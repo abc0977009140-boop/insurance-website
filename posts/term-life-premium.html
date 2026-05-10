@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>同樣是壽險保障，後半輩子能不能更聰明地付？</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  /* =========================================================
+     Design tokens - 修改顏色／字體只需要動這一段
+     ========================================================= */
+  :root{
+    --bg: #f5efe4;
+    --bg-2: #ebe2d2;
+    --paper: #faf6ed;
+    --ink: #1a1f1d;
+    --ink-soft: #4a4a44;
+    --ink-mute: #7a766c;
+    --line: #cbbfa9;
+    --line-soft: #d9cfb9;
+
+    --forest: #1f3a36;
+    --forest-deep: #14272a;
+    --copper: #a8632d;
+    --copper-light: #c98852;
+    --amber: #c8954a;
+    --burgundy: #7a2e2e;
+    --gold: #b8893a;
+
+    /* 三個方案各自的識別色 */
+    --c-problem: #a8632d;      /* 定期壽險（問題端，銅紅色） */
+    --c-invest: #1f3a36;       /* 投資型保單（深綠） */
+    --c-usd: #b8893a;          /* 美金保單（金黃） */
+
+    --serif: "Noto Serif TC", "Cormorant Garamond", serif;
+    --sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+    --display: "Cormorant Garamond", "Noto Serif TC", serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse at 8% 0%, rgba(168,99,45,0.07), transparent 50%),
+      radial-gradient(ellipse at 92% 100%, rgba(31,58,54,0.05), transparent 60%);
+  }
+  /* Grain overlay for paper feel */
+  body::before{
+    content:"";
+    position: fixed; inset: 0; pointer-events: none;
+    opacity: 0.32; mix-blend-mode: multiply; z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* =========================================================
+     Top bar - 品牌列
+     ========================================================= */
+  .topbar{
+    position: relative; z-index: 5;
+    border-bottom: 1px solid var(--line);
+    padding: 18px 6vw;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--sans); font-size: 12px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .topbar .brand{
+    font-family: var(--display); font-style: italic; font-weight: 500;
+    font-size: 18px; letter-spacing: 0.02em; text-transform: none;
+    color: var(--forest);
+  }
+  .topbar .brand small{
+    font-style: normal; font-family: var(--sans);
+    font-size: 11px; letter-spacing: 0.2em;
+    color: var(--ink-mute); margin-left: 8px;
+  }
+  .topbar .meta{display:flex; gap: 28px; align-items:center}
+  .topbar .meta span:not(:last-child)::after{
+    content: "·"; margin-left: 28px; color: var(--line);
+  }
+
+  /* =========================================================
+     Hero - 開場
+     ========================================================= */
+  .hero{
+    position: relative; z-index: 2;
+    padding: 90px 6vw 80px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-grid{
+    display: grid; grid-template-columns: 1.3fr 1fr;
+    gap: 80px; align-items: end;
+    max-width: 1400px; margin: 0 auto;
+  }
+  .hero-eyebrow{
+    font-family: var(--display); font-style: italic;
+    font-size: 22px; color: var(--copper);
+    margin-bottom: 24px; letter-spacing: 0.02em;
+  }
+  .hero-eyebrow .num{
+    font-feature-settings: "lnum"; font-weight: 600;
+    border: 1px solid var(--copper); padding: 2px 10px;
+    border-radius: 999px; font-size: 13px; margin-right: 12px;
+    font-style: normal; letter-spacing: 0.15em;
+  }
+  h1.hero-title{
+    font-family: var(--serif); font-weight: 900;
+    font-size: clamp(40px, 5.6vw, 80px);
+    line-height: 1.1; letter-spacing: -0.01em;
+    margin: 0 0 32px; color: var(--forest-deep);
+  }
+  h1.hero-title .accent{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; color: var(--copper);
+  }
+  h1.hero-title .underline{
+    background-image: linear-gradient(transparent 78%, rgba(200,149,74,0.42) 78%, rgba(200,149,74,0.42) 92%, transparent 92%);
+  }
+  .hero-lead{
+    font-family: var(--serif); font-size: 19px;
+    line-height: 1.85; color: var(--ink-soft);
+    max-width: 540px;
+    border-left: 2px solid var(--copper); padding-left: 22px;
+  }
+  .hero-lead .drop{
+    font-family: var(--display); font-size: 56px;
+    line-height: 0.9; float: left;
+    margin: 8px 10px -4px 0;
+    color: var(--forest); font-weight: 600;
+  }
+
+  .hero-aside{
+    position: relative;
+    padding: 36px 38px 30px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 14px 14px 0 -4px var(--bg-2), 14px 14px 0 -3px var(--line);
+  }
+  .hero-aside::before{
+    content:"今天的對話"; position: absolute;
+    top: -12px; left: 28px; background: var(--bg);
+    padding: 0 12px; font-family: var(--display);
+    font-style: italic; color: var(--copper); font-size: 18px;
+  }
+  .hero-aside h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 16px; margin: 8px 0 20px;
+    color: var(--forest); letter-spacing: 0.04em;
+  }
+  .hero-aside ol{
+    list-style: none; padding: 0; margin: 0;
+    counter-reset: aside;
+  }
+  .hero-aside li{
+    counter-increment: aside;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    font-size: 14.5px; color: var(--ink-soft);
+    display: grid; grid-template-columns: 30px 1fr;
+    gap: 14px; align-items: start;
+  }
+  .hero-aside li:last-child{border-bottom: none; padding-bottom: 4px}
+  .hero-aside li::before{
+    content: counter(aside, decimal-leading-zero);
+    font-family: var(--display); font-weight: 600;
+    color: var(--copper); font-size: 18px; line-height: 1.4;
+  }
+  .hero-aside li strong{
+    display: block; color: var(--forest-deep);
+    font-size: 15px; margin-bottom: 2px;
+  }
+
+  /* =========================================================
+     Section base
+     ========================================================= */
+  section{
+    position: relative; z-index: 2;
+    padding: 95px 6vw;
+    border-bottom: 1px solid var(--line);
+  }
+  .container{max-width: 1400px; margin: 0 auto}
+
+  .sec-eyebrow{
+    display: flex; align-items: center; gap: 18px;
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 28px; font-weight: 500;
+  }
+  .sec-eyebrow::before{
+    content:""; width: 50px; height: 1px; background: var(--copper);
+  }
+  .sec-eyebrow .num{
+    font-family: var(--display); font-style: italic;
+    font-size: 18px; letter-spacing: 0.02em;
+    text-transform: none; color: var(--forest);
+  }
+
+  h2.sec-title{
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(32px, 4.0vw, 52px);
+    line-height: 1.18; letter-spacing: -0.01em;
+    margin: 0 0 24px; color: var(--forest-deep);
+    max-width: 920px;
+  }
+  h2.sec-title em{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; color: var(--copper);
+  }
+
+  .sec-intro{
+    font-family: var(--serif); font-size: 18px;
+    line-height: 1.85; color: var(--ink-soft);
+    max-width: 780px; margin-bottom: 50px;
+  }
+
+  /* =========================================================
+     Section 1: Term Life Premium Reality
+     ========================================================= */
+  .premium-block{
+    display: grid; grid-template-columns: 1.3fr 1fr;
+    gap: 56px; align-items: start;
+  }
+  .chart-wrap{
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 32px 28px 22px;
+    box-shadow: 16px 16px 0 -4px var(--bg-2), 16px 16px 0 -3px var(--line);
+  }
+  .chart-wrap .cap{
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 16px; padding-bottom: 14px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .chart-wrap .cap h4{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 17px; margin: 0; color: var(--forest-deep);
+  }
+  .chart-wrap .cap span{
+    font-family: var(--display); font-style: italic;
+    color: var(--ink-mute); font-size: 14px;
+  }
+  #premiumChart{ height: 380px !important; }
+
+  .chart-wrap .legend{
+    margin-top: 14px; padding-top: 12px;
+    border-top: 1px solid var(--line-soft);
+    font-size: 12px; color: var(--ink-mute);
+    font-style: italic; font-family: var(--display);
+  }
+
+  .milestone-list{ display: flex; flex-direction: column; gap: 14px; }
+  .milestone{
+    display: grid;
+    grid-template-columns: 70px 1fr auto;
+    align-items: center; gap: 22px;
+    padding: 20px 24px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--c-problem);
+    transition: transform .35s ease;
+  }
+  .milestone:hover{ transform: translateX(6px); }
+  .milestone .age{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; font-size: 38px;
+    color: var(--forest-deep); line-height: 1;
+  }
+  .milestone .age sup{
+    font-size: 14px; margin-left: 2px;
+    color: var(--ink-mute); font-style: normal;
+  }
+  .milestone .desc{
+    font-size: 13.5px; color: var(--ink-soft); line-height: 1.55;
+  }
+  .milestone .desc strong{
+    display: block; color: var(--forest);
+    font-weight: 700; font-size: 14px; margin-bottom: 2px;
+  }
+  .milestone .price{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 24px; color: var(--c-problem);
+    text-align: right; white-space: nowrap;
+  }
+  .milestone .price small{
+    display: block; font-family: var(--sans); font-weight: 400;
+    font-size: 11px; color: var(--ink-mute); letter-spacing: 0.1em;
+  }
+
+  /* Full rate grid */
+  .rate-grid-wrap{
+    margin-top: 60px;
+  }
+  .rate-grid-wrap h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 22px; margin: 0 0 8px; color: var(--forest-deep);
+  }
+  .rate-grid-wrap p.note{
+    font-family: var(--display); font-style: italic;
+    color: var(--ink-mute); margin: 0 0 24px; font-size: 15px;
+  }
+  .rate-grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .rate-cell{
+    padding: 14px 10px;
+    border-right: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    text-align: center;
+    transition: background .25s;
+  }
+  .rate-cell:nth-child(10n){ border-right: none; }
+  .rate-cell:nth-last-child(-n+10){ border-bottom: none; }
+  .rate-cell:hover{ background: var(--bg-2); }
+  .rate-cell .a{
+    font-family: var(--sans); font-size: 11px;
+    color: var(--ink-mute); letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .rate-cell .v{
+    font-family: var(--serif); font-weight: 600;
+    font-size: 14px; color: var(--forest-deep);
+  }
+  .rate-cell.peak{ background: rgba(168,99,45,0.08) }
+  .rate-cell.peak .v{ color: var(--c-problem); }
+
+  /* Total cost callout */
+  .total-callout{
+    margin-top: 50px;
+    padding: 40px 44px;
+    background: linear-gradient(135deg, rgba(168,99,45,0.08), rgba(168,99,45,0.02));
+    border: 1px solid rgba(168,99,45,0.3);
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 40px; align-items: center;
+  }
+  .total-callout .text h4{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 22px; margin: 0 0 8px; color: var(--forest-deep);
+  }
+  .total-callout .text p{
+    font-size: 15px; color: var(--ink-soft);
+    margin: 0; line-height: 1.7;
+  }
+  .total-callout .num{
+    text-align: right;
+  }
+  .total-callout .num .big{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; font-size: 64px;
+    color: var(--c-problem); line-height: 1;
+  }
+  .total-callout .num .lbl{
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.2em; color: var(--ink-mute);
+    text-transform: uppercase; margin-top: 4px;
+  }
+
+  /* =========================================================
+     Pull quote between sections
+     ========================================================= */
+  .pullquote{
+    padding: 110px 6vw;
+    text-align: center;
+    background: linear-gradient(180deg, var(--forest-deep), var(--forest));
+    color: #f5efe4;
+    border-bottom: 1px solid var(--forest-deep);
+    position: relative; z-index: 2;
+  }
+  .pullquote .marks{
+    font-family: var(--display); font-size: 96px;
+    line-height: 0.5; color: var(--copper-light);
+    margin-bottom: 24px; opacity: 0.85;
+  }
+  .pullquote blockquote{
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(24px, 3.0vw, 36px);
+    line-height: 1.5; margin: 0 auto;
+    max-width: 920px; color: #faf6ed;
+  }
+  .pullquote blockquote em{
+    font-family: var(--display); font-style: italic;
+    color: var(--copper-light); font-weight: 600;
+  }
+  .pullquote cite{
+    display: block; margin-top: 32px;
+    font-family: var(--display); font-style: italic;
+    font-size: 16px; color: rgba(245,239,228,0.7);
+    letter-spacing: 0.05em;
+  }
+  .pullquote cite::before{ content: "—"; margin-right: 8px; }
+
+  /* =========================================================
+     Solution sections (Investment-linked & USD policy)
+     ========================================================= */
+  .sol-section{
+    background: var(--bg);
+  }
+  .sol-section.invest{
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  }
+  .sol-section.usd{
+    background: var(--bg);
+  }
+
+  .sol-header{
+    display: flex; align-items: baseline; gap: 24px;
+    margin-bottom: 8px;
+  }
+  .sol-tag{
+    font-family: var(--sans); font-weight: 500;
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    padding: 6px 14px; border: 1px solid currentColor;
+    border-radius: 999px;
+  }
+  .sol-section.invest .sol-tag{ color: var(--c-invest); }
+  .sol-section.usd .sol-tag{ color: var(--c-usd); }
+
+  .sol-section h2.sec-title em{
+    color: var(--c-invest);
+  }
+  .sol-section.usd h2.sec-title em{
+    color: var(--c-usd);
+  }
+
+  .sol-grid{
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 64px; align-items: start;
+    margin-top: 30px;
+  }
+
+  .sol-explain h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 24px; line-height: 1.4;
+    margin: 0 0 18px; color: var(--forest-deep);
+  }
+  .sol-explain h3 em{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600;
+  }
+  .sol-section.invest .sol-explain h3 em{ color: var(--c-invest); }
+  .sol-section.usd .sol-explain h3 em{ color: var(--c-usd); }
+
+  .sol-explain p{
+    font-size: 16px; line-height: 1.85;
+    color: var(--ink-soft); margin: 0 0 20px;
+  }
+  .sol-explain p strong{
+    color: var(--forest-deep); font-weight: 700;
+  }
+
+  .feature-list{
+    list-style: none; padding: 0; margin: 28px 0 0;
+  }
+  .feature-list li{
+    display: grid; grid-template-columns: 28px 1fr;
+    gap: 16px; align-items: start;
+    padding: 14px 0;
+    border-top: 1px solid var(--line-soft);
+    font-size: 14.5px; color: var(--ink-soft);
+  }
+  .feature-list li:last-child{
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .feature-list .ico{
+    width: 22px; height: 22px;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .sol-section.invest .feature-list .ico{ color: var(--c-invest); }
+  .sol-section.usd .feature-list .ico{ color: var(--c-usd); }
+  .feature-list .ico svg{ width: 11px; height: 11px; }
+  .feature-list strong{
+    display: block; color: var(--forest-deep);
+    font-family: var(--serif); font-weight: 700;
+    font-size: 15.5px; margin-bottom: 2px;
+  }
+
+  /* Sol data card with chart + numbers */
+  .sol-data{
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 32px 34px;
+    box-shadow: 16px 16px 0 -4px var(--bg-2), 16px 16px 0 -3px var(--line);
+  }
+  .sol-data .data-head{
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 16px; border-bottom: 1px solid var(--line-soft);
+    margin-bottom: 22px;
+  }
+  .sol-data .data-head h4{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 18px; margin: 0; color: var(--forest-deep);
+  }
+  .sol-data .data-head span{
+    font-family: var(--display); font-style: italic;
+    color: var(--ink-mute); font-size: 14px;
+  }
+  .sol-chart{ height: 260px !important; }
+
+  .sol-stats{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0; margin-top: 24px;
+    padding-top: 22px; border-top: 1px solid var(--line-soft);
+  }
+  .sol-stat{
+    padding: 4px 16px;
+    border-right: 1px dashed var(--line);
+  }
+  .sol-stat:last-child{ border-right: none; }
+  .sol-stat:first-child{ padding-left: 0; }
+  .sol-stat .lbl{
+    font-family: var(--sans); font-size: 10.5px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-mute); margin-bottom: 6px;
+  }
+  .sol-stat .val{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 22px; color: var(--forest-deep);
+    line-height: 1.2;
+  }
+  .sol-stat .val .unit{
+    font-family: var(--sans); font-weight: 400;
+    font-size: 12px; color: var(--ink-mute);
+    margin-left: 4px;
+  }
+  .sol-section.invest .sol-stat .val{ color: var(--c-invest); }
+  .sol-section.usd .sol-stat .val{ color: var(--c-usd); }
+  .sol-stat .sub{
+    font-size: 11.5px; color: var(--ink-mute);
+    margin-top: 4px; line-height: 1.4;
+  }
+
+  .sol-detail{
+    margin-top: 22px; padding-top: 18px;
+    border-top: 1px solid var(--line-soft);
+    font-family: var(--display); font-style: italic;
+    color: var(--ink-mute); font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* Year-by-year mini table */
+  .yr-table{
+    margin-top: 60px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    overflow-x: auto;
+  }
+  .yr-table h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 18px; margin: 0;
+    padding: 22px 28px 16px;
+    color: var(--forest-deep);
+    border-bottom: 1px solid var(--line-soft);
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .yr-table h3 span{
+    font-family: var(--display); font-style: italic;
+    color: var(--ink-mute); font-size: 14px; font-weight: 400;
+  }
+  .yr-table table{
+    width: 100%; border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  .yr-table th, .yr-table td{
+    padding: 12px 16px; text-align: right;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .yr-table th:first-child, .yr-table td:first-child{
+    text-align: left; padding-left: 28px;
+  }
+  .yr-table th:last-child, .yr-table td:last-child{
+    padding-right: 28px;
+  }
+  .yr-table thead th{
+    background: var(--bg-2);
+    font-family: var(--sans); font-weight: 500;
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .yr-table tbody tr:hover{ background: var(--bg); }
+  .yr-table tbody td{
+    font-family: var(--serif); color: var(--ink);
+  }
+  .yr-table tbody td.age{
+    font-family: var(--display); font-style: italic;
+    color: var(--forest); font-weight: 500;
+  }
+  .yr-table tbody tr.highlight{
+    background: rgba(31,58,54,0.05);
+  }
+  .sol-section.usd .yr-table tbody tr.highlight{
+    background: rgba(184,137,58,0.08);
+  }
+  .yr-table tbody tr.highlight td.age{ font-weight: 700; }
+
+  /* =========================================================
+     Comparison section
+     ========================================================= */
+  .compare-section{
+    padding: 100px 6vw;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--line);
+    position: relative; z-index: 2;
+  }
+  .compare-grid{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    margin-top: 50px;
+  }
+  .compare-col{
+    padding: 36px 32px 40px;
+    border-right: 1px solid var(--line);
+    position: relative;
+  }
+  .compare-col:last-child{ border-right: none; }
+  .compare-col .top-bar{
+    height: 4px; margin: -36px -32px 28px;
+    background: var(--c-problem);
+  }
+  .compare-col.invest .top-bar{ background: var(--c-invest); }
+  .compare-col.usd .top-bar{ background: var(--c-usd); }
+
+  .compare-col .label{
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ink-mute); margin-bottom: 8px;
+  }
+  .compare-col h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 26px; margin: 0 0 4px;
+    color: var(--forest-deep); letter-spacing: -0.01em;
+  }
+  .compare-col h3 .en{
+    display: block; font-family: var(--display);
+    font-style: italic; font-weight: 500;
+    font-size: 15px; color: var(--ink-mute);
+    margin-top: 4px; letter-spacing: 0.02em;
+  }
+  .compare-col .verdict{
+    margin-top: 20px; padding: 14px 16px;
+    background: var(--bg);
+    font-family: var(--serif); font-style: italic;
+    font-size: 14.5px; color: var(--ink-soft);
+    line-height: 1.6;
+    border-left: 2px solid var(--c-problem);
+  }
+  .compare-col.invest .verdict{ border-left-color: var(--c-invest); }
+  .compare-col.usd .verdict{ border-left-color: var(--c-usd); }
+
+  .compare-rows{ margin-top: 22px; }
+  .compare-row{
+    padding: 14px 0;
+    border-top: 1px solid var(--line-soft);
+    font-size: 13.5px;
+  }
+  .compare-row .cr-lbl{
+    font-family: var(--display); font-style: italic;
+    color: var(--ink-mute); font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .compare-row .cr-val{
+    color: var(--ink); font-family: var(--serif);
+    font-weight: 500; line-height: 1.5;
+  }
+
+  .who-fits{
+    margin-top: 24px; padding: 16px 18px;
+    border: 1px dashed var(--line);
+    font-size: 13px; line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .who-fits strong{
+    display: block; font-family: var(--serif);
+    color: var(--forest-deep); font-size: 14px;
+    margin-bottom: 4px; font-weight: 700;
+  }
+
+  /* =========================================================
+     Closing CTA
+     ========================================================= */
+  .closing{
+    padding: 100px 6vw;
+    text-align: center;
+    background: var(--bg);
+    position: relative; z-index: 2;
+  }
+  .closing h2{
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2; color: var(--forest-deep);
+    max-width: 800px; margin: 0 auto 20px;
+  }
+  .closing h2 em{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; color: var(--copper);
+  }
+  .closing p{
+    font-family: var(--serif); font-size: 17px;
+    line-height: 1.85; color: var(--ink-soft);
+    max-width: 640px; margin: 0 auto 36px;
+  }
+  .closing .cta{
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 18px 36px;
+    background: var(--forest-deep); color: #f5efe4;
+    text-decoration: none;
+    font-family: var(--serif); font-weight: 600;
+    font-size: 16px; letter-spacing: 0.04em;
+    border: 1px solid var(--forest-deep);
+    transition: all .3s ease;
+  }
+  .closing .cta:hover{
+    background: var(--copper); border-color: var(--copper);
+    transform: translateY(-2px);
+  }
+  .closing .cta svg{ width: 18px; height: 18px; }
+
+  /* =========================================================
+     Footer
+     ========================================================= */
+  footer{
+    position: relative; z-index: 2;
+    padding: 60px 6vw 40px;
+    background: var(--forest-deep); color: #d4cfc1;
+  }
+  .foot-grid{
+    max-width: 1400px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px; align-items: start;
+  }
+  .foot-grid h5{
+    font-family: var(--display); font-style: italic;
+    font-size: 16px; color: var(--copper-light);
+    margin: 0 0 16px; font-weight: 500;
+  }
+  .foot-disclaimer{
+    font-size: 12px; line-height: 1.85;
+    color: rgba(212,207,193,0.75);
+  }
+  .foot-grid ul{ list-style: none; padding: 0; margin: 0; font-size: 13px; }
+  .foot-grid li{ padding: 5px 0; }
+  .foot-bottom{
+    max-width: 1400px; margin: 36px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(212,207,193,0.15);
+    display: flex; justify-content: space-between;
+    font-family: var(--display); font-style: italic;
+    font-size: 13px; color: rgba(212,207,193,0.6);
+  }
+
+  /* =========================================================
+     Reveal animation
+     ========================================================= */
+  .reveal{
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 1.0s cubic-bezier(.2,.7,.2,1), transform 1.0s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in{ opacity: 1; transform: none; }
+  .reveal.d1{ transition-delay: .1s; }
+  .reveal.d2{ transition-delay: .25s; }
+  .reveal.d3{ transition-delay: .4s; }
+
+  /* =========================================================
+     Responsive
+     ========================================================= */
+  @media (max-width: 980px){
+    .hero-grid, .premium-block, .sol-grid, .compare-grid{
+      grid-template-columns: 1fr; gap: 50px;
+    }
+    .compare-col{
+      border-right: none; border-bottom: 1px solid var(--line);
+    }
+    .compare-col:last-child{ border-bottom: none; }
+    .foot-grid{ grid-template-columns: 1fr; gap: 30px; }
+    .foot-bottom{ flex-direction: column; gap: 8px; }
+    .topbar .meta{ display: none; }
+    section, .hero, .pullquote, .compare-section, .closing{
+      padding-left: 5vw; padding-right: 5vw;
+    }
+    .hero{ padding-top: 56px; padding-bottom: 56px; }
+    .milestone{ grid-template-columns: 60px 1fr; }
+    .milestone .price{ grid-column: 1 / -1; text-align: left; }
+    .rate-grid{ grid-template-columns: repeat(5, 1fr); }
+    .rate-cell:nth-child(10n){ border-right: 1px solid var(--line-soft); }
+    .rate-cell:nth-child(5n){ border-right: none; }
+    .total-callout{ grid-template-columns: 1fr; gap: 20px; }
+    .total-callout .num{ text-align: left; }
+    .sol-stats{ grid-template-columns: 1fr; gap: 16px; }
+    .sol-stat{ border-right: none; padding: 12px 0; border-bottom: 1px dashed var(--line); }
+    .sol-stat:last-child{ border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================================================
+     TOP BAR
+     ================================================ -->
+<div class="topbar">
+  <div class="brand">
+    <a href="../index.html" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+      <span style="display:inline-flex;width:32px;height:32px;border-radius:50%;background:#b56b3d;color:#faf6ed;align-items:center;justify-content:center;font-style:italic;font-weight:600;font-size:18px;">保</span>
+      保險白話文
+    </a>
+    <small>讓你保險買對不買貴</small>
+  </div>
+  <div class="meta">
+    <span><a href="../index.html" style="color: inherit; text-decoration: none;">← 返回首頁</a></span>
+    <span>定期壽險．後期保費</span>
+    <span>閱讀時間 約 8 分鐘</span>
+  </div>
+</div>
+
+<!-- ================================================
+     HERO
+     ================================================ -->
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow reveal">
+        <span class="num">CHAPTER 03</span>定期壽險的另一面
+      </div>
+      <h1 class="hero-title reveal d1">
+        前面十年很<span class="accent">便宜</span>，<br>
+        後面三十年<span class="underline">越繳越貴</span>。
+      </h1>
+      <p class="hero-lead reveal d2">
+        <span class="drop">同</span>樣的保額，30 歲只要 3,200 元，到了 59 歲卻要 31,200 元。整整貴了將近 10 倍。如果保費注定要漲，我們是不是該想一想——這筆錢，有沒有更聰明的去處？
+      </p>
+    </div>
+
+    <aside class="hero-aside reveal d3">
+      <h3>本篇將陪您思考</h3>
+      <ol>
+        <li>
+          <strong>定期壽險的真實費率</strong>
+          看一張完整的 30 年保費表，您就會明白
+        </li>
+        <li>
+          <strong>方案 A · 投資型保單</strong>
+          同一筆預算，能不能同時擁有保障 + 投資？
+        </li>
+        <li>
+          <strong>方案 B · 美金分紅保單</strong>
+          不想進股市，那有沒有穩定的選擇？
+        </li>
+      </ol>
+    </aside>
+  </div>
+</header>
+
+<!-- ================================================
+     SECTION 1: TERM LIFE PREMIUM REALITY
+     ================================================ -->
+<section>
+  <div class="container">
+    <div class="sec-eyebrow reveal">
+      <span class="num">I.</span>真實的數字
+    </div>
+    <h2 class="sec-title reveal d1">
+      看一次費率表，<em>勝過十次解釋</em>
+    </h2>
+    <p class="sec-intro reveal d2">
+      下面這張線圖，是男性定期壽險從 30 歲到 59 歲的年繳保費走勢。30 年間，曲線從平緩慢慢爬升，到了 50 歲之後幾乎是垂直往上。這不是哪一家保險公司的特殊規定，而是壽險商品的本質——年齡越大，身故風險越高，純保費自然就越貴。
+    </p>
+
+    <div class="premium-block">
+      <!-- Big chart -->
+      <div class="chart-wrap reveal d2">
+        <div class="cap">
+          <h4>男性．30~59 歲年繳總保費走勢</h4>
+          <span>單位：新台幣</span>
+        </div>
+        <canvas id="premiumChart"></canvas>
+        <div class="legend">資料依商品費率表，男性、健康體、保額假設一致；實際依保險公司核保條件為準。</div>
+      </div>
+
+      <!-- Milestones -->
+      <div class="milestone-list">
+        <div class="milestone reveal">
+          <div class="age">30<sup>歲</sup></div>
+          <div class="desc">
+            <strong>建立保障期</strong>
+            年輕，身故風險低，象徵性收費
+          </div>
+          <div class="price">$3,200<small>NT$ / 年</small></div>
+        </div>
+        <div class="milestone reveal d1">
+          <div class="age">40<sup>歲</sup></div>
+          <div class="desc">
+            <strong>家庭責任成形</strong>
+            10 年後，保費已翻倍以上
+          </div>
+          <div class="price">$7,000<small>NT$ / 年</small></div>
+        </div>
+        <div class="milestone reveal d2">
+          <div class="age">50<sup>歲</sup></div>
+          <div class="desc">
+            <strong>退休前期</strong>
+            保費約為 30 歲的 5 倍
+          </div>
+          <div class="price">$16,000<small>NT$ / 年</small></div>
+        </div>
+        <div class="milestone reveal d3">
+          <div class="age">59<sup>歲</sup></div>
+          <div class="desc">
+            <strong>後期高峰</strong>
+            幾乎是 30 歲時的 10 倍
+          </div>
+          <div class="price">$31,200<small>NT$ / 年</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full rate grid -->
+    <div class="rate-grid-wrap reveal">
+      <h3>完整費率表 · 30~59 歲</h3>
+      <p class="note">A Year-by-Year Look at the Premium</p>
+
+      <div class="rate-grid" id="rateGrid"></div>
+    </div>
+
+    <!-- Total cost callout -->
+    <div class="total-callout reveal d1">
+      <div class="text">
+        <h4>30 年下來，光是保費就要繳……</h4>
+        <p>
+          如果從 30 歲一路繳到 59 歲，30 個年度的保費加總是一筆相當可觀的金額。這筆錢若沒有發生身故事故，就是純粹「買到保障」的成本。請記住這個數字，待會兒我們會用它做比較。
+        </p>
+      </div>
+      <div class="num">
+        <div class="big">$375,800</div>
+        <div class="lbl">NT$ · 30 年累積保費</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     PULL QUOTE
+     ================================================ -->
+<section class="pullquote">
+  <div class="marks">&ldquo;</div>
+  <blockquote>
+    保費注定會漲，但<em>使用同一筆預算的方式</em>，我們可以選。<br>
+    與其單純買「越來越貴的保障」，不如想想——<br>
+    能不能讓這筆錢，<em>同時為您工作</em>？
+  </blockquote>
+  <cite>給每位重新檢視保單的客戶</cite>
+</section>
+
+<!-- ================================================
+     SECTION 2: SOLUTION A - INVESTMENT-LINKED
+     ================================================ -->
+<section class="sol-section invest">
+  <div class="container">
+    <div class="sol-header">
+      <span class="sol-tag reveal">Solution A · 投資型</span>
+    </div>
+    <div class="sec-eyebrow reveal">
+      <span class="num">II.</span>方案一．投資型保單
+    </div>
+    <h2 class="sec-title reveal d1">
+      讓每一塊保費，<em>同時做兩件事</em>
+    </h2>
+    <p class="sec-intro reveal d2">
+      投資型保單的概念是：您每年繳的保費，扣掉保險成本與管理費後，剩下的部分會「實際進場投資」，連結您選擇的基金或市場標的。一張保單同時做到「壽險保障」+「定期定額投資」，年輕時保險成本低、可投資的金額多，正好讓資產有時間複利累積。
+    </p>
+
+    <div class="sol-grid">
+      <!-- Left: Explanation -->
+      <div class="sol-explain reveal d2">
+        <h3>用一張表解讀<em>「保費去哪裡」</em></h3>
+        <p>
+          以 <strong>42 歲、目標保險費年繳 60,000 元、假設投資報酬率 6%</strong> 的試算為例，每一年的保費並不是全部交給保險公司，而是分成三個流向。
+        </p>
+
+        <ul class="feature-list">
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>保險成本（壽險保障）</strong>
+              依年齡變化，第 1 年僅 5,564 元；中年期峰值約 7,000 出頭，之後反而下降。
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>保單管理費</strong>
+              每年固定 1,200 元，作為保單運作的行政成本。
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>實際投入投資</strong>
+              第 1 年 24,000 元，從第 6 年起每年 60,000 元全額投入；連結基金、ETF 或積極市場標的，由您自行配置。
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>身故保障始終存在</strong>
+              整個保單期間，身故保險金維持 1,750,000 元起跳；後期帳戶價值大於保額時，給付以兩者較高為準。
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Data card with chart -->
+      <div class="sol-data reveal d3">
+        <div class="data-head">
+          <h4>10 年累積試算</h4>
+          <span>假設投資報酬率 6.00%</span>
+        </div>
+        <canvas id="investChart" class="sol-chart"></canvas>
+
+        <div class="sol-stats">
+          <div class="sol-stat">
+            <div class="lbl">10 年總繳</div>
+            <div class="val">600,000<span class="unit">元</span></div>
+            <div class="sub">每年 60,000 × 10 年</div>
+          </div>
+          <div class="sol-stat">
+            <div class="lbl">期末帳戶價值</div>
+            <div class="val">687,035<span class="unit">元</span></div>
+            <div class="sub">第 10 年末（51 歲）</div>
+          </div>
+          <div class="sol-stat">
+            <div class="lbl">身故保障</div>
+            <div class="val">1,750,000<span class="unit">元</span></div>
+            <div class="sub">全期維持</div>
+          </div>
+        </div>
+
+        <div class="sol-detail">
+          ※ 累積至第 20 年（61 歲）時，帳戶價值已達約 1,980,981 元；第 21 年起無需再繳保費，帳戶價值即可自行支應後續保險成本。
+        </div>
+      </div>
+    </div>
+
+    <!-- Year-by-year table -->
+    <div class="yr-table reveal">
+      <h3>關鍵年度節錄 <span>選取第 1、5、10、15、20 年顯示</span></h3>
+      <table>
+        <thead>
+          <tr>
+            <th>保單年度</th>
+            <th>保險年齡</th>
+            <th>累積保險費</th>
+            <th>當年保險成本</th>
+            <th>期末帳戶價值</th>
+            <th>身故保險金</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="age">第 1 年</td>
+            <td>42 歲</td>
+            <td>60,000</td>
+            <td>5,564</td>
+            <td>18,461</td>
+            <td>1,750,000</td>
+          </tr>
+          <tr>
+            <td class="age">第 5 年</td>
+            <td>46 歲</td>
+            <td>300,000</td>
+            <td>6,844</td>
+            <td>204,247</td>
+            <td>1,750,000</td>
+          </tr>
+          <tr class="highlight">
+            <td class="age">第 10 年</td>
+            <td>51 歲</td>
+            <td>600,000</td>
+            <td>7,081</td>
+            <td>687,035</td>
+            <td>1,750,000</td>
+          </tr>
+          <tr>
+            <td class="age">第 15 年</td>
+            <td>56 歲</td>
+            <td>900,000</td>
+            <td>5,477</td>
+            <td>1,233,436</td>
+            <td>1,750,000</td>
+          </tr>
+          <tr>
+            <td class="age">第 20 年</td>
+            <td>61 歲</td>
+            <td>1,200,000</td>
+            <td>2,147</td>
+            <td>1,980,981</td>
+            <td>2,060,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     SECTION 3: SOLUTION B - USD POLICY
+     ================================================ -->
+<section class="sol-section usd">
+  <div class="container">
+    <div class="sol-header">
+      <span class="sol-tag reveal">Solution B · 美金分紅</span>
+    </div>
+    <div class="sec-eyebrow reveal">
+      <span class="num">III.</span>方案二．美金分紅保單
+    </div>
+    <h2 class="sec-title reveal d1">
+      不想進股市？這裡有<em>另一種穩定的力量</em>
+    </h2>
+    <p class="sec-intro reveal d2">
+      投資型保單雖好，但畢竟連結的是市場——有些人就是不想看到帳戶上下波動。如果您屬於這一類，美金分紅保單會是另一個選擇：以美元計價、保險公司穩定發放年度分紅（試算約 4~5%），同時擁有壽險保障。最關鍵的是——它通常只需要繳費 12 年，之後不用再繳，價值持續累積。
+    </p>
+
+    <div class="sol-grid">
+      <!-- Left: Explanation -->
+      <div class="sol-explain reveal d2">
+        <h3>繳 12 年，<em>用一輩子</em></h3>
+        <p>
+          以 <strong>42 歲、年存美元 USD 2,000、繳費 12 年</strong> 的試算為例，總共投入 USD 24,000（約新台幣 75 萬元）。從第 13 年起不需要再繳保費，但壽險保障與解約金價值會在年複利分紅下持續累積。
+        </p>
+
+        <ul class="feature-list">
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>美元計價，分散貨幣風險</strong>
+              台幣資產為主的家庭，可透過美金保單建立外幣部位。
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>年度分紅約 4~5%</strong>
+              比定存利率高，且不直接受股市漲跌影響（為非保證項目，依公司宣告）。
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>限期繳費，終身有效</strong>
+              繳完 12 年即可停繳，保單繼續為您工作數十年。
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <div>
+              <strong>壽險＋資產累積一次到位</strong>
+              60 歲時壽險保障約 USD 61,990、解約金約 USD 37,112，可作為退休備用金。
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Data card with chart -->
+      <div class="sol-data reveal d3">
+        <div class="data-head">
+          <h4>20 年累積試算</h4>
+          <span>單位：USD（美元）</span>
+        </div>
+        <canvas id="usdChart" class="sol-chart"></canvas>
+
+        <div class="sol-stats">
+          <div class="sol-stat">
+            <div class="lbl">12 年總繳</div>
+            <div class="val">24,000<span class="unit">USD</span></div>
+            <div class="sub">每年 2,000 × 12 年</div>
+          </div>
+          <div class="sol-stat">
+            <div class="lbl">60 歲解約金</div>
+            <div class="val">37,112<span class="unit">USD</span></div>
+            <div class="sub">第 19 年（已停繳 7 年）</div>
+          </div>
+          <div class="sol-stat">
+            <div class="lbl">60 歲壽險保障</div>
+            <div class="val">61,990<span class="unit">USD</span></div>
+            <div class="sub">含分紅累積</div>
+          </div>
+        </div>
+
+        <div class="sol-detail">
+          ※ 分紅金額為非保證項目，實際依保險公司逐年宣告之利率為準。停繳後保單仍持續累積分紅，建議搭配長期持有規劃。
+        </div>
+      </div>
+    </div>
+
+    <!-- Year-by-year table -->
+    <div class="yr-table reveal">
+      <h3>關鍵年度節錄 <span>USD 美元，選取代表年度</span></h3>
+      <table>
+        <thead>
+          <tr>
+            <th>保單年度</th>
+            <th>保險年齡</th>
+            <th>當年存入</th>
+            <th>累積存入</th>
+            <th>解約金</th>
+            <th>壽險保障</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="age">第 1 年</td>
+            <td>42 歲</td>
+            <td>2,000</td>
+            <td>2,000</td>
+            <td>303</td>
+            <td>2,829</td>
+          </tr>
+          <tr>
+            <td class="age">第 8 年</td>
+            <td>49 歲</td>
+            <td>2,000</td>
+            <td>16,000</td>
+            <td>17,182</td>
+            <td>33,857</td>
+          </tr>
+          <tr class="highlight">
+            <td class="age">第 12 年（繳費期滿）</td>
+            <td>53 歲</td>
+            <td>2,000</td>
+            <td>24,000</td>
+            <td>28,321</td>
+            <td>53,229</td>
+          </tr>
+          <tr>
+            <td class="age">第 15 年</td>
+            <td>56 歲</td>
+            <td>—</td>
+            <td>24,000</td>
+            <td>31,647</td>
+            <td>56,178</td>
+          </tr>
+          <tr>
+            <td class="age">第 19 年</td>
+            <td>60 歲</td>
+            <td>—</td>
+            <td>24,000</td>
+            <td>37,112</td>
+            <td>61,990</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     COMPARISON SECTION
+     ================================================ -->
+<section class="compare-section">
+  <div class="container">
+    <div class="sec-eyebrow reveal">
+      <span class="num">IV.</span>三種選擇．並排對照
+    </div>
+    <h2 class="sec-title reveal d1">
+      最後，把三條路<em>放在同一張桌上</em>看
+    </h2>
+    <p class="sec-intro reveal d2">
+      沒有絕對最好的答案，只有最適合您現階段的選擇。下面這張對照表，幫助您快速判斷自己最在意的是「便宜」、「成長」、還是「穩定」。
+    </p>
+
+    <div class="compare-grid">
+      <!-- Term Life -->
+      <div class="compare-col reveal">
+        <div class="top-bar"></div>
+        <div class="label">Option · 1</div>
+        <h3>
+          維持現狀
+          <span class="en">Keep the Term Life</span>
+        </h3>
+        <div class="verdict">
+          純粹的保障，最直接、最便宜，但只進不出——保費一年比一年貴。
+        </div>
+
+        <div class="compare-rows">
+          <div class="compare-row">
+            <div class="cr-lbl">保費走勢</div>
+            <div class="cr-val">每年依年齡上漲，後期陡峭</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">資產累積</div>
+            <div class="cr-val">無——錢只用於保障</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">投資風險</div>
+            <div class="cr-val">無</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">繳費期限</div>
+            <div class="cr-val">需要保障多久就繳多久</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">流動性</div>
+            <div class="cr-val">無解約金</div>
+          </div>
+        </div>
+
+        <div class="who-fits">
+          <strong>適合：</strong>
+          僅需短期保障（如房貸期間）、預算非常有限，或已有完整投資與儲蓄組合的人。
+        </div>
+      </div>
+
+      <!-- Investment-Linked -->
+      <div class="compare-col invest reveal d1">
+        <div class="top-bar"></div>
+        <div class="label">Option · 2</div>
+        <h3>
+          投資型保單
+          <span class="en">Investment-Linked</span>
+        </h3>
+        <div class="verdict">
+          一張保單同時做兩件事——買保障，也讓資金進場投資成長。
+        </div>
+
+        <div class="compare-rows">
+          <div class="compare-row">
+            <div class="cr-lbl">保費走勢</div>
+            <div class="cr-val">目標保費固定，年繳金額一致</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">資產累積</div>
+            <div class="cr-val">有——帳戶價值隨投資績效成長</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">投資風險</div>
+            <div class="cr-val">中至高（依連結標的）</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">繳費期限</div>
+            <div class="cr-val">長期繳費，後期可以帳戶自繳</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">流動性</div>
+            <div class="cr-val">可部分提領帳戶價值</div>
+          </div>
+        </div>
+
+        <div class="who-fits">
+          <strong>適合：</strong>
+          能承受市場波動、希望保費「同時做事」、有 10 年以上長期規劃視野的人。
+        </div>
+      </div>
+
+      <!-- USD Policy -->
+      <div class="compare-col usd reveal d2">
+        <div class="top-bar"></div>
+        <div class="label">Option · 3</div>
+        <h3>
+          美金分紅保單
+          <span class="en">USD Dividend Policy</span>
+        </h3>
+        <div class="verdict">
+          穩定、可預期，限期繳費後的「終身資產」——適合不想看波動的客戶。
+        </div>
+
+        <div class="compare-rows">
+          <div class="compare-row">
+            <div class="cr-lbl">保費走勢</div>
+            <div class="cr-val">USD 固定金額繳 12 年後停繳</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">資產累積</div>
+            <div class="cr-val">有——年度分紅穩定累積</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">投資風險</div>
+            <div class="cr-val">低（含匯率風險）</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">繳費期限</div>
+            <div class="cr-val">12 年期滿即停繳，保障終身</div>
+          </div>
+          <div class="compare-row">
+            <div class="cr-lbl">流動性</div>
+            <div class="cr-val">可解約取回，亦可保單貸款</div>
+          </div>
+        </div>
+
+        <div class="who-fits">
+          <strong>適合：</strong>
+          偏好穩定、希望持有美元資產、想為退休或下一代預備一份「不用煩惱」的保單的人。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     CLOSING
+     ================================================ -->
+<section class="closing">
+  <div class="container">
+    <h2 class="reveal">
+      您不是來買保單的，<br>
+      您是來<em>規劃下半輩子</em>的。
+    </h2>
+    <p class="reveal d1">
+      每個人的家庭責任、現金流、風險偏好都不一樣。歡迎與我們約一次面談，把您手上的保單攤開，一起重新看一次——找出最適合您「現在這個階段」的組合。
+    </p>
+    <a href="#" class="cta reveal d2">
+      預約一對一保單健檢
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- ================================================
+     FOOTER
+     ================================================ -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h5>關於本篇</h5>
+      <p class="foot-disclaimer">
+        本網頁所引用之保費、報酬率、分紅與帳戶價值試算，皆為各保單建議書之示意性數據，僅供概念理解使用。投資型保單之投資報酬率（6%）為「假設」並非保證；美金分紅保單之分紅利率（4~5%）為非保證項目，依保險公司逐年宣告為準。實際保單之費率、條款、保障範圍與限制，請以各保險公司核准之契約內容為準。本資料不構成保險商品要約或銷售建議；如需就個人狀況進行規劃，請與您的合格壽險顧問面談。
+      </p>
+    </div>
+    <div>
+      <h5>系列文章</h5>
+      <ul>
+        <li>第 01 篇．什麼是定期壽險</li>
+        <li>第 02 篇．保額怎麼估才合理</li>
+        <li>第 03 篇．後期保費的選擇</li>
+        <li>第 04 篇．退休前後的保單檢視</li>
+      </ul>
+    </div>
+    <div>
+      <h5>聯繫我們</h5>
+      <ul>
+        <li>LINE · @129diduy</li>
+        <li>Instagram · @insurance_is_su</li>
+        <li>Threads · @insurance_is_su</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>保險白話文 · 部落格文章</span>
+    <span>© 2026 · 讓你保險買對不買貴</span>
+  </div>
+</footer>
+
+<!-- ================================================
+     SCRIPTS
+     ================================================ -->
+<script>
+/* =========================================================
+   完整費率表資料（image 1）
+   ========================================================= */
+const RATE_DATA = [
+  {age: 30, p: 3200},  {age: 31, p: 3600},  {age: 32, p: 3800},  {age: 33, p: 4000},
+  {age: 34, p: 4400},  {age: 35, p: 4800},  {age: 36, p: 5200},  {age: 37, p: 5600},
+  {age: 38, p: 6000},  {age: 39, p: 6400},
+  {age: 40, p: 7000},  {age: 41, p: 7600},  {age: 42, p: 8200},  {age: 43, p: 9000},
+  {age: 44, p: 9800},  {age: 45, p: 10600}, {age: 46, p: 11600}, {age: 47, p: 12600},
+  {age: 48, p: 13600}, {age: 49, p: 14800},
+  {age: 50, p: 16000}, {age: 51, p: 17200}, {age: 52, p: 18400}, {age: 53, p: 19800},
+  {age: 54, p: 21000}, {age: 55, p: 22400}, {age: 56, p: 24000}, {age: 57, p: 25800},
+  {age: 58, p: 28200}, {age: 59, p: 31200},
+];
+
+/* 渲染費率表格 */
+const grid = document.getElementById('rateGrid');
+RATE_DATA.forEach(r => {
+  const cell = document.createElement('div');
+  cell.className = 'rate-cell' + (r.age >= 55 ? ' peak' : '');
+  cell.innerHTML = `
+    <div class="a">${r.age} 歲</div>
+    <div class="v">${r.p.toLocaleString()}</div>
+  `;
+  grid.appendChild(cell);
+});
+
+/* =========================================================
+   Reveal-on-scroll
+   ========================================================= */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* =========================================================
+   Chart.js shared defaults
+   ========================================================= */
+Chart.defaults.font.family = "'Noto Sans TC', system-ui, sans-serif";
+Chart.defaults.color = '#4a4a44';
+
+/* =========================================================
+   Chart 1 - Term Life Premium (image 1)
+   ========================================================= */
+const ctx1 = document.getElementById('premiumChart').getContext('2d');
+const grad1 = ctx1.createLinearGradient(0, 0, 0, 380);
+grad1.addColorStop(0, 'rgba(168, 99, 45, 0.32)');
+grad1.addColorStop(1, 'rgba(168, 99, 45, 0.0)');
+
+new Chart(ctx1, {
+  type: 'line',
+  data: {
+    labels: RATE_DATA.map(r => r.age + '歲'),
+    datasets: [{
+      label: '年繳保費',
+      data: RATE_DATA.map(r => r.p),
+      borderColor: '#a8632d',
+      backgroundColor: grad1,
+      borderWidth: 2.5,
+      tension: 0.25,
+      fill: true,
+      pointBackgroundColor: '#faf6ed',
+      pointBorderColor: '#a8632d',
+      pointBorderWidth: 1.5,
+      pointRadius: 3,
+      pointHoverRadius: 7,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#14272a',
+        titleFont: { family: "'Noto Serif TC'", size: 14, weight: '700' },
+        bodyFont: { family: "'Noto Sans TC'", size: 13 },
+        padding: 12,
+        borderColor: '#a8632d',
+        borderWidth: 1,
+        callbacks: {
+          label: (c) => '年繳保費：NT$ ' + c.parsed.y.toLocaleString()
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: 'rgba(203,191,169,0.4)' },
+        ticks: { font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 10 }
+      },
+      y: {
+        grid: { color: 'rgba(203,191,169,0.4)' },
+        ticks: { font: { size: 11 }, callback: (v) => v === 0 ? '0' : 'NT$ ' + (v/1000) + 'K' }
+      }
+    },
+    interaction: { intersect: false, mode: 'index' },
+    animation: { duration: 1600, easing: 'easeOutQuart' }
+  }
+});
+
+/* =========================================================
+   Chart 2 - Investment-Linked (image 2)
+   數據：年度 1~10 的累積保費 vs 帳戶價值
+   ========================================================= */
+const investData = {
+  years: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  cumPremium: [60000, 120000, 180000, 240000, 300000, 360000, 420000, 480000, 540000, 600000],
+  accountValue: [18461, 56767, 103411, 152519, 204247, 284323, 369050, 458757, 560211, 687035],
+};
+
+const ctx2 = document.getElementById('investChart').getContext('2d');
+const grad2 = ctx2.createLinearGradient(0, 0, 0, 260);
+grad2.addColorStop(0, 'rgba(31, 58, 54, 0.30)');
+grad2.addColorStop(1, 'rgba(31, 58, 54, 0.0)');
+
+new Chart(ctx2, {
+  type: 'line',
+  data: {
+    labels: investData.years.map(y => '第' + y + '年'),
+    datasets: [
+      {
+        label: '帳戶價值',
+        data: investData.accountValue,
+        borderColor: '#1f3a36',
+        backgroundColor: grad2,
+        borderWidth: 2.5,
+        tension: 0.35,
+        fill: true,
+        pointBackgroundColor: '#faf6ed',
+        pointBorderColor: '#1f3a36',
+        pointBorderWidth: 1.5,
+        pointRadius: 3,
+        pointHoverRadius: 7,
+      },
+      {
+        label: '累積保費',
+        data: investData.cumPremium,
+        borderColor: '#a8632d',
+        backgroundColor: 'transparent',
+        borderWidth: 1.8,
+        borderDash: [5, 4],
+        tension: 0.05,
+        pointBackgroundColor: '#faf6ed',
+        pointBorderColor: '#a8632d',
+        pointBorderWidth: 1.5,
+        pointRadius: 2,
+        pointHoverRadius: 6,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+        align: 'end',
+        labels: { font: { size: 11 }, boxWidth: 10, boxHeight: 10, usePointStyle: true }
+      },
+      tooltip: {
+        backgroundColor: '#14272a',
+        titleFont: { family: "'Noto Serif TC'", weight: '700' },
+        padding: 12, borderColor: '#1f3a36', borderWidth: 1,
+        callbacks: { label: (c) => c.dataset.label + '：NT$ ' + c.parsed.y.toLocaleString() }
+      }
+    },
+    scales: {
+      x: { grid: { color: 'rgba(203,191,169,0.4)' }, ticks: { font: { size: 10 } } },
+      y: { grid: { color: 'rgba(203,191,169,0.4)' }, ticks: { font: { size: 10 }, callback: (v) => 'NT$ ' + (v/10000) + '萬' } }
+    },
+    interaction: { intersect: false, mode: 'index' },
+    animation: { duration: 1600, easing: 'easeOutQuart' }
+  }
+});
+
+/* =========================================================
+   Chart 3 - USD Policy (image 3)
+   壽險保障 + 解約金 over 19 years
+   ========================================================= */
+const usdData = {
+  years: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+  ages:  [42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+  insurance:  [2829,4040,6060,8080,10100,12119,14153,33857,38500,43301,48164,53229,54180,55145,56178,57557,58978,60411,61990],
+  surrender:  [303,1236,2190,3367,4696,6176,7818,17182,19864,22616,25418,28321,29376,30476,31647,32931,34283,35692,37112],
+};
+
+const ctx3 = document.getElementById('usdChart').getContext('2d');
+const grad3 = ctx3.createLinearGradient(0, 0, 0, 260);
+grad3.addColorStop(0, 'rgba(184, 137, 58, 0.32)');
+grad3.addColorStop(1, 'rgba(184, 137, 58, 0.0)');
+
+new Chart(ctx3, {
+  type: 'line',
+  data: {
+    labels: usdData.years.map((y, i) => '第' + y + '年 / ' + usdData.ages[i] + '歲'),
+    datasets: [
+      {
+        label: '壽險保障',
+        data: usdData.insurance,
+        borderColor: '#b8893a',
+        backgroundColor: grad3,
+        borderWidth: 2.5,
+        tension: 0.35,
+        fill: true,
+        pointBackgroundColor: '#faf6ed',
+        pointBorderColor: '#b8893a',
+        pointBorderWidth: 1.5,
+        pointRadius: 2.5,
+        pointHoverRadius: 7,
+      },
+      {
+        label: '解約金',
+        data: usdData.surrender,
+        borderColor: '#1f3a36',
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        borderDash: [5, 4],
+        tension: 0.35,
+        pointBackgroundColor: '#faf6ed',
+        pointBorderColor: '#1f3a36',
+        pointBorderWidth: 1.5,
+        pointRadius: 2.5,
+        pointHoverRadius: 6,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+        align: 'end',
+        labels: { font: { size: 11 }, boxWidth: 10, boxHeight: 10, usePointStyle: true }
+      },
+      tooltip: {
+        backgroundColor: '#14272a',
+        titleFont: { family: "'Noto Serif TC'", weight: '700' },
+        padding: 12, borderColor: '#b8893a', borderWidth: 1,
+        callbacks: { label: (c) => c.dataset.label + '：USD ' + c.parsed.y.toLocaleString() }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: 'rgba(203,191,169,0.4)' },
+        ticks: { font: { size: 9 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 6 }
+      },
+      y: {
+        grid: { color: 'rgba(203,191,169,0.4)' },
+        ticks: { font: { size: 10 }, callback: (v) => '$' + (v/1000) + 'K' }
+      }
+    },
+    interaction: { intersect: false, mode: 'index' },
+    animation: { duration: 1600, easing: 'easeOutQuart' }
+  }
+});
+</script>
+</body>
+</html>
