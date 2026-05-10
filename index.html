@@ -90,14 +90,13 @@
     letter-spacing: 0.08em;
   }
   .logo-mark{
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: var(--terracotta);
-    color: var(--paper);
+    width: 52px; height: 52px;
     display: flex; align-items: center; justify-content: center;
-    font-family: var(--display); font-style: italic;
-    font-weight: 600; font-size: 24px;
-    box-shadow: 0 2px 8px rgba(138,79,42,0.25);
+    flex-shrink: 0;
+  }
+  .logo-mark img{
+    width: 100%; height: 100%;
+    object-fit: contain;
   }
   .logo-text small{
     display: block;
@@ -498,24 +497,24 @@
   }
   .about-portrait{
     aspect-ratio: 4/5;
-    background: var(--terracotta);
+    background: var(--paper);
     position: relative;
     border: 1px solid rgba(245,239,228,0.15);
     box-shadow: 14px 14px 0 -4px transparent, 14px 14px 0 -3px rgba(245,239,228,0.2);
-    display: flex; align-items: center; justify-content: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
     overflow: hidden;
+    padding: 40px;
   }
-  .about-portrait .portrait-mark{
-    font-family: var(--display); font-style: italic;
-    font-size: 140px; font-weight: 600;
-    color: var(--paper); opacity: 0.9;
+  .about-portrait img{
+    width: 80%; max-width: 320px;
+    height: auto;
   }
   .about-portrait::after{
-    content: "保 險 白 話 文";
-    position: absolute; bottom: 24px;
+    content: "讓 你 保 險 買 對 不 買 貴";
+    position: absolute; bottom: 32px; left: 0; right: 0;
     font-family: var(--serif); font-weight: 500;
-    color: var(--paper); letter-spacing: 0.4em;
-    font-size: 14px;
+    color: var(--olive-deep); letter-spacing: 0.3em;
+    font-size: 13px; text-align: center;
   }
 
   .about-content p{
@@ -645,10 +644,12 @@
     gap: 50px;
   }
   .foot-brand .logo{ color: var(--paper); margin-bottom: 18px }
-  .foot-brand .logo-mark{
-    background: var(--terracotta);
-    box-shadow: 0 2px 8px rgba(138,79,42,0.4);
+  .foot-brand .logo .logo-mark{
+    background: var(--paper);
+    border-radius: 50%;
+    padding: 4px;
   }
+  .foot-brand .logo small{ color: rgba(245,239,228,0.55) !important }
   .foot-brand p{
     font-size: 13.5px; line-height: 1.85;
     color: rgba(245,239,228,0.65);
@@ -720,7 +721,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <div class="logo-mark">保</div>
+      <div class="logo-mark"><img src="logo.svg" alt="保險白話文 Logo"></div>
       <div class="logo-text">
         保險白話文
         <small>Insurance, in Plain Words.</small>
@@ -773,8 +774,8 @@
       </div>
       <div class="hero-card float">
         <div class="label">Specialty</div>
-        <div class="num">3</div>
-        <div class="desc">專注領域<br>新生兒・退休・資產規劃</div>
+        <div class="num">300<span style="font-size: 28px">+</span></div>
+        <div class="desc">協助新生兒<br>完成投保</div>
       </div>
     </div>
   </div>
@@ -947,12 +948,12 @@
 
     <div class="about-grid" style="margin-top: 50px">
       <div class="about-portrait reveal d1">
-        <div class="portrait-mark">保</div>
+        <img src="logo.svg" alt="保險白話文 Logo">
       </div>
 
       <div class="about-content reveal d2">
         <p>
-          您好，我是 <strong>保險白話文</strong>。執業中的保險經紀人，過去幾年陪伴超過上百個家庭，從新生兒第一張保單，到退休族的資產傳承，做的不是「賣商品」，而是「陪您做決定」。
+          您好，我是 <strong>保險白話文</strong>。執業中的保險經紀人，過去這些年陪伴超過 <strong>200 個家庭</strong>，協助 <strong>超過 300 位新生兒</strong> 完成投保——做的不只是「賣商品」，而是「陪您做決定」。
         </p>
         <p>
           市場上的保險商品太多、條款太複雜，讓很多人最後不是「買錯」就是「買貴」。我相信好的保險顧問，應該像家庭醫生一樣——先聽您的需求，再開最適合的處方，而不是反過來。
@@ -963,16 +964,16 @@
 
         <div class="about-stats">
           <div class="about-stat">
-            <div class="num">100<span style="font-size: 24px">+</span></div>
+            <div class="num">200<span style="font-size: 24px">+</span></div>
             <div class="lbl">服務家庭</div>
           </div>
           <div class="about-stat">
-            <div class="num">8<span style="font-size: 24px">年</span></div>
-            <div class="lbl">業界經驗</div>
+            <div class="num">300<span style="font-size: 24px">+</span></div>
+            <div class="lbl">新生兒投保</div>
           </div>
           <div class="about-stat">
-            <div class="num">3</div>
-            <div class="lbl">專業領域</div>
+            <div class="num">6<span style="font-size: 24px">年</span></div>
+            <div class="lbl">業界經驗</div>
           </div>
         </div>
 
@@ -1042,7 +1043,7 @@
   <div class="foot-grid">
     <div class="foot-brand">
       <a href="index.html" class="logo">
-        <div class="logo-mark">保</div>
+        <div class="logo-mark"><img src="logo.svg" alt="保險白話文 Logo"></div>
         <div class="logo-text">
           保險白話文
           <small>Insurance, in Plain Words.</small>
