@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>什麼是罐頭保單？醫生也在買的高 CP 值組合｜保險白話文</title>
+<meta name="description" content="罐頭保單不是吃的罐頭！由 PTT 醫生 Apin 發明的保單組合方式，找 2~3 家保險公司商品搭配，達到低保費高保障。本篇完整解析罐頭保單的由來、優勢、規劃觀念。">
+<meta name="keywords" content="罐頭保單,Apin醫生,保單規劃,定期險,低保費高保障,保大再保小,實支實付,高CP值保單">
+<meta property="og:title" content="什麼是罐頭保單？醫生也在買的高 CP 值組合">
+<meta property="og:description" content="罐頭保單由來、優勢、規劃 3 觀念，看懂連醫生自己也在買的保險組合方式。">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f5efe4; --bg-2: #ebe2d2; --paper: #faf6ed;
+    --ink: #1a1f1d; --ink-soft: #4a4a44; --ink-mute: #7a766c;
+    --line: #cbbfa9; --line-soft: #d9cfb9;
+    --terracotta: #b56b3d; --terracotta-deep: #8a4f2a; --terracotta-light: #d18b5a;
+    --olive: #6b6240; --olive-deep: #4a4530; --cream: #e8d9b8;
+    --gold: #b8893a; --teal: #4a7a6a; --burgundy: #7a3535; --rose: #c97d6f;
+    --serif: "Noto Serif TC", "Cormorant Garamond", serif;
+    --sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+    --display: "Cormorant Garamond", "Noto Serif TC", serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior: smooth}
+  html,body{margin:0;padding:0}
+  body{
+    background: var(--bg); color: var(--ink);
+    font-family: var(--sans); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    background-image: radial-gradient(ellipse at 8% 0%, rgba(184,137,58,0.08), transparent 50%),
+      radial-gradient(ellipse at 92% 100%, rgba(181,107,61,0.06), transparent 60%);
+  }
+  body::before{
+    content:""; position: fixed; inset: 0; pointer-events: none;
+    opacity: 0.30; mix-blend-mode: multiply; z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  a{color: inherit; text-decoration: none}
+
+  .topbar{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245,239,228,0.94);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    padding: 14px 6vw;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--sans); font-size: 12px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .brand{ display: flex; flex-direction: column; gap: 2px; }
+  .brand a{
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--serif); font-weight: 700;
+    font-size: 18px; letter-spacing: 0.06em;
+    color: var(--terracotta-deep); text-transform: none;
+  }
+  .brand a img{ width: 36px; height: 36px; object-fit: contain; }
+  .brand small{
+    font-style: italic; font-family: var(--display);
+    font-size: 12px; letter-spacing: 0.05em;
+    color: var(--ink-mute); text-transform: none; margin-left: 46px;
+  }
+  .topmeta{ display: flex; gap: 28px; align-items: center; }
+  .topmeta a{ color: var(--terracotta); font-weight: 500 }
+  .topmeta span:not(:last-child)::after{ content: "·"; margin-left: 28px; color: var(--line); }
+
+  .hero{
+    position: relative; z-index: 2;
+    padding: 80px 6vw 70px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-grid{
+    max-width: 1300px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.4fr 1fr;
+    gap: 70px; align-items: end;
+  }
+  .hero-eyebrow{
+    font-family: var(--display); font-style: italic;
+    font-size: 22px; color: var(--gold);
+    margin-bottom: 22px; letter-spacing: 0.02em;
+  }
+  .hero-eyebrow .num{
+    font-feature-settings: "lnum"; font-weight: 600;
+    border: 1px solid var(--gold);
+    padding: 2px 10px; border-radius: 999px;
+    font-size: 12px; margin-right: 12px;
+    font-style: normal; letter-spacing: 0.15em;
+  }
+  h1.hero-title{
+    font-family: var(--serif); font-weight: 900;
+    font-size: clamp(38px, 5.6vw, 76px);
+    line-height: 1.1; letter-spacing: -0.01em;
+    margin: 0 0 28px; color: var(--olive-deep);
+  }
+  h1.hero-title .accent{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; color: var(--gold);
+  }
+  h1.hero-title .underline{
+    background-image: linear-gradient(transparent 78%, rgba(184,137,58,0.42) 78%, rgba(184,137,58,0.42) 92%, transparent 92%);
+  }
+  .hero-lead{
+    font-family: var(--serif); font-size: 18px;
+    line-height: 1.85; color: var(--ink-soft);
+    max-width: 540px;
+    border-left: 2px solid var(--gold); padding-left: 22px;
+  }
+  .hero-lead .drop{
+    font-family: var(--display); font-size: 56px;
+    line-height: 0.9; float: left;
+    margin: 8px 10px -4px 0;
+    color: var(--gold); font-weight: 600;
+  }
+  .hero-aside{
+    position: relative;
+    padding: 36px 36px 30px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 14px 14px 0 -4px var(--bg-2), 14px 14px 0 -3px var(--line);
+  }
+  .hero-aside::before{
+    content: "本文導覽"; position: absolute;
+    top: -12px; left: 28px; background: var(--bg);
+    padding: 0 12px;
+    font-family: var(--display); font-style: italic;
+    color: var(--gold); font-size: 18px;
+  }
+  .hero-aside h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 15px; margin: 8px 0 18px;
+    color: var(--olive-deep); letter-spacing: 0.04em;
+  }
+  .hero-aside ol{ list-style: none; padding: 0; margin: 0; counter-reset: aside; }
+  .hero-aside li{
+    counter-increment: aside;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    font-size: 14px; color: var(--ink-soft);
+    display: grid; grid-template-columns: 30px 1fr;
+    gap: 14px; align-items: center;
+  }
+  .hero-aside li:last-child{ border-bottom: none; padding-bottom: 4px }
+  .hero-aside li::before{
+    content: counter(aside, decimal-leading-zero);
+    font-family: var(--display); font-weight: 600;
+    color: var(--gold); font-size: 17px;
+  }
+  .hero-aside li a{ color: inherit; transition: color .2s }
+  .hero-aside li:hover a{ color: var(--gold) }
+
+  /* Origin section */
+  .origin-section{
+    padding: 90px 6vw;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(135deg, rgba(184,137,58,0.05), rgba(184,137,58,0.02));
+    position: relative; z-index: 2;
+  }
+  .origin-grid{
+    max-width: 1300px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 60px; align-items: center;
+  }
+  .origin-icon{
+    aspect-ratio: 1/1;
+    max-width: 380px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 14px 14px 0 -4px var(--bg-2), 14px 14px 0 -3px var(--line);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    padding: 40px;
+  }
+  .origin-icon::before{
+    content: ""; position: absolute;
+    inset: 20px;
+    border: 1px dashed var(--gold);
+  }
+  .origin-icon .can{
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 14px;
+  }
+  .origin-icon .can-img{
+    font-size: 100px;
+    line-height: 1;
+  }
+  .origin-icon .can-label{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 20px; color: var(--olive-deep);
+    letter-spacing: 0.1em;
+  }
+  .origin-icon .can-sublabel{
+    font-family: var(--display); font-style: italic;
+    font-size: 14px; color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+
+  .origin-text h2{
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1.25; letter-spacing: -0.01em;
+    margin: 0 0 24px; color: var(--olive-deep);
+  }
+  .origin-text h2 em{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; color: var(--gold);
+  }
+  .origin-text p{
+    font-family: var(--serif); font-size: 17px;
+    line-height: 1.95; color: var(--ink-soft);
+    margin: 0 0 22px;
+  }
+  .origin-text p strong{
+    color: var(--olive-deep); font-weight: 700;
+    background-image: linear-gradient(transparent 75%, rgba(184,137,58,0.35) 75%);
+    padding: 0 2px;
+  }
+  .origin-text .author-tag{
+    display: inline-flex; align-items: center; gap: 10px;
+    margin-top: 8px;
+    padding: 8px 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    font-family: var(--display); font-style: italic;
+    color: var(--olive-deep);
+    font-size: 14px;
+  }
+  .origin-text .author-tag strong{
+    background: none; padding: 0;
+    color: var(--gold); font-weight: 700;
+  }
+
+  section{
+    position: relative; z-index: 2;
+    padding: 90px 6vw;
+    border-bottom: 1px solid var(--line);
+  }
+  .container{ max-width: 1300px; margin: 0 auto }
+  .sec-eyebrow{
+    display: flex; align-items: center; gap: 18px;
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 24px; font-weight: 500;
+  }
+  .sec-eyebrow::before{ content: ""; width: 50px; height: 1px; background: var(--terracotta); }
+  h2.sec-title{
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(30px, 3.8vw, 48px);
+    line-height: 1.18; letter-spacing: -0.01em;
+    margin: 0 0 22px; color: var(--olive-deep);
+    max-width: 880px;
+  }
+  h2.sec-title em{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; color: var(--terracotta);
+  }
+  .sec-lead{
+    font-family: var(--serif); font-size: 17px;
+    line-height: 1.85; color: var(--ink-soft);
+    max-width: 760px; margin: 0 0 50px;
+  }
+
+  /* Example AB comparison */
+  .example-section{
+    background: var(--bg);
+  }
+  .ab-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 40px 0;
+  }
+  .ab-card{
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 30px 32px;
+    transition: all .35s;
+  }
+  .ab-card:hover{ transform: translateY(-4px); box-shadow: 0 14px 30px rgba(184,137,58,0.12); }
+  .ab-card .head{
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .ab-card .head .letter{
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; font-size: 26px;
+  }
+  .ab-card.b .head .letter{ background: var(--teal); }
+  .ab-card .head h4{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 19px; margin: 0;
+    color: var(--olive-deep);
+  }
+  .ab-card .head h4 .sub{
+    display: block;
+    font-family: var(--display); font-style: italic;
+    font-size: 13px; color: var(--ink-mute);
+    margin-top: 2px;
+    letter-spacing: 0.05em;
+  }
+  .ab-card .feat-list{ list-style: none; padding: 0; margin: 0; }
+  .ab-card .feat-list li{
+    padding: 12px 0;
+    border-top: 1px dashed var(--line-soft);
+    font-size: 14.5px; color: var(--ink-soft);
+    line-height: 1.65;
+    display: grid; grid-template-columns: 90px 1fr;
+    gap: 14px; align-items: start;
+  }
+  .ab-card .feat-list li:first-child{ border-top: none; padding-top: 0 }
+  .ab-card .feat-list li .name{
+    font-family: var(--serif); font-weight: 700;
+    color: var(--olive-deep); font-size: 14px;
+  }
+  .ab-card .feat-list li .desc{
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+  .ab-card .feat-list li.pos .desc{ color: var(--teal); font-weight: 500; }
+  .ab-card .feat-list li.neg .desc{ color: var(--burgundy); font-weight: 500; }
+
+  /* Combined arrow */
+  .combine-arrow{
+    text-align: center;
+    margin: 40px 0;
+  }
+  .combine-arrow .arrow{
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 14px 32px;
+    background: var(--gold); color: var(--paper);
+    border-radius: 999px;
+    font-family: var(--serif); font-weight: 700;
+    font-size: 16px; letter-spacing: 0.05em;
+  }
+  .combine-arrow .arrow svg{ width: 20px; height: 20px; }
+
+  .combined-card{
+    background: linear-gradient(135deg, rgba(184,137,58,0.1), rgba(74,122,106,0.06));
+    border: 2px solid var(--gold);
+    padding: 32px 36px;
+  }
+  .combined-card h4{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 20px; margin: 0 0 16px;
+    color: var(--olive-deep);
+    text-align: center;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--gold);
+  }
+  .combined-card .combined-list{
+    list-style: none; padding: 0; margin: 0;
+  }
+  .combined-card .combined-list li{
+    padding: 12px 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    display: grid; grid-template-columns: 24px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .combined-card .combined-list li::before{
+    content: "✓";
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .combined-card .combined-list strong{
+    color: var(--olive-deep); font-weight: 700;
+  }
+  .combined-card .conclusion{
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--gold);
+    font-family: var(--display); font-style: italic;
+    text-align: center;
+    color: var(--olive-deep);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* Tip box */
+  .tip-box{
+    background: rgba(74,122,106,0.07);
+    border-left: 3px solid var(--teal);
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    display: grid; grid-template-columns: 24px 1fr; gap: 14px;
+    align-items: start;
+  }
+  .tip-box::before{ content: "💡"; font-size: 16px; margin-top: -1px; }
+  .tip-box strong{ display: inline; color: var(--olive-deep); font-weight: 700; }
+  .tip-box a{
+    color: var(--terracotta);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  /* Concept section (3 principles) */
+  .concept-section{
+    background: var(--bg);
+  }
+  .concept-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .concept-card{
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+    padding: 32px 30px 30px;
+    transition: all .35s;
+  }
+  .concept-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgba(184,137,58,0.15);
+  }
+  .concept-card .num{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; font-size: 48px;
+    color: var(--gold); line-height: 1;
+    margin-bottom: 14px;
+  }
+  .concept-card h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 20px; margin: 0 0 14px;
+    color: var(--olive-deep);
+    line-height: 1.4;
+  }
+  .concept-card p{
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .concept-card p strong{
+    color: var(--olive-deep); font-weight: 700;
+    background-image: linear-gradient(transparent 75%, rgba(184,137,58,0.32) 75%);
+    padding: 0 2px;
+  }
+  .concept-card .premium-tag{
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 14px;
+    background: var(--bg);
+    border-left: 3px solid var(--gold);
+    font-family: var(--serif);
+    font-size: 13.5px;
+    color: var(--olive-deep);
+    line-height: 1.6;
+  }
+  .concept-card .premium-tag strong{
+    color: var(--gold); font-weight: 700;
+    background: none; padding: 0;
+  }
+
+  /* Coverage list (final section) */
+  .coverage-section{
+    background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+  }
+  .coverage-list{
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 14px 14px 0 -4px var(--bg-2), 14px 14px 0 -3px var(--line);
+    padding: 36px 40px;
+    margin-top: 40px;
+  }
+  .coverage-list h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 22px; margin: 0 0 20px;
+    color: var(--olive-deep);
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .coverage-list ul{
+    list-style: none; padding: 0; margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 28px;
+  }
+  .coverage-list li{
+    padding: 12px 0;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    display: grid; grid-template-columns: 28px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  .coverage-list li::before{
+    content: "✓";
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .coverage-list li strong{
+    display: block;
+    color: var(--olive-deep);
+    font-weight: 700;
+    font-family: var(--serif);
+    margin-bottom: 2px;
+  }
+
+  /* Pull quote */
+  .pullquote{
+    padding: 110px 6vw;
+    text-align: center;
+    background: linear-gradient(180deg, var(--olive-deep), var(--olive));
+    color: var(--cream);
+    border-bottom: 1px solid var(--olive-deep);
+    position: relative; z-index: 2;
+  }
+  .pullquote .marks{
+    font-family: var(--display); font-size: 96px;
+    line-height: 0.5; color: var(--terracotta-light);
+    margin-bottom: 24px; opacity: 0.85;
+  }
+  .pullquote blockquote{
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(22px, 2.8vw, 34px);
+    line-height: 1.5; margin: 0 auto;
+    max-width: 920px; color: var(--paper);
+  }
+  .pullquote blockquote em{
+    font-family: var(--display); font-style: italic;
+    color: var(--terracotta-light); font-weight: 600;
+  }
+  .pullquote cite{
+    display: block; margin-top: 32px;
+    font-family: var(--display); font-style: italic;
+    font-size: 16px; color: rgba(245,239,228,0.7);
+    letter-spacing: 0.05em;
+  }
+  .pullquote cite::before{ content: "—"; margin-right: 8px }
+
+  /* Closing */
+  .closing{
+    padding: 100px 6vw;
+    text-align: center;
+    background: var(--paper);
+    position: relative; z-index: 2;
+  }
+  .closing h2{
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(30px, 3.6vw, 44px);
+    line-height: 1.25; color: var(--olive-deep);
+    max-width: 760px; margin: 0 auto 18px;
+  }
+  .closing h2 em{
+    font-family: var(--display); font-style: italic;
+    font-weight: 600; color: var(--terracotta);
+  }
+  .closing p{
+    font-family: var(--serif); font-size: 17px;
+    line-height: 1.85; color: var(--ink-soft);
+    max-width: 620px; margin: 0 auto 36px;
+  }
+  .closing-cta{
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 36px;
+    background: var(--terracotta); color: var(--paper);
+    font-family: var(--serif); font-weight: 600;
+    font-size: 16px; letter-spacing: 0.04em;
+    border-radius: 999px;
+    transition: all .3s;
+  }
+  .closing-cta:hover{
+    background: var(--terracotta-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(138,79,42,0.25);
+  }
+  .closing-cta svg{ width: 18px; height: 18px }
+
+  footer{
+    position: relative; z-index: 2;
+    padding: 60px 6vw 36px;
+    background: var(--olive-deep);
+    color: rgba(245,239,228,0.75);
+  }
+  .foot-grid{
+    max-width: 1300px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+  }
+  .foot-grid h5{
+    font-family: var(--display); font-style: italic;
+    font-size: 16px; color: var(--terracotta-light);
+    margin: 0 0 16px; font-weight: 500;
+  }
+  .foot-disclaimer{ font-size: 12px; line-height: 1.85; color: rgba(245,239,228,0.6); }
+  .foot-grid ul{ list-style: none; padding: 0; margin: 0; font-size: 13px }
+  .foot-grid li{ padding: 5px 0 }
+  .foot-grid a{ color: rgba(245,239,228,0.7); transition: color .2s }
+  .foot-grid a:hover{ color: var(--paper) }
+  .foot-bottom{
+    max-width: 1300px; margin: 36px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(245,239,228,0.12);
+    display: flex; justify-content: space-between;
+    font-family: var(--display); font-style: italic;
+    font-size: 13px; color: rgba(245,239,228,0.5);
+  }
+
+  .reveal{
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 1.0s cubic-bezier(.2,.7,.2,1), transform 1.0s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in{ opacity: 1; transform: none }
+  .reveal.d1{ transition-delay: .1s }
+  .reveal.d2{ transition-delay: .25s }
+  .reveal.d3{ transition-delay: .4s }
+
+  @media (max-width: 980px){
+    .hero-grid, .origin-grid{ grid-template-columns: 1fr; gap: 40px }
+    .ab-grid{ grid-template-columns: 1fr; gap: 16px }
+    .concept-grid{ grid-template-columns: 1fr; gap: 18px }
+    .coverage-list ul{ grid-template-columns: 1fr; gap: 10px }
+    .foot-grid{ grid-template-columns: 1fr; gap: 36px }
+    .foot-bottom{ flex-direction: column; gap: 8px }
+    .topmeta{ display: none }
+    section, .hero, .pullquote, .closing, .origin-section{
+      padding-left: 5vw; padding-right: 5vw;
+    }
+    .pullquote{ padding-top: 70px; padding-bottom: 70px }
+    .origin-icon{ max-width: 280px; }
+    .origin-icon .can-img{ font-size: 80px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <a href="../index.html">
+      <img src="../logo.svg" alt="保險白話文 Logo">
+      <span>保險白話文</span>
+    </a>
+    <small>讓你保險買對不買貴</small>
+  </div>
+  <div class="topmeta">
+    <span><a href="../index.html">← 返回首頁</a></span>
+    <span>罐頭保單</span>
+    <span>閱讀時間 約 7 分鐘</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow reveal">
+        <span class="num">高 CP 值組合</span>連醫生也在買
+      </div>
+      <h1 class="hero-title reveal d1">
+        什麼是<span class="accent">罐頭保單</span>？<br>
+        <span class="underline">不是吃的罐頭</span>，<br>
+        是醫生發明的高 CP 值組合
+      </h1>
+      <p class="hero-lead reveal d2">
+        <span class="drop">很</span>多人沒聽過罐頭保單，甚至以為是吃的罐頭。其實罐頭保單是<strong>由 PTT 上一位醫生 Apin 為了幫小孩買保險而設計的保單組合方式</strong>——找 2~3 家保險公司商品搭配，達到「低保費、高保障、高 CP 值」。連醫生自己也是買這樣的組合。
+      </p>
+    </div>
+
+    <aside class="hero-aside reveal d2">
+      <h3>本文導覽</h3>
+      <ol>
+        <li><a href="#origin">罐頭保單的由來</a></li>
+        <li><a href="#example">A+B 組合實例</a></li>
+        <li><a href="#advantage">罐頭保單的核心優勢</a></li>
+        <li><a href="#concept">3 個規劃觀念</a></li>
+        <li><a href="#coverage">完整保障清單</a></li>
+      </ol>
+    </aside>
+  </div>
+</header>
+
+<!-- Origin section -->
+<section class="origin-section" id="origin">
+  <div class="origin-grid">
+    <div class="origin-icon reveal">
+      <div class="can">
+        <div class="can-img">🥫</div>
+        <div class="can-label">罐 頭 保 單</div>
+        <div class="can-sublabel">High CP Value Plan</div>
+      </div>
+    </div>
+    <div class="origin-text reveal d1">
+      <h2>由 <em>PTT 醫生 Apin</em> 開創的<br>保單組合方式</h2>
+      <p>
+        罐頭保單的由來，是早期在 <strong>PTT 保險版</strong> 上，有一位暱稱為 <strong>Apin 的醫生</strong>，為了幫自己的小孩買保險，自行搭配各家保險商品。
+      </p>
+      <p>
+        他<strong>以「一年期定期險」為主</strong>，找尋 2~3 家保險公司的商品去搭配，規劃出高 CP 值的保險組合——類似罐頭似用組合的方式規劃，這樣可以使保費便宜、保障高。
+      </p>
+      <div class="author-tag">
+        🧑‍⚕️ Created by <strong>Dr. Apin</strong> · PTT 保險版
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Example A+B -->
+<section class="example-section" id="example">
+  <div class="container">
+    <div class="sec-eyebrow reveal">
+      <span style="font-family: var(--display); font-style: italic; font-size: 18px; text-transform: none; color: var(--olive-deep)">實際舉例</span>A 公司 + B 公司
+    </div>
+    <h2 class="sec-title reveal d1">
+      用一個例子，<em>看懂罐頭保單怎麼搭配</em>
+    </h2>
+    <p class="sec-lead reveal d2">
+      想要 A 公司的重大傷病、也想要 B 公司的實支實付與意外險——找一個保經公司業務員，<strong style="color: var(--olive-deep)">同時投保兩家公司的優勢商品</strong>。同樣的保費，但理賠權益最大化。
+    </p>
+
+    <div class="ab-grid">
+      <!-- A 公司 -->
+      <div class="ab-card reveal d1">
+        <div class="head">
+          <div class="letter">A</div>
+          <h4>A 保險公司
+            <span class="sub">Insurance Company A</span>
+          </h4>
+        </div>
+        <ul class="feat-list">
+          <li class="pos">
+            <div class="name">重大傷病</div>
+            <div class="desc">✓ 無慢性精神疾病打折理賠（優勢）</div>
+          </li>
+          <li class="neg">
+            <div class="name">實支實付</div>
+            <div class="desc">✕ 無保證續保條款</div>
+          </li>
+          <li class="neg">
+            <div class="name">意外險</div>
+            <div class="desc">✕ 保費貴</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- B 公司 -->
+      <div class="ab-card b reveal d2">
+        <div class="head">
+          <div class="letter">B</div>
+          <h4>B 保險公司
+            <span class="sub">Insurance Company B</span>
+          </h4>
+        </div>
+        <ul class="feat-list">
+          <li class="neg">
+            <div class="name">重大傷病</div>
+            <div class="desc">✕ 有慢性精神病打折理賠</div>
+          </li>
+          <li class="pos">
+            <div class="name">實支實付</div>
+            <div class="desc">✓ 有保證續保條款（優勢）</div>
+          </li>
+          <li class="pos">
+            <div class="name">意外險</div>
+            <div class="desc">✓ 保費便宜（優勢）</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="combine-arrow">
+      <div class="arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        最佳組合搭配
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+
+    <div class="combined-card reveal">
+      <h4>找一位保經公司業務員，同時投保</h4>
+      <ul class="combined-list">
+        <li><div><strong>A 公司</strong>的重大傷病（沒有慢性精神疾病打折）</div></li>
+        <li><div><strong>B 公司</strong>的實支實付（有保證續保條款）</div></li>
+        <li><div><strong>B 公司</strong>的意外險（保費便宜）</div></li>
+      </ul>
+      <p class="conclusion">
+        這樣搭配下，保費一樣，<br>
+        但<strong style="font-style: normal; color: var(--gold); font-family: var(--serif);">客戶的理賠權益呈現最好的</strong>狀態。
+      </p>
+    </div>
+
+    <div class="tip-box">
+      <div>
+        <strong>有人擔心：</strong>未來要理賠時要找兩家保險公司業務員，會不會很麻煩？<br>
+        <strong>其實不會！</strong>找一位<strong>保經公司業務員</strong>就可以一次處理多家保險公司的事——
+        <a href="broker-vs-insurance-company.html">請閱讀：保險公司與保經公司差異</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Advantage -->
+<section id="advantage">
+  <div class="container">
+    <div class="sec-eyebrow reveal">
+      <span style="font-family: var(--display); font-style: italic; font-size: 18px; text-transform: none; color: var(--olive-deep)">核心優勢</span>低保費．高保障．高 CP 值
+    </div>
+    <h2 class="sec-title reveal d1">
+      為什麼罐頭保單是<em>現在的投保趨勢</em>？
+    </h2>
+    <p class="sec-lead reveal d2">
+      以前大多數人投保的經驗，都是「找單一家公司就把保險買完」。但<strong style="color: var(--olive-deep)">現在的保險環境與以前大不相同</strong>——商品推陳出新、各家有各家的強弱項。罐頭保單因應這種變化，成為現在的投保主流。
+    </p>
+
+    <div style="background: var(--paper); border: 1px solid var(--line); padding: 36px 40px; margin-top: 40px; box-shadow: 14px 14px 0 -4px var(--bg-2), 14px 14px 0 -3px var(--line);" class="reveal d1">
+      <p style="font-family: var(--serif); font-size: 18px; line-height: 1.95; color: var(--ink-soft); margin: 0 0 18px;">
+        罐頭保單最大的特色是——<strong style="color: var(--olive-deep); background-image: linear-gradient(transparent 75%, rgba(184,137,58,0.35) 75%); padding: 0 2px;">隨著各家保險公司商品的推陳出新，保單組合也可以跟著調整</strong>。
+      </p>
+      <p style="font-family: var(--serif); font-size: 18px; line-height: 1.95; color: var(--ink-soft); margin: 0;">
+        <strong style="color: var(--olive-deep); font-weight: 700;">低保費、高保障、高 CP 值</strong>——這就是罐頭保單的核心。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 Concepts -->
+<section class="concept-section" id="concept">
+  <div class="container">
+    <div class="sec-eyebrow reveal">
+      <span style="font-family: var(--display); font-style: italic; font-size: 18px; text-transform: none; color: var(--olive-deep)">規劃觀念</span>3 個核心心法
+    </div>
+    <h2 class="sec-title reveal d1">
+      規劃罐頭保單的<em>3 個核心觀念</em>
+    </h2>
+    <p class="sec-lead reveal d2">
+      這 3 個觀念是規劃罐頭保單的核心邏輯。理解之後，您就會明白為什麼業務員會這樣建議——這不是隨便組合，是有完整思考的。
+    </p>
+
+    <div class="concept-grid">
+      <div class="concept-card reveal d1">
+        <div class="num">01</div>
+        <h3>定期險為主</h3>
+        <p>
+          新生兒一年約 <strong>2 萬保費</strong>，成人一年約 <strong>3 萬保費</strong>（30 歲為例），即可規劃得非常完整。<strong>把錢花在刀口上</strong>，賺錢不易。
+        </p>
+        <div class="premium-tag">
+          <strong>新生兒</strong> · 約 NT$ 20,000 / 年<br>
+          <strong>成人 30 歲</strong> · 約 NT$ 30,000 / 年
+        </div>
+        <p style="margin-top: 16px;">
+          相同預算下，若規劃終身險，<strong>可能光一個險種就超出預算</strong>，導致其他保障出現缺口。
+        </p>
+      </div>
+
+      <div class="concept-card reveal d2">
+        <div class="num">02</div>
+        <h3>保大再保小，保近再保遠</h3>
+        <p>
+          <strong>優先規劃大風險的保障</strong>，例如：數萬元的自費藥品、材料費用、手術費用、癌症及重大傷病等等。
+        </p>
+        <p style="margin-top: 14px;">
+          這些都是一旦發生會造成<strong>龐大且長期的醫療費用負擔</strong>。買保險的目的，是要解決支出醫療費用的風險——所以該優先把這些「會傷筋動骨」的風險解決。
+        </p>
+      </div>
+
+      <div class="concept-card reveal d3">
+        <div class="num">03</div>
+        <h3>把醫療環境需要的保障買足</h3>
+        <p>
+          現代醫療環境需要的保障，罐頭保單可以一次具備：
+        </p>
+        <p style="margin-top: 14px;">
+          <strong>醫療險實支實付</strong>、<strong>意外實支實付</strong>（含意外失能）、<strong>癌症險</strong>、<strong>重大傷病險</strong>、<strong>失能險</strong>——這些都能在罐頭保單裡一次完成，不漏掉任何一個關鍵保障。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coverage list -->
+<section class="coverage-section" id="coverage">
+  <div class="container">
+    <div class="sec-eyebrow reveal">
+      <span style="font-family: var(--display); font-style: italic; font-size: 18px; text-transform: none; color: var(--olive-deep)">完整保障</span>罐頭保單涵蓋範圍
+    </div>
+    <h2 class="sec-title reveal d1">
+      完整罐頭保單<em>應具備的保障</em>
+    </h2>
+    <p class="sec-lead reveal d2">
+      下面是一份完整罐頭保單應該涵蓋的險種清單。罐頭保單會根據每位保戶的需求及預算不同，請業務員幫您客製調整。
+    </p>
+
+    <div class="coverage-list reveal d1">
+      <h3>🥫 完整罐頭保單應有的險種</h3>
+      <ul>
+        <li><div><strong>醫療險實支實付</strong>負擔住院、手術、自費醫材費用</div></li>
+        <li><div><strong>意外實支實付</strong>意外受傷就醫，花多少賠多少</div></li>
+        <li><div><strong>意外失能</strong>意外造成的失能，依等級理賠</div></li>
+        <li><div><strong>癌症險</strong>確診癌症一次給付高保額</div></li>
+        <li><div><strong>重大傷病險</strong>300+ 項疾病保障，一次給付</div></li>
+        <li><div><strong>失能險</strong>長期失能狀況的長期照護保障</div></li>
+      </ul>
+    </div>
+
+    <div class="tip-box" style="margin-top: 30px;">
+      <div>
+        <strong>客製化提醒：</strong>罐頭保單不是「一個固定的方案」，而是<strong>根據您的需求與預算靈活調整的組合</strong>。請您的業務員幫您設計符合您狀況的罐頭保單——這才是真正適合您的方案。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pullquote">
+  <div class="marks">&ldquo;</div>
+  <blockquote>
+    罐頭保單不是<em>一個商品</em>，<br>
+    而是一種<em>規劃思維</em>——<br>
+    用 2~3 家保險公司的優勢，組合出最適合您的保障。
+  </blockquote>
+  <cite>給每位想用最聰明方式買保險的客戶</cite>
+</section>
+
+<section class="closing">
+  <div class="container">
+    <h2 class="reveal">想為自己或家人，<em>規劃一份罐頭保單嗎</em>？</h2>
+    <p class="reveal d1">
+      罐頭保單需要熟悉各家保險公司商品的業務員幫您挑選。我服務於保經公司，可以從多家商品中幫您組合出最適合的方案。歡迎透過 LINE 與我聊聊，幫您客製化專屬的罐頭保單。
+    </p>
+    <a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="closing-cta reveal d2">
+      LINE 預約客製化罐頭保單
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h5>關於本文</h5>
+      <p class="foot-disclaimer">
+        本文所述罐頭保單概念為一般性保險規劃觀念說明，實際保單組合需根據個人需求、預算、健康狀況等因素客製化。文中提及之 A 公司、B 公司舉例為說明用途，非指特定保險公司商品。本文不構成保險商品要約或銷售建議。撰文：保險白話文，服務於保經公司之保險全方位規劃師。
+      </p>
+    </div>
+    <div>
+      <h5>延伸閱讀</h5>
+      <ul>
+        <li><a href="broker-vs-insurance-company.html">保險公司與保經公司差異</a></li>
+        <li><a href="insurance-products-guide.html">保險商品 7 大險種解析</a></li>
+        <li><a href="adult-insurance-planning.html">成人保險規劃完整指南</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>聯繫我們</h5>
+      <ul>
+        <li>LINE · @129diduy</li>
+        <li>Instagram · @insurance_is_su</li>
+        <li>Threads · @insurance_is_su</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>保險白話文 · 部落格文章</span>
+    <span>© 2026 · 讓你保險買對不買貴</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
