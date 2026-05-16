@@ -1,4 +1,6 @@
+# 保險白話文 robots.txt
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+# 網站地圖位置
+Sitemap: https://insurance-website-one.vercel.app/sitemap.xml
