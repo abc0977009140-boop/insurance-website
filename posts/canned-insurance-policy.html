@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #ffffff; --bg-2: #fafaf8; --paper: #fafaf8;
+    --bg: #ffffff; --bg-2: #ffffff; --paper: #ffffff;
     --ink: #1a1f1d; --ink-soft: #4a4a44; --ink-mute: #7a766c;
     --line: #cbbfa9; --line-soft: #d9cfb9;
     --terracotta: #b56b3d; --terracotta-deep: #8a4f2a; --terracotta-light: #d18b5a;
@@ -893,14 +893,14 @@
     .nav-title{ font-size: 16px !important; }
     .nav-brand small{ display: none !important; }
 
-    /* 黑色遮罩 */
+    /* 半透明遮罩(不模糊、不擋選單點擊) */
     body.menu-open::after{
       content: "" !important;
       position: fixed !important;
       inset: 0 !important;
-      background: rgba(0,0,0,0.4) !important;
+      background: rgba(0,0,0,0.35) !important;
       z-index: 9998 !important;
-      backdrop-filter: blur(2px) !important;
+      pointer-events: none !important;
     }
 
     /* === 抽屜：從左滑入，覆蓋整個 viewport 高度 === */
@@ -1082,6 +1082,122 @@
     .priority-header p, .belief-card .quote,
     .combo-item .text{ font-size: 15.5px !important; }
     .closing p{ font-size: 16.5px !important; }
+  }
+
+  /* hl-red */
+  .hl{ color: #b02b2b; font-weight: 700; }
+  strong.hl, .hl strong{ color: #b02b2b; }
+  /* === 重點字統一紅色 === */
+  .article strong,
+  .post-body strong,
+  .content strong,
+  article strong,
+  .sec-lead strong,
+  .intro-section strong,
+  .info-block strong,
+  p strong{
+    color: #b02b2b !important;
+    font-weight: 700;
+  }
+  /* 深色底區塊內的 strong 維持淺色(避免看不清) */
+  .dark-callout strong,
+  .case-bigcost strong,
+  .case-warning strong,
+  .stat-mega strong,
+  [class*="dark"] strong,
+  [style*="background: var(--ink)"] strong,
+  [style*="background:#1"] strong,
+  .hero strong,
+  .hero-mega strong{
+    color: inherit !important;
+  }
+
+  /* ============================================
+     [v17] 視覺降噪 - 讓文章清爽好讀
+     ============================================ */
+
+  /* 1. 全部 section 統一白底,不要忽深忽淺 */
+  section, .pro-section, .big-num-section,
+  .intro-section, [class*="-section"]{
+    background: #ffffff !important;
+    background-image: none !important;
+  }
+
+  /* 2. 拿掉 section 之間的粗邊框、陰影 */
+  section{
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 3. 內文段落:加大、行距加寬,更好閱讀 */
+  p, .pro-body p, .sec-lead, .intro-section p{
+    font-size: 17px !important;
+    line-height: 2.0 !important;
+    color: #2a2a26 !important;
+  }
+
+  /* 4. 大標題縮小一點,不要那麼張揚 */
+  h1, .hero-mega, .hero-title{
+    letter-spacing: 0.02em !important;
+  }
+  h2, .sec-title, h2.sec-title{
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  /* 5. 拿掉裝飾性的 eyebrow 小標的花樣,變單純文字 */
+  .sec-eyebrow, .eyebrow, .pro-tag, .top-text{
+    letter-spacing: 0.08em !important;
+    font-size: 12.5px !important;
+    color: #9a9488 !important;
+    background: none !important;
+    border: none !important;
+  }
+
+  /* 6. 大數字裝飾 - 全部縮小 */
+  .stat-mega-number, .stat-mega .num,
+  .big-digit, .digit, .breakdown-card .digit,
+  .case-bigcost .num{
+    font-size: 32px !important;
+  }
+  .hero-mega{ font-size: 40px !important; }
+
+  /* 7. 卡片類 - 邊框淡化、陰影拿掉,變素雅 */
+  .feat-list li, .info-block, .surgery-col,
+  .compare-col, .item-card, .breakdown-card,
+  .outcome-card, .belief-card, .qa-box, .combo-item{
+    box-shadow: none !important;
+    border-radius: 6px !important;
+  }
+
+  /* 8. 提示框保留但簡化:細邊框 + 淺底 */
+  .tip-box, .warn-box{
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #faf8f4 !important;
+  }
+
+  /* 9. 深色色塊區 - 改成淺色,不要那麼搶眼 */
+  .dark-callout, .dark-section{
+    background: #f5f3ee !important;
+    color: #2a2a26 !important;
+    box-shadow: none !important;
+  }
+  .dark-callout *, .dark-section *{
+    color: #2a2a26 !important;
+  }
+
+  /* 10. 拿掉各種漸層 highlight 底線,重點字單純用紅色 */
+  strong{
+    background-image: none !important;
+    background: none !important;
+  }
+  .article strong, .pro-body p strong, p strong,
+  .sec-lead strong, .info-block strong{
+    color: #b02b2b !important;
+    font-weight: 700 !important;
   }
 
 </style>
@@ -1505,36 +1621,41 @@
 </footer>
 
 <script>
-  // === [v10] Navbar toggle ===
+  // === [v14] Navbar toggle ===
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
-  if (navToggle){
-    navToggle.addEventListener('click', () => {
+  if (navToggle && navMenu){
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = navMenu.classList.toggle('open');
       navToggle.classList.toggle('open');
       document.body.classList.toggle('menu-open', isOpen);
     });
   }
-  // 點主分類 = toggle 該分類底下文章
+  // 點主分類 = 展開/收合該分類文章
   document.querySelectorAll('.has-dropdown > a').forEach(a => {
     a.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const li = a.parentElement;
+      const wasOpen = li.classList.contains('open');
+      // 收合其他已開的分類
       document.querySelectorAll('.has-dropdown.open').forEach(d => {
         if (d !== li) d.classList.remove('open');
       });
-      li.classList.toggle('open');
+      // 切換自己
+      li.classList.toggle('open', !wasOpen);
     });
   });
-  // 點外面（遮罩）關閉抽屜
+  // 點抽屜以外的地方 = 關閉抽屜
   document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 980){
+    if (window.innerWidth <= 980 && navMenu && navMenu.classList.contains('open')){
       if (!e.target.closest('.nav-menu') && !e.target.closest('.nav-toggle')){
-        navMenu?.classList.remove('open');
-        navToggle?.classList.remove('open');
+        navMenu.classList.remove('open');
+        navToggle.classList.remove('open');
         document.body.classList.remove('menu-open');
       }
-    } else {
+    } else if (window.innerWidth > 980){
       if (!e.target.closest('.has-dropdown')){
         document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
       }
