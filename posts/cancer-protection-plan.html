@@ -474,6 +474,82 @@
   .case-doc-box .item-row:first-of-type{ border-top: none; }
   .case-doc-box .item-row strong{ color: var(--burgundy); }
 
+  /* 真實文件紙張質感 */
+  .case-doc-box.paper-doc{
+    background: #fdfcf8;
+    border: 1px solid #d8d2c4;
+    border-left: 4px solid var(--burgundy);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    position: relative;
+  }
+  .case-doc-box.paper-doc::after{
+    content: "";
+    position: absolute; top: 0; right: 0;
+    border-width: 0 22px 22px 0;
+    border-style: solid;
+    border-color: transparent #ebe5d6 transparent transparent;
+  }
+  .case-doc-box.paper-doc .doc-field{
+    display: flex;
+    border-top: 1px solid #e6e0d0;
+    font-family: var(--serif);
+    font-size: 14.5px;
+  }
+  .case-doc-box.paper-doc .doc-field:first-of-type{ border-top: none; }
+  .case-doc-box.paper-doc .doc-field .f-label{
+    flex-shrink: 0; width: 84px;
+    padding: 11px 14px 11px 0;
+    color: var(--ink-mute);
+    font-weight: 600;
+    border-right: 1px solid #e6e0d0;
+  }
+  .case-doc-box.paper-doc .doc-field .f-value{
+    padding: 11px 0 11px 16px;
+    color: var(--ink);
+    line-height: 1.8;
+  }
+  .case-doc-box.paper-doc .doc-field .f-value strong{
+    color: var(--burgundy);
+    font-size: 16px;
+  }
+  .doc-amount-row{
+    display: flex; justify-content: space-between; align-items: baseline;
+    background: rgba(122,53,53,0.06);
+    padding: 14px 18px;
+    margin-top: 14px;
+    border: 1px dashed var(--burgundy);
+  }
+  .doc-amount-row .a-label{
+    font-family: var(--sans); font-size: 13.5px;
+    color: var(--ink-soft); font-weight: 600;
+  }
+  .doc-amount-row .a-value{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 24px; color: var(--burgundy);
+  }
+  /* 信任標記 */
+  .case-consent{
+    display: flex; align-items: flex-start; gap: 10px;
+    background: rgba(74,122,106,0.08);
+    border: 1px solid rgba(74,122,106,0.25);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-top: 22px;
+  }
+  .case-consent .c-icon{
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    background: var(--teal); color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700;
+  }
+  .case-consent .c-text{
+    font-family: var(--sans);
+    font-size: 13px; line-height: 1.7;
+    color: var(--olive-deep);
+  }
+
   .case-bigcost{
     background: var(--ink);
     color: var(--paper);
@@ -1365,7 +1441,7 @@
         </ul>
       </li>
       <li class="has-dropdown">
-        <a href="#">癌症保障</a>
+        <a href="#">重症案例分享</a>
         <ul class="dropdown">
           <li class="dropdown-all"><a href="../blog.html">→ 查看全部 1 篇</a></li>
           <li><a href="cancer-protection-plan.html">癌症治療年燒百萬</a></li>
@@ -1398,7 +1474,7 @@
 
 <!-- HERO -->
 <header class="hero">
-  <span class="hero-tag reveal">癌症保障系列</span>
+  <span class="hero-tag reveal">重症案例分享系列</span>
   <h1 class="hero-mega reveal d1">癌症治療</h1>
   <h1 class="hero-mega red reveal d2">年燒百萬</h1>
   <div class="hero-divider reveal d2"></div>
@@ -1435,7 +1511,7 @@
     </div>
 
     <p class="sec-lead reveal d2" style="text-align: center; margin: 30px 0 0;">
-      接下來這個案例，是我服務過的一位客戶——真實的診斷書與費用收據。
+      接下來這個案例，來自我服務過的一位客戶——真實的診斷與費用紀錄，個資已隱去。
     </p>
 
   </div>
@@ -1447,7 +1523,7 @@
 
     <div class="sec-eyebrow reveal">真實案例 · Real Case</div>
     <h2 class="sec-title reveal d1">一次治療，<em>就燒了 51 萬</em></h2>
-    <p class="sec-lead reveal d1">下面是我手上一位肝癌客戶的真實單據。看到金額時，連我自己都倒抽一口氣。</p>
+    <p class="sec-lead reveal d1">下面是我服務過的一位肝癌客戶，治療過程中的真實診斷與費用紀錄。看到金額時，連我自己都倒抽一口氣。</p>
 
     <div class="case-card reveal d2">
       <div class="case-header">
@@ -1455,24 +1531,37 @@
       </div>
       <div class="case-content">
 
-        <div class="case-doc-box">
-          <span class="case-doc-tag">▍診斷書</span>
-          <h4>病名：肝細胞癌</h4>
-          <p>
-            病人因上述原因，於民國 114 年 04 月 08 日至本院外科部住院，於民國 114 年 04 月 09 日接受<strong>自費經動脈肝臟腫瘤血管內放射治療（釔-90 微球體）</strong>，於民國 114 年 04 月 10 日出院，宜休養兩週，並於門診持續追蹤治療。
-          </p>
+        <div class="case-doc-box paper-doc">
+          <span class="case-doc-tag">▍診斷證明書</span>
+          <div class="doc-field">
+            <div class="f-label">科別</div>
+            <div class="f-value">外科部</div>
+          </div>
+          <div class="doc-field">
+            <div class="f-label">病名</div>
+            <div class="f-value"><strong>肝細胞癌</strong></div>
+          </div>
+          <div class="doc-field">
+            <div class="f-label">醫師囑言</div>
+            <div class="f-value">
+              病人因上述原因，於民國 114 年 04 月 08 日住院，於 04 月 09 日接受<strong style="font-size:14.5px;">自費經動脈肝臟腫瘤血管內放射治療（釔-90 微球體）</strong>，於 04 月 10 日出院，宜休養兩週，並於門診持續追蹤治療。
+            </div>
+          </div>
         </div>
 
-        <div class="case-doc-box">
+        <div class="case-doc-box paper-doc">
           <span class="case-doc-tag" style="background: var(--gold);">▍費用收據</span>
-          <h4>身分別：健保 / 部分負擔優待</h4>
-          <div class="item-row">
-            <span>治療處置費</span>
-            <span>健保點數 56</span>
+          <div class="doc-field">
+            <div class="f-label">就醫身分</div>
+            <div class="f-value">健保 / 部分負擔優待</div>
           </div>
-          <div class="item-row">
-            <span>材料費（釔-90 微球體）</span>
-            <span><strong>自付金額 513,000 元</strong></span>
+          <div class="doc-field">
+            <div class="f-label">治療處置費</div>
+            <div class="f-value">健保點數 56 點</div>
+          </div>
+          <div class="doc-amount-row">
+            <span class="a-label">材料費（釔-90 微球體）· 自付金額</span>
+            <span class="a-value">513,000 元</span>
           </div>
         </div>
 
@@ -1485,6 +1574,13 @@
         <div class="case-warning">
           <div class="top">這只是藥物治療費用</div>
           <div class="bottom">不含住院、手術、實支費用</div>
+        </div>
+
+        <div class="case-consent">
+          <div class="c-icon">✓</div>
+          <div class="c-text">
+            本案例之診斷與費用資訊，經當事人同意分享，所有可識別個人身分之資訊（姓名、病歷號、醫療院所等）均已隱去。內容僅供保險規劃參考。
+          </div>
         </div>
 
       </div>
@@ -1689,7 +1785,7 @@
 
 <!-- FINAL SECTION -->
 <section class="final-section">
-  <div class="top-text reveal">癌症保障系列 · 這篇的核心只有一句話</div>
+  <div class="top-text reveal">重症案例分享系列 · 這篇的核心只有一句話</div>
   <h2 class="reveal d1">保障夠不夠，<br><em>只有出事那天才會知道</em></h2>
 
   <div class="summary-grid">
@@ -1724,7 +1820,7 @@
   </div>
 
   <a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="final-cta reveal d2">
-    LINE 預約癌症保障規劃
+    LINE 預約重症保障規劃
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
   </a>
 </section>
