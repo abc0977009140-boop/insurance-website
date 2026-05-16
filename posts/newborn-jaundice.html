@@ -791,23 +791,35 @@
     h4{ font-size: 18px !important; }
   }
 
-  /* === 手機版：左側抽屜 + 所有文章預設展開 === */
+  /* === [v10] Mobile menu - 重寫 === */
   @media (max-width: 980px){
-    /* === Navbar 基本佈局 === */
+    /* Navbar 容器 */
     .navbar{ padding: 10px 4vw !important; }
     .nav-container{
       position: relative !important;
       flex-direction: row !important;
       justify-content: flex-start !important;
+      align-items: center !important;
       gap: 0 !important;
+      max-width: 100% !important;
     }
+
+    /* 漢堡 menu 在左 */
     .nav-toggle{
       display: flex !important;
-      order: -1;
-      margin-right: auto;
-      z-index: 102;
-      position: relative;
+      order: -1 !important;
+      margin-right: auto !important;
+      z-index: 10002 !important;
+      position: relative !important;
+      padding: 8px !important;
     }
+    .nav-toggle span{
+      width: 24px !important;
+      height: 2px !important;
+      background: #4a4530 !important;
+    }
+
+    /* LOGO 置中 */
     .nav-brand{
       position: absolute !important;
       left: 50% !important;
@@ -815,36 +827,62 @@
       transform: translate(-50%, -50%) !important;
       flex-direction: row !important;
       margin: 0 !important;
+      gap: 8px !important;
+      z-index: 1 !important;
     }
-    .nav-brand img{ width: 32px !important; height: 32px !important; }
+    .nav-brand img{ width: 30px !important; height: 30px !important; }
+    .nav-brand .nav-brand-text{ flex-direction: row !important; align-items: center !important; }
     .nav-title{ font-size: 16px !important; }
     .nav-brand small{ display: none !important; }
 
-    /* === 抽屜本體 === */
+    /* 黑色遮罩 */
+    body.menu-open::after{
+      content: "" !important;
+      position: fixed !important;
+      inset: 0 !important;
+      background: rgba(0,0,0,0.4) !important;
+      z-index: 9998 !important;
+      backdrop-filter: blur(2px) !important;
+    }
+
+    /* === 抽屜：從左滑入，覆蓋整個 viewport 高度 === */
+    .navbar .nav-menu,
+    body .nav-menu,
     .nav-menu{
       position: fixed !important;
-      top: 56px !important;
+      top: 0 !important;
       left: 0 !important;
       right: auto !important;
       bottom: 0 !important;
+      height: 100vh !important;
+      height: 100dvh !important;
       width: 86% !important;
       max-width: 340px !important;
+      min-width: 280px !important;
       flex-direction: column !important;
       align-items: stretch !important;
+      justify-content: flex-start !important;
       background: #ffffff !important;
-      padding: 12px 16px 60px !important;
+      padding: 70px 0 60px !important;
       margin: 0 !important;
       gap: 0 !important;
       list-style: none !important;
-      transform: translateX(-100%) !important;
+      transform: translateX(-105%) !important;
       transition: transform .35s cubic-bezier(.2,.7,.2,1) !important;
       overflow-y: auto !important;
-      z-index: 99 !important;
-      box-shadow: 4px 0 32px rgba(0,0,0,0.15) !important;
+      overflow-x: hidden !important;
+      z-index: 9999 !important;
+      box-shadow: 4px 0 32px rgba(0,0,0,0.18) !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      display: flex !important;
+      border: none !important;
     }
-    .nav-menu.open{ transform: translateX(0) !important; }
+    .nav-menu.open{
+      transform: translateX(0) !important;
+    }
 
-    /* === 主分類 === */
+    /* 主分類 li */
     .nav-menu > li{
       width: 100% !important;
       list-style: none !important;
@@ -852,10 +890,18 @@
       border-top: none !important;
       padding: 0 !important;
       margin: 0 !important;
-    }
-    .nav-menu > li > a{
       display: block !important;
-      padding: 14px 6px 8px !important;
+      position: relative !important;
+      background: #ffffff !important;
+    }
+    .nav-menu > li:first-child{ border-top: 1px solid #f0ece4 !important; }
+
+    /* 主分類連結 */
+    .nav-menu > li > a{
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 16px 22px !important;
       font-size: 17px !important;
       font-weight: 700 !important;
       color: #4a4530 !important;
@@ -863,66 +909,78 @@
       background: transparent !important;
       border-radius: 0 !important;
       line-height: 1.4 !important;
+      width: 100% !important;
     }
     .nav-menu > li.has-dropdown > a::after{
-      content: "" !important;
-      display: none !important;
+      content: "▾" !important;
+      display: inline-block !important;
+      font-size: 18px !important;
+      color: #b56b3d !important;
+      transition: transform .25s !important;
+      margin-left: 12px !important;
+    }
+    .nav-menu > li.has-dropdown.open > a::after{
+      transform: rotate(180deg) !important;
     }
     .nav-menu > li.has-dropdown.open > a{
-      background: transparent !important;
-      color: #4a4530 !important;
+      background: rgba(181,107,61,0.06) !important;
+      color: #8a4f2a !important;
     }
 
-    /* === Dropdown 子項：預設全部展開、不需點擊 === */
+    /* Dropdown 子項：預設關閉，點開展開 */
     .dropdown{
       list-style: none !important;
-      padding: 0 0 8px 12px !important;
+      padding: 0 !important;
       margin: 0 !important;
-      max-height: none !important;
-      overflow: visible !important;
+      max-height: 0 !important;
+      overflow: hidden !important;
       position: static !important;
       box-shadow: none !important;
       border: none !important;
-      background: transparent !important;
+      background: #fafaf8 !important;
       transform: none !important;
       opacity: 1 !important;
       visibility: visible !important;
       display: block !important;
       width: 100% !important;
+      transition: max-height .35s ease !important;
     }
-    .dropdown li{ list-style: none !important; }
+    .nav-menu > li.has-dropdown.open .dropdown{
+      max-height: 800px !important;
+      padding: 4px 0 12px !important;
+    }
+    .dropdown li{ list-style: none !important; display: block !important; }
     .dropdown li a{
       display: block !important;
-      padding: 9px 12px !important;
-      font-size: 14.5px !important;
-      color: #6a6660 !important;
+      padding: 11px 22px 11px 38px !important;
+      font-size: 15px !important;
+      color: #555048 !important;
       text-decoration: none !important;
-      border-left: 2px solid #f0ece4 !important;
+      border: none !important;
       line-height: 1.5 !important;
+      background: transparent !important;
       transition: all .15s !important;
     }
-    .dropdown li a:hover, .dropdown li a:active{
+    .dropdown li a:active{
       color: #b56b3d !important;
-      border-left-color: #b56b3d !important;
-      background: rgba(181,107,61,0.04) !important;
-      padding-left: 16px !important;
+      background: rgba(181,107,61,0.08) !important;
     }
     .dropdown-all{
-      background: rgba(181,107,61,0.08) !important;
-      margin-bottom: 4px !important;
+      background: rgba(181,107,61,0.10) !important;
+      margin: 0 0 4px !important;
     }
     .dropdown-all a{
       color: #8a4f2a !important;
       font-weight: 700 !important;
-      font-size: 13.5px !important;
-      border-left-color: transparent !important;
+      font-size: 14px !important;
     }
 
-    /* === LINE CTA === */
-    .nav-menu > li:last-child{ border-bottom: none !important; }
+    /* LINE CTA 按鈕 */
+    .nav-menu > li:last-child{ border-bottom: none !important; padding: 20px 22px 0 !important; }
     .nav-menu .nav-cta{
       display: block !important;
-      margin: 20px 0 0 !important;
+      width: 100% !important;
+      margin: 0 !important;
       padding: 16px 24px !important;
       background: #b56b3d !important;
       color: #ffffff !important;
@@ -931,11 +989,12 @@
       font-size: 16px !important;
       font-weight: 700 !important;
       text-decoration: none !important;
+      box-shadow: 0 4px 12px rgba(181,107,61,0.25) !important;
     }
     .nav-menu .nav-cta::after{ display: none !important; }
   }
 
-  /* === 文章內文字體放大 === */
+  /* === 文章內字體放大（同 v9）=== */
   .hero-lead{ font-size: 19px !important; line-height: 1.95 !important; }
   .sec-lead, .intro-section p, .case-lead{ font-size: 18px !important; line-height: 1.95 !important; }
   .info-block p, .info-block .title,
@@ -1289,32 +1348,39 @@
 </footer>
 
 <script>
-  // === Navbar toggle ===
+  // === [v10] Navbar toggle ===
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
   if (navToggle){
     navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.toggle('open');
       navToggle.classList.toggle('open');
+      document.body.classList.toggle('menu-open', isOpen);
     });
   }
-  // 桌機點主分類 = 展開下拉；手機版預設全部展開，主分類字本身可進該分類頁
+  // 點主分類 = toggle 該分類底下文章
   document.querySelectorAll('.has-dropdown > a').forEach(a => {
     a.addEventListener('click', (e) => {
-      if (window.innerWidth > 980){
-        e.preventDefault();
-        const li = a.parentElement;
-        document.querySelectorAll('.has-dropdown.open').forEach(d => {
-          if (d !== li) d.classList.remove('open');
-        });
-        li.classList.toggle('open');
-      }
-      // 手機版：讓 a 自然動作（如果 href 是 #，不會動；如果是真連結，跳轉）
+      e.preventDefault();
+      const li = a.parentElement;
+      document.querySelectorAll('.has-dropdown.open').forEach(d => {
+        if (d !== li) d.classList.remove('open');
+      });
+      li.classList.toggle('open');
     });
   });
+  // 點外面（遮罩）關閉抽屜
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.has-dropdown') && !e.target.closest('.nav-toggle')){
-      document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
+    if (window.innerWidth <= 980){
+      if (!e.target.closest('.nav-menu') && !e.target.closest('.nav-toggle')){
+        navMenu?.classList.remove('open');
+        navToggle?.classList.remove('open');
+        document.body.classList.remove('menu-open');
+      }
+    } else {
+      if (!e.target.closest('.has-dropdown')){
+        document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
+      }
     }
   });
 
