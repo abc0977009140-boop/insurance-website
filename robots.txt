@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # 網站地圖位置
-Sitemap: https://insurance-website-one.vercel.app/sitemap.xml
+Sitemap: https://baihuawenins.com/sitemap.xml
