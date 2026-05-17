@@ -177,13 +177,13 @@
   .nav-menu{
    position: fixed; top: 64px; left: 0; right: auto;
    bottom: 0; flex-direction: column;
-   background: var(--bg);
+   background: #ffffff;
    width: 88vw; max-width: 360px;
    padding: 18px 22px 40px;
    gap: 0; align-items: stretch;
    transform: translateX(-100%);
    transition: transform .35s cubic-bezier(.2,.7,.2,1);
-   overflow-y: auto; z-index: 99;
+   overflow-y: auto; z-index: 9999;
    box-shadow: 8px 0 32px rgba(0,0,0,0.15);
   }
   /* 手機 menu 開啟時的背景遮罩 */
@@ -1029,6 +1029,86 @@
   font-weight: 700 !important;
  }
 
+
+  /* ============================================
+     [v25] 加大文章字體 - 晚上滑手機更好讀
+     ============================================ */
+  .pro-body p, .intro-section p, .sec-lead,
+  article p, .priority-header p,
+  .item-card .desc, .item-card .reason,
+  .tip-box > div, .warn-box > div,
+  .info-block p, .dark-callout p,
+  .timeline-content p, .plan-section p,
+  .case-content p, p{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 條列卡片裡的小標也放大一點 */
+  .item-card .note, .feat-list li{
+    font-size: 17px !important;
+  }
+  /* 提示框文字 */
+  .tip-box, .warn-box{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 手機上再大一點點 */
+  @media (max-width: 980px){
+    .pro-body p, .intro-section p, .sec-lead,
+    article p, .priority-header p,
+    .item-card .desc, .item-card .reason,
+    .tip-box > div, .warn-box > div,
+    .info-block p, .dark-callout p,
+    .timeline-content p, .plan-section p,
+    .case-content p, p{
+      font-size: 19px !important;
+      line-height: 2.05 !important;
+    }
+  }
+
+
+  /* === 本文重點整理區塊 === */
+  .recap-section{
+    background: #faf8f4;
+    padding: 56px 6vw 64px;
+    border-top: 1px solid #e6e0d4;
+  }
+  .recap-box{
+    max-width: 720px; margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e0d9ca;
+    border-radius: 12px;
+    padding: 38px 34px;
+  }
+  .recap-box .recap-title{
+    font-family: var(--serif); font-size: 23px; font-weight: 700;
+    color: var(--terracotta-deep); margin: 0 0 6px; text-align: center;
+  }
+  .recap-box .recap-sub{
+    font-family: var(--sans); font-size: 14px; color: var(--ink-soft);
+    text-align: center; margin: 0 0 26px; letter-spacing: 0.08em;
+  }
+  .recap-box .recap-item{
+    display: flex; gap: 14px; padding: 16px 0;
+    border-top: 1px dashed #e0d9ca;
+  }
+  .recap-box .recap-item:first-of-type{ border-top: none; }
+  .recap-box .recap-check{
+    flex-shrink: 0; width: 26px; height: 26px;
+    background: var(--olive); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+  }
+  .recap-box .recap-text{
+    font-family: var(--sans); font-size: 16.5px;
+    line-height: 1.85; color: var(--ink);
+  }
+  .recap-box .recap-text strong{ color: #b02b2b; font-weight: 700; }
+  @media (max-width: 980px){
+    .recap-box{ padding: 30px 22px; }
+    .recap-box .recap-title{ font-size: 21px; }
+    .recap-box .recap-text{ font-size: 16px; }
+  }
 </style>
 
 <link rel="canonical" href="https://baihuawenins.com/posts/surgery-227-explained.html">
@@ -1080,7 +1160,6 @@
    <li class="has-dropdown">
     <a href="#">新生兒保單</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 6 篇</a></li>
      <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
      <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
      <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
@@ -1092,7 +1171,6 @@
    <li class="has-dropdown">
     <a href="#">成人保單</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 2 篇</a></li>
      <li><a href="adult-insurance-planning.html">成人保險完整指南</a></li>
      <li><a href="term-life-premium.html">定期壽險後期保費</a></li>
     </ul>
@@ -1100,21 +1178,18 @@
    <li class="has-dropdown">
     <a href="#">銀髮族保險</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 1 篇</a></li>
      <li><a href="senior-insurance-planning.html">銀髮族規劃 2 級順序</a></li>
     </ul>
    </li>
    <li class="has-dropdown">
     <a href="#">重症案例分享</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 1 篇</a></li>
      <li><a href="cancer-protection-plan.html">癌症治療年燒百萬</a></li>
     </ul>
    </li>
    <li class="has-dropdown">
     <a href="#">險種知識</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 5 篇</a></li>
      <li><a href="insurance-products-guide.html">7 大險種解析</a></li>
      <li><a href="canned-insurance-policy.html">什麼是罐頭保單</a></li>
      <li><a href="auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a></li>
@@ -1125,14 +1200,12 @@
       <li class="has-dropdown">
         <a href="#">信用卡刷保費</a>
         <ul class="dropdown">
-          <li class="dropdown-all"><a href="../blog.html">→ 查看全部 1 篇</a></li>
           <li><a href="credit-card-installment.html">信用卡刷保費懶人包</a></li>
         </ul>
       </li>
    <li class="has-dropdown">
     <a href="#">理賠經驗</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 3 篇</a></li>
      <li><a href="claim-rejection-reasons.html">理賠 5 大地雷</a></li>
      <li><a href="pre-existing-disease.html">已在疾病 127 條</a></li>
      <li><a href="broker-vs-insurance-company.html">保經 vs 保險公司</a></li>
@@ -1291,6 +1364,38 @@
    </div>
   </div>
  </div>
+</section>
+
+
+<section class="recap-section">
+  <div class="recap-box">
+    <div class="recap-title">本文重點整理</div>
+    <div class="recap-sub">RECAP · 看完這篇，記住這幾件事</div>
+    <div class="recap-item">
+      <div class="recap-check">1</div>
+      <div class="recap-text">「<strong>2-2-7</strong>」是健保署支付標準裡「手術」項目的編碼。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">2</div>
+      <div class="recap-text">很多保單會<strong>引用 2-2-7</strong> 作為「手術」的理賠定義。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">3</div>
+      <div class="recap-text">如果處置<strong>不在 2-2-7 清單內</strong>，可能不算「手術」、影響理賠。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">4</div>
+      <div class="recap-text">現代很多治療是<strong>「處置」而非「手術」</strong>，理賠認定要看條款。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">5</div>
+      <div class="recap-text">投保時要注意保單對<strong>手術 vs 處置</strong>的定義與理賠範圍。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">✓</div>
+      <div class="recap-text">想搞懂保單的手術理賠條款？歡迎 <strong>LINE 諮詢</strong>。</div>
+    </div>
+  </div>
 </section>
 
 <section class="closing">

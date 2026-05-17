@@ -207,13 +207,13 @@
   .nav-menu{
    position: fixed; top: 64px; left: 0; right: auto;
    bottom: 0; flex-direction: column;
-   background: var(--bg);
+   background: #ffffff;
    width: 88vw; max-width: 360px;
    padding: 18px 22px 40px;
    gap: 0; align-items: stretch;
    transform: translateX(-100%);
    transition: transform .35s cubic-bezier(.2,.7,.2,1);
-   overflow-y: auto; z-index: 99;
+   overflow-y: auto; z-index: 9999;
    box-shadow: 8px 0 32px rgba(0,0,0,0.15);
   }
   /* 手機 menu 開啟時的背景遮罩 */
@@ -1412,6 +1412,171 @@
   font-weight: 700 !important;
  }
 
+
+  /* ============================================
+     [v25] 加大文章字體 - 晚上滑手機更好讀
+     ============================================ */
+  .pro-body p, .intro-section p, .sec-lead,
+  article p, .priority-header p,
+  .item-card .desc, .item-card .reason,
+  .tip-box > div, .warn-box > div,
+  .info-block p, .dark-callout p,
+  .timeline-content p, .plan-section p,
+  .case-content p, p{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 條列卡片裡的小標也放大一點 */
+  .item-card .note, .feat-list li{
+    font-size: 17px !important;
+  }
+  /* 提示框文字 */
+  .tip-box, .warn-box{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 手機上再大一點點 */
+  @media (max-width: 980px){
+    .pro-body p, .intro-section p, .sec-lead,
+    article p, .priority-header p,
+    .item-card .desc, .item-card .reason,
+    .tip-box > div, .warn-box > div,
+    .info-block p, .dark-callout p,
+    .timeline-content p, .plan-section p,
+    .case-content p, p{
+      font-size: 19px !important;
+      line-height: 2.05 !important;
+    }
+  }
+
+
+  /* === 5 大保障 橫條清單(IG 圖風格) === */
+  .five-list{
+    max-width: 680px;
+    margin: 36px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .five-list .fl-item{
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: #ffffff;
+    border: 1px solid #e6e0d4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .five-list .fl-item:hover{
+    transform: translateX(4px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+  .five-list .fl-bar{
+    width: 8px;
+    align-self: stretch;
+    flex-shrink: 0;
+  }
+  .five-list .fl-num{
+    flex-shrink: 0;
+    width: 54px;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 700;
+  }
+  .five-list .fl-text{
+    padding: 18px 18px 18px 6px;
+    flex: 1;
+  }
+  .five-list .fl-text h3{
+    margin: 0 0 4px;
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .five-list .fl-text .fl-desc{
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+  }
+  .five-list .fl-arrow{
+    flex-shrink: 0;
+    padding-right: 18px;
+    color: #c4bdae;
+    font-size: 20px;
+  }
+  @media (max-width: 980px){
+    .five-list .fl-num{ width: 46px; font-size: 22px; }
+    .five-list .fl-text h3{ font-size: 19px; }
+    .five-list .fl-text .fl-desc{ font-size: 14.5px; }
+  }
+
+  /* === 本文重點整理區塊 === */
+  .recap-section{
+    background: #faf8f4;
+    padding: 56px 6vw 64px;
+    border-top: 1px solid #e6e0d4;
+  }
+  .recap-box{
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e0d9ca;
+    border-radius: 12px;
+    padding: 38px 34px;
+  }
+  .recap-box .recap-title{
+    font-family: var(--serif);
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--terracotta-deep);
+    margin: 0 0 6px;
+    text-align: center;
+  }
+  .recap-box .recap-sub{
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin: 0 0 26px;
+    letter-spacing: 0.08em;
+  }
+  .recap-box .recap-item{
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-top: 1px dashed #e0d9ca;
+  }
+  .recap-box .recap-item:first-of-type{ border-top: none; }
+  .recap-box .recap-check{
+    flex-shrink: 0;
+    width: 26px; height: 26px;
+    background: var(--olive);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+  }
+  .recap-box .recap-text{
+    font-family: var(--sans);
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--ink);
+  }
+  .recap-box .recap-text strong{
+    color: #b02b2b;
+    font-weight: 700;
+  }
+  @media (max-width: 980px){
+    .recap-box{ padding: 30px 22px; }
+    .recap-box .recap-title{ font-size: 21px; }
+    .recap-box .recap-text{ font-size: 16px; }
+  }
 </style>
 
 <link rel="canonical" href="https://baihuawenins.com/posts/newborn-insurance-2025.html">
@@ -1466,7 +1631,6 @@
    <li class="has-dropdown">
     <a href="#">新生兒保單</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 6 篇</a></li>
      <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
      <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
      <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
@@ -1478,7 +1642,6 @@
    <li class="has-dropdown">
     <a href="#">成人保單</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 2 篇</a></li>
      <li><a href="adult-insurance-planning.html">成人保險完整指南</a></li>
      <li><a href="term-life-premium.html">定期壽險後期保費</a></li>
     </ul>
@@ -1486,21 +1649,18 @@
    <li class="has-dropdown">
     <a href="#">銀髮族保險</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 1 篇</a></li>
      <li><a href="senior-insurance-planning.html">銀髮族規劃 2 級順序</a></li>
     </ul>
    </li>
    <li class="has-dropdown">
     <a href="#">重症案例分享</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 1 篇</a></li>
      <li><a href="cancer-protection-plan.html">癌症治療年燒百萬</a></li>
     </ul>
    </li>
    <li class="has-dropdown">
     <a href="#">險種知識</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 5 篇</a></li>
      <li><a href="insurance-products-guide.html">7 大險種解析</a></li>
      <li><a href="canned-insurance-policy.html">什麼是罐頭保單</a></li>
      <li><a href="auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a></li>
@@ -1511,14 +1671,12 @@
       <li class="has-dropdown">
         <a href="#">信用卡刷保費</a>
         <ul class="dropdown">
-          <li class="dropdown-all"><a href="../blog.html">→ 查看全部 1 篇</a></li>
           <li><a href="credit-card-installment.html">信用卡刷保費懶人包</a></li>
         </ul>
       </li>
    <li class="has-dropdown">
     <a href="#">理賠經驗</a>
     <ul class="dropdown">
-     <li class="dropdown-all"><a href="../blog.html">→ 查看全部 3 篇</a></li>
      <li><a href="claim-rejection-reasons.html">理賠 5 大地雷</a></li>
      <li><a href="pre-existing-disease.html">已在疾病 127 條</a></li>
      <li><a href="broker-vs-insurance-company.html">保經 vs 保險公司</a></li>
@@ -1578,64 +1736,55 @@
    每一個保障都對應到不同的人生風險，少了任何一個都可能成為缺口。先快速瀏覽，再進入每一項的深度解析。
   </p>
 
-  <div class="overview-grid">
-   <a href="#p1" class="ov-card c1 reveal d1">
-    <div class="ov-num">01</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M9 12h6M12 9v6"/>
-      <rect x="3" y="3" width="18" height="18" rx="3"/>
-     </svg>
+  <div class="five-list">
+   <a href="#p1" class="fl-item reveal d1">
+    <div class="fl-bar" style="background: var(--c1);"></div>
+    <div class="fl-num" style="color: var(--c1);">01</div>
+    <div class="fl-text">
+     <h3>醫療險</h3>
+     <p class="fl-desc">住院日額 + 實支實付</p>
     </div>
-    <h3>醫療險</h3>
-    <div class="desc">住院日額 + 實支實付</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p2" class="ov-card c2 reveal d2">
-    <div class="ov-num">02</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M12 8v4l3 2"/>
-      <circle cx="12" cy="12" r="2" fill="currentColor"/>
-     </svg>
+   <a href="#p2" class="fl-item reveal d1">
+    <div class="fl-bar" style="background: var(--c2);"></div>
+    <div class="fl-num" style="color: var(--c2);">02</div>
+    <div class="fl-text">
+     <h3>癌症險</h3>
+     <p class="fl-desc">確診一次給付</p>
     </div>
-    <h3>癌症險</h3>
-    <div class="desc">確診一次給付</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p3" class="ov-card c3 reveal d3">
-    <div class="ov-num">03</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/>
-      <path d="M9 12l2 2 4-4"/>
-     </svg>
+   <a href="#p3" class="fl-item reveal d2">
+    <div class="fl-bar" style="background: var(--c3);"></div>
+    <div class="fl-num" style="color: var(--c3);">03</div>
+    <div class="fl-text">
+     <h3>重大傷病險</h3>
+     <p class="fl-desc">300+ 項疾病保障</p>
     </div>
-    <h3>重大傷病險</h3>
-    <div class="desc">300+ 項疾病保障</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p4" class="ov-card c4 reveal d4">
-    <div class="ov-num">04</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M13 2L3 14h7l-2 8 10-12h-7l2-8z"/>
-     </svg>
+   <a href="#p4" class="fl-item reveal d2">
+    <div class="fl-bar" style="background: var(--c4);"></div>
+    <div class="fl-num" style="color: var(--c4);">04</div>
+    <div class="fl-text">
+     <h3>意外險</h3>
+     <p class="fl-desc">含意外實支 + 失能</p>
     </div>
-    <h3>意外險</h3>
-    <div class="desc">含意外實支 + 失能</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p5" class="ov-card c5 reveal d4">
-    <div class="ov-num">05</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-     </svg>
+   <a href="#p5" class="fl-item reveal d3">
+    <div class="fl-bar" style="background: var(--c5);"></div>
+    <div class="fl-num" style="color: var(--c5);">05</div>
+    <div class="fl-text">
+     <h3>兒童壽險</h3>
+     <p class="fl-desc">最低 69 萬保額</p>
     </div>
-    <h3>兒童壽險</h3>
-    <div class="desc">最低 69 萬保額</div>
+    <div class="fl-arrow">›</div>
    </a>
   </div>
  </div>
@@ -2005,16 +2154,6 @@
 <!-- ================================================
    PULL QUOTE
    ================================================ -->
-<section class="pullquote">
- <div class="marks">&ldquo;</div>
- <blockquote>
-  新生兒保險不是<em>越貴越好</em>，<br>
-  而是<em>該有的都要有、不該漏的都不能漏</em>。<br>
-  五個保障少一個，就是一個風險缺口。
- </blockquote>
- <cite>給每位即將迎接寶寶的父母</cite>
-</section>
-
 <!-- ================================================
    TIMELINE · 出生前後投保時機
    ================================================ -->
@@ -2216,6 +2355,39 @@
 <!-- ================================================
    CLOSING
    ================================================ -->
+
+<section class="recap-section">
+  <div class="recap-box">
+    <div class="recap-title">本文重點整理</div>
+    <div class="recap-sub">RECAP · 看完這篇，記住這幾件事</div>
+
+    <div class="recap-item">
+      <div class="recap-check">1</div>
+      <div class="recap-text">新生兒必備 <strong>5 大保障</strong>：醫療險、癌症險、重大傷病險、意外險、兒童壽險——少一個都是缺口。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">2</div>
+      <div class="recap-text"><strong>醫療險</strong>是核心，要同時有「住院日額」和「實支實付」，應對嬰幼兒高住院率。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">3</div>
+      <div class="recap-text"><strong>癌症險、重大傷病險</strong>提供確診後的一次金，讓家庭面對重症時有現金可用。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">4</div>
+      <div class="recap-text"><strong>意外險</strong>要含意外實支與失能；<strong>兒童壽險</strong>則是讓其他保障生效的法規基礎。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">5</div>
+      <div class="recap-text">新生兒保費控制在 <strong>2.8 萬以內</strong>都算合理——重點是保障要完整，而不是越貴越好。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">✓</div>
+      <div class="recap-text">不確定怎麼規劃？歡迎 <strong>LINE 諮詢</strong>，我會依寶寶狀況幫您客製建議。</div>
+    </div>
+  </div>
+</section>
+
 <section class="closing">
  <div class="container">
   <h2 class="reveal">
