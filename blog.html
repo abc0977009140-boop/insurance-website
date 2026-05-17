@@ -186,16 +186,12 @@
    gap: 0; align-items: stretch;
    transform: translateX(-100%);
    transition: transform .35s cubic-bezier(.2,.7,.2,1);
-   overflow-y: auto; z-index: 9999;
+   overflow-y: auto; z-index: 10000;
    box-shadow: 8px 0 32px rgba(0,0,0,0.15);
+   background-color: #ffffff !important; opacity: 1 !important;
   }
   /* 手機 menu 開啟時的背景遮罩 */
-  .nav-menu.open::before{
-   content: ""; position: fixed;
-   top: 64px; left: 88vw; right: 0; bottom: 0;
-   background: rgba(0,0,0,0.3);
-   pointer-events: none;
-  }
+  .nav-menu.open::before{ content: none; }
   .nav-menu.open{ transform: translateX(0); }
   .nav-menu > li{ width: 100%; border-bottom: 1px solid var(--line-soft); }
   .nav-menu > li > a{
@@ -661,7 +657,7 @@
    position: fixed !important;
    inset: 0 !important;
    background: rgba(0,0,0,0.35) !important;
-   z-index: 9998 !important;
+   z-index: 9990 !important;
    pointer-events: none !important;
   }
 
@@ -867,61 +863,9 @@
   </button>
   <ul class="nav-menu">
    <li><a href="index.html">首頁</a></li>
-   <li class="has-dropdown">
-    <a href="#">新生兒保單</a>
-    <ul class="dropdown">
-     <li><a href="posts/newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
-     <li><a href="posts/newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
-     <li><a href="posts/newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
-     <li><a href="posts/newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
-     <li><a href="posts/newborn-screening-basic.html">21 項基本篩檢</a></li>
-     <li><a href="posts/newborn-screening-paid.html">自費篩檢攻略</a></li>
-    </ul>
-   </li>
-   <li class="has-dropdown">
-    <a href="#">成人保單</a>
-    <ul class="dropdown">
-     <li><a href="posts/adult-insurance-planning.html">成人保險完整指南</a></li>
-     <li><a href="posts/term-life-premium.html">定期壽險後期保費</a></li>
-    </ul>
-   </li>
-   <li class="has-dropdown">
-    <a href="#">銀髮族保險</a>
-    <ul class="dropdown">
-     <li><a href="posts/senior-insurance-planning.html">銀髮族規劃 2 級順序</a></li>
-    </ul>
-   </li>
-   <li class="has-dropdown">
-    <a href="#">重症案例分享</a>
-    <ul class="dropdown">
-     <li><a href="posts/cancer-protection-plan.html">癌症治療年燒百萬</a></li>
-    </ul>
-   </li>
-   <li class="has-dropdown">
-    <a href="#">險種知識</a>
-    <ul class="dropdown">
-     <li><a href="posts/insurance-products-guide.html">7 大險種解析</a></li>
-     <li><a href="posts/canned-insurance-policy.html">什麼是罐頭保單</a></li>
-     <li><a href="posts/auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a></li>
-     <li><a href="posts/surgery-227-explained.html">2-2-7 手術定義</a></li>
-          <li><a href="posts/whole-life-vs-term.html">終身險 vs 定期險</a></li>
-    </ul>
-   </li>
-      <li class="has-dropdown">
-        <a href="#">信用卡刷保費</a>
-        <ul class="dropdown">
-          <li><a href="posts/credit-card-installment.html">信用卡刷保費懶人包</a></li>
-        </ul>
-      </li>
-   <li class="has-dropdown">
-    <a href="#">理賠經驗</a>
-    <ul class="dropdown">
-     <li><a href="posts/claim-rejection-reasons.html">理賠 5 大地雷</a></li>
-     <li><a href="posts/pre-existing-disease.html">已在疾病 127 條</a></li>
-     <li><a href="posts/broker-vs-insurance-company.html">保經 vs 保險公司</a></li>
-    </ul>
-   </li>
    <li><a href="blog.html">全部文章</a></li>
+   <li><a href="https://www.instagram.com/insurance_is_su" target="_blank" rel="noopener">Instagram</a></li>
+   <li><a href="https://www.threads.net/@insurance_is_su" target="_blank" rel="noopener">Threads</a></li>
    <li><a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="nav-cta">LINE 諮詢</a></li>
   </ul>
  </div>

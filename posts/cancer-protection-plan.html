@@ -185,16 +185,12 @@
    gap: 0; align-items: stretch;
    transform: translateX(-100%);
    transition: transform .35s cubic-bezier(.2,.7,.2,1);
-   overflow-y: auto; z-index: 9999;
+   overflow-y: auto; z-index: 10000;
    box-shadow: 8px 0 32px rgba(0,0,0,0.15);
+   background-color: #ffffff !important; opacity: 1 !important;
   }
   /* 手機 menu 開啟時的背景遮罩 */
-  .nav-menu.open::before{
-   content: ""; position: fixed;
-   top: 64px; left: 88vw; right: 0; bottom: 0;
-   background: rgba(0,0,0,0.3);
-   pointer-events: none;
-  }
+  .nav-menu.open::before{ content: none; }
   .nav-menu.open{ transform: translateX(0); }
   .nav-menu > li{ width: 100%; border-bottom: 1px solid var(--line-soft); }
   .nav-menu > li > a{
@@ -1180,7 +1176,7 @@
    position: fixed !important;
    inset: 0 !important;
    background: rgba(0,0,0,0.35) !important;
-   z-index: 9998 !important;
+   z-index: 9990 !important;
    pointer-events: none !important;
   }
 
