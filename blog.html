@@ -327,6 +327,62 @@
   color: var(--ink-mute);
  }
 
+ /* === 分類下拉版 === */
+ .filter-dd{
+  position: relative;
+  display: inline-block;
+ }
+ .filter-dd > .filter-btn{
+  cursor: pointer;
+ }
+ .filter-dd > .filter-btn .dd-arrow{
+  font-size: 10px;
+  transition: transform .25s;
+ }
+ .filter-dd.open > .filter-btn .dd-arrow{
+  transform: rotate(180deg);
+ }
+ .filter-dd .dd-menu{
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+  z-index: 50;
+ }
+ .filter-dd.open .dd-menu{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+ }
+ .filter-dd .dd-menu a{
+  display: block;
+  padding: 11px 14px;
+  font-family: var(--serif);
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+ }
+ .filter-dd .dd-menu a:hover{
+  background: var(--paper);
+  color: var(--terracotta-deep);
+ }
+ @media (max-width: 980px){
+  .filter-dd .dd-menu{
+   min-width: 220px;
+  }
+ }
+
  /* Articles grid */
  .articles-section{
   padding: 60px 6vw 100px;
@@ -892,14 +948,73 @@
  <div class="filter-container">
   <span class="filter-label">分類</span>
   <button class="filter-btn active" data-cat="all">全部文章 <span class="count">19</span></button>
-  <button class="filter-btn" data-cat="newborn">新生兒保單 <span class="count">6</span></button>
-  <button class="filter-btn" data-cat="adult">成人保單 <span class="count">2</span></button>
-  <button class="filter-btn" data-cat="senior">銀髮族保險 <span class="count">1</span></button>
-  <button class="filter-btn" data-cat="cancer">重症案例分享 <span class="count">1</span></button>
-  <button class="filter-btn" data-cat="knowledge">險種知識 <span class="count">5</span></button>
-  <button class="filter-btn" data-cat="creditcard">信用卡刷保費 <span class="count">1</span></button>
-  <button class="filter-btn" data-cat="claim">理賠經驗 <span class="count">2</span></button>
-  <button class="filter-btn" data-cat="company">公司差異 <span class="count">1</span></button>
+
+  <div class="filter-dd">
+   <button class="filter-btn">新生兒保單 <span class="count">6</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/newborn-insurance-2025.html">新生兒保險 5 大保障</a>
+    <a href="posts/newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a>
+    <a href="posts/newborn-parents-checklist.html">新手爸媽 60 天清單</a>
+    <a href="posts/newborn-jaundice.html">寶寶黃疸對核保影響</a>
+    <a href="posts/newborn-screening-basic.html">21 項基本篩檢</a>
+    <a href="posts/newborn-screening-paid.html">自費篩檢攻略</a>
+   </div>
+  </div>
+
+  <div class="filter-dd">
+   <button class="filter-btn">成人保單 <span class="count">2</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/adult-insurance-planning.html">成人保險完整指南</a>
+    <a href="posts/term-life-premium.html">定期壽險後期保費</a>
+   </div>
+  </div>
+
+  <div class="filter-dd">
+   <button class="filter-btn">銀髮族保險 <span class="count">1</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/senior-insurance-planning.html">銀髮族規劃 2 級順序</a>
+   </div>
+  </div>
+
+  <div class="filter-dd">
+   <button class="filter-btn">重症案例分享 <span class="count">1</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/cancer-protection-plan.html">癌症治療年燒百萬</a>
+   </div>
+  </div>
+
+  <div class="filter-dd">
+   <button class="filter-btn">險種知識 <span class="count">5</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/insurance-products-guide.html">7 大險種解析</a>
+    <a href="posts/canned-insurance-policy.html">什麼是罐頭保單</a>
+    <a href="posts/auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a>
+    <a href="posts/surgery-227-explained.html">2-2-7 手術定義</a>
+    <a href="posts/whole-life-vs-term.html">終身險 vs 定期險</a>
+   </div>
+  </div>
+
+  <div class="filter-dd">
+   <button class="filter-btn">信用卡刷保費 <span class="count">1</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/credit-card-installment.html">信用卡刷保費懶人包</a>
+   </div>
+  </div>
+
+  <div class="filter-dd">
+   <button class="filter-btn">理賠經驗 <span class="count">2</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/claim-rejection-reasons.html">理賠 5 大地雷</a>
+    <a href="posts/pre-existing-disease.html">既往症與帶病投保</a>
+   </div>
+  </div>
+
+  <div class="filter-dd">
+   <button class="filter-btn">公司差異 <span class="count">1</span> <span class="dd-arrow">▼</span></button>
+   <div class="dd-menu">
+    <a href="posts/broker-vs-insurance-company.html">保經 vs 保險公司</a>
+   </div>
+  </div>
  </div>
 </div>
 
@@ -1497,50 +1612,44 @@
  }, { threshold: 0.12 });
  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
- // Filter functionality
- const filterBtns = document.querySelectorAll('.filter-btn');
+ // Filter functionality（全部文章按鈕）
+ const allBtn = document.querySelector('.filter-btn[data-cat="all"]');
  const articleCards = document.querySelectorAll('.article-card');
  const resultCount = document.getElementById('result-count');
  const emptyState = document.getElementById('empty-state');
  const articlesGrid = document.getElementById('articles-grid');
 
- filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-   const cat = btn.dataset.cat;
-
-   // Update active state
-   filterBtns.forEach(b => b.classList.remove('active'));
-   btn.classList.add('active');
-
-   // Filter cards
-   let visibleCount = 0;
-   articleCards.forEach(card => {
-    if (cat === 'all' || card.dataset.cat === cat){
-     card.classList.remove('hidden');
-     visibleCount++;
-    } else {
-     card.classList.add('hidden');
-    }
-   });
-
-   // Update count
-   resultCount.textContent = visibleCount;
-
-   // Show empty state if no results
-   if (visibleCount === 0){
-    emptyState.classList.add('show');
-    articlesGrid.style.display = 'none';
-   } else {
-    emptyState.classList.remove('show');
-    articlesGrid.style.display = 'grid';
-   }
-
-   // Smooth scroll to results
+ if (allBtn){
+  allBtn.addEventListener('click', () => {
+   // 顯示全部文章
+   articleCards.forEach(card => card.classList.remove('hidden'));
+   if (resultCount) resultCount.textContent = articleCards.length;
+   if (emptyState) emptyState.classList.remove('show');
+   if (articlesGrid) articlesGrid.style.display = 'grid';
    window.scrollTo({
     top: document.querySelector('.articles-section').offsetTop - 130,
     behavior: 'smooth'
    });
   });
+ }
+
+ // 分類下拉選單
+ document.querySelectorAll('.filter-dd').forEach(dd => {
+  const btn = dd.querySelector('.filter-btn');
+  btn.addEventListener('click', (e) => {
+   e.stopPropagation();
+   const wasOpen = dd.classList.contains('open');
+   // 先關掉其他展開的
+   document.querySelectorAll('.filter-dd.open').forEach(d => d.classList.remove('open'));
+   // 切換自己
+   if (!wasOpen) dd.classList.add('open');
+  });
+ });
+ // 點別處關閉下拉
+ document.addEventListener('click', (e) => {
+  if (!e.target.closest('.filter-dd')){
+   document.querySelectorAll('.filter-dd.open').forEach(d => d.classList.remove('open'));
+  }
  });
 </script>
 </body>
