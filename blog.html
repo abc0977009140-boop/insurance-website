@@ -15,836 +15,836 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg: #ffffff; --bg-2: #ffffff; --paper: #ffffff;
-    --ink: #1a1f1d; --ink-soft: #4a4a44; --ink-mute: #7a766c;
-    --line: #cbbfa9; --line-soft: #d9cfb9;
-    --terracotta: #b56b3d; --terracotta-deep: #8a4f2a; --terracotta-light: #d18b5a;
-    --olive: #6b6240; --olive-deep: #4a4530; --cream: #e8d9b8;
-    --gold: #b8893a; --teal: #4a7a6a; --burgundy: #7a3535; --rose: #c97d6f;
-    --serif: "Noto Serif TC", "Cormorant Garamond", serif;
-    --sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
-    --display: "Cormorant Garamond", "Noto Serif TC", serif;
-  }
-  *,*::before,*::after{box-sizing:border-box}
-  html{scroll-behavior: smooth}
-  html,body{margin:0;padding:0}
-  body{
-    background: var(--bg); color: var(--ink);
-    font-family: var(--sans); line-height: 1.7;
-    -webkit-font-smoothing: antialiased; overflow-x: hidden;
-    background-image: none;
-  }
-  body::before{
-    content:""; position: fixed; inset: 0; pointer-events: none;
-    opacity: 0; mix-blend-mode: multiply; z-index: 1;
-  }
-  a{color: inherit; text-decoration: none}
+ :root{
+  --bg: #ffffff; --bg-2: #ffffff; --paper: #ffffff;
+  --ink: #1a1f1d; --ink-soft: #4a4a44; --ink-mute: #7a766c;
+  --line: #cbbfa9; --line-soft: #d9cfb9;
+  --terracotta: #b56b3d; --terracotta-deep: #8a4f2a; --terracotta-light: #d18b5a;
+  --olive: #6b6240; --olive-deep: #4a4530; --cream: #e8d9b8;
+  --gold: #b8893a; --teal: #4a7a6a; --burgundy: #7a3535; --rose: #c97d6f;
+  --serif: "Noto Serif TC", "Cormorant Garamond", serif;
+  --sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+  --display: "Cormorant Garamond", "Noto Serif TC", serif;
+ }
+ *,*::before,*::after{box-sizing:border-box}
+ html{scroll-behavior: smooth}
+ html,body{margin:0;padding:0}
+ body{
+  background: var(--bg); color: var(--ink);
+  font-family: var(--sans); line-height: 1.7;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  background-image: none;
+ }
+ body::before{
+  content:""; position: fixed; inset: 0; pointer-events: none;
+  opacity: 0; mix-blend-mode: multiply; z-index: 1;
+ }
+ a{color: inherit; text-decoration: none}
 
-  /* Top bar */
-  .navbar{
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,0.94);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--line);
-    padding: 10px 4vw;
-  }
-  .nav-container{
-    max-width: 1400px; margin: 0 auto;
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 24px;
-  }
-  .nav-brand{
-    display: flex; align-items: center; gap: 12px;
-    text-decoration: none; flex-shrink: 0;
-  }
-  .nav-brand img{ width: 38px; height: 38px; object-fit: contain; }
-  .nav-brand-text{ display: flex; flex-direction: column; line-height: 1.2; }
-  .nav-title{
-    font-family: var(--serif); font-weight: 700;
-    font-size: 17px; letter-spacing: 0.05em;
-    color: var(--terracotta-deep);
-  }
-  .nav-brand small{
-    font-family: var(--display); font-style: italic;
-    font-size: 11px; letter-spacing: 0.04em;
-    color: var(--ink-mute); margin-top: 1px;
-  }
+ /* Top bar */
+ .navbar{
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 4vw;
+ }
+ .nav-container{
+  max-width: 1400px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 24px;
+ }
+ .nav-brand{
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; flex-shrink: 0;
+ }
+ .nav-brand img{ width: 38px; height: 38px; object-fit: contain; }
+ .nav-brand-text{ display: flex; flex-direction: column; line-height: 1.2; }
+ .nav-title{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 17px; letter-spacing: 0.05em;
+  color: var(--terracotta-deep);
+ }
+ .nav-brand small{
+  font-family: var(--display); font-style: italic;
+  font-size: 11px; letter-spacing: 0.04em;
+  color: var(--ink-mute); margin-top: 1px;
+ }
+ .nav-menu{
+  display: flex; list-style: none; margin: 0; padding: 0;
+  gap: 2px; align-items: center;
+ }
+ .nav-menu > li{ position: relative; }
+ .nav-menu > li > a{
+  display: flex; align-items: center; gap: 4px;
+  padding: 10px 12px;
+  font-family: var(--sans); font-size: 13.5px; font-weight: 500;
+  color: var(--ink-soft); text-decoration: none;
+  border-radius: 6px; transition: all .2s;
+  white-space: nowrap;
+ }
+ .nav-menu > li.has-dropdown > a::after{
+  content: "▾"; font-size: 10px;
+  transition: transform .2s; opacity: 0.6;
+ }
+ .nav-menu > li > a:hover,
+ .nav-menu > li.has-dropdown:hover > a{
+  background: var(--terracotta); color: var(--paper);
+ }
+ .nav-menu > li.has-dropdown:hover > a::after{ opacity: 1; transform: rotate(180deg); }
+ .nav-menu .nav-cta{
+  background: var(--terracotta); color: var(--paper) !important;
+  padding: 10px 18px !important; border-radius: 999px;
+  margin-left: 8px; font-weight: 600 !important;
+ }
+ .nav-menu .nav-cta:hover{
+  background: var(--terracotta-deep) !important;
+  box-shadow: 0 6px 16px rgba(138,79,42,0.25);
+ }
+ .dropdown{
+  position: absolute; top: calc(100% + 6px); left: 0;
+  min-width: 280px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--terracotta);
+  padding: 8px 0; list-style: none; margin: 0;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  opacity: 0; visibility: hidden;
+  transform: translateY(-6px);
+  transition: all .25s cubic-bezier(.2,.7,.2,1);
+ }
+ .nav-menu > li.has-dropdown:hover .dropdown{
+  opacity: 1; visibility: visible; transform: translateY(0);
+ }
+ .dropdown li a{
+  display: block;
+  padding: 11px 22px;
+  font-family: var(--sans); font-size: 13.5px;
+  color: var(--ink-soft); text-decoration: none;
+  transition: all .18s;
+  border-left: 2px solid transparent;
+ }
+ .dropdown li a:hover{
+  background: rgba(181,107,61,0.08);
+  color: var(--terracotta-deep);
+  border-left-color: var(--terracotta);
+  padding-left: 26px;
+ }
+ .dropdown-all{
+  background: linear-gradient(90deg, rgba(181,107,61,0.12), rgba(181,107,61,0.04));
+  border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 6px;
+ }
+ .dropdown-all a{
+  color: var(--terracotta-deep) !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.02em;
+ }
+ .dropdown-all a:hover{
+  background: var(--terracotta) !important;
+  color: var(--paper) !important;
+  border-left-color: transparent !important;
+ }
+ /* 點擊 active 狀態 */
+ .nav-menu > li.has-dropdown.open > a{
+  background: var(--terracotta);
+  color: var(--paper);
+ }
+ .nav-menu > li.has-dropdown.open > a::after{
+  transform: rotate(180deg); opacity: 1;
+ }
+ .nav-toggle{
+  display: none; background: none; border: none;
+  cursor: pointer; padding: 8px;
+  flex-direction: column; gap: 5px;
+ }
+ .nav-toggle span{
+  display: block; width: 22px; height: 2px;
+  background: var(--ink-soft);
+  transition: all .3s;
+ }
+ .nav-toggle.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+ .nav-toggle.open span:nth-child(2){ opacity: 0; }
+ .nav-toggle.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+ @media (max-width: 1180px){
+  .nav-menu > li > a{ padding: 10px 9px; font-size: 13px; }
+  .nav-menu .nav-cta{ padding: 10px 14px !important; font-size: 12.5px; }
+ }
+ @media (max-width: 980px){
+  .nav-toggle{ display: flex; order: -1; margin-right: 4px; }
+  .nav-container{ gap: 8px; }
+  .nav-brand{ flex: 1; justify-content: center; gap: 8px; }
+  .nav-brand small{ display: none; }
+  .nav-title{ font-size: 16px !important; }
   .nav-menu{
-    display: flex; list-style: none; margin: 0; padding: 0;
-    gap: 2px; align-items: center;
+   position: fixed; top: 64px; left: 0; right: auto;
+   bottom: 0; flex-direction: column;
+   background: var(--bg);
+   width: 88vw; max-width: 360px;
+   padding: 18px 22px 40px;
+   gap: 0; align-items: stretch;
+   transform: translateX(-100%);
+   transition: transform .35s cubic-bezier(.2,.7,.2,1);
+   overflow-y: auto; z-index: 99;
+   box-shadow: 8px 0 32px rgba(0,0,0,0.15);
   }
-  .nav-menu > li{ position: relative; }
+  /* 手機 menu 開啟時的背景遮罩 */
+  .nav-menu.open::before{
+   content: ""; position: fixed;
+   top: 64px; left: 88vw; right: 0; bottom: 0;
+   background: rgba(0,0,0,0.3);
+   pointer-events: none;
+  }
+  .nav-menu.open{ transform: translateX(0); }
+  .nav-menu > li{ width: 100%; border-bottom: 1px solid var(--line-soft); }
   .nav-menu > li > a{
-    display: flex; align-items: center; gap: 4px;
-    padding: 10px 12px;
-    font-family: var(--sans); font-size: 13.5px; font-weight: 500;
-    color: var(--ink-soft); text-decoration: none;
-    border-radius: 6px; transition: all .2s;
-    white-space: nowrap;
-  }
-  .nav-menu > li.has-dropdown > a::after{
-    content: "▾"; font-size: 10px;
-    transition: transform .2s; opacity: 0.6;
+   padding: 18px 4px; font-size: 15px;
+   border-radius: 0; justify-content: space-between;
+   color: var(--olive-deep);
   }
   .nav-menu > li > a:hover,
   .nav-menu > li.has-dropdown:hover > a{
-    background: var(--terracotta); color: var(--paper);
+   background: transparent; color: var(--terracotta);
   }
-  .nav-menu > li.has-dropdown:hover > a::after{ opacity: 1; transform: rotate(180deg); }
-  .nav-menu .nav-cta{
-    background: var(--terracotta); color: var(--paper) !important;
-    padding: 10px 18px !important; border-radius: 999px;
-    margin-left: 8px; font-weight: 600 !important;
-  }
-  .nav-menu .nav-cta:hover{
-    background: var(--terracotta-deep) !important;
-    box-shadow: 0 6px 16px rgba(138,79,42,0.25);
-  }
+  .nav-menu > li.has-dropdown > a::after{ font-size: 14px; }
+  .nav-menu > li.has-dropdown.open > a::after{ transform: rotate(180deg); color: var(--terracotta); }
   .dropdown{
-    position: absolute; top: calc(100% + 6px); left: 0;
-    min-width: 280px;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-top: 3px solid var(--terracotta);
-    padding: 8px 0; list-style: none; margin: 0;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-    opacity: 0; visibility: hidden;
-    transform: translateY(-6px);
-    transition: all .25s cubic-bezier(.2,.7,.2,1);
+   position: static; box-shadow: none; border: none;
+   border-top: none; padding: 0;
+   background: transparent;
+   max-height: 0; overflow: hidden;
+   opacity: 1; visibility: visible;
+   transform: none;
+   transition: max-height .3s, padding .3s;
+  }
+  .nav-menu > li.has-dropdown.open .dropdown{
+   max-height: 800px;
+   padding: 0 0 16px 16px;
   }
   .nav-menu > li.has-dropdown:hover .dropdown{
-    opacity: 1; visibility: visible; transform: translateY(0);
+   opacity: 1; visibility: visible;
+  }
+  .nav-menu > li.has-dropdown:not(.open):hover .dropdown{
+   max-height: 0; padding: 0 0 0 16px;
   }
   .dropdown li a{
-    display: block;
-    padding: 11px 22px;
-    font-family: var(--sans); font-size: 13.5px;
-    color: var(--ink-soft); text-decoration: none;
-    transition: all .18s;
-    border-left: 2px solid transparent;
+   padding: 12px 16px; font-size: 14px;
+   border-left: 2px solid var(--line-soft);
   }
-  .dropdown li a:hover{
-    background: rgba(181,107,61,0.08);
-    color: var(--terracotta-deep);
-    border-left-color: var(--terracotta);
-    padding-left: 26px;
+  .nav-menu .nav-cta{
+   margin: 20px 0 0; text-align: center;
+   padding: 14px 18px !important; font-size: 15px;
+   justify-content: center;
   }
-  .dropdown-all{
-    background: linear-gradient(90deg, rgba(181,107,61,0.12), rgba(181,107,61,0.04));
-    border-bottom: 1px solid var(--line-soft);
-    margin-bottom: 6px;
+  .nav-brand small{ display: none; }
+ }
+
+ /* Hero compact */
+ .blog-hero{
+  position: relative; z-index: 2;
+  padding: 70px 6vw 50px;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+ }
+ .blog-hero .container{ max-width: 1300px; margin: 0 auto; }
+ .blog-hero .eyebrow{
+  font-family: var(--display); font-style: italic;
+  font-size: 20px; color: var(--terracotta);
+  margin-bottom: 14px; letter-spacing: 0.02em;
+ }
+ .blog-hero h1{
+  font-family: var(--serif); font-weight: 900;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.15; letter-spacing: -0.01em;
+  margin: 0 0 18px;
+  color: var(--olive-deep);
+  max-width: 900px;
+ }
+ .blog-hero h1 em{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; color: var(--terracotta);
+ }
+ .blog-hero p.lead{
+  font-family: var(--serif); font-size: 17px;
+  line-height: 1.85; color: var(--ink-soft);
+  max-width: 680px; margin: 0;
+ }
+
+ /* Category filter — STICKY */
+ .filter-section{
+  position: sticky;
+  top: 60px;
+  z-index: 40;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 22px 6vw 22px;
+ }
+ .filter-container{
+  max-width: 1300px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; gap: 10px;
+  align-items: center;
+ }
+ .filter-label{
+  font-family: var(--display); font-style: italic;
+  color: var(--ink-mute); font-size: 15px;
+  letter-spacing: 0.05em;
+  margin-right: 8px;
+  font-weight: 500;
+ }
+ .filter-btn{
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--serif); font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all .25s;
+  white-space: nowrap;
+ }
+ .filter-btn:hover{
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: var(--paper);
+  transform: translateY(-1px);
+ }
+ .filter-btn.active{
+  background: var(--terracotta-deep);
+  border-color: var(--terracotta-deep);
+  color: var(--paper);
+ }
+ .filter-btn .count{
+  font-family: var(--sans);
+  background: rgba(255,255,255,0.25);
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+ }
+ .filter-btn:not(.active) .count{
+  background: var(--bg-2);
+  color: var(--ink-mute);
+ }
+
+ /* Articles grid */
+ .articles-section{
+  padding: 60px 6vw 100px;
+  position: relative; z-index: 2;
+ }
+ .articles-container{ max-width: 1300px; margin: 0 auto; }
+ .results-bar{
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 32px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+ }
+ .results-bar .info{
+  font-family: var(--display); font-style: italic;
+  color: var(--ink-mute); font-size: 16px;
+ }
+ .results-bar .info strong{
+  color: var(--terracotta); font-weight: 700;
+  font-style: normal;
+  font-family: var(--serif);
+ }
+ .results-bar .sort{
+  font-family: var(--sans); font-size: 12px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-mute);
+ }
+
+ .articles-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+ }
+
+ .article-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  transition: all .35s cubic-bezier(.2,.7,.2,1);
+  position: relative;
+ }
+ .article-card.hidden{
+  display: none;
+ }
+ .article-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(138,79,42,0.14);
+  border-color: var(--terracotta-light);
+ }
+ .article-card .thumb{
+  aspect-ratio: 21/9;
+  background: var(--bg-2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--paper);
+  position: relative;
+ }
+ .article-card .thumb svg{
+  width: 56px; height: 56px;
+  opacity: 0.85;
+ }
+ .article-card .thumb.t1{ background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta-deep)); }
+ .article-card .thumb.t2{ background: linear-gradient(135deg, var(--terracotta), var(--terracotta-deep)); }
+ .article-card .thumb.t3{ background: linear-gradient(135deg, var(--olive), var(--olive-deep)); }
+ .article-card .thumb.t4{ background: linear-gradient(135deg, var(--teal), var(--olive-deep)); }
+ .article-card .thumb.t5{ background: linear-gradient(135deg, var(--burgundy), var(--olive-deep)); }
+ .article-card .thumb.t6{ background: linear-gradient(135deg, var(--gold), var(--terracotta-deep)); }
+ .article-card .thumb.t7{ background: linear-gradient(135deg, var(--rose), var(--burgundy)); }
+ .article-card .thumb.t8{ background: linear-gradient(135deg, var(--olive), var(--terracotta-deep)); }
+
+ .article-card .thumb .cat-badge{
+  position: absolute;
+  top: 14px; left: 14px;
+  padding: 5px 14px;
+  background: rgba(0,0,0,0.35);
+  color: var(--paper);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+ }
+
+ .article-card .body{
+  padding: 28px 30px 28px;
+  flex: 1;
+  display: flex; flex-direction: column;
+ }
+ .article-card .tags{
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-bottom: 14px;
+ }
+ .article-card .tags span{
+  padding: 3px 10px;
+  background: var(--bg-2);
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--ink-mute);
+  letter-spacing: 0.05em;
+ }
+ .article-card h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+  color: var(--olive-deep);
+  letter-spacing: -0.01em;
+  transition: color .25s;
+ }
+ .article-card:hover h3{ color: var(--terracotta); }
+ .article-card .excerpt{
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+  flex: 1;
+ }
+ .article-card .meta{
+  display: flex; justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line-soft);
+  font-family: var(--display); font-style: italic;
+  font-size: 13.5px;
+  color: var(--ink-mute);
+ }
+ .article-card .meta .read{
+  color: var(--terracotta); font-weight: 600;
+ }
+
+ /* Empty state */
+ .empty-state{
+  display: none;
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--ink-mute);
+ }
+ .empty-state.show{ display: block; }
+ .empty-state .icon{
+  font-size: 56px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+ }
+ .empty-state p{
+  font-family: var(--display); font-style: italic;
+  font-size: 18px;
+ }
+
+ /* Bottom CTA */
+ .bottom-cta{
+  margin-top: 80px;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, var(--olive-deep), var(--olive));
+  color: var(--cream);
+  text-align: center;
+  border-radius: 0;
+ }
+ .bottom-cta h2{
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(24px, 3vw, 34px);
+  margin: 0 0 14px;
+  color: var(--paper);
+ }
+ .bottom-cta h2 em{
+  font-family: var(--display); font-style: italic;
+  color: var(--terracotta-light); font-weight: 600;
+ }
+ .bottom-cta p{
+  font-family: var(--serif);
+  font-size: 16px;
+  color: rgba(245,239,228,0.85);
+  margin: 0 0 30px;
+  max-width: 580px; margin-left: auto; margin-right: auto;
+  line-height: 1.85;
+ }
+ .bottom-cta a.cta{
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 32px;
+  background: var(--terracotta);
+  color: var(--paper);
+  font-family: var(--serif); font-weight: 600;
+  font-size: 15px;
+  border-radius: 999px;
+  transition: all .3s;
+ }
+ .bottom-cta a.cta:hover{
+  background: var(--paper);
+  color: var(--terracotta-deep);
+  transform: translateY(-2px);
+ }
+ .bottom-cta a.cta svg{ width: 16px; height: 16px; }
+
+ /* Footer */
+ footer{
+  position: relative; z-index: 2;
+  padding: 60px 6vw 36px;
+  background: var(--olive-deep);
+  color: rgba(245,239,228,0.75);
+ }
+ .foot-grid{
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+ }
+ .foot-grid h5{
+  font-family: var(--display); font-style: italic;
+  font-size: 16px; color: var(--terracotta-light);
+  margin: 0 0 16px; font-weight: 500;
+ }
+ .foot-disclaimer{ font-size: 12px; line-height: 1.85; color: rgba(245,239,228,0.6); }
+ .foot-grid ul{ list-style: none; padding: 0; margin: 0; font-size: 13px }
+ .foot-grid li{ padding: 5px 0 }
+ .foot-grid a{ color: rgba(245,239,228,0.7); transition: color .2s }
+ .foot-grid a:hover{ color: var(--paper) }
+ .foot-bottom{
+  max-width: 1300px; margin: 36px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245,239,228,0.12);
+  display: flex; justify-content: space-between;
+  font-family: var(--display); font-style: italic;
+  font-size: 13px; color: rgba(245,239,228,0.5);
+ }
+
+ .reveal{
+  opacity: 0; transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+ }
+ .reveal.in{ opacity: 1; transform: none }
+
+ @media (max-width: 980px){
+  .articles-grid{ grid-template-columns: 1fr; gap: 20px }
+  .filter-section{ top: 0; padding: 16px 5vw; }
+  .filter-label{ display: none; }
+  .filter-container{ gap: 8px; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+  .filter-btn{ font-size: 13px; padding: 8px 14px; }
+  .blog-hero{ padding: 50px 5vw 36px; }
+  .articles-section{ padding: 40px 5vw 70px; }
+  .results-bar{ flex-direction: column; gap: 6px; align-items: flex-start; }
+  .article-card .body{ padding: 22px 24px; }
+  .article-card h3{ font-size: 19px; }
+  .foot-grid{ grid-template-columns: 1fr; gap: 36px }
+  .foot-bottom{ flex-direction: column; gap: 8px }
+  .topmeta{ display: none; }
+  .bottom-cta{ padding: 40px 24px; }
+ }
+
+ /* ============ 手機版內文字加大（讓閱讀更舒適）============ */
+ @media (max-width: 768px){
+  body{ font-size: 17px; line-height: 1.85; }
+  p{ font-size: 17px !important; line-height: 1.9 !important; }
+  li{ font-size: 16.5px !important; line-height: 1.85 !important; }
+  .hero-lead{ font-size: 17.5px !important; line-height: 1.9 !important; }
+  .sec-lead{ font-size: 17px !important; line-height: 1.9 !important; }
+  .excerpt{ font-size: 15.5px !important; line-height: 1.8 !important; }
+  .info-block p, .tip-box, .warn-box,
+  .item-card .desc, .compare-col p,
+  .compare-col li, .outcome-card p,
+  .breakdown-card p, .action-card p,
+  .surgery-col p, .surgery-col li,
+  .qa-row .a, .qa-row .q,
+  .ruling-card blockquote,
+  .law-panel blockquote,
+  .news-block p,
+  .case-doc-row .content,
+  .tier-card .right,
+  .belief-card .quote,
+  .dark-callout p,
+  .formula-box .formula,
+  .combo-item .text,
+  .feat-list li,
+  .subtype-grid p{
+   font-size: 16.5px !important; line-height: 1.9 !important;
   }
-  .dropdown-all a{
-    color: var(--terracotta-deep) !important;
-    font-weight: 700 !important;
-    font-size: 13px !important;
-    letter-spacing: 0.02em;
+  .dropdown li a{ font-size: 16px !important; padding: 14px 20px !important; }
+  .nav-menu > li > a{ font-size: 17px !important; padding: 18px 8px !important; }
+  .dropdown-all a{ font-size: 15px !important; font-weight: 700 !important; }
+  h3{ font-size: 21px !important; }
+  h4{ font-size: 18px !important; }
+ }
+
+ /* === [v10] Mobile menu - 重寫 === */
+ @media (max-width: 980px){
+  /* Navbar 容器 */
+  .navbar{ padding: 10px 4vw !important; }
+  .nav-container{
+   position: relative !important;
+   flex-direction: row !important;
+   justify-content: flex-start !important;
+   align-items: center !important;
+   gap: 0 !important;
+   max-width: 100% !important;
   }
-  .dropdown-all a:hover{
-    background: var(--terracotta) !important;
-    color: var(--paper) !important;
-    border-left-color: transparent !important;
-  }
-  /* 點擊 active 狀態 */
-  .nav-menu > li.has-dropdown.open > a{
-    background: var(--terracotta);
-    color: var(--paper);
-  }
-  .nav-menu > li.has-dropdown.open > a::after{
-    transform: rotate(180deg); opacity: 1;
-  }
+
+  /* 漢堡 menu 在左 */
   .nav-toggle{
-    display: none; background: none; border: none;
-    cursor: pointer; padding: 8px;
-    flex-direction: column; gap: 5px;
+   display: flex !important;
+   order: -1 !important;
+   margin-right: auto !important;
+   z-index: 10002 !important;
+   position: relative !important;
+   padding: 8px !important;
   }
   .nav-toggle span{
-    display: block; width: 22px; height: 2px;
-    background: var(--ink-soft);
-    transition: all .3s;
-  }
-  .nav-toggle.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
-  .nav-toggle.open span:nth-child(2){ opacity: 0; }
-  .nav-toggle.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
-  @media (max-width: 1180px){
-    .nav-menu > li > a{ padding: 10px 9px; font-size: 13px; }
-    .nav-menu .nav-cta{ padding: 10px 14px !important; font-size: 12.5px; }
-  }
-  @media (max-width: 980px){
-    .nav-toggle{ display: flex; order: -1; margin-right: 4px; }
-    .nav-container{ gap: 8px; }
-    .nav-brand{ flex: 1; justify-content: center; gap: 8px; }
-    .nav-brand small{ display: none; }
-    .nav-title{ font-size: 16px !important; }
-    .nav-menu{
-      position: fixed; top: 64px; left: 0; right: auto;
-      bottom: 0; flex-direction: column;
-      background: var(--bg);
-      width: 88vw; max-width: 360px;
-      padding: 18px 22px 40px;
-      gap: 0; align-items: stretch;
-      transform: translateX(-100%);
-      transition: transform .35s cubic-bezier(.2,.7,.2,1);
-      overflow-y: auto; z-index: 99;
-      box-shadow: 8px 0 32px rgba(0,0,0,0.15);
-    }
-    /* 手機 menu 開啟時的背景遮罩 */
-    .nav-menu.open::before{
-      content: ""; position: fixed;
-      top: 64px; left: 88vw; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.3);
-      pointer-events: none;
-    }
-    .nav-menu.open{ transform: translateX(0); }
-    .nav-menu > li{ width: 100%; border-bottom: 1px solid var(--line-soft); }
-    .nav-menu > li > a{
-      padding: 18px 4px; font-size: 15px;
-      border-radius: 0; justify-content: space-between;
-      color: var(--olive-deep);
-    }
-    .nav-menu > li > a:hover,
-    .nav-menu > li.has-dropdown:hover > a{
-      background: transparent; color: var(--terracotta);
-    }
-    .nav-menu > li.has-dropdown > a::after{ font-size: 14px; }
-    .nav-menu > li.has-dropdown.open > a::after{ transform: rotate(180deg); color: var(--terracotta); }
-    .dropdown{
-      position: static; box-shadow: none; border: none;
-      border-top: none; padding: 0;
-      background: transparent;
-      max-height: 0; overflow: hidden;
-      opacity: 1; visibility: visible;
-      transform: none;
-      transition: max-height .3s, padding .3s;
-    }
-    .nav-menu > li.has-dropdown.open .dropdown{
-      max-height: 800px;
-      padding: 0 0 16px 16px;
-    }
-    .nav-menu > li.has-dropdown:hover .dropdown{
-      opacity: 1; visibility: visible;
-    }
-    .nav-menu > li.has-dropdown:not(.open):hover .dropdown{
-      max-height: 0; padding: 0 0 0 16px;
-    }
-    .dropdown li a{
-      padding: 12px 16px; font-size: 14px;
-      border-left: 2px solid var(--line-soft);
-    }
-    .nav-menu .nav-cta{
-      margin: 20px 0 0; text-align: center;
-      padding: 14px 18px !important; font-size: 15px;
-      justify-content: center;
-    }
-    .nav-brand small{ display: none; }
+   width: 24px !important;
+   height: 2px !important;
+   background: #4a4530 !important;
   }
 
-  /* Hero compact */
-  .blog-hero{
-    position: relative; z-index: 2;
-    padding: 70px 6vw 50px;
-    border-bottom: 1px solid var(--line);
-    background: transparent;
+  /* LOGO 置中 */
+  .nav-brand{
+   position: absolute !important;
+   left: 50% !important;
+   top: 50% !important;
+   transform: translate(-50%, -50%) !important;
+   flex-direction: row !important;
+   margin: 0 !important;
+   gap: 8px !important;
+   z-index: 1 !important;
   }
-  .blog-hero .container{ max-width: 1300px; margin: 0 auto; }
-  .blog-hero .eyebrow{
-    font-family: var(--display); font-style: italic;
-    font-size: 20px; color: var(--terracotta);
-    margin-bottom: 14px; letter-spacing: 0.02em;
-  }
-  .blog-hero h1{
-    font-family: var(--serif); font-weight: 900;
-    font-size: clamp(36px, 5vw, 64px);
-    line-height: 1.15; letter-spacing: -0.01em;
-    margin: 0 0 18px;
-    color: var(--olive-deep);
-    max-width: 900px;
-  }
-  .blog-hero h1 em{
-    font-family: var(--display); font-style: italic;
-    font-weight: 600; color: var(--terracotta);
-  }
-  .blog-hero p.lead{
-    font-family: var(--serif); font-size: 17px;
-    line-height: 1.85; color: var(--ink-soft);
-    max-width: 680px; margin: 0;
+  .nav-brand img{ width: 30px !important; height: 30px !important; }
+  .nav-brand .nav-brand-text{ flex-direction: row !important; align-items: center !important; }
+  .nav-title{ font-size: 16px !important; }
+  .nav-brand small{ display: none !important; }
+
+  /* 半透明遮罩(不模糊、不擋選單點擊) */
+  body.menu-open::after{
+   content: "" !important;
+   position: fixed !important;
+   inset: 0 !important;
+   background: rgba(0,0,0,0.35) !important;
+   z-index: 9998 !important;
+   pointer-events: none !important;
   }
 
-  /* Category filter — STICKY */
-  .filter-section{
-    position: sticky;
-    top: 60px;
-    z-index: 40;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
-    padding: 22px 6vw 22px;
+  /* === 抽屜：從左滑入，覆蓋整個 viewport 高度 === */
+  .navbar .nav-menu,
+  body .nav-menu,
+  .nav-menu{
+   position: fixed !important;
+   top: 0 !important;
+   left: 0 !important;
+   right: auto !important;
+   bottom: 0 !important;
+   height: 100vh !important;
+   height: 100dvh !important;
+   width: 86% !important;
+   max-width: 340px !important;
+   min-width: 280px !important;
+   flex-direction: column !important;
+   align-items: stretch !important;
+   justify-content: flex-start !important;
+   background: #ffffff !important;
+   padding: 70px 0 60px !important;
+   margin: 0 !important;
+   gap: 0 !important;
+   list-style: none !important;
+   transform: translateX(-105%) !important;
+   transition: transform .35s cubic-bezier(.2,.7,.2,1) !important;
+   overflow-y: auto !important;
+   overflow-x: hidden !important;
+   z-index: 9999 !important;
+   box-shadow: 4px 0 32px rgba(0,0,0,0.18) !important;
+   visibility: visible !important;
+   opacity: 1 !important;
+   display: flex !important;
+   border: none !important;
   }
-  .filter-container{
-    max-width: 1300px; margin: 0 auto;
-    display: flex; flex-wrap: wrap; gap: 10px;
-    align-items: center;
-  }
-  .filter-label{
-    font-family: var(--display); font-style: italic;
-    color: var(--ink-mute); font-size: 15px;
-    letter-spacing: 0.05em;
-    margin-right: 8px;
-    font-weight: 500;
-  }
-  .filter-btn{
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 9px 18px;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    font-family: var(--serif); font-weight: 600;
-    font-size: 14px;
-    color: var(--ink-soft);
-    cursor: pointer;
-    transition: all .25s;
-    white-space: nowrap;
-  }
-  .filter-btn:hover{
-    background: var(--terracotta);
-    border-color: var(--terracotta);
-    color: var(--paper);
-    transform: translateY(-1px);
-  }
-  .filter-btn.active{
-    background: var(--terracotta-deep);
-    border-color: var(--terracotta-deep);
-    color: var(--paper);
-  }
-  .filter-btn .count{
-    font-family: var(--sans);
-    background: rgba(255,255,255,0.25);
-    padding: 1px 8px;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 600;
-  }
-  .filter-btn:not(.active) .count{
-    background: var(--bg-2);
-    color: var(--ink-mute);
+  .nav-menu.open{
+   transform: translateX(0) !important;
   }
 
-  /* Articles grid */
-  .articles-section{
-    padding: 60px 6vw 100px;
-    position: relative; z-index: 2;
+  /* 主分類 li */
+  .nav-menu > li{
+   width: 100% !important;
+   list-style: none !important;
+   border-bottom: 1px solid #f0ece4 !important;
+   border-top: none !important;
+   padding: 0 !important;
+   margin: 0 !important;
+   display: block !important;
+   position: relative !important;
+   background: #ffffff !important;
   }
-  .articles-container{ max-width: 1300px; margin: 0 auto; }
-  .results-bar{
-    display: flex; justify-content: space-between; align-items: baseline;
-    margin-bottom: 32px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--line);
+  .nav-menu > li:first-child{ border-top: 1px solid #f0ece4 !important; }
+
+  /* 主分類連結 */
+  .nav-menu > li > a{
+   display: flex !important;
+   justify-content: space-between !important;
+   align-items: center !important;
+   padding: 16px 22px !important;
+   font-size: 17px !important;
+   font-weight: 700 !important;
+   color: #4a4530 !important;
+   text-decoration: none !important;
+   background: transparent !important;
+   border-radius: 0 !important;
+   line-height: 1.4 !important;
+   width: 100% !important;
   }
-  .results-bar .info{
-    font-family: var(--display); font-style: italic;
-    color: var(--ink-mute); font-size: 16px;
+  .nav-menu > li.has-dropdown > a::after{
+   content: "▾" !important;
+   display: inline-block !important;
+   font-size: 18px !important;
+   color: #b56b3d !important;
+   transition: transform .25s !important;
+   margin-left: 12px !important;
   }
-  .results-bar .info strong{
-    color: var(--terracotta); font-weight: 700;
-    font-style: normal;
-    font-family: var(--serif);
+  .nav-menu > li.has-dropdown.open > a::after{
+   transform: rotate(180deg) !important;
   }
-  .results-bar .sort{
-    font-family: var(--sans); font-size: 12px;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--ink-mute);
+  .nav-menu > li.has-dropdown.open > a{
+   background: rgba(181,107,61,0.06) !important;
+   color: #8a4f2a !important;
   }
 
-  .articles-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+  /* Dropdown 子項：預設關閉，點開展開 */
+  .dropdown{
+   list-style: none !important;
+   padding: 0 !important;
+   margin: 0 !important;
+   max-height: 0 !important;
+   overflow: hidden !important;
+   position: static !important;
+   box-shadow: none !important;
+   border: none !important;
+   background: #fafaf8 !important;
+   transform: none !important;
+   opacity: 1 !important;
+   visibility: visible !important;
+   display: block !important;
+   width: 100% !important;
+   transition: max-height .35s ease !important;
+  }
+  .nav-menu > li.has-dropdown.open .dropdown{
+   max-height: 800px !important;
+   padding: 4px 0 12px !important;
+  }
+  .dropdown li{ list-style: none !important; display: block !important; }
+  .dropdown li a{
+   display: block !important;
+   padding: 11px 22px 11px 38px !important;
+   font-size: 15px !important;
+   color: #555048 !important;
+   text-decoration: none !important;
+   border: none !important;
+   line-height: 1.5 !important;
+   background: transparent !important;
+   transition: all .15s !important;
+  }
+  .dropdown li a:active{
+   color: #b56b3d !important;
+   background: rgba(181,107,61,0.08) !important;
+  }
+  .dropdown-all{
+   background: rgba(181,107,61,0.10) !important;
+   margin: 0 0 4px !important;
+  }
+  .dropdown-all a{
+   color: #8a4f2a !important;
+   font-weight: 700 !important;
+   font-size: 14px !important;
   }
 
-  .article-card{
-    background: var(--paper);
-    border: 1px solid var(--line);
-    display: flex; flex-direction: column;
-    overflow: hidden;
-    transition: all .35s cubic-bezier(.2,.7,.2,1);
-    position: relative;
+  /* LINE CTA 按鈕 */
+  .nav-menu > li:last-child{ border-bottom: none !important; padding: 20px 22px 0 !important; }
+  .nav-menu .nav-cta{
+   display: block !important;
+   width: 100% !important;
+   margin: 0 !important;
+   padding: 16px 24px !important;
+   background: #b56b3d !important;
+   color: #ffffff !important;
+   text-align: center !important;
+   border-radius: 999px !important;
+   font-size: 16px !important;
+   font-weight: 700 !important;
+   text-decoration: none !important;
+   box-shadow: 0 4px 12px rgba(181,107,61,0.25) !important;
   }
-  .article-card.hidden{
-    display: none;
-  }
-  .article-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 22px 44px rgba(138,79,42,0.14);
-    border-color: var(--terracotta-light);
-  }
-  .article-card .thumb{
-    aspect-ratio: 21/9;
-    background: var(--bg-2);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--paper);
-    position: relative;
-  }
-  .article-card .thumb svg{
-    width: 56px; height: 56px;
-    opacity: 0.85;
-  }
-  .article-card .thumb.t1{ background: linear-gradient(135deg, var(--terracotta-light), var(--terracotta-deep)); }
-  .article-card .thumb.t2{ background: linear-gradient(135deg, var(--terracotta), var(--terracotta-deep)); }
-  .article-card .thumb.t3{ background: linear-gradient(135deg, var(--olive), var(--olive-deep)); }
-  .article-card .thumb.t4{ background: linear-gradient(135deg, var(--teal), var(--olive-deep)); }
-  .article-card .thumb.t5{ background: linear-gradient(135deg, var(--burgundy), var(--olive-deep)); }
-  .article-card .thumb.t6{ background: linear-gradient(135deg, var(--gold), var(--terracotta-deep)); }
-  .article-card .thumb.t7{ background: linear-gradient(135deg, var(--rose), var(--burgundy)); }
-  .article-card .thumb.t8{ background: linear-gradient(135deg, var(--olive), var(--terracotta-deep)); }
+  .nav-menu .nav-cta::after{ display: none !important; }
+ }
 
-  .article-card .thumb .cat-badge{
-    position: absolute;
-    top: 14px; left: 14px;
-    padding: 5px 14px;
-    background: rgba(0,0,0,0.35);
-    color: var(--paper);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 999px;
-    font-family: var(--sans);
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    font-weight: 500;
-  }
+ /* === 文章內字體放大（同 v9）=== */
+ .hero-lead{ font-size: 19px !important; line-height: 1.95 !important; }
+ .sec-lead, .intro-section p, .case-lead{ font-size: 18px !important; line-height: 1.95 !important; }
+ .info-block p, .info-block .title,
+ .tip-box > div, .warn-box > div,
+ .qa-box .q, .qa-box .a, .qa-row .q, .qa-row .a,
+ .dark-callout p{ font-size: 17px !important; line-height: 1.9 !important; }
+ .compare-col p, .compare-col li,
+ .surgery-col p, .surgery-col li,
+ .outcome-card p, .item-card .desc,
+ .ruling-card blockquote, .law-panel blockquote,
+ .case-doc-row .content, .feat-list li,
+ .priority-header p, .belief-card .quote,
+ .combo-item .text{ font-size: 16.5px !important; line-height: 1.9 !important; }
+ .closing p{ font-size: 18px !important; }
 
-  .article-card .body{
-    padding: 28px 30px 28px;
-    flex: 1;
-    display: flex; flex-direction: column;
-  }
-  .article-card .tags{
-    display: flex; flex-wrap: wrap; gap: 6px;
-    margin-bottom: 14px;
-  }
-  .article-card .tags span{
-    padding: 3px 10px;
-    background: var(--bg-2);
-    border-radius: 4px;
-    font-size: 11px;
-    color: var(--ink-mute);
-    letter-spacing: 0.05em;
-  }
-  .article-card h3{
-    font-family: var(--serif); font-weight: 700;
-    font-size: 22px;
-    line-height: 1.4;
-    margin: 0 0 12px;
-    color: var(--olive-deep);
-    letter-spacing: -0.01em;
-    transition: color .25s;
-  }
-  .article-card:hover h3{ color: var(--terracotta); }
-  .article-card .excerpt{
-    font-size: 14.5px;
-    line-height: 1.75;
-    color: var(--ink-soft);
-    margin: 0 0 20px;
-    flex: 1;
-  }
-  .article-card .meta{
-    display: flex; justify-content: space-between;
-    padding-top: 16px;
-    border-top: 1px dashed var(--line-soft);
-    font-family: var(--display); font-style: italic;
-    font-size: 13.5px;
-    color: var(--ink-mute);
-  }
-  .article-card .meta .read{
-    color: var(--terracotta); font-weight: 600;
-  }
-
-  /* Empty state */
-  .empty-state{
-    display: none;
-    padding: 80px 20px;
-    text-align: center;
-    color: var(--ink-mute);
-  }
-  .empty-state.show{ display: block; }
-  .empty-state .icon{
-    font-size: 56px;
-    margin-bottom: 16px;
-    opacity: 0.5;
-  }
-  .empty-state p{
-    font-family: var(--display); font-style: italic;
-    font-size: 18px;
-  }
-
-  /* Bottom CTA */
-  .bottom-cta{
-    margin-top: 80px;
-    padding: 50px 40px;
-    background: linear-gradient(135deg, var(--olive-deep), var(--olive));
-    color: var(--cream);
-    text-align: center;
-    border-radius: 0;
-  }
-  .bottom-cta h2{
-    font-family: var(--serif); font-weight: 700;
-    font-size: clamp(24px, 3vw, 34px);
-    margin: 0 0 14px;
-    color: var(--paper);
-  }
-  .bottom-cta h2 em{
-    font-family: var(--display); font-style: italic;
-    color: var(--terracotta-light); font-weight: 600;
-  }
-  .bottom-cta p{
-    font-family: var(--serif);
-    font-size: 16px;
-    color: rgba(245,239,228,0.85);
-    margin: 0 0 30px;
-    max-width: 580px; margin-left: auto; margin-right: auto;
-    line-height: 1.85;
-  }
-  .bottom-cta a.cta{
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 14px 32px;
-    background: var(--terracotta);
-    color: var(--paper);
-    font-family: var(--serif); font-weight: 600;
-    font-size: 15px;
-    border-radius: 999px;
-    transition: all .3s;
-  }
-  .bottom-cta a.cta:hover{
-    background: var(--paper);
-    color: var(--terracotta-deep);
-    transform: translateY(-2px);
-  }
-  .bottom-cta a.cta svg{ width: 16px; height: 16px; }
-
-  /* Footer */
-  footer{
-    position: relative; z-index: 2;
-    padding: 60px 6vw 36px;
-    background: var(--olive-deep);
-    color: rgba(245,239,228,0.75);
-  }
-  .foot-grid{
-    max-width: 1300px; margin: 0 auto;
-    display: grid; grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
-  }
-  .foot-grid h5{
-    font-family: var(--display); font-style: italic;
-    font-size: 16px; color: var(--terracotta-light);
-    margin: 0 0 16px; font-weight: 500;
-  }
-  .foot-disclaimer{ font-size: 12px; line-height: 1.85; color: rgba(245,239,228,0.6); }
-  .foot-grid ul{ list-style: none; padding: 0; margin: 0; font-size: 13px }
-  .foot-grid li{ padding: 5px 0 }
-  .foot-grid a{ color: rgba(245,239,228,0.7); transition: color .2s }
-  .foot-grid a:hover{ color: var(--paper) }
-  .foot-bottom{
-    max-width: 1300px; margin: 36px auto 0;
-    padding-top: 24px;
-    border-top: 1px solid rgba(245,239,228,0.12);
-    display: flex; justify-content: space-between;
-    font-family: var(--display); font-style: italic;
-    font-size: 13px; color: rgba(245,239,228,0.5);
-  }
-
-  .reveal{
-    opacity: 0; transform: translateY(28px);
-    transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
-  }
-  .reveal.in{ opacity: 1; transform: none }
-
-  @media (max-width: 980px){
-    .articles-grid{ grid-template-columns: 1fr; gap: 20px }
-    .filter-section{ top: 0; padding: 16px 5vw; }
-    .filter-label{ display: none; }
-    .filter-container{ gap: 8px; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
-    .filter-btn{ font-size: 13px; padding: 8px 14px; }
-    .blog-hero{ padding: 50px 5vw 36px; }
-    .articles-section{ padding: 40px 5vw 70px; }
-    .results-bar{ flex-direction: column; gap: 6px; align-items: flex-start; }
-    .article-card .body{ padding: 22px 24px; }
-    .article-card h3{ font-size: 19px; }
-    .foot-grid{ grid-template-columns: 1fr; gap: 36px }
-    .foot-bottom{ flex-direction: column; gap: 8px }
-    .topmeta{ display: none; }
-    .bottom-cta{ padding: 40px 24px; }
-  }
-
-  /* ============ 手機版內文字加大（讓閱讀更舒適）============ */
-  @media (max-width: 768px){
-    body{ font-size: 17px; line-height: 1.85; }
-    p{ font-size: 17px !important; line-height: 1.9 !important; }
-    li{ font-size: 16.5px !important; line-height: 1.85 !important; }
-    .hero-lead{ font-size: 17.5px !important; line-height: 1.9 !important; }
-    .sec-lead{ font-size: 17px !important; line-height: 1.9 !important; }
-    .excerpt{ font-size: 15.5px !important; line-height: 1.8 !important; }
-    .info-block p, .tip-box, .warn-box,
-    .item-card .desc, .compare-col p,
-    .compare-col li, .outcome-card p,
-    .breakdown-card p, .action-card p,
-    .surgery-col p, .surgery-col li,
-    .qa-row .a, .qa-row .q,
-    .ruling-card blockquote,
-    .law-panel blockquote,
-    .news-block p,
-    .case-doc-row .content,
-    .tier-card .right,
-    .belief-card .quote,
-    .dark-callout p,
-    .formula-box .formula,
-    .combo-item .text,
-    .feat-list li,
-    .subtype-grid p{
-      font-size: 16.5px !important; line-height: 1.9 !important;
-    }
-    .dropdown li a{ font-size: 16px !important; padding: 14px 20px !important; }
-    .nav-menu > li > a{ font-size: 17px !important; padding: 18px 8px !important; }
-    .dropdown-all a{ font-size: 15px !important; font-weight: 700 !important; }
-    h3{ font-size: 21px !important; }
-    h4{ font-size: 18px !important; }
-  }
-
-  /* === [v10] Mobile menu - 重寫 === */
-  @media (max-width: 980px){
-    /* Navbar 容器 */
-    .navbar{ padding: 10px 4vw !important; }
-    .nav-container{
-      position: relative !important;
-      flex-direction: row !important;
-      justify-content: flex-start !important;
-      align-items: center !important;
-      gap: 0 !important;
-      max-width: 100% !important;
-    }
-
-    /* 漢堡 menu 在左 */
-    .nav-toggle{
-      display: flex !important;
-      order: -1 !important;
-      margin-right: auto !important;
-      z-index: 10002 !important;
-      position: relative !important;
-      padding: 8px !important;
-    }
-    .nav-toggle span{
-      width: 24px !important;
-      height: 2px !important;
-      background: #4a4530 !important;
-    }
-
-    /* LOGO 置中 */
-    .nav-brand{
-      position: absolute !important;
-      left: 50% !important;
-      top: 50% !important;
-      transform: translate(-50%, -50%) !important;
-      flex-direction: row !important;
-      margin: 0 !important;
-      gap: 8px !important;
-      z-index: 1 !important;
-    }
-    .nav-brand img{ width: 30px !important; height: 30px !important; }
-    .nav-brand .nav-brand-text{ flex-direction: row !important; align-items: center !important; }
-    .nav-title{ font-size: 16px !important; }
-    .nav-brand small{ display: none !important; }
-
-    /* 半透明遮罩(不模糊、不擋選單點擊) */
-    body.menu-open::after{
-      content: "" !important;
-      position: fixed !important;
-      inset: 0 !important;
-      background: rgba(0,0,0,0.35) !important;
-      z-index: 9998 !important;
-      pointer-events: none !important;
-    }
-
-    /* === 抽屜：從左滑入，覆蓋整個 viewport 高度 === */
-    .navbar .nav-menu,
-    body .nav-menu,
-    .nav-menu{
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: auto !important;
-      bottom: 0 !important;
-      height: 100vh !important;
-      height: 100dvh !important;
-      width: 86% !important;
-      max-width: 340px !important;
-      min-width: 280px !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      justify-content: flex-start !important;
-      background: #ffffff !important;
-      padding: 70px 0 60px !important;
-      margin: 0 !important;
-      gap: 0 !important;
-      list-style: none !important;
-      transform: translateX(-105%) !important;
-      transition: transform .35s cubic-bezier(.2,.7,.2,1) !important;
-      overflow-y: auto !important;
-      overflow-x: hidden !important;
-      z-index: 9999 !important;
-      box-shadow: 4px 0 32px rgba(0,0,0,0.18) !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      display: flex !important;
-      border: none !important;
-    }
-    .nav-menu.open{
-      transform: translateX(0) !important;
-    }
-
-    /* 主分類 li */
-    .nav-menu > li{
-      width: 100% !important;
-      list-style: none !important;
-      border-bottom: 1px solid #f0ece4 !important;
-      border-top: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      display: block !important;
-      position: relative !important;
-      background: #ffffff !important;
-    }
-    .nav-menu > li:first-child{ border-top: 1px solid #f0ece4 !important; }
-
-    /* 主分類連結 */
-    .nav-menu > li > a{
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      padding: 16px 22px !important;
-      font-size: 17px !important;
-      font-weight: 700 !important;
-      color: #4a4530 !important;
-      text-decoration: none !important;
-      background: transparent !important;
-      border-radius: 0 !important;
-      line-height: 1.4 !important;
-      width: 100% !important;
-    }
-    .nav-menu > li.has-dropdown > a::after{
-      content: "▾" !important;
-      display: inline-block !important;
-      font-size: 18px !important;
-      color: #b56b3d !important;
-      transition: transform .25s !important;
-      margin-left: 12px !important;
-    }
-    .nav-menu > li.has-dropdown.open > a::after{
-      transform: rotate(180deg) !important;
-    }
-    .nav-menu > li.has-dropdown.open > a{
-      background: rgba(181,107,61,0.06) !important;
-      color: #8a4f2a !important;
-    }
-
-    /* Dropdown 子項：預設關閉，點開展開 */
-    .dropdown{
-      list-style: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      max-height: 0 !important;
-      overflow: hidden !important;
-      position: static !important;
-      box-shadow: none !important;
-      border: none !important;
-      background: #fafaf8 !important;
-      transform: none !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      display: block !important;
-      width: 100% !important;
-      transition: max-height .35s ease !important;
-    }
-    .nav-menu > li.has-dropdown.open .dropdown{
-      max-height: 800px !important;
-      padding: 4px 0 12px !important;
-    }
-    .dropdown li{ list-style: none !important; display: block !important; }
-    .dropdown li a{
-      display: block !important;
-      padding: 11px 22px 11px 38px !important;
-      font-size: 15px !important;
-      color: #555048 !important;
-      text-decoration: none !important;
-      border: none !important;
-      line-height: 1.5 !important;
-      background: transparent !important;
-      transition: all .15s !important;
-    }
-    .dropdown li a:active{
-      color: #b56b3d !important;
-      background: rgba(181,107,61,0.08) !important;
-    }
-    .dropdown-all{
-      background: rgba(181,107,61,0.10) !important;
-      margin: 0 0 4px !important;
-    }
-    .dropdown-all a{
-      color: #8a4f2a !important;
-      font-weight: 700 !important;
-      font-size: 14px !important;
-    }
-
-    /* LINE CTA 按鈕 */
-    .nav-menu > li:last-child{ border-bottom: none !important; padding: 20px 22px 0 !important; }
-    .nav-menu .nav-cta{
-      display: block !important;
-      width: 100% !important;
-      margin: 0 !important;
-      padding: 16px 24px !important;
-      background: #b56b3d !important;
-      color: #ffffff !important;
-      text-align: center !important;
-      border-radius: 999px !important;
-      font-size: 16px !important;
-      font-weight: 700 !important;
-      text-decoration: none !important;
-      box-shadow: 0 4px 12px rgba(181,107,61,0.25) !important;
-    }
-    .nav-menu .nav-cta::after{ display: none !important; }
-  }
-
-  /* === 文章內字體放大（同 v9）=== */
-  .hero-lead{ font-size: 19px !important; line-height: 1.95 !important; }
-  .sec-lead, .intro-section p, .case-lead{ font-size: 18px !important; line-height: 1.95 !important; }
-  .info-block p, .info-block .title,
-  .tip-box > div, .warn-box > div,
+ @media (max-width: 768px){
+  .hero-lead{ font-size: 17px !important; }
+  .sec-lead, .intro-section p, .case-lead{ font-size: 16.5px !important; }
+  .info-block p, .tip-box > div, .warn-box > div,
   .qa-box .q, .qa-box .a, .qa-row .q, .qa-row .a,
-  .dark-callout p{ font-size: 17px !important; line-height: 1.9 !important; }
+  .dark-callout p{ font-size: 16px !important; }
   .compare-col p, .compare-col li,
   .surgery-col p, .surgery-col li,
   .outcome-card p, .item-card .desc,
   .ruling-card blockquote, .law-panel blockquote,
   .case-doc-row .content, .feat-list li,
   .priority-header p, .belief-card .quote,
-  .combo-item .text{ font-size: 16.5px !important; line-height: 1.9 !important; }
-  .closing p{ font-size: 18px !important; }
-
-  @media (max-width: 768px){
-    .hero-lead{ font-size: 17px !important; }
-    .sec-lead, .intro-section p, .case-lead{ font-size: 16.5px !important; }
-    .info-block p, .tip-box > div, .warn-box > div,
-    .qa-box .q, .qa-box .a, .qa-row .q, .qa-row .a,
-    .dark-callout p{ font-size: 16px !important; }
-    .compare-col p, .compare-col li,
-    .surgery-col p, .surgery-col li,
-    .outcome-card p, .item-card .desc,
-    .ruling-card blockquote, .law-panel blockquote,
-    .case-doc-row .content, .feat-list li,
-    .priority-header p, .belief-card .quote,
-    .combo-item .text{ font-size: 15.5px !important; }
-    .closing p{ font-size: 16.5px !important; }
-  }
+  .combo-item .text{ font-size: 15.5px !important; }
+  .closing p{ font-size: 16.5px !important; }
+ }
 
 </style>
 
@@ -854,698 +854,754 @@
 <body>
 
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-brand">
-      <img src="logo.svg" alt="保險白話文 Logo">
-      <div class="nav-brand-text">
-        <span class="nav-title">保險白話文</span>
-        <small>讓你保險買對不買貴</small>
-      </div>
-    </a>
-    <button class="nav-toggle" aria-label="開啟選單">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-menu">
-      <li><a href="index.html">首頁</a></li>
-      <li class="has-dropdown">
-        <a href="#">新生兒保單</a>
-        <ul class="dropdown">
-          <li class="dropdown-all"><a href="blog.html">→ 查看全部 5 篇</a></li>
-          <li><a href="posts/newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
-          <li><a href="posts/newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
-          <li><a href="posts/newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
-          <li><a href="posts/newborn-screening-basic.html">21 項基本篩檢</a></li>
-          <li><a href="posts/newborn-screening-paid.html">自費篩檢攻略</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#">成人保單</a>
-        <ul class="dropdown">
-          <li class="dropdown-all"><a href="blog.html">→ 查看全部 3 篇</a></li>
-          <li><a href="posts/adult-insurance-planning.html">成人保險完整指南</a></li>
-          <li><a href="posts/term-life-premium.html">定期壽險後期保費</a></li>
-          <li><a href="posts/whole-life-vs-term.html">終身險 vs 定期險</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#">銀髮族保險</a>
-        <ul class="dropdown">
-          <li class="dropdown-all"><a href="blog.html">→ 查看全部 1 篇</a></li>
-          <li><a href="posts/senior-insurance-planning.html">銀髮族規劃 2 級順序</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#">重症案例分享</a>
-        <ul class="dropdown">
-          <li class="dropdown-all"><a href="blog.html">→ 查看全部 1 篇</a></li>
-          <li><a href="posts/cancer-protection-plan.html">癌症治療年燒百萬</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#">險種知識</a>
-        <ul class="dropdown">
-          <li class="dropdown-all"><a href="blog.html">→ 查看全部 4 篇</a></li>
-          <li><a href="posts/insurance-products-guide.html">7 大險種解析</a></li>
-          <li><a href="posts/canned-insurance-policy.html">什麼是罐頭保單</a></li>
-          <li><a href="posts/auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a></li>
-          <li><a href="posts/surgery-227-explained.html">2-2-7 手術定義</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <a href="#">理賠經驗</a>
-        <ul class="dropdown">
-          <li class="dropdown-all"><a href="blog.html">→ 查看全部 3 篇</a></li>
-          <li><a href="posts/claim-rejection-reasons.html">理賠 5 大地雷</a></li>
-          <li><a href="posts/pre-existing-disease.html">已在疾病 127 條</a></li>
-          <li><a href="posts/broker-vs-insurance-company.html">保經 vs 保險公司</a></li>
-        </ul>
-      </li>
-      <li><a href="blog.html">全部文章</a></li>
-      <li><a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="nav-cta">LINE 諮詢</a></li>
+ <div class="nav-container">
+  <a href="index.html" class="nav-brand">
+   <img src="logo.svg" alt="保險白話文 Logo">
+   <div class="nav-brand-text">
+    <span class="nav-title">保險白話文</span>
+    <small>讓你保險買對不買貴</small>
+   </div>
+  </a>
+  <button class="nav-toggle" aria-label="開啟選單">
+   <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-menu">
+   <li><a href="index.html">首頁</a></li>
+   <li class="has-dropdown">
+    <a href="#">新生兒保單</a>
+    <ul class="dropdown">
+     <li class="dropdown-all"><a href="blog.html">→ 查看全部 6 篇</a></li>
+     <li><a href="posts/newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
+     <li><a href="posts/newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
+     <li><a href="posts/newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
+     <li><a href="posts/newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
+     <li><a href="posts/newborn-screening-basic.html">21 項基本篩檢</a></li>
+     <li><a href="posts/newborn-screening-paid.html">自費篩檢攻略</a></li>
     </ul>
-  </div>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">成人保單</a>
+    <ul class="dropdown">
+     <li class="dropdown-all"><a href="blog.html">→ 查看全部 2 篇</a></li>
+     <li><a href="posts/adult-insurance-planning.html">成人保險完整指南</a></li>
+     <li><a href="posts/term-life-premium.html">定期壽險後期保費</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">銀髮族保險</a>
+    <ul class="dropdown">
+     <li class="dropdown-all"><a href="blog.html">→ 查看全部 1 篇</a></li>
+     <li><a href="posts/senior-insurance-planning.html">銀髮族規劃 2 級順序</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">重症案例分享</a>
+    <ul class="dropdown">
+     <li class="dropdown-all"><a href="blog.html">→ 查看全部 1 篇</a></li>
+     <li><a href="posts/cancer-protection-plan.html">癌症治療年燒百萬</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">險種知識</a>
+    <ul class="dropdown">
+     <li class="dropdown-all"><a href="blog.html">→ 查看全部 5 篇</a></li>
+     <li><a href="posts/insurance-products-guide.html">7 大險種解析</a></li>
+     <li><a href="posts/canned-insurance-policy.html">什麼是罐頭保單</a></li>
+     <li><a href="posts/auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a></li>
+     <li><a href="posts/surgery-227-explained.html">2-2-7 手術定義</a></li>
+          <li><a href="posts/whole-life-vs-term.html">終身險 vs 定期險</a></li>
+    </ul>
+   </li>
+      <li class="has-dropdown">
+        <a href="#">信用卡刷保費</a>
+        <ul class="dropdown">
+          <li class="dropdown-all"><a href="blog.html">→ 查看全部 1 篇</a></li>
+          <li><a href="posts/credit-card-installment.html">信用卡刷保費懶人包</a></li>
+        </ul>
+      </li>
+   <li class="has-dropdown">
+    <a href="#">理賠經驗</a>
+    <ul class="dropdown">
+     <li class="dropdown-all"><a href="blog.html">→ 查看全部 3 篇</a></li>
+     <li><a href="posts/claim-rejection-reasons.html">理賠 5 大地雷</a></li>
+     <li><a href="posts/pre-existing-disease.html">已在疾病 127 條</a></li>
+     <li><a href="posts/broker-vs-insurance-company.html">保經 vs 保險公司</a></li>
+    </ul>
+   </li>
+   <li><a href="blog.html">全部文章</a></li>
+   <li><a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="nav-cta">LINE 諮詢</a></li>
+  </ul>
+ </div>
 </nav>
 
 <!-- Hero -->
 <header class="blog-hero">
-  <div class="container">
-    <div class="eyebrow reveal">Blog · 部落格文章</div>
-    <h1 class="reveal">
-      您想了解<em>哪個保險主題</em>？
-    </h1>
-    <p class="lead reveal">
-      下面有 8 篇深入解析的文章，依照主題分類。<strong>點上方分類標籤</strong>快速篩選您感興趣的內容，3 秒鐘找到您要的答案。
-    </p>
-  </div>
+ <div class="container">
+  <div class="eyebrow reveal">Blog · 部落格文章</div>
+  <h1 class="reveal">
+   您想了解<em>哪個保險主題</em>？
+  </h1>
+  <p class="lead reveal">
+   下面有 19 篇深入解析的文章，依照主題分類。<strong>點上方分類標籤</strong>快速篩選您感興趣的內容，3 秒鐘找到您要的答案。
+  </p>
+ </div>
 </header>
 
 <!-- Filter (sticky) -->
 <div class="filter-section">
-  <div class="filter-container">
-    <span class="filter-label">分類</span>
-    <button class="filter-btn active" data-cat="all">全部文章 <span class="count">17</span></button>
-    <button class="filter-btn" data-cat="newborn">新生兒保單 <span class="count">5</span></button>
-    <button class="filter-btn" data-cat="adult">成人保單 <span class="count">3</span></button>
-    <button class="filter-btn" data-cat="senior">銀髮族保險 <span class="count">1</span></button>
-    <button class="filter-btn" data-cat="cancer">重症案例分享 <span class="count">1</span></button>
-    <button class="filter-btn" data-cat="knowledge">險種知識 <span class="count">4</span></button>
-    <button class="filter-btn" data-cat="claim">理賠經驗 <span class="count">2</span></button>
-    <button class="filter-btn" data-cat="company">公司差異 <span class="count">1</span></button>
-  </div>
+ <div class="filter-container">
+  <span class="filter-label">分類</span>
+  <button class="filter-btn active" data-cat="all">全部文章 <span class="count">19</span></button>
+  <button class="filter-btn" data-cat="newborn">新生兒保單 <span class="count">6</span></button>
+  <button class="filter-btn" data-cat="adult">成人保單 <span class="count">2</span></button>
+  <button class="filter-btn" data-cat="senior">銀髮族保險 <span class="count">1</span></button>
+  <button class="filter-btn" data-cat="cancer">重症案例分享 <span class="count">1</span></button>
+  <button class="filter-btn" data-cat="knowledge">險種知識 <span class="count">5</span></button>
+  <button class="filter-btn" data-cat="creditcard">信用卡刷保費 <span class="count">1</span></button>
+  <button class="filter-btn" data-cat="claim">理賠經驗 <span class="count">2</span></button>
+  <button class="filter-btn" data-cat="company">公司差異 <span class="count">1</span></button>
+ </div>
 </div>
 
 <!-- Articles -->
 <section class="articles-section">
-  <div class="articles-container">
-    <div class="results-bar">
-      <div class="info">
-        正在顯示 <strong id="result-count">17</strong> 篇文章
-      </div>
-      <div class="sort">Latest · 最新優先</div>
-    </div>
-
-    <div class="articles-grid" id="articles-grid">
-
-      <!-- Article 1: 新生兒保單規劃 -->
-      <a href="posts/newborn-insurance-2025.html" class="article-card" data-cat="newborn">
-        <div class="thumb t2">
-          <span class="cat-badge">新生兒保單</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/>
-            <path d="M9 12l2 2 4-4"/>
-            <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>新生兒保單</span>
-            <span>5 大保障</span>
-          </div>
-          <h3>新生兒保單規劃｜5 大保障完整解析</h3>
-          <p class="excerpt">寶寶剛出生，到底該買哪些保險？醫療險、癌症險、重大傷病險、意外險、兒童壽險——一篇文章看懂 5 大必備保障與規劃方案。</p>
-          <div class="meta">
-            <span>新生兒主題</span>
-            <span class="read">閱讀 12 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 2: 新生兒出生待辦事項 -->
-      <a href="posts/newborn-parents-checklist.html" class="article-card" data-cat="newborn">
-        <div class="thumb t1">
-          <span class="cat-badge">新生兒保單</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="3" width="16" height="18" rx="2"/>
-            <line x1="9" y1="8" x2="15" y2="8"/>
-            <line x1="9" y1="12" x2="15" y2="12"/>
-            <line x1="9" y1="16" x2="13" y2="16"/>
-            <polyline points="7 8 7.5 8.5 8 8"/>
-            <polyline points="7 12 7.5 12.5 8 12"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>新手爸媽</span>
-            <span>60 天清單</span>
-            <span>政府補助</span>
-          </div>
-          <h3>新手爸媽必看｜寶寶出生後 60 天完整辦事清單</h3>
-          <p class="excerpt">孩子要出生了好焦慮？別慌！7 件必辦事項一次整理：新生兒保險、取名、報戶口、健保卡、生育津貼、勞保補助、育兒津貼。</p>
-          <div class="meta">
-            <span>新生兒主題</span>
-            <span class="read">閱讀 8 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 3: 成人保單規劃 -->
-      <a href="posts/adult-insurance-planning.html" class="article-card" data-cat="adult">
-        <div class="thumb t3">
-          <span class="cat-badge">成人保單</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            <path d="M12 13l3-3M9 10l3 3" stroke-width="1"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>成人保險</span>
-            <span>5 大保障</span>
-            <span>定期壽險</span>
-          </div>
-          <h3>成人保險規劃完整指南｜留愛不留債的 5 大保障</h3>
-          <p class="excerpt">父母怎麼了會影響整個家庭。從醫療、癌症、重大傷病、意外到壽險——家庭經濟支柱該買哪些保險？含定期壽險比較表。</p>
-          <div class="meta">
-            <span>成人主題</span>
-            <span class="read">閱讀 14 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 4: 定期壽險後期保費 -->
-      <a href="posts/term-life-premium.html" class="article-card" data-cat="adult">
-        <div class="thumb t4">
-          <span class="cat-badge">成人保單</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 3v18h18"/>
-            <path d="M7 14l4-4 4 4 5-5"/>
-            <circle cx="11" cy="10" r="1.5" fill="currentColor"/>
-            <circle cx="15" cy="14" r="1.5" fill="currentColor"/>
-            <circle cx="20" cy="9" r="1.5" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>定期壽險</span>
-            <span>保費規劃</span>
-            <span>美金保單</span>
-          </div>
-          <h3>同樣是壽險保障，後半輩子能不能更聰明地付？</h3>
-          <p class="excerpt">30 歲只要 3,200 元，到了 59 歲卻要 31,200 元。如果保費注定要漲，這筆錢有沒有更聰明的去處？投資型與美金保單兩種選擇。</p>
-          <div class="meta">
-            <span>成人主題</span>
-            <span class="read">閱讀 8 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 5: 保險商品 7 大險種 -->
-      <a href="posts/insurance-products-guide.html" class="article-card" data-cat="knowledge">
-        <div class="thumb t6">
-          <span class="cat-badge">險種知識</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="16" rx="2"/>
-            <line x1="3" y1="10" x2="21" y2="10"/>
-            <line x1="9" y1="4" x2="9" y2="20"/>
-            <circle cx="6" cy="7" r="0.5" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>險種解析</span>
-            <span>7 大險種</span>
-            <span>避開地雷</span>
-          </div>
-          <h3>保險商品 7 大險種完整解析｜避開地雷商品</h3>
-          <p class="excerpt">實支實付、住院日額、手術險、癌症險、長照險、失能險、重大傷病險、意外險、壽險——一篇文章看懂險種差異。</p>
-          <div class="meta">
-            <span>險種知識</span>
-            <span class="read">閱讀 12 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 6: 罐頭保單 -->
-      <a href="posts/canned-insurance-policy.html" class="article-card" data-cat="knowledge">
-        <div class="thumb t8">
-          <span class="cat-badge">險種知識</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="6" y="3" width="12" height="18" rx="1"/>
-            <line x1="6" y1="7" x2="18" y2="7"/>
-            <line x1="6" y1="17" x2="18" y2="17"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>罐頭保單</span>
-            <span>高 CP 值</span>
-            <span>保大再保小</span>
-          </div>
-          <h3>什麼是罐頭保單？醫生也在買的高 CP 值組合</h3>
-          <p class="excerpt">罐頭保單不是吃的罐頭！由 PTT 醫生 Apin 發明的保單組合方式，找 2~3 家保險公司商品搭配，達到低保費高保障。</p>
-          <div class="meta">
-            <span>險種知識</span>
-            <span class="read">閱讀 7 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 7: 理賠經驗談 -->
-      <a href="posts/claim-rejection-reasons.html" class="article-card" data-cat="claim">
-        <div class="thumb t5">
-          <span class="cat-badge">理賠經驗</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>理賠經驗</span>
-            <span>5 個地雷</span>
-            <span>避免拒賠</span>
-          </div>
-          <h3>理賠被拒？避開這 5 個地雷｜常見拒賠原因</h3>
-          <p class="excerpt">買了保險卻被拒賠？保險公司不是刻意刁難——這 5 個原因最常導致拒賠：保前疾病、沒有據實說明、除外責任、診斷書不明確、保單停效。</p>
-          <div class="meta">
-            <span>理賠經驗</span>
-            <span class="read">閱讀 8 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 8: 保險公司 vs 保經公司 -->
-      <a href="posts/broker-vs-insurance-company.html" class="article-card" data-cat="company">
-        <div class="thumb t7">
-          <span class="cat-badge">公司差異</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>業務員身分</span>
-            <span>保經 vs 保險</span>
-            <span>客戶權益</span>
-          </div>
-          <h3>保險公司 vs 保經公司，差別在哪？</h3>
-          <p class="excerpt">買保險前先釐清業務員身分。保險公司業務員只能賣自家保單；保經公司業務員可以比較多家。從理賠爭議、未來服務看清差異。</p>
-          <div class="meta">
-            <span>公司差異</span>
-            <span class="read">閱讀 6 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 9: 癌症治療年燒百萬 (頂級) -->
-      <a href="posts/cancer-protection-plan.html" class="article-card" data-cat="cancer">
-        <div class="thumb t5">
-          <span class="cat-badge">重症案例分享</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>重大傷病險</span>
-            <span>癌症一次金</span>
-            <span>4 大保單</span>
-          </div>
-          <h3>癌症治療年燒百萬，您的保單能理賠多少？</h3>
-          <p class="excerpt">台灣每 4 分 19 秒就有一人確診癌症，單次自費治療 51.3 萬！重大傷病險、癌症一次金、實支實付、壽險——4 大保單組合對抗癌症燒錢。</p>
-          <div class="meta">
-            <span>重症案例分享</span>
-            <span class="read">閱讀 12 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 10: 銀髮族保險規劃 -->
-      <a href="posts/senior-insurance-planning.html" class="article-card" data-cat="senior">
-        <div class="thumb t4">
-          <span class="cat-badge">銀髮族保險</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>長輩保險</span>
-            <span>規劃順序</span>
-            <span>2 級規劃</span>
-          </div>
-          <h3>銀髮族如何買保險｜把錢花在刀口上的 2 級規劃</h3>
-          <p class="excerpt">想幫家中長輩買保險嗎？年齡越大保費越貴，更要把錢花在刀口上。意外險、實支實付、失能險為基本，癌症與重大傷病為加強。</p>
-          <div class="meta">
-            <span>銀髮族保險</span>
-            <span class="read">閱讀 8 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 11: 終身險 vs 定期險 -->
-      <a href="posts/whole-life-vs-term.html" class="article-card" data-cat="knowledge">
-        <div class="thumb t6">
-          <span class="cat-badge">險種知識</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.5 0 2.9.37 4.13 1"/>
-            <polyline points="21 3 21 9 15 9"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>終身險</span>
-            <span>定期險</span>
-            <span>30 倍差距</span>
-          </div>
-          <h3>終身險 vs 定期險，到底該怎麼挑選？</h3>
-          <p class="excerpt">100 萬癌症保障——定期險年繳 370 元、終身險年繳 11,000 元，差距高達 30 倍！這 30 倍的錢真的值得嗎？深入解析挑選邏輯。</p>
-          <div class="meta">
-            <span>險種知識</span>
-            <span class="read">閱讀 9 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 12: 已在疾病與理賠 -->
-      <a href="posts/pre-existing-disease.html" class="article-card" data-cat="claim">
-        <div class="thumb t5">
-          <span class="cat-badge">理賠經驗</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="9" y1="13" x2="15" y2="13"/>
-            <line x1="9" y1="17" x2="15" y2="17"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>已在疾病</span>
-            <span>保險法 127 條</span>
-            <span>判例解析</span>
-          </div>
-          <h3>已在疾病與理賠｜保險法 127 條深入解析</h3>
-          <p class="excerpt">已在疾病 vs 既往症差別在哪？舊疾痊癒、舊疾復發保險公司會理賠嗎？引用最高法院乳癌案判決完整解析。</p>
-          <div class="meta">
-            <span>理賠經驗</span>
-            <span class="read">閱讀 8 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 13: 新生兒黃疸 -->
-      <a href="posts/newborn-jaundice.html" class="article-card" data-cat="newborn">
-        <div class="thumb t1">
-          <span class="cat-badge">新生兒保單</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>新生兒體況</span>
-            <span>黃疸</span>
-            <span>核保</span>
-          </div>
-          <h3>寶寶有黃疸還能買保險嗎？3 種黃疸對核保的影響</h3>
-          <p class="excerpt">生理性黃疸、母乳性黃疸、病理性黃疸——對保險核保影響完全不同。新生兒投保的特別考量，給新手爸媽的實務攻略。</p>
-          <div class="meta">
-            <span>新生兒體況</span>
-            <span class="read">閱讀 7 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 14: 新生兒基本篩檢 -->
-      <a href="posts/newborn-screening-basic.html" class="article-card" data-cat="newborn">
-        <div class="thumb t2">
-          <span class="cat-badge">新生兒保單</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="3" width="16" height="18" rx="2"/>
-            <polyline points="8 10 11 13 16 8"/>
-            <line x1="8" y1="16" x2="14" y2="16"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>政府補助</span>
-            <span>21 項篩檢</span>
-            <span>新生兒</span>
-          </div>
-          <h3>21 項新生兒基本篩檢，投保時點完整解析</h3>
-          <p class="excerpt">政府補助的 21 項新生兒篩檢一定要做嗎？對保險核保有什麼影響？金管會規定篩檢結果不受等待期限制，投保時機重點解析。</p>
-          <div class="meta">
-            <span>新生兒體況</span>
-            <span class="read">閱讀 7 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 15: 新生兒自費篩檢 -->
-      <a href="posts/newborn-screening-paid.html" class="article-card" data-cat="newborn">
-        <div class="thumb t3">
-          <span class="cat-badge">新生兒保單</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="6" x2="12" y2="14"/>
-            <circle cx="12" cy="17" r="0.5" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>自費篩檢</span>
-            <span>血液檢查</span>
-            <span>超音波</span>
-          </div>
-          <h3>新生兒自費篩檢，投保 step by step</h3>
-          <p class="excerpt">血液檢查 6 項、超音波 4 項——自費篩檢做不做？超音波即時可見的警告與正確投保順序，新手爸媽不得不看。</p>
-          <div class="meta">
-            <span>新生兒體況</span>
-            <span class="read">閱讀 8 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 16: 自動續保 vs 保證續保 -->
-      <a href="posts/auto-vs-guaranteed-renewal.html" class="article-card" data-cat="knowledge">
-        <div class="thumb t8">
-          <span class="cat-badge">險種知識</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 4 23 10 17 10"/>
-            <polyline points="1 20 1 14 7 14"/>
-            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/>
-            <path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>自動續保</span>
-            <span>保證續保</span>
-            <span>產險時事</span>
-          </div>
-          <h3>自動續保 vs 保證續保，差一個字差很大</h3>
-          <p class="excerpt">兩者搞錯了會讓您的保障在最需要的時候斷掉！壽險與產險公司差異、產險意外實支險「無保證續保」最新時事一次解析。</p>
-          <div class="meta">
-            <span>險種知識</span>
-            <span class="read">閱讀 7 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Article 17: 2-2-7 手術是什麼 -->
-      <a href="posts/surgery-227-explained.html" class="article-card" data-cat="knowledge">
-        <div class="thumb t6">
-          <span class="cat-badge">險種知識</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-          </svg>
-        </div>
-        <div class="body">
-          <div class="tags">
-            <span>健保支付標準</span>
-            <span>手術定義</span>
-            <span>大腸鏡息肉</span>
-          </div>
-          <h3>2-2-7 手術是什麼？理賠的關鍵編碼</h3>
-          <p class="excerpt">大腸鏡切息肉算手術嗎？拔智齒算手術嗎？關鍵在保單條款引用的「2-2-7」——健保署支付標準第 2 部第 2 章第 7 節完整解析。</p>
-          <div class="meta">
-            <span>險種知識</span>
-            <span class="read">閱讀 7 分鐘 →</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- Empty state -->
-    <div class="empty-state" id="empty-state">
-      <div class="icon">📭</div>
-      <p>這個分類目前沒有文章，請選其他分類看看 🙌</p>
-    </div>
-
-    <!-- Bottom CTA -->
-    <div class="bottom-cta">
-      <h2>看完文章，<em>還有疑問嗎</em>？</h2>
-      <p>每個人狀況不同，文章只能給您方向。如果您想要根據自己的狀況做客製化規劃，歡迎透過 LINE 與我聊聊——第一次諮詢都是免費的。</p>
-      <a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="cta">
-        LINE 預約一對一諮詢
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    </div>
+ <div class="articles-container">
+  <div class="results-bar">
+   <div class="info">
+    正在顯示 <strong id="result-count">19</strong> 篇文章
+   </div>
+   <div class="sort">Latest · 最新優先</div>
   </div>
+
+  <div class="articles-grid" id="articles-grid">
+
+   <!-- Article 1: 新生兒保單規劃 -->
+   <a href="posts/newborn-insurance-2025.html" class="article-card" data-cat="newborn">
+    <div class="thumb t2">
+     <span class="cat-badge">新生兒保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/>
+      <path d="M9 12l2 2 4-4"/>
+      <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>新生兒保單</span>
+      <span>5 大保障</span>
+     </div>
+     <h3>新生兒保單規劃｜5 大保障完整解析</h3>
+     <p class="excerpt">寶寶剛出生，到底該買哪些保險？醫療險、癌症險、重大傷病險、意外險、兒童壽險——一篇文章看懂 5 大必備保障與規劃方案。</p>
+     <div class="meta">
+      <span>新生兒主題</span>
+      <span class="read">閱讀 12 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 2: 新生兒出生待辦事項 -->
+   <a href="posts/newborn-parents-checklist.html" class="article-card" data-cat="newborn">
+    <div class="thumb t1">
+     <span class="cat-badge">新生兒保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="3" width="16" height="18" rx="2"/>
+      <line x1="9" y1="8" x2="15" y2="8"/>
+      <line x1="9" y1="12" x2="15" y2="12"/>
+      <line x1="9" y1="16" x2="13" y2="16"/>
+      <polyline points="7 8 7.5 8.5 8 8"/>
+      <polyline points="7 12 7.5 12.5 8 12"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>新手爸媽</span>
+      <span>60 天清單</span>
+      <span>政府補助</span>
+     </div>
+     <h3>新手爸媽必看｜寶寶出生後 60 天完整辦事清單</h3>
+     <p class="excerpt">孩子要出生了好焦慮？別慌！7 件必辦事項一次整理：新生兒保險、取名、報戶口、健保卡、生育津貼、勞保補助、育兒津貼。</p>
+     <div class="meta">
+      <span>新生兒主題</span>
+      <span class="read">閱讀 8 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article: 新生兒投保出生前後時間軸 -->
+   <a href="posts/newborn-insurance-timeline.html" class="article-card" data-cat="newborn">
+    <div class="thumb t4">
+     <span class="cat-badge">新生兒保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <polyline points="12 7 12 12 15 14"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>新生兒保單</span>
+      <span>投保時間軸</span>
+      <span>黃金 60 天</span>
+     </div>
+     <h3>新生兒投保出生前後時間軸</h3>
+     <p class="excerpt">寶寶什麼時候可以買保險？從懷孕期間到出生後 60 天，新生兒投保有清楚的黃金時間軸——每個階段該做的準備一次看懂。</p>
+     <div class="meta">
+      <span>新生兒主題</span>
+      <span class="read">閱讀 8 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 3: 成人保單規劃 -->
+   <a href="posts/adult-insurance-planning.html" class="article-card" data-cat="adult">
+    <div class="thumb t3">
+     <span class="cat-badge">成人保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      <path d="M12 13l3-3M9 10l3 3" stroke-width="1"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>成人保險</span>
+      <span>5 大保障</span>
+      <span>定期壽險</span>
+     </div>
+     <h3>成人保險規劃完整指南｜留愛不留債的 5 大保障</h3>
+     <p class="excerpt">父母怎麼了會影響整個家庭。從醫療、癌症、重大傷病、意外到壽險——家庭經濟支柱該買哪些保險？含定期壽險比較表。</p>
+     <div class="meta">
+      <span>成人主題</span>
+      <span class="read">閱讀 14 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 4: 定期壽險後期保費 -->
+   <a href="posts/term-life-premium.html" class="article-card" data-cat="adult">
+    <div class="thumb t4">
+     <span class="cat-badge">成人保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 3v18h18"/>
+      <path d="M7 14l4-4 4 4 5-5"/>
+      <circle cx="11" cy="10" r="1.5" fill="currentColor"/>
+      <circle cx="15" cy="14" r="1.5" fill="currentColor"/>
+      <circle cx="20" cy="9" r="1.5" fill="currentColor"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>定期壽險</span>
+      <span>保費規劃</span>
+      <span>美金保單</span>
+     </div>
+     <h3>同樣是壽險保障，後半輩子能不能更聰明地付？</h3>
+     <p class="excerpt">30 歲只要 3,200 元，到了 59 歲卻要 31,200 元。如果保費注定要漲，這筆錢有沒有更聰明的去處？投資型與美金保單兩種選擇。</p>
+     <div class="meta">
+      <span>成人主題</span>
+      <span class="read">閱讀 8 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 5: 保險商品 7 大險種 -->
+   <a href="posts/insurance-products-guide.html" class="article-card" data-cat="knowledge">
+    <div class="thumb t6">
+     <span class="cat-badge">險種知識</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2"/>
+      <line x1="3" y1="10" x2="21" y2="10"/>
+      <line x1="9" y1="4" x2="9" y2="20"/>
+      <circle cx="6" cy="7" r="0.5" fill="currentColor"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>險種解析</span>
+      <span>7 大險種</span>
+      <span>避開地雷</span>
+     </div>
+     <h3>保險商品 7 大險種完整解析｜避開地雷商品</h3>
+     <p class="excerpt">實支實付、住院日額、手術險、癌症險、長照險、失能險、重大傷病險、意外險、壽險——一篇文章看懂險種差異。</p>
+     <div class="meta">
+      <span>險種知識</span>
+      <span class="read">閱讀 12 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 6: 罐頭保單 -->
+   <a href="posts/canned-insurance-policy.html" class="article-card" data-cat="knowledge">
+    <div class="thumb t8">
+     <span class="cat-badge">險種知識</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="3" width="12" height="18" rx="1"/>
+      <line x1="6" y1="7" x2="18" y2="7"/>
+      <line x1="6" y1="17" x2="18" y2="17"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>罐頭保單</span>
+      <span>高 CP 值</span>
+      <span>保大再保小</span>
+     </div>
+     <h3>什麼是罐頭保單？醫生也在買的高 CP 值組合</h3>
+     <p class="excerpt">罐頭保單不是吃的罐頭！由 PTT 醫生 Apin 發明的保單組合方式，找 2~3 家保險公司商品搭配，達到低保費高保障。</p>
+     <div class="meta">
+      <span>險種知識</span>
+      <span class="read">閱讀 7 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 7: 理賠經驗談 -->
+   <a href="posts/claim-rejection-reasons.html" class="article-card" data-cat="claim">
+    <div class="thumb t5">
+     <span class="cat-badge">理賠經驗</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="8" x2="12" y2="12"/>
+      <line x1="12" y1="16" x2="12.01" y2="16"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>理賠經驗</span>
+      <span>5 個地雷</span>
+      <span>避免拒賠</span>
+     </div>
+     <h3>理賠被拒？避開這 5 個地雷｜常見拒賠原因</h3>
+     <p class="excerpt">買了保險卻被拒賠？保險公司不是刻意刁難——這 5 個原因最常導致拒賠：保前疾病、沒有據實說明、除外責任、診斷書不明確、保單停效。</p>
+     <div class="meta">
+      <span>理賠經驗</span>
+      <span class="read">閱讀 8 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 8: 保險公司 vs 保經公司 -->
+   <a href="posts/broker-vs-insurance-company.html" class="article-card" data-cat="company">
+    <div class="thumb t7">
+     <span class="cat-badge">公司差異</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>業務員身分</span>
+      <span>保經 vs 保險</span>
+      <span>客戶權益</span>
+     </div>
+     <h3>保險公司 vs 保經公司，差別在哪？</h3>
+     <p class="excerpt">買保險前先釐清業務員身分。保險公司業務員只能賣自家保單；保經公司業務員可以比較多家。從理賠爭議、未來服務看清差異。</p>
+     <div class="meta">
+      <span>公司差異</span>
+      <span class="read">閱讀 6 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 9: 癌症治療年燒百萬 (頂級) -->
+   <a href="posts/cancer-protection-plan.html" class="article-card" data-cat="cancer">
+    <div class="thumb t5">
+     <span class="cat-badge">重症案例分享</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>重大傷病險</span>
+      <span>癌症一次金</span>
+      <span>4 大保單</span>
+     </div>
+     <h3>癌症治療年燒百萬，您的保單能理賠多少？</h3>
+     <p class="excerpt">台灣每 4 分 19 秒就有一人確診癌症，單次自費治療 51.3 萬！重大傷病險、癌症一次金、實支實付、壽險——4 大保單組合對抗癌症燒錢。</p>
+     <div class="meta">
+      <span>重症案例分享</span>
+      <span class="read">閱讀 12 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 10: 銀髮族保險規劃 -->
+   <a href="posts/senior-insurance-planning.html" class="article-card" data-cat="senior">
+    <div class="thumb t4">
+     <span class="cat-badge">銀髮族保險</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>長輩保險</span>
+      <span>規劃順序</span>
+      <span>2 級規劃</span>
+     </div>
+     <h3>銀髮族如何買保險｜把錢花在刀口上的 2 級規劃</h3>
+     <p class="excerpt">想幫家中長輩買保險嗎？年齡越大保費越貴，更要把錢花在刀口上。意外險、實支實付、失能險為基本，癌症與重大傷病為加強。</p>
+     <div class="meta">
+      <span>銀髮族保險</span>
+      <span class="read">閱讀 8 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 11: 終身險 vs 定期險 -->
+   <a href="posts/whole-life-vs-term.html" class="article-card" data-cat="knowledge">
+    <div class="thumb t6">
+     <span class="cat-badge">險種知識</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.5 0 2.9.37 4.13 1"/>
+      <polyline points="21 3 21 9 15 9"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>終身險</span>
+      <span>定期險</span>
+      <span>30 倍差距</span>
+     </div>
+     <h3>終身險 vs 定期險，到底該怎麼挑選？</h3>
+     <p class="excerpt">100 萬癌症保障——定期險年繳 370 元、終身險年繳 11,000 元，差距高達 30 倍！這 30 倍的錢真的值得嗎？深入解析挑選邏輯。</p>
+     <div class="meta">
+      <span>險種知識</span>
+      <span class="read">閱讀 9 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 12: 已在疾病與理賠 -->
+   <a href="posts/pre-existing-disease.html" class="article-card" data-cat="claim">
+    <div class="thumb t5">
+     <span class="cat-badge">理賠經驗</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="9" y1="13" x2="15" y2="13"/>
+      <line x1="9" y1="17" x2="15" y2="17"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>已在疾病</span>
+      <span>保險法 127 條</span>
+      <span>判例解析</span>
+     </div>
+     <h3>已在疾病與理賠｜保險法 127 條深入解析</h3>
+     <p class="excerpt">已在疾病 vs 既往症差別在哪？舊疾痊癒、舊疾復發保險公司會理賠嗎？引用最高法院乳癌案判決完整解析。</p>
+     <div class="meta">
+      <span>理賠經驗</span>
+      <span class="read">閱讀 8 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 13: 新生兒黃疸 -->
+   <a href="posts/newborn-jaundice.html" class="article-card" data-cat="newborn">
+    <div class="thumb t1">
+     <span class="cat-badge">新生兒保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>新生兒體況</span>
+      <span>黃疸</span>
+      <span>核保</span>
+     </div>
+     <h3>寶寶有黃疸還能買保險嗎？3 種黃疸對核保的影響</h3>
+     <p class="excerpt">生理性黃疸、母乳性黃疸、病理性黃疸——對保險核保影響完全不同。新生兒投保的特別考量，給新手爸媽的實務攻略。</p>
+     <div class="meta">
+      <span>新生兒體況</span>
+      <span class="read">閱讀 7 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 14: 新生兒基本篩檢 -->
+   <a href="posts/newborn-screening-basic.html" class="article-card" data-cat="newborn">
+    <div class="thumb t2">
+     <span class="cat-badge">新生兒保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="3" width="16" height="18" rx="2"/>
+      <polyline points="8 10 11 13 16 8"/>
+      <line x1="8" y1="16" x2="14" y2="16"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>政府補助</span>
+      <span>21 項篩檢</span>
+      <span>新生兒</span>
+     </div>
+     <h3>21 項新生兒基本篩檢，投保時點完整解析</h3>
+     <p class="excerpt">政府補助的 21 項新生兒篩檢一定要做嗎？對保險核保有什麼影響？金管會規定篩檢結果不受等待期限制，投保時機重點解析。</p>
+     <div class="meta">
+      <span>新生兒體況</span>
+      <span class="read">閱讀 7 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 15: 新生兒自費篩檢 -->
+   <a href="posts/newborn-screening-paid.html" class="article-card" data-cat="newborn">
+    <div class="thumb t3">
+     <span class="cat-badge">新生兒保單</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="6" x2="12" y2="14"/>
+      <circle cx="12" cy="17" r="0.5" fill="currentColor"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>自費篩檢</span>
+      <span>血液檢查</span>
+      <span>超音波</span>
+     </div>
+     <h3>新生兒自費篩檢，投保 step by step</h3>
+     <p class="excerpt">血液檢查 6 項、超音波 4 項——自費篩檢做不做？超音波即時可見的警告與正確投保順序，新手爸媽不得不看。</p>
+     <div class="meta">
+      <span>新生兒體況</span>
+      <span class="read">閱讀 8 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 16: 自動續保 vs 保證續保 -->
+   <a href="posts/auto-vs-guaranteed-renewal.html" class="article-card" data-cat="knowledge">
+    <div class="thumb t8">
+     <span class="cat-badge">險種知識</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="23 4 23 10 17 10"/>
+      <polyline points="1 20 1 14 7 14"/>
+      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/>
+      <path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>自動續保</span>
+      <span>保證續保</span>
+      <span>產險時事</span>
+     </div>
+     <h3>自動續保 vs 保證續保，差一個字差很大</h3>
+     <p class="excerpt">兩者搞錯了會讓您的保障在最需要的時候斷掉！壽險與產險公司差異、產險意外實支險「無保證續保」最新時事一次解析。</p>
+     <div class="meta">
+      <span>險種知識</span>
+      <span class="read">閱讀 7 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <!-- Article 17: 2-2-7 手術是什麼 -->
+   <a href="posts/surgery-227-explained.html" class="article-card" data-cat="knowledge">
+    <div class="thumb t6">
+     <span class="cat-badge">險種知識</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>健保支付標準</span>
+      <span>手術定義</span>
+      <span>大腸鏡息肉</span>
+     </div>
+     <h3>2-2-7 手術是什麼？理賠的關鍵編碼</h3>
+     <p class="excerpt">大腸鏡切息肉算手術嗎？拔智齒算手術嗎？關鍵在保單條款引用的「2-2-7」——健保署支付標準第 2 部第 2 章第 7 節完整解析。</p>
+     <div class="meta">
+      <span>險種知識</span>
+      <span class="read">閱讀 7 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+   <a href="posts/credit-card-installment.html" class="article-card" data-cat="creditcard">
+    <div class="thumb t6">
+     <span class="cat-badge">信用卡刷保費</span>
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2"/>
+      <line x1="2" y1="10" x2="22" y2="10"/>
+     </svg>
+    </div>
+    <div class="body">
+     <div class="tags">
+      <span>信用卡刷保費</span>
+      <span>分期 0 利率</span>
+      <span>保費回饋</span>
+     </div>
+     <h3>信用卡刷保費分期 0 利率懶人包</h3>
+     <p class="excerpt">保費太重？整理 17 家銀行信用卡刷保費的分期 0 利率與回饋資訊——把保費壓力分散，還能拿現金回饋，把錢花得更聰明。</p>
+     <div class="meta">
+      <span>信用卡刷保費</span>
+      <span class="read">閱讀 6 分鐘 →</span>
+     </div>
+    </div>
+   </a>
+
+  </div>
+
+  <!-- Empty state -->
+  <div class="empty-state" id="empty-state">
+   <div class="icon">📭</div>
+   <p>這個分類目前沒有文章，請選其他分類看看 🙌</p>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bottom-cta">
+   <h2>看完文章，<em>還有疑問嗎</em>？</h2>
+   <p>每個人狀況不同，文章只能給您方向。如果您想要根據自己的狀況做客製化規劃，歡迎透過 LINE 與我聊聊——第一次諮詢都是免費的。</p>
+   <a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="cta">
+    LINE 預約一對一諮詢
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+   </a>
+  </div>
+ </div>
 </section>
 
 <footer>
-  <div class="foot-grid">
-    <div>
-      <h5>關於保險白話文</h5>
-      <p class="foot-disclaimer">
-        保險白話文——服務於保經公司之保險全方位規劃師。專注於新生兒保單、成人保險規劃、退休規劃與資產變現金。用最白話的方式，幫您把每張保單看清楚、買對不買貴。
-      </p>
-    </div>
-    <div>
-      <h5>網站導覽</h5>
-      <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="blog.html">部落格文章</a></li>
-        <li><a href="index.html#about">關於我</a></li>
-        <li><a href="index.html#contact">聯絡我</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5>聯繫我們</h5>
-      <ul>
-        <li>LINE · @129diduy</li>
-        <li>Instagram · @insurance_is_su</li>
-        <li>Threads · @insurance_is_su</li>
-      </ul>
-    </div>
+ <div class="foot-grid">
+  <div>
+   <h5>關於保險白話文</h5>
+   <p class="foot-disclaimer">
+    保險白話文——服務於保經公司之保險全方位規劃師。專注於新生兒保單、成人保險規劃、退休規劃與資產變現金。用最白話的方式，幫您把每張保單看清楚、買對不買貴。
+   </p>
   </div>
-  <div class="foot-bottom">
-    <span>保險白話文 · 部落格文章</span>
-    <span>© 2026 · 讓你保險買對不買貴</span>
+  <div>
+   <h5>網站導覽</h5>
+   <ul>
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="blog.html">部落格文章</a></li>
+    <li><a href="index.html#about">關於我</a></li>
+    <li><a href="index.html#contact">聯絡我</a></li>
+   </ul>
   </div>
+  <div>
+   <h5>聯繫我們</h5>
+   <ul>
+    <li>LINE · @129diduy</li>
+    <li>Instagram · @insurance_is_su</li>
+    <li>Threads · @insurance_is_su</li>
+   </ul>
+  </div>
+ </div>
+ <div class="foot-bottom">
+  <span>保險白話文 · 部落格文章</span>
+  <span>© 2026 · 讓你保險買對不買貴</span>
+ </div>
 </footer>
 
 <script>
-  // Reveal animations
-  // === [v14] Navbar toggle ===
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  if (navToggle && navMenu){
-    navToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = navMenu.classList.toggle('open');
-      navToggle.classList.toggle('open');
-      document.body.classList.toggle('menu-open', isOpen);
-    });
+ // Reveal animations
+ // === [v14] Navbar toggle ===
+ const navToggle = document.querySelector('.nav-toggle');
+ const navMenu = document.querySelector('.nav-menu');
+ if (navToggle && navMenu){
+  navToggle.addEventListener('click', (e) => {
+   e.stopPropagation();
+   const isOpen = navMenu.classList.toggle('open');
+   navToggle.classList.toggle('open');
+   document.body.classList.toggle('menu-open', isOpen);
+  });
+ }
+ // 點主分類 = 展開/收合該分類文章
+ document.querySelectorAll('.has-dropdown > a').forEach(a => {
+  a.addEventListener('click', (e) => {
+   e.preventDefault();
+   e.stopPropagation();
+   const li = a.parentElement;
+   const wasOpen = li.classList.contains('open');
+   // 收合其他已開的分類
+   document.querySelectorAll('.has-dropdown.open').forEach(d => {
+    if (d !== li) d.classList.remove('open');
+   });
+   // 切換自己
+   li.classList.toggle('open', !wasOpen);
+  });
+ });
+ // 點抽屜以外的地方 = 關閉抽屜
+ document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 980 && navMenu && navMenu.classList.contains('open')){
+   if (!e.target.closest('.nav-menu') && !e.target.closest('.nav-toggle')){
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('open');
+    document.body.classList.remove('menu-open');
+   }
+  } else if (window.innerWidth > 980){
+   if (!e.target.closest('.has-dropdown')){
+    document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
+   }
   }
-  // 點主分類 = 展開/收合該分類文章
-  document.querySelectorAll('.has-dropdown > a').forEach(a => {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const li = a.parentElement;
-      const wasOpen = li.classList.contains('open');
-      // 收合其他已開的分類
-      document.querySelectorAll('.has-dropdown.open').forEach(d => {
-        if (d !== li) d.classList.remove('open');
-      });
-      // 切換自己
-      li.classList.toggle('open', !wasOpen);
-    });
+ });
+
+ const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+   if (e.isIntersecting){
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+   }
   });
-  // 點抽屜以外的地方 = 關閉抽屜
-  document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 980 && navMenu && navMenu.classList.contains('open')){
-      if (!e.target.closest('.nav-menu') && !e.target.closest('.nav-toggle')){
-        navMenu.classList.remove('open');
-        navToggle.classList.remove('open');
-        document.body.classList.remove('menu-open');
-      }
-    } else if (window.innerWidth > 980){
-      if (!e.target.closest('.has-dropdown')){
-        document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
-      }
+ }, { threshold: 0.12 });
+ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+ // Filter functionality
+ const filterBtns = document.querySelectorAll('.filter-btn');
+ const articleCards = document.querySelectorAll('.article-card');
+ const resultCount = document.getElementById('result-count');
+ const emptyState = document.getElementById('empty-state');
+ const articlesGrid = document.getElementById('articles-grid');
+
+ filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+   const cat = btn.dataset.cat;
+
+   // Update active state
+   filterBtns.forEach(b => b.classList.remove('active'));
+   btn.classList.add('active');
+
+   // Filter cards
+   let visibleCount = 0;
+   articleCards.forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat){
+     card.classList.remove('hidden');
+     visibleCount++;
+    } else {
+     card.classList.add('hidden');
     }
+   });
+
+   // Update count
+   resultCount.textContent = visibleCount;
+
+   // Show empty state if no results
+   if (visibleCount === 0){
+    emptyState.classList.add('show');
+    articlesGrid.style.display = 'none';
+   } else {
+    emptyState.classList.remove('show');
+    articlesGrid.style.display = 'grid';
+   }
+
+   // Smooth scroll to results
+   window.scrollTo({
+    top: document.querySelector('.articles-section').offsetTop - 130,
+    behavior: 'smooth'
+   });
   });
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting){
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // Filter functionality
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const articleCards = document.querySelectorAll('.article-card');
-  const resultCount = document.getElementById('result-count');
-  const emptyState = document.getElementById('empty-state');
-  const articlesGrid = document.getElementById('articles-grid');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const cat = btn.dataset.cat;
-
-      // Update active state
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Filter cards
-      let visibleCount = 0;
-      articleCards.forEach(card => {
-        if (cat === 'all' || card.dataset.cat === cat){
-          card.classList.remove('hidden');
-          visibleCount++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-
-      // Update count
-      resultCount.textContent = visibleCount;
-
-      // Show empty state if no results
-      if (visibleCount === 0){
-        emptyState.classList.add('show');
-        articlesGrid.style.display = 'none';
-      } else {
-        emptyState.classList.remove('show');
-        articlesGrid.style.display = 'grid';
-      }
-
-      // Smooth scroll to results
-      window.scrollTo({
-        top: document.querySelector('.articles-section').offsetTop - 130,
-        behavior: 'smooth'
-      });
-    });
-  });
+ });
 </script>
 </body>
 </html>
