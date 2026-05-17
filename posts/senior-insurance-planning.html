@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>銀髮族如何買保險｜3 級規劃順序，把錢花在刀口上｜保險白話文</title>
+<meta name="description" content="想幫家中長輩買保險嗎？年齡越大保費越貴，更要把錢花在刀口上。3 級規劃順序：意外險、實支實付、失能險為基本保障，癌症險、重大傷病險為次要規劃。">
+<meta name="keywords" content="銀髮族保險,高齡投保,長輩保險,意外險,實支實付,失能險,癌症險,重大傷病險">
+<meta property="og:title" content="銀髮族如何買保險｜3 級規劃順序">
+<meta property="og:description" content="幫家中長輩買保險，依照優先順序規劃才能把錢花在刀口上。">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+ :root{
+  --bg: #ffffff; --bg-2: #ffffff; --paper: #ffffff;
+  --ink: #1a1f1d; --ink-soft: #4a4a44; --ink-mute: #7a766c;
+  --line: #cbbfa9; --line-soft: #d9cfb9;
+  --terracotta: #b56b3d; --terracotta-deep: #8a4f2a; --terracotta-light: #d18b5a;
+  --olive: #6b6240; --olive-deep: #4a4530; --cream: #e8d9b8;
+  --gold: #b8893a; --teal: #4a7a6a; --burgundy: #7a3535; --rose: #c97d6f;
+  --serif: "Noto Serif TC", "Cormorant Garamond", serif;
+  --sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+  --display: "Cormorant Garamond", "Noto Serif TC", serif;
+ }
+ *,*::before,*::after{box-sizing:border-box}
+ html{scroll-behavior: smooth}
+ html,body{margin:0;padding:0}
+ body{
+  background: var(--bg); color: var(--ink);
+  font-family: var(--sans); line-height: 1.7;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  background-image: none;
+ }
+ body::before{
+  content:""; position: fixed; inset: 0; pointer-events: none;
+  opacity: 0; mix-blend-mode: multiply; z-index: 1;
+ }
+ a{color: inherit; text-decoration: none}
+ .navbar{
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 4vw;
+ }
+ .nav-container{
+  max-width: 1400px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 24px;
+ }
+ .nav-brand{
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; flex-shrink: 0;
+ }
+ .nav-brand img{ width: 38px; height: 38px; object-fit: contain; }
+ .nav-brand-text{ display: flex; flex-direction: column; line-height: 1.2; }
+ .nav-title{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 17px; letter-spacing: 0.05em;
+  color: var(--terracotta-deep);
+ }
+ .nav-brand small{
+  font-family: var(--display); font-style: italic;
+  font-size: 11px; letter-spacing: 0.04em;
+  color: var(--ink-mute); margin-top: 1px;
+ }
+ .nav-menu{
+  display: flex; list-style: none; margin: 0; padding: 0;
+  gap: 2px; align-items: center;
+ }
+ .nav-menu > li{ position: relative; }
+ .nav-menu > li > a{
+  display: flex; align-items: center; gap: 4px;
+  padding: 10px 12px;
+  font-family: var(--sans); font-size: 13.5px; font-weight: 500;
+  color: var(--ink-soft); text-decoration: none;
+  border-radius: 6px; transition: all .2s;
+  white-space: nowrap;
+ }
+ .nav-menu > li.has-dropdown > a::after{
+  content: "▾"; font-size: 10px;
+  transition: transform .2s; opacity: 0.6;
+ }
+ .nav-menu > li > a:hover,
+ .nav-menu > li.has-dropdown:hover > a{
+  background: var(--terracotta); color: var(--paper);
+ }
+ .nav-menu > li.has-dropdown:hover > a::after{ opacity: 1; transform: rotate(180deg); }
+ .nav-menu .nav-cta{
+  background: var(--terracotta); color: var(--paper) !important;
+  padding: 10px 18px !important; border-radius: 999px;
+  margin-left: 8px; font-weight: 600 !important;
+ }
+ .nav-menu .nav-cta:hover{
+  background: var(--terracotta-deep) !important;
+  box-shadow: 0 6px 16px rgba(138,79,42,0.25);
+ }
+ .dropdown{
+  position: absolute; top: calc(100% + 6px); left: 0;
+  min-width: 280px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--terracotta);
+  padding: 8px 0; list-style: none; margin: 0;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  opacity: 0; visibility: hidden;
+  transform: translateY(-6px);
+  transition: all .25s cubic-bezier(.2,.7,.2,1);
+ }
+ .nav-menu > li.has-dropdown:hover .dropdown{
+  opacity: 1; visibility: visible; transform: translateY(0);
+ }
+ .dropdown li a{
+  display: block;
+  padding: 11px 22px;
+  font-family: var(--sans); font-size: 13.5px;
+  color: var(--ink-soft); text-decoration: none;
+  transition: all .18s;
+  border-left: 2px solid transparent;
+ }
+ .dropdown li a:hover{
+  background: rgba(181,107,61,0.08);
+  color: var(--terracotta-deep);
+  border-left-color: var(--terracotta);
+  padding-left: 26px;
+ }
+ .dropdown-all{
+  background: linear-gradient(90deg, rgba(181,107,61,0.12), rgba(181,107,61,0.04));
+  border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 6px;
+ }
+ .dropdown-all a{
+  color: var(--terracotta-deep) !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.02em;
+ }
+ .dropdown-all a:hover{
+  background: var(--terracotta) !important;
+  color: var(--paper) !important;
+  border-left-color: transparent !important;
+ }
+ /* 點擊 active 狀態 */
+ .nav-menu > li.has-dropdown.open > a{
+  background: var(--terracotta);
+  color: var(--paper);
+ }
+ .nav-menu > li.has-dropdown.open > a::after{
+  transform: rotate(180deg); opacity: 1;
+ }
+ .nav-toggle{
+  display: none; background: none; border: none;
+  cursor: pointer; padding: 8px;
+  flex-direction: column; gap: 5px;
+ }
+ .nav-toggle span{
+  display: block; width: 22px; height: 2px;
+  background: var(--ink-soft);
+  transition: all .3s;
+ }
+ .nav-toggle.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+ .nav-toggle.open span:nth-child(2){ opacity: 0; }
+ .nav-toggle.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+ @media (max-width: 1180px){
+  .nav-menu > li > a{ padding: 10px 9px; font-size: 13px; }
+  .nav-menu .nav-cta{ padding: 10px 14px !important; font-size: 12.5px; }
+ }
+ @media (max-width: 980px){
+  .nav-toggle{ display: flex; order: -1; margin-right: 4px; }
+  .nav-container{ gap: 8px; }
+  .nav-brand{ flex: 1; justify-content: center; gap: 8px; }
+  .nav-brand small{ display: none; }
+  .nav-title{ font-size: 16px !important; }
+  .nav-menu{
+   position: fixed; top: 64px; left: 0; right: auto;
+   bottom: 0; flex-direction: column;
+   background: #ffffff;
+   width: 88vw; max-width: 360px;
+   padding: 18px 22px 40px;
+   gap: 0; align-items: stretch;
+   transform: translateX(-100%);
+   transition: transform .35s cubic-bezier(.2,.7,.2,1);
+   overflow-y: auto; z-index: 10000;
+   box-shadow: 8px 0 32px rgba(0,0,0,0.15);
+   background-color: #ffffff !important; opacity: 1 !important;
+  }
+  /* 手機 menu 開啟時的背景遮罩 */
+  .nav-menu.open::before{ content: none; }
+  .nav-menu.open{ transform: translateX(0); }
+  .nav-menu > li{ width: 100%; border-bottom: 1px solid var(--line-soft); }
+  .nav-menu > li > a{
+   padding: 18px 4px; font-size: 15px;
+   border-radius: 0; justify-content: space-between;
+   color: var(--olive-deep);
+  }
+  .nav-menu > li > a:hover,
+  .nav-menu > li.has-dropdown:hover > a{
+   background: transparent; color: var(--terracotta);
+  }
+  .nav-menu > li.has-dropdown > a::after{ font-size: 14px; }
+  .nav-menu > li.has-dropdown.open > a::after{ transform: rotate(180deg); color: var(--terracotta); }
+  .dropdown{
+   position: static; box-shadow: none; border: none;
+   border-top: none; padding: 0;
+   background: transparent;
+   max-height: 0; overflow: hidden;
+   opacity: 1; visibility: visible;
+   transform: none;
+   transition: max-height .3s, padding .3s;
+  }
+  .nav-menu > li.has-dropdown.open .dropdown{
+   max-height: 800px;
+   padding: 0 0 16px 16px;
+  }
+  .nav-menu > li.has-dropdown:hover .dropdown{
+   opacity: 1; visibility: visible;
+  }
+  .nav-menu > li.has-dropdown:not(.open):hover .dropdown{
+   max-height: 0; padding: 0 0 0 16px;
+  }
+  .dropdown li a{
+   padding: 12px 16px; font-size: 14px;
+   border-left: 2px solid var(--line-soft);
+  }
+  .nav-menu .nav-cta{
+   margin: 20px 0 0; text-align: center;
+   padding: 14px 18px !important; font-size: 15px;
+   justify-content: center;
+  }
+  .nav-brand small{ display: none; }
+ }
+ .hero{
+  position: relative; z-index: 2;
+  padding: 80px 6vw 70px;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+ }
+ .hero-grid{
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: 70px; align-items: end;
+ }
+ .hero-eyebrow{
+  font-family: var(--display); font-style: italic;
+  font-size: 22px; color: var(--teal);
+  margin-bottom: 22px;
+ }
+ .hero-eyebrow .num{
+  font-weight: 600;
+  border: 1px solid var(--teal);
+  padding: 2px 10px; border-radius: 999px;
+  font-size: 12px; margin-right: 12px;
+  font-style: normal; letter-spacing: 0.15em;
+ }
+ h1.hero-title{
+  font-family: var(--serif); font-weight: 900;
+  font-size: clamp(38px, 5.6vw, 76px);
+  line-height: 1.1; margin: 0 0 28px; color: var(--olive-deep);
+ }
+ h1.hero-title .accent{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; color: var(--teal);
+ }
+ h1.hero-title .underline{
+  background-image: linear-gradient(transparent 78%, rgba(184,137,58,0.42) 78%, rgba(184,137,58,0.42) 92%, transparent 92%);
+ }
+ .hero-lead{
+  font-family: var(--serif); font-size: 18px;
+  line-height: 1.85; color: var(--ink-soft);
+  max-width: 540px;
+  border-left: 2px solid var(--teal); padding-left: 22px;
+ }
+ .hero-lead .drop{
+  font-family: var(--display); font-size: 56px;
+  line-height: 0.9; float: left;
+  margin: 8px 10px -4px 0;
+  color: var(--teal); font-weight: 600;
+ }
+ .hero-aside{
+  position: relative; padding: 36px 36px 30px;
+  background: var(--paper); border: 1px solid var(--line);
+  box-shadow: 14px 14px 0 -4px var(--bg-2), 14px 14px 0 -3px var(--line);
+ }
+ .hero-aside::before{
+  content: "本文導覽"; position: absolute;
+  top: -12px; left: 28px; background: var(--bg);
+  padding: 0 12px;
+  font-family: var(--display); font-style: italic;
+  color: var(--teal); font-size: 18px;
+ }
+ .hero-aside h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 15px; margin: 8px 0 18px;
+  color: var(--olive-deep);
+ }
+ .hero-aside ol{ list-style: none; padding: 0; margin: 0; counter-reset: aside; }
+ .hero-aside li{
+  counter-increment: aside;
+  padding: 11px 0;
+  border-bottom: 1px dashed var(--line-soft);
+  font-size: 14px; color: var(--ink-soft);
+  display: grid; grid-template-columns: 28px 1fr;
+  gap: 12px; align-items: center;
+ }
+ .hero-aside li:last-child{ border-bottom: none; padding-bottom: 4px }
+ .hero-aside li::before{
+  content: counter(aside, decimal-leading-zero);
+  font-family: var(--display); font-weight: 600;
+  color: var(--teal); font-size: 16px;
+ }
+ .hero-aside li a{ color: inherit; transition: color .2s }
+ .hero-aside li:hover a{ color: var(--teal) }
+ .intro-section{
+  padding: 80px 6vw;
+  border-bottom: 1px solid var(--line);
+  position: relative; z-index: 2;
+  text-align: center;
+ }
+ .intro-section .container{ max-width: 900px; margin: 0 auto; }
+ .intro-section h2{
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(26px, 3.2vw, 36px);
+  line-height: 1.4; margin: 0 0 22px;
+  color: var(--olive-deep);
+ }
+ .intro-section h2 em{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; color: var(--terracotta);
+ }
+ .intro-section p{
+  font-family: var(--serif); font-size: 17px;
+  line-height: 1.95; color: var(--ink-soft);
+  margin: 0 0 20px;
+ }
+ .intro-section p strong{
+  color: var(--olive-deep); font-weight: 700;
+  background-image: linear-gradient(transparent 75%, rgba(184,137,58,0.32) 75%);
+  padding: 0 2px;
+ }
+ .priority-section{
+  padding: 100px 6vw;
+  border-bottom: 1px solid var(--line);
+  position: relative; z-index: 2;
+ }
+ .priority-section.p1{ background: var(--bg); }
+ .priority-section.p2{ background: transparent; }
+ .priority-container{ max-width: 1100px; margin: 0 auto; }
+ .priority-header{ margin-bottom: 50px; text-align: center; }
+ .priority-rank{
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-family: var(--display); font-style: italic;
+  font-size: 17px; font-weight: 600;
+  margin-bottom: 18px;
+ }
+ .priority-section.p1 .priority-rank{ background: var(--teal); color: var(--paper); }
+ .priority-section.p2 .priority-rank{ background: var(--gold); color: var(--paper); }
+ .priority-rank .badge{
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-weight: 700;
+  font-size: 17px; font-style: normal;
+ }
+ .priority-header h2{
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 42px);
+  line-height: 1.25; margin: 0 0 16px;
+  color: var(--olive-deep);
+ }
+ .priority-header h2 em{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600;
+ }
+ .priority-section.p1 .priority-header h2 em{ color: var(--teal); }
+ .priority-section.p2 .priority-header h2 em{ color: var(--gold); }
+ .priority-header p{
+  font-family: var(--serif); font-size: 17px;
+  line-height: 1.85; color: var(--ink-soft);
+  max-width: 720px; margin: 0 auto;
+ }
+ .items-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+ }
+ .items-grid.two{
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 760px; margin: 0 auto;
+ }
+ .item-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 32px 30px 28px;
+  transition: all .35s;
+  position: relative;
+ }
+ .priority-section.p1 .item-card{ border-top: 4px solid var(--teal); }
+ .priority-section.p2 .item-card{ border-top: 4px solid var(--gold); }
+ .item-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(74,122,106,0.12);
+ }
+ .item-card .item-num{
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--bg-2);
+  color: var(--ink-mute);
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 0.18em;
+  margin-bottom: 14px;
+ }
+ .item-card h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 22px; margin: 0 0 18px;
+  color: var(--olive-deep);
+ }
+ .item-card h3 .note{
+  display: block;
+  font-family: var(--display); font-style: italic;
+  font-size: 14px; color: var(--terracotta);
+  margin-top: 4px; font-weight: 500;
+ }
+ .item-card .desc{
+  font-size: 14.5px;
+  line-height: 1.85; color: var(--ink-soft);
+  margin: 0 0 18px;
+ }
+ .item-card .desc strong{ color: var(--olive-deep); font-weight: 700; }
+ .item-card .reason{
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 13.5px; color: var(--ink-mute);
+  line-height: 1.7; font-style: italic;
+ }
+ .item-card .reason strong{
+  color: var(--teal); font-weight: 700; font-style: normal;
+ }
+ .priority-section.p2 .item-card .reason strong{ color: var(--gold); }
+ .tip-box{
+  background: rgba(74,122,106,0.07);
+  border-left: 3px solid var(--teal);
+  padding: 18px 22px;
+  margin: 22px 0;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.85;
+  display: grid; grid-template-columns: 24px 1fr; gap: 14px;
+  align-items: start;
+ }
+ .tip-box::before{ content: "💡"; font-size: 16px; margin-top: -1px; }
+ .tip-box strong{ display: inline; color: var(--olive-deep); font-weight: 700; }
+ .pullquote{
+  padding: 110px 6vw; text-align: center;
+  background: linear-gradient(180deg, var(--olive-deep), var(--olive));
+  color: var(--cream); border-bottom: 1px solid var(--olive-deep);
+  position: relative; z-index: 2;
+ }
+ .pullquote .marks{
+  font-family: var(--display); font-size: 96px;
+  line-height: 0.5; color: var(--terracotta-light);
+  margin-bottom: 24px; opacity: 0.85;
+ }
+ .pullquote blockquote{
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.5; margin: 0 auto;
+  max-width: 920px; color: var(--paper);
+ }
+ .pullquote blockquote em{
+  font-family: var(--display); font-style: italic;
+  color: var(--terracotta-light); font-weight: 600;
+ }
+ .pullquote cite{
+  display: block; margin-top: 32px;
+  font-family: var(--display); font-style: italic;
+  font-size: 16px; color: rgba(245,239,228,0.7);
+  letter-spacing: 0.05em;
+ }
+ .pullquote cite::before{ content: "—"; margin-right: 8px }
+ .closing{
+  padding: 100px 6vw; text-align: center;
+  background: var(--paper);
+  position: relative; z-index: 2;
+ }
+ .closing h2{
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.25; color: var(--olive-deep);
+  max-width: 760px; margin: 0 auto 18px;
+ }
+ .closing h2 em{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; color: var(--terracotta);
+ }
+ .closing p{
+  font-family: var(--serif); font-size: 17px;
+  line-height: 1.85; color: var(--ink-soft);
+  max-width: 620px; margin: 0 auto 36px;
+ }
+ .closing-cta{
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 16px 36px;
+  background: var(--terracotta); color: var(--paper);
+  font-family: var(--serif); font-weight: 600;
+  font-size: 16px; letter-spacing: 0.04em;
+  border-radius: 999px;
+  transition: all .3s;
+ }
+ .closing-cta:hover{
+  background: var(--terracotta-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(138,79,42,0.25);
+ }
+ .closing-cta svg{ width: 18px; height: 18px }
+ footer{
+  position: relative; z-index: 2;
+  padding: 60px 6vw 36px;
+  background: var(--olive-deep);
+  color: rgba(245,239,228,0.75);
+ }
+ .foot-grid{
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+ }
+ .foot-grid h5{
+  font-family: var(--display); font-style: italic;
+  font-size: 16px; color: var(--terracotta-light);
+  margin: 0 0 16px; font-weight: 500;
+ }
+ .foot-disclaimer{ font-size: 12px; line-height: 1.85; color: rgba(245,239,228,0.6); }
+ .foot-grid ul{ list-style: none; padding: 0; margin: 0; font-size: 13px }
+ .foot-grid li{ padding: 5px 0 }
+ .foot-grid a{ color: rgba(245,239,228,0.7); transition: color .2s }
+ .foot-grid a:hover{ color: var(--paper) }
+ .foot-bottom{
+  max-width: 1300px; margin: 36px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245,239,228,0.12);
+  display: flex; justify-content: space-between;
+  font-family: var(--display); font-style: italic;
+  font-size: 13px; color: rgba(245,239,228,0.5);
+ }
+ .reveal{
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 1.0s cubic-bezier(.2,.7,.2,1), transform 1.0s cubic-bezier(.2,.7,.2,1);
+ }
+ .reveal.in{ opacity: 1; transform: none }
+ .reveal.d1{ transition-delay: .1s }
+ .reveal.d2{ transition-delay: .25s }
+ .reveal.d3{ transition-delay: .4s }
+ @media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; gap: 40px }
+  .items-grid, .items-grid.two{ grid-template-columns: 1fr; gap: 18px }
+  .foot-grid{ grid-template-columns: 1fr; gap: 36px }
+  .foot-bottom{ flex-direction: column; gap: 8px }
+  .topmeta{ display: none }
+  section, .hero, .pullquote, .closing, .intro-section, .priority-section{
+   padding-left: 5vw; padding-right: 5vw;
+  }
+  .pullquote{ padding-top: 70px; padding-bottom: 70px }
+ }
+
+ /* ============ 手機版內文字加大（讓閱讀更舒適）============ */
+ @media (max-width: 768px){
+  body{ font-size: 17px; line-height: 1.85; }
+  p{ font-size: 17px !important; line-height: 1.9 !important; }
+  li{ font-size: 16.5px !important; line-height: 1.85 !important; }
+  .hero-lead{ font-size: 17.5px !important; line-height: 1.9 !important; }
+  .sec-lead{ font-size: 17px !important; line-height: 1.9 !important; }
+  .excerpt{ font-size: 15.5px !important; line-height: 1.8 !important; }
+  .info-block p, .tip-box, .warn-box,
+  .item-card .desc, .compare-col p,
+  .compare-col li, .outcome-card p,
+  .breakdown-card p, .action-card p,
+  .surgery-col p, .surgery-col li,
+  .qa-row .a, .qa-row .q,
+  .ruling-card blockquote,
+  .law-panel blockquote,
+  .news-block p,
+  .case-doc-row .content,
+  .tier-card .right,
+  .belief-card .quote,
+  .dark-callout p,
+  .formula-box .formula,
+  .combo-item .text,
+  .feat-list li,
+  .subtype-grid p{
+   font-size: 16.5px !important; line-height: 1.9 !important;
+  }
+  .dropdown li a{ font-size: 16px !important; padding: 14px 20px !important; }
+  .nav-menu > li > a{ font-size: 17px !important; padding: 18px 8px !important; }
+  .dropdown-all a{ font-size: 15px !important; font-weight: 700 !important; }
+  h3{ font-size: 21px !important; }
+  h4{ font-size: 18px !important; }
+ }
+
+ /* === [v10] Mobile menu - 重寫 === */
+ @media (max-width: 980px){
+  /* Navbar 容器 */
+  .navbar{ padding: 10px 4vw !important; }
+  .nav-container{
+   position: relative !important;
+   flex-direction: row !important;
+   justify-content: flex-start !important;
+   align-items: center !important;
+   gap: 0 !important;
+   max-width: 100% !important;
+  }
+
+  /* 漢堡 menu 在左 */
+  .nav-toggle{
+   display: flex !important;
+   order: -1 !important;
+   margin-right: auto !important;
+   z-index: 10002 !important;
+   position: relative !important;
+   padding: 8px !important;
+  }
+  .nav-toggle span{
+   width: 24px !important;
+   height: 2px !important;
+   background: #4a4530 !important;
+  }
+
+  /* LOGO 置中 */
+  .nav-brand{
+   position: absolute !important;
+   left: 50% !important;
+   top: 50% !important;
+   transform: translate(-50%, -50%) !important;
+   flex-direction: row !important;
+   margin: 0 !important;
+   gap: 8px !important;
+   z-index: 1 !important;
+  }
+  .nav-brand img{ width: 30px !important; height: 30px !important; }
+  .nav-brand .nav-brand-text{ flex-direction: row !important; align-items: center !important; }
+  .nav-title{ font-size: 16px !important; }
+  .nav-brand small{ display: none !important; }
+
+  /* 半透明遮罩(不模糊、不擋選單點擊) */
+  body.menu-open::after{
+   content: "" !important;
+   position: fixed !important;
+   top: 0 !important;
+   left: 88vw !important;
+   right: 0 !important;
+   bottom: 0 !important;
+   background: rgba(0,0,0,0.3) !important;
+   z-index: 9990 !important;
+   pointer-events: none !important;
+  }
+
+  /* === 抽屜：從左滑入，覆蓋整個 viewport 高度 === */
+  .navbar .nav-menu,
+  body .nav-menu,
+  .nav-menu{
+   position: fixed !important;
+   top: 0 !important;
+   left: 0 !important;
+   right: auto !important;
+   bottom: 0 !important;
+   height: 100vh !important;
+   height: 100dvh !important;
+   width: 86% !important;
+   max-width: 340px !important;
+   min-width: 280px !important;
+   flex-direction: column !important;
+   align-items: stretch !important;
+   justify-content: flex-start !important;
+   background: #ffffff !important;
+   padding: 70px 0 60px !important;
+   margin: 0 !important;
+   gap: 0 !important;
+   list-style: none !important;
+   transform: translateX(-105%) !important;
+   transition: transform .35s cubic-bezier(.2,.7,.2,1) !important;
+   overflow-y: auto !important;
+   overflow-x: hidden !important;
+   z-index: 9999 !important;
+   box-shadow: 4px 0 32px rgba(0,0,0,0.18) !important;
+   visibility: visible !important;
+   opacity: 1 !important;
+   display: flex !important;
+   border: none !important;
+  }
+  .nav-menu.open{
+   transform: translateX(0) !important;
+  }
+
+  /* 主分類 li */
+  .nav-menu > li{
+   width: 100% !important;
+   list-style: none !important;
+   border-bottom: 1px solid #f0ece4 !important;
+   border-top: none !important;
+   padding: 0 !important;
+   margin: 0 !important;
+   display: block !important;
+   position: relative !important;
+   background: #ffffff !important;
+  }
+  .nav-menu > li:first-child{ border-top: 1px solid #f0ece4 !important; }
+
+  /* 主分類連結 */
+  .nav-menu > li > a{
+   display: flex !important;
+   justify-content: space-between !important;
+   align-items: center !important;
+   padding: 16px 22px !important;
+   font-size: 17px !important;
+   font-weight: 700 !important;
+   color: #4a4530 !important;
+   text-decoration: none !important;
+   background: transparent !important;
+   border-radius: 0 !important;
+   line-height: 1.4 !important;
+   width: 100% !important;
+  }
+  .nav-menu > li.has-dropdown > a::after{
+   content: "▾" !important;
+   display: inline-block !important;
+   font-size: 18px !important;
+   color: #b56b3d !important;
+   transition: transform .25s !important;
+   margin-left: 12px !important;
+  }
+  .nav-menu > li.has-dropdown.open > a::after{
+   transform: rotate(180deg) !important;
+  }
+  .nav-menu > li.has-dropdown.open > a{
+   background: rgba(181,107,61,0.06) !important;
+   color: #8a4f2a !important;
+  }
+
+  /* Dropdown 子項：預設關閉，點開展開 */
+  .dropdown{
+   list-style: none !important;
+   padding: 0 !important;
+   margin: 0 !important;
+   max-height: 0 !important;
+   overflow: hidden !important;
+   position: static !important;
+   box-shadow: none !important;
+   border: none !important;
+   background: #fafaf8 !important;
+   transform: none !important;
+   opacity: 1 !important;
+   visibility: visible !important;
+   display: block !important;
+   width: 100% !important;
+   transition: max-height .35s ease !important;
+  }
+  .nav-menu > li.has-dropdown.open .dropdown{
+   max-height: 800px !important;
+   padding: 4px 0 12px !important;
+  }
+  .dropdown li{ list-style: none !important; display: block !important; }
+  .dropdown li a{
+   display: block !important;
+   padding: 11px 22px 11px 38px !important;
+   font-size: 15px !important;
+   color: #555048 !important;
+   text-decoration: none !important;
+   border: none !important;
+   line-height: 1.5 !important;
+   background: transparent !important;
+   transition: all .15s !important;
+  }
+  .dropdown li a:active{
+   color: #b56b3d !important;
+   background: rgba(181,107,61,0.08) !important;
+  }
+  .dropdown-all{
+   background: rgba(181,107,61,0.10) !important;
+   margin: 0 0 4px !important;
+  }
+  .dropdown-all a{
+   color: #8a4f2a !important;
+   font-weight: 700 !important;
+   font-size: 14px !important;
+  }
+
+  /* LINE CTA 按鈕 */
+  .nav-menu > li:last-child{ border-bottom: none !important; padding: 20px 22px 0 !important; }
+  .nav-menu .nav-cta{
+   display: block !important;
+   width: 100% !important;
+   margin: 0 !important;
+   padding: 16px 24px !important;
+   background: #b56b3d !important;
+   color: #ffffff !important;
+   text-align: center !important;
+   border-radius: 999px !important;
+   font-size: 16px !important;
+   font-weight: 700 !important;
+   text-decoration: none !important;
+   box-shadow: 0 4px 12px rgba(181,107,61,0.25) !important;
+  }
+  .nav-menu .nav-cta::after{ display: none !important; }
+ }
+
+ /* === 文章內字體放大（同 v9）=== */
+ .hero-lead{ font-size: 19px !important; line-height: 1.95 !important; }
+ .sec-lead, .intro-section p, .case-lead{ font-size: 18px !important; line-height: 1.95 !important; }
+ .info-block p, .info-block .title,
+ .tip-box > div, .warn-box > div,
+ .qa-box .q, .qa-box .a, .qa-row .q, .qa-row .a,
+ .dark-callout p{ font-size: 17px !important; line-height: 1.9 !important; }
+ .compare-col p, .compare-col li,
+ .surgery-col p, .surgery-col li,
+ .outcome-card p, .item-card .desc,
+ .ruling-card blockquote, .law-panel blockquote,
+ .case-doc-row .content, .feat-list li,
+ .priority-header p, .belief-card .quote,
+ .combo-item .text{ font-size: 16.5px !important; line-height: 1.9 !important; }
+ .closing p{ font-size: 18px !important; }
+
+ @media (max-width: 768px){
+  .hero-lead{ font-size: 17px !important; }
+  .sec-lead, .intro-section p, .case-lead{ font-size: 16.5px !important; }
+  .info-block p, .tip-box > div, .warn-box > div,
+  .qa-box .q, .qa-box .a, .qa-row .q, .qa-row .a,
+  .dark-callout p{ font-size: 16px !important; }
+  .compare-col p, .compare-col li,
+  .surgery-col p, .surgery-col li,
+  .outcome-card p, .item-card .desc,
+  .ruling-card blockquote, .law-panel blockquote,
+  .case-doc-row .content, .feat-list li,
+  .priority-header p, .belief-card .quote,
+  .combo-item .text{ font-size: 15.5px !important; }
+  .closing p{ font-size: 16.5px !important; }
+ }
+
+ /* hl-red */
+ .hl{ color: #b02b2b; font-weight: 700; }
+ strong.hl, .hl strong{ color: #b02b2b; }
+ /* === 重點字統一紅色 === */
+ .article strong,
+ .post-body strong,
+ .content strong,
+ article strong,
+ .sec-lead strong,
+ .intro-section strong,
+ .info-block strong,
+ p strong{
+  color: #b02b2b !important;
+  font-weight: 700;
+ }
+ /* 深色底區塊內的 strong 維持淺色(避免看不清) */
+ .dark-callout strong,
+ .case-bigcost strong,
+ .case-warning strong,
+ .stat-mega strong,
+ [class*="dark"] strong,
+ [style*="background: var(--ink)"] strong,
+ [style*="background:#1"] strong,
+ .hero strong,
+ .hero-mega strong{
+  color: inherit !important;
+ }
+
+ /* ============================================
+   [v17] 視覺降噪 - 讓文章清爽好讀
+   ============================================ */
+
+ /* 1. 全部 section 統一白底,不要忽深忽淺 */
+ section, .pro-section, .big-num-section,
+ .intro-section, [class*="-section"]{
+  background: #ffffff !important;
+  background-image: none !important;
+ }
+
+ /* 2. 拿掉 section 之間的粗邊框、陰影 */
+ section{
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+ }
+
+ /* 3. 內文段落:加大、行距加寬,更好閱讀 */
+ p, .pro-body p, .sec-lead, .intro-section p{
+  font-size: 17px !important;
+  line-height: 2.0 !important;
+  color: #2a2a26 !important;
+ }
+
+ /* 4. 大標題縮小一點,不要那麼張揚 */
+ h1, .hero-mega, .hero-title{
+  letter-spacing: 0.02em !important;
+ }
+ h2, .sec-title, h2.sec-title{
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+ }
+
+ /* 5. 拿掉裝飾性的 eyebrow 小標的花樣,變單純文字 */
+ .sec-eyebrow, .eyebrow, .pro-tag, .top-text{
+  letter-spacing: 0.08em !important;
+  font-size: 12.5px !important;
+  color: #9a9488 !important;
+  background: none !important;
+  border: none !important;
+ }
+
+ /* 6. 大數字裝飾 - 全部縮小 */
+ .stat-mega-number, .stat-mega .num,
+ .big-digit, .digit, .breakdown-card .digit,
+ .case-bigcost .num{
+  font-size: 32px !important;
+ }
+ .hero-mega{ font-size: 40px !important; }
+
+ /* 7. 卡片類 - 邊框淡化、陰影拿掉,變素雅 */
+ .feat-list li, .info-block, .surgery-col,
+ .compare-col, .item-card, .breakdown-card,
+ .outcome-card, .belief-card, .qa-box, .combo-item{
+  box-shadow: none !important;
+  border-radius: 6px !important;
+ }
+
+ /* 8. 提示框保留但簡化:細邊框 + 淺底 */
+ .tip-box, .warn-box{
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #faf8f4 !important;
+ }
+
+ /* 9. 深色色塊區 - 改成淺色,不要那麼搶眼 */
+ .dark-callout, .dark-section{
+  background: #f5f3ee !important;
+  color: #2a2a26 !important;
+  box-shadow: none !important;
+ }
+ .dark-callout *, .dark-section *{
+  color: #2a2a26 !important;
+ }
+
+ /* 10. 拿掉各種漸層 highlight 底線,重點字單純用紅色 */
+ strong{
+  background-image: none !important;
+  background: none !important;
+ }
+ .article strong, .pro-body p strong, p strong,
+ .sec-lead strong, .info-block strong{
+  color: #b02b2b !important;
+  font-weight: 700 !important;
+ }
+
+
+  /* ============================================
+     [v25] 加大文章字體 - 晚上滑手機更好讀
+     ============================================ */
+  .pro-body p, .intro-section p, .sec-lead,
+  article p, .priority-header p,
+  .item-card .desc, .item-card .reason,
+  .tip-box > div, .warn-box > div,
+  .info-block p, .dark-callout p,
+  .timeline-content p, .plan-section p,
+  .case-content p, p{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 條列卡片裡的小標也放大一點 */
+  .item-card .note, .feat-list li{
+    font-size: 17px !important;
+  }
+  /* 提示框文字 */
+  .tip-box, .warn-box{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 手機上再大一點點 */
+  @media (max-width: 980px){
+    .pro-body p, .intro-section p, .sec-lead,
+    article p, .priority-header p,
+    .item-card .desc, .item-card .reason,
+    .tip-box > div, .warn-box > div,
+    .info-block p, .dark-callout p,
+    .timeline-content p, .plan-section p,
+    .case-content p, p{
+      font-size: 19px !important;
+      line-height: 2.05 !important;
+    }
+  }
+
+
+  /* === 本文重點整理區塊 === */
+  .recap-section{
+    background: #faf8f4;
+    padding: 56px 6vw 64px;
+    border-top: 1px solid #e6e0d4;
+  }
+  .recap-box{
+    max-width: 720px; margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e0d9ca;
+    border-radius: 12px;
+    padding: 38px 34px;
+  }
+  .recap-box .recap-title{
+    font-family: var(--serif); font-size: 23px; font-weight: 700;
+    color: var(--terracotta-deep); margin: 0 0 6px; text-align: center;
+  }
+  .recap-box .recap-sub{
+    font-family: var(--sans); font-size: 14px; color: var(--ink-soft);
+    text-align: center; margin: 0 0 26px; letter-spacing: 0.08em;
+  }
+  .recap-box .recap-item{
+    display: flex; gap: 14px; padding: 16px 0;
+    border-top: 1px dashed #e0d9ca;
+  }
+  .recap-box .recap-item:first-of-type{ border-top: none; }
+  .recap-box .recap-check{
+    flex-shrink: 0; width: 26px; height: 26px;
+    background: var(--olive); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+  }
+  .recap-box .recap-text{
+    font-family: var(--sans); font-size: 16.5px;
+    line-height: 1.85; color: var(--ink);
+  }
+  .recap-box .recap-text strong{ color: #b02b2b; font-weight: 700; }
+  @media (max-width: 980px){
+    .recap-box{ padding: 30px 22px; }
+    .recap-box .recap-title{ font-size: 21px; }
+    .recap-box .recap-text{ font-size: 16px; }
+  }
+</style>
+
+<link rel="canonical" href="https://baihuawenins.com/posts/senior-insurance-planning.html">
+<meta property="og:url" content="https://baihuawenins.com/posts/senior-insurance-planning.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "銀髮族如何買保險｜3 級規劃順序，把錢花在刀口上｜保險白話文",
+ "description": "想幫家中長輩買保險嗎？年齡越大保費越貴，更要把錢花在刀口上。3 級規劃順序：意外險、實支實付、失能險為基本保障，癌症險、重大傷病險為次要規劃。",
+ "author": {
+  "@type": "Person",
+  "name": "保險白話文"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "保險白話文",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://baihuawenins.com/logo.svg"
+  }
+ },
+ "datePublished": "2026-05-15",
+ "dateModified": "2026-05-15",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://baihuawenins.com/posts/senior-insurance-planning.html"
+ },
+ "inLanguage": "zh-Hant-TW"
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+ <div class="nav-container">
+  <a href="../index.html" class="nav-brand">
+   <img src="../logo.svg" alt="保險白話文 Logo">
+   <div class="nav-brand-text">
+    <span class="nav-title">保險白話文</span>
+    <small>讓你保險買對不買貴</small>
+   </div>
+  </a>
+  <button class="nav-toggle" aria-label="開啟選單">
+   <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-menu">
+   <li><a href="../index.html">首頁</a></li>
+   <li class="has-dropdown">
+    <a href="#">新生兒保單</a>
+    <ul class="dropdown">
+     <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
+     <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
+     <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
+     <li><a href="newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
+     <li><a href="newborn-screening-basic.html">21 項基本篩檢</a></li>
+     <li><a href="newborn-screening-paid.html">自費篩檢攻略</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">成人保單</a>
+    <ul class="dropdown">
+     <li><a href="adult-insurance-planning.html">成人保險完整指南</a></li>
+     <li><a href="term-life-premium.html">定期壽險後期保費</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">銀髮族保險</a>
+    <ul class="dropdown">
+     <li><a href="senior-insurance-planning.html">銀髮族規劃 2 級順序</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">重症案例分享</a>
+    <ul class="dropdown">
+     <li><a href="cancer-protection-plan.html">癌症治療年燒百萬</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">險種知識</a>
+    <ul class="dropdown">
+     <li><a href="insurance-products-guide.html">7 大險種解析</a></li>
+     <li><a href="canned-insurance-policy.html">什麼是罐頭保單</a></li>
+     <li><a href="auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a></li>
+     <li><a href="surgery-227-explained.html">2-2-7 手術定義</a></li>
+          <li><a href="whole-life-vs-term.html">終身險 vs 定期險</a></li>
+    </ul>
+   </li>
+      <li class="has-dropdown">
+        <a href="#">信用卡刷保費</a>
+        <ul class="dropdown">
+          <li><a href="credit-card-installment.html">信用卡刷保費懶人包</a></li>
+        </ul>
+      </li>
+   <li class="has-dropdown">
+    <a href="#">理賠經驗</a>
+    <ul class="dropdown">
+     <li><a href="claim-rejection-reasons.html">理賠 5 大地雷</a></li>
+     <li><a href="pre-existing-disease.html">已在疾病 127 條</a></li>
+     <li><a href="broker-vs-insurance-company.html">保經 vs 保險公司</a></li>
+    </ul>
+   </li>
+   <li><a href="../blog.html">全部文章</a></li>
+   <li><a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="nav-cta">LINE 諮詢</a></li>
+  </ul>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="hero-grid">
+  <div>
+   <div class="hero-eyebrow reveal">
+    <span class="num">高齡投保攻略</span>銀髮族保險規劃
+   </div>
+   <h1 class="hero-title reveal d1">
+    銀髮族<br>
+    如何<span class="accent">買保險</span>？<br>
+    <span class="underline">把錢花在刀口上</span>
+   </h1>
+   <p class="hero-lead reveal d2">
+    <span class="drop">「</span>業務員，我想幫家中爸媽買保險，該從哪裡開始？」這是我每個月都會被問到的問題。隨著年齡增長，高齡者的保費也會越來越高——所以<strong>「選對險種、優先順序」</strong>就變得格外關鍵。這篇文章我會用 2 級規劃順序，告訴您銀髮族該如何規劃保險。
+   </p>
+  </div>
+  <aside class="hero-aside reveal d2">
+   <h3>本文導覽</h3>
+   <ol>
+    <li><a href="#why">為什麼有規劃順序這件事</a></li>
+    <li><a href="#p1">優先規劃：基本保障</a></li>
+    <li><a href="#p2">次要規劃：加強保障</a></li>
+    <li><a href="#advice">給家人的最後建議</a></li>
+   </ol>
+  </aside>
+ </div>
+</header>
+
+<section class="intro-section" id="why">
+ <div class="container">
+  <h2 class="reveal">
+   銀髮族投保的核心邏輯：<br>
+   <em>保費沒有花在刀口上，就是浪費</em>
+  </h2>
+  <p class="reveal d1">
+   高齡者買保險的<strong>保費也越高</strong>——這是個簡單但殘酷的事實。同樣的保障內容，30 歲的人買跟 60 歲的人買，保費可能差到 3~5 倍。
+  </p>
+  <p class="reveal d2">
+   所以幫長輩規劃保險，<strong>順序很重要</strong>。在我服務 200+ 家庭的經驗中，我會把銀髮族的保險商品依「<strong>CP 值（投保效益）</strong>」分成 2 個層級——先把基本保障搞定，行有餘力再加強，這才是把錢花在刀口上的方法。
+  </p>
+ </div>
+</section>
+
+<section class="priority-section p1" id="p1">
+ <div class="priority-container">
+  <div class="priority-header reveal">
+   <div class="priority-rank">
+    <span class="badge">1</span>優先規劃 · Tier 01
+   </div>
+   <h2>優先規劃：<em>基本保障</em></h2>
+   <p>這 3 個險種 CP 值最高，<strong>無論預算多寡，都建議優先規劃</strong>。對銀髮族來說，這是「不買會後悔」的底層保障。</p>
+  </div>
+
+  <div class="items-grid">
+   <div class="item-card reveal d1">
+    <span class="item-num">必備 01</span>
+    <h3>
+     意外險
+     <span class="note">老年人必備的第一張保單</span>
+    </h3>
+    <p class="desc">
+     意外險的保費<strong>不會隨著年齡而調整</strong>，保費便宜、效益超高，是真正的 CP 值之王。
+    </p>
+    <div class="reason">
+     <strong>為什麼必備：</strong>老年人容易發生跌倒、骨折等意外事故，這些都會花到大筆醫療費。意外險就是專門解決這類情境的保障。
+    </div>
+   </div>
+
+   <div class="item-card reveal d2">
+    <span class="item-num">必備 02</span>
+    <h3>
+     實支實付醫療險
+     <span class="note">負擔自費藥物與醫材</span>
+    </h3>
+    <p class="desc">
+     實支實付可以<strong>轉嫁高額的自費藥物跟醫材費用</strong>，是現代醫療環境最關鍵的一張保單。
+    </p>
+    <div class="reason">
+     <strong>為什麼必備：</strong>老年人常見的人工水晶體、人工髖關節等手術，自費金額動輒數十萬。實支實付就是來應付這些自費醫材的。
+    </div>
+   </div>
+
+   <div class="item-card reveal d3">
+    <span class="item-num">必備 03</span>
+    <h3>
+     失能險
+     <span class="note">⚠ 由於損率高，大多已停售</span>
+    </h3>
+    <p class="desc">
+     失能險用來解決<strong>長期照護費用</strong>——一旦發生失能，後續的看護、生活用品、復健支出非常驚人。
+    </p>
+    <div class="reason">
+     <strong>為什麼必備：</strong>中風、失智、喪失咀嚼吞嚥能力等，都可能導致失能需要聘請看護照顧。失能險就是來補這塊缺口的。
+    </div>
+   </div>
+  </div>
+
+  <div class="tip-box">
+   <div>
+    <strong>關於失能險的最新狀況：</strong>由於早期商品的損率太高，目前市場上的失能險商品已經<strong>大多停售或限縮條件</strong>。如果家中長輩還沒有失能險，建議跟業務員確認目前可以投保的選項——能買到就趕快買。
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="priority-section p2" id="p2">
+ <div class="priority-container">
+  <div class="priority-header reveal">
+   <div class="priority-rank">
+    <span class="badge">2</span>次要規劃 · Tier 02
+   </div>
+   <h2>次要規劃：<em>加強保障</em></h2>
+   <p>這 2 個險種對高齡者來說保費較貴，<strong>不一定每位長輩都適合規劃</strong>。要看預算與長輩的健康狀況再決定。</p>
+  </div>
+
+  <div class="items-grid two">
+   <div class="item-card reveal d1">
+    <span class="item-num">加強 01</span>
+    <h3>
+     癌症險
+     <span class="note">癌症連續多年為國人十大死因之首</span>
+    </h3>
+    <p class="desc">
+     無論是癌症險或重大傷病險，<strong>理賠頻率最高的就是癌症</strong>。一旦罹癌，各種醫療支出相當龐大——標靶藥物、化療療程都是長期燒錢。
+    </p>
+    <div class="reason">
+     <strong>為什麼次要規劃：</strong>對高齡者來說，癌症險保費相當高，CP 值較低。如果預算許可可以補強；預算有限，則優先靠實支實付來部分轉嫁醫療費。
+    </div>
+   </div>
+
+   <div class="item-card reveal d2">
+    <span class="item-num">加強 02</span>
+    <h3>
+     重大傷病險
+     <span class="note">300+ 項重大傷病涵蓋癌症</span>
+    </h3>
+    <p class="desc">
+     重大傷病險範圍比癌症險廣，<strong>取得健保署核發的重大傷病卡就一次理賠</strong>，可以用來支付任何費用，自由度高。
+    </p>
+    <div class="reason">
+     <strong>為什麼次要規劃：</strong>同樣對高齡者來說保費較貴。如果預算有限，重大傷病險的保額可以拉低一點（例如 50~100 萬）作為輔助，主要還是靠基本保障層。
+    </div>
+   </div>
+  </div>
+
+  <div class="tip-box">
+   <div>
+    <strong>我服務客戶的實務建議：</strong>幫長輩規劃保險時，<strong>不要硬塞癌症險或重大傷病險</strong>。我會先確認意外險、實支實付、失能險都齊全，然後看預算還能不能負擔——可以的話再補強癌症與重大傷病。<strong>能買「保大」就先別買「保小」</strong>，這才是把錢花在刀口上的關鍵。
+   </div>
+  </div>
+ </div>
+</section>
+
+
+<section class="recap-section">
+  <div class="recap-box">
+    <div class="recap-title">本文重點整理</div>
+    <div class="recap-sub">RECAP · 看完這篇，記住這幾件事</div>
+    <div class="recap-item">
+      <div class="recap-check">1</div>
+      <div class="recap-text">銀髮族投保<strong>保費較高</strong>，更要把錢花在刀口上——選對險種、抓對順序最重要。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">2</div>
+      <div class="recap-text"><strong>優先規劃</strong>基本保障：意外險、實支實付醫療險、失能險，無論預算多寡都建議先有。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">3</div>
+      <div class="recap-text"><strong>意外險</strong>保費不隨年齡調整、CP 值最高；<strong>實支實付</strong>負擔自費藥物與醫材。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">4</div>
+      <div class="recap-text"><strong>失能險</strong>應對長期照護費用，但多已停售——能買到要把握。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">5</div>
+      <div class="recap-text">行有餘力再加強<strong>癌症險、重大傷病險</strong>；預算有限就以基本保障為主。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">✓</div>
+      <div class="recap-text">想幫長輩規劃保險？歡迎 <strong>LINE 諮詢</strong>，我會依長輩狀況客製建議。</div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+ <div style="max-width: 1300px; margin: 0 auto;">
+  <h2 class="reveal">幫家中長輩規劃保險，<em>需要陪伴的智慧</em></h2>
+  <p class="reveal d1">
+   每位長輩的健康狀況、家庭結構、預算都不同——標準答案不存在。如果您想為爸媽規劃保險但不知道從何開始，歡迎透過 LINE 跟我聊聊，我會根據長輩的狀況，幫您客製化最適合的方案。
+  </p>
+  <a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="closing-cta reveal d2">
+   LINE 預約長輩保險規劃
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+ </div>
+</section>
+
+<footer>
+ <div class="foot-grid">
+  <div>
+   <h5>關於本文</h5>
+   <p class="foot-disclaimer">
+    本文所述銀髮族保險規劃為一般性建議，實際投保需根據長輩的健康狀況、預算、家庭結構等因素客製化。文中提及之失能險、癌症險、重大傷病險等商品內容會因保險公司、商品版本而有所不同。本文不構成保險商品要約或銷售建議。撰文：保險白話文。
+   </p>
+  </div>
+  <div>
+   <h5>延伸閱讀</h5>
+   <ul>
+    <li><a href="insurance-products-guide.html">保險商品 7 大險種解析</a></li>
+    <li><a href="cancer-protection-plan.html">癌症治療年燒百萬</a></li>
+    <li><a href="canned-insurance-policy.html">什麼是罐頭保單</a></li>
+   </ul>
+  </div>
+  <div>
+   <h5>聯繫我們</h5>
+   <ul>
+    <li>LINE · @129diduy</li>
+    <li>Instagram · @insurance_is_su</li>
+    <li>Threads · @insurance_is_su</li>
+   </ul>
+  </div>
+ </div>
+ <div class="foot-bottom">
+  <span>保險白話文 · 部落格文章</span>
+  <span>© 2026 · 讓你保險買對不買貴</span>
+ </div>
+</footer>
+
+<script>
+ // === [v14] Navbar toggle ===
+ const navToggle = document.querySelector('.nav-toggle');
+ const navMenu = document.querySelector('.nav-menu');
+ if (navToggle && navMenu){
+  navToggle.addEventListener('click', (e) => {
+   e.stopPropagation();
+   const isOpen = navMenu.classList.toggle('open');
+   navToggle.classList.toggle('open');
+   document.body.classList.toggle('menu-open', isOpen);
+  });
+ }
+ // 點主分類 = 展開/收合該分類文章
+ document.querySelectorAll('.has-dropdown > a').forEach(a => {
+  a.addEventListener('click', (e) => {
+   e.preventDefault();
+   e.stopPropagation();
+   const li = a.parentElement;
+   const wasOpen = li.classList.contains('open');
+   // 收合其他已開的分類
+   document.querySelectorAll('.has-dropdown.open').forEach(d => {
+    if (d !== li) d.classList.remove('open');
+   });
+   // 切換自己
+   li.classList.toggle('open', !wasOpen);
+  });
+ });
+ // 點抽屜以外的地方 = 關閉抽屜
+ document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 980 && navMenu && navMenu.classList.contains('open')){
+   if (!e.target.closest('.nav-menu') && !e.target.closest('.nav-toggle')){
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('open');
+    document.body.classList.remove('menu-open');
+   }
+  } else if (window.innerWidth > 980){
+   if (!e.target.closest('.has-dropdown')){
+    document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
+   }
+  }
+ });
+
+ const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+   if (e.isIntersecting){
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+   }
+  });
+ }, { threshold: 0.12 });
+ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
