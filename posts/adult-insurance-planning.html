@@ -74,7 +74,7 @@
   background: rgba(255,255,255,0.94);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  padding: 10px 4vw;
+  padding: 48px 4vw;
  }
  .nav-container{
   max-width: 1400px; margin: 0 auto;
@@ -268,7 +268,7 @@
    ========================================================= */
  .hero{
   position: relative; z-index: 2;
-  padding: 80px 6vw 70px;
+  padding: 49px 6vw 70px;
   border-bottom: 1px solid var(--line);
  }
  .hero-grid{
@@ -360,7 +360,7 @@
    Why section (responsibility + leverage)
    ========================================================= */
  .why-section{
-  padding: 100px 6vw;
+  padding: 62px 6vw;
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   border-bottom: 1px solid var(--line);
   position: relative; z-index: 2;
@@ -458,7 +458,7 @@
    ========================================================= */
  section{
   position: relative; z-index: 2;
-  padding: 90px 6vw;
+  padding: 55px 6vw;
   border-bottom: 1px solid var(--line);
  }
  .container{ max-width: 1300px; margin: 0 auto }
@@ -571,7 +571,7 @@
    Protection deep-dive section
    ========================================================= */
  .pro-section{
-  padding: 100px 6vw;
+  padding: 62px 6vw;
   border-bottom: 1px solid var(--line);
   position: relative; z-index: 2;
  }
@@ -924,7 +924,7 @@
    Pull quote
    ========================================================= */
  .pullquote{
-  padding: 110px 6vw;
+  padding: 68px 6vw;
   text-align: center;
   background: linear-gradient(180deg, var(--olive-deep), var(--olive));
   color: var(--cream);
@@ -958,7 +958,7 @@
    Closing
    ========================================================= */
  .closing{
-  padding: 100px 6vw;
+  padding: 62px 6vw;
   text-align: center;
   background: var(--paper);
   position: relative; z-index: 2;
@@ -999,7 +999,7 @@
    ========================================================= */
  footer{
   position: relative; z-index: 2;
-  padding: 60px 6vw 36px;
+  padding: 48px 6vw 36px;
   background: var(--olive-deep);
   color: rgba(245,239,228,0.75);
  }
@@ -1059,7 +1059,7 @@
   section, .hero, .pro-section, .pullquote, .closing, .why-section{
    padding-left: 5vw; padding-right: 5vw;
   }
-  .pullquote{ padding-top: 70px; padding-bottom: 70px }
+  .pullquote{ padding-top: 44px; padding-bottom: 44px }
   .pro-aside{ position: static }
   .leverage-card{ padding: 32px 24px }
   .lev-side.small .num{ font-size: 40px }
@@ -1105,7 +1105,7 @@
  /* === [v10] Mobile menu - 重寫 === */
  @media (max-width: 980px){
   /* Navbar 容器 */
-  .navbar{ padding: 10px 4vw !important; }
+  .navbar{ padding: 48px 4vw !important; }
   .nav-container{
    position: relative !important;
    flex-direction: row !important;
@@ -1497,7 +1497,7 @@
   /* === 本文重點整理區塊 === */
   .recap-section{
     background: #faf8f4;
-    padding: 56px 6vw 64px;
+    padding: 48px 6vw 64px;
     border-top: 1px solid #e6e0d4;
   }
   .recap-box{
@@ -1535,6 +1535,123 @@
     .recap-box{ padding: 30px 22px; }
     .recap-box .recap-title{ font-size: 21px; }
     .recap-box .recap-text{ font-size: 16px; }
+  }
+
+  /* === [問題⑤] 重點式整理文字放大 === */
+  .item-card h4, .item-grid h4,
+  .feat-list li, .check-list li,
+  .point-list li, .tip-list li,
+  .items-list li .name,
+  .recap-text,
+  .five-list .fl-text h3{
+    font-size: 19px !important;
+  }
+  .item-card .desc, .item-card p,
+  .item-card .note,
+  .items-list li .desc{
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+  .recap-box .recap-text{
+    font-size: 18px !important;
+  }
+
+  /* === 5 大保障 橫條清單 === */
+  .five-list{ max-width: 680px; margin: 36px auto 0; display: flex; flex-direction: column; gap: 14px; }
+  .five-list .fl-item{ display: flex; align-items: center; gap: 0; background: #ffffff; border: 1px solid #e6e0d4; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); text-decoration: none; transition: transform .15s, box-shadow .15s; }
+  .five-list .fl-item:hover{ transform: translateX(4px); box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+  .five-list .fl-bar{ width: 8px; align-self: stretch; flex-shrink: 0; }
+  .five-list .fl-num{ flex-shrink: 0; width: 54px; text-align: center; font-family: var(--serif); font-size: 26px; font-weight: 700; }
+  .five-list .fl-text{ padding: 18px 18px 18px 6px; flex: 1; }
+  .five-list .fl-text h3{ margin: 0 0 4px; font-family: var(--serif); font-size: 21px; font-weight: 700; color: var(--ink); }
+  .five-list .fl-text .fl-desc{ margin: 0; font-family: var(--sans); font-size: 15.5px; color: var(--ink-soft); }
+  .five-list .fl-arrow{ flex-shrink: 0; padding-right: 18px; color: #c4bdae; font-size: 20px; }
+  @media (max-width: 980px){
+    .five-list .fl-num{ width: 46px; font-size: 22px; }
+    .five-list .fl-text h3{ font-size: 19px; }
+    .five-list .fl-text .fl-desc{ font-size: 14.5px; }
+  }
+
+  /* === 意外失能理賠說明框 === */
+  .disability-note{
+    background: #faf6ef;
+    border: 1px solid #e8e0d0;
+    border-left: 5px solid var(--c4);
+    border-radius: 10px;
+    padding: 26px 28px;
+    margin: 24px 0 8px;
+  }
+  .disability-note .dn-title{
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--olive-deep);
+    margin: 0 0 12px;
+  }
+  .disability-note p{
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .disability-note .dn-example{
+    background: #ffffff;
+    border: 1px dashed #d8cfb8;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 14px;
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+  }
+  .disability-note .dn-example strong{ color: #b02b2b; }
+  .disability-note .dn-foot{
+    font-size: 14px !important;
+    color: var(--ink-mute) !important;
+    margin: 12px 0 0 !important;
+  }
+
+  /* === 適合購買定期壽險分析表 === */
+  .fit-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 8px;
+    font-family: var(--sans);
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .fit-table th{
+    background: var(--c5);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 16px;
+    text-align: left;
+  }
+  .fit-table td{
+    padding: 16px;
+    border-top: 1px solid #ece6da;
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: var(--ink);
+    vertical-align: top;
+  }
+  .fit-table td:first-child{
+    font-weight: 700;
+    color: var(--olive-deep);
+    font-family: var(--serif);
+    white-space: nowrap;
+    width: 38%;
+  }
+  .fit-table tr:nth-child(even) td{ background: #faf8f4; }
+  @media (max-width: 980px){
+    .fit-table th{ font-size: 15px; padding: 12px 12px; }
+    .fit-table td{ font-size: 15.5px; padding: 13px 12px; }
+    .fit-table td:first-child{ width: 42%; }
   }
 </style>
 
@@ -1592,7 +1709,7 @@
     <ul class="dropdown">
      <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
      <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
-     <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
+     <li><a href="newborn-parents-checklist.html">新生兒出生後待辦清單</a></li>
      <li><a href="newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
      <li><a href="newborn-screening-basic.html">21 項基本篩檢</a></li>
      <li><a href="newborn-screening-paid.html">自費篩檢攻略</a></li>
@@ -1737,64 +1854,55 @@
    保險大致可分為六大保障：<strong style="color: var(--olive-deep);">醫療險、癌症險、重大傷病險、壽險、失能險</strong>。本文將針對成年人最核心的五大必買商品深入解析——<strong style="color: var(--olive-deep);">實支實付、重大傷病、癌症險、意外險、壽險</strong>。每一個都對應一種人生風險，缺一不可。
   </p>
 
-  <div class="overview-grid">
-   <a href="#p1" class="ov-card c1 reveal d1">
-    <div class="ov-num">01</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M9 12h6M12 9v6"/>
-      <rect x="3" y="3" width="18" height="18" rx="3"/>
-     </svg>
+  <div class="five-list">
+   <a href="#p1" class="fl-item reveal d1">
+    <div class="fl-bar" style="background: var(--c1);"></div>
+    <div class="fl-num" style="color: var(--c1);">01</div>
+    <div class="fl-text">
+     <h3>醫療險</h3>
+     <p class="fl-desc">住院日額 + 實支實付</p>
     </div>
-    <h3>醫療險</h3>
-    <div class="desc">住院日額 + 實支實付</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p2" class="ov-card c2 reveal d2">
-    <div class="ov-num">02</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M12 8v4l3 2"/>
-      <circle cx="12" cy="12" r="2" fill="currentColor"/>
-     </svg>
+   <a href="#p2" class="fl-item reveal d1">
+    <div class="fl-bar" style="background: var(--c2);"></div>
+    <div class="fl-num" style="color: var(--c2);">02</div>
+    <div class="fl-text">
+     <h3>癌症險</h3>
+     <p class="fl-desc">確診一次給付</p>
     </div>
-    <h3>癌症險</h3>
-    <div class="desc">確診一次給付</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p3" class="ov-card c3 reveal d3">
-    <div class="ov-num">03</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/>
-      <path d="M9 12l2 2 4-4"/>
-     </svg>
+   <a href="#p3" class="fl-item reveal d2">
+    <div class="fl-bar" style="background: var(--c3);"></div>
+    <div class="fl-num" style="color: var(--c3);">03</div>
+    <div class="fl-text">
+     <h3>重大傷病險</h3>
+     <p class="fl-desc">300+ 項疾病保障</p>
     </div>
-    <h3>重大傷病險</h3>
-    <div class="desc">300+ 項疾病保障</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p4" class="ov-card c4 reveal d4">
-    <div class="ov-num">04</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M13 2L3 14h7l-2 8 10-12h-7l2-8z"/>
-     </svg>
+   <a href="#p4" class="fl-item reveal d2">
+    <div class="fl-bar" style="background: var(--c4);"></div>
+    <div class="fl-num" style="color: var(--c4);">04</div>
+    <div class="fl-text">
+     <h3>意外險</h3>
+     <p class="fl-desc">含意外實支 + 失能</p>
     </div>
-    <h3>意外險</h3>
-    <div class="desc">含意外實支 + 失能</div>
+    <div class="fl-arrow">›</div>
    </a>
 
-   <a href="#p5" class="ov-card c5 reveal d4">
-    <div class="ov-num">05</div>
-    <div class="ov-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-     </svg>
+   <a href="#p5" class="fl-item reveal d3">
+    <div class="fl-bar" style="background: var(--c5);"></div>
+    <div class="fl-num" style="color: var(--c5);">05</div>
+    <div class="fl-text">
+     <h3>壽險</h3>
+     <p class="fl-desc">定期 + 終身搭配規劃</p>
     </div>
-    <h3>壽險</h3>
-    <div class="desc">定期 + 終身搭配規劃</div>
+    <div class="fl-arrow">›</div>
    </a>
   </div>
  </div>
@@ -2044,7 +2152,7 @@
      <h4>規劃建議</h4>
     </div>
     <ul>
-     <li><div><strong>額度至少 500 萬以上</strong>雖然投保 500 萬，保險公司理賠會依照殘疾 1-11 等級賠償</div></li>
+     <li><div><strong>額度建議 500 萬以上</strong>意外失能理賠是依失能等級計算（詳見下方說明），額度足夠才能因應長期照護</div></li>
     </ul>
    </div>
 
@@ -2059,6 +2167,20 @@
     </ul>
    </div>
   </div>
+ </div>
+
+ <div class="disability-note reveal">
+  <div class="dn-title">意外失能怎麼賠？不是「一次賠滿額」</div>
+  <p>很多人以為投保意外失能 500 萬，發生失能就一次拿 500 萬——這是常見的誤會。實際上，意外失能是<strong style="color:#b02b2b;">依照「失能等級」對應不同的給付比例</strong>來理賠。</p>
+  <p>失能程度依嚴重度分成 <strong style="color:#b02b2b;">第 1 級到第 11 級</strong>：第 1 級最嚴重（給付比例最高），第 11 級較輕（給付比例最低）。理賠金的算法是：</p>
+  <div class="dn-example">
+   <strong>理賠金 ＝ 投保保額 × 該失能等級的給付比例</strong><br><br>
+   舉例：投保意外失能 <strong>500 萬</strong>，若意外導致的失能經鑑定為——<br>
+   ・第 1 級（最嚴重）：500 萬 × 100% ＝ <strong>500 萬</strong><br>
+   ・第 6 級（中等）：500 萬 × 50% ＝ <strong>250 萬</strong><br>
+   ・第 11 級（較輕）：500 萬 × 5% ＝ <strong>25 萬</strong>
+  </div>
+  <p class="dn-foot">＊上述等級比例為示意，各保險公司商品的給付比例可能略有不同，實際請以保單條款為準。</p>
  </div>
 </section>
 
@@ -2103,23 +2225,37 @@
 
    <h3 class="pro-subhead">適合購買定期壽險的人</h3>
 
-   <div class="item-grid" style="grid-template-columns: repeat(3, 1fr); gap: 12px">
-    <div class="item-card">
-     <span class="lbl">類型 01</span>
-     <h4>家庭經濟支柱</h4>
-     <p>希望在自己離世後，家人能獲得經濟支持。</p>
-    </div>
-    <div class="item-card">
-     <span class="lbl">類型 02</span>
-     <h4>有房貸/車貸/債務者</h4>
-     <p>確保在意外發生時，家人不會因債務陷入困境。</p>
-    </div>
-    <div class="item-card">
-     <span class="lbl">類型 03</span>
-     <h4>預算有限但需高保障</h4>
-     <p>比終身壽險更划算，適合短期內需要較高保額的人。</p>
-    </div>
-   </div>
+   <table class="fit-table">
+    <thead>
+     <tr>
+      <th>這樣的人</th>
+      <th>為什麼適合定期壽險</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>家庭經濟支柱</td>
+      <td>家裡主要收入來源者。萬一自己離世，定期壽險的理賠金能讓家人在這段期間維持生活、不被經濟壓垮。</td>
+     </tr>
+     <tr>
+      <td>有房貸 / 車貸 / 債務者</td>
+      <td>身上背著貸款的人。可把保障期間設定成貸款年期，萬一發生意外，理賠金能幫家人還清債務，不留負擔。</td>
+     </tr>
+     <tr>
+      <td>預算有限、但需要高保障</td>
+      <td>同樣保額下，定期壽險保費比終身壽險便宜很多。用有限預算就能買到足夠保障，CP 值高。</td>
+     </tr>
+     <tr>
+      <td>育兒家庭</td>
+      <td>孩子還小、尚未成年的家庭。可把保障規劃到孩子經濟獨立為止，確保孩子的成長與教育不受影響。</td>
+     </tr>
+     <tr>
+      <td>有特定期間風險者</td>
+      <td>例如創業期、子女就學期等人生特定階段，需要在這段時間有較高保障的人。</td>
+     </tr>
+    </tbody>
+   </table>
+   <p style="font-size: 14px; color: var(--ink-mute); margin: 10px 0 0; font-family: var(--sans);">＊以上為一般情況的規劃方向，實際仍需依個人家庭狀況與預算評估。</p>
 
    <!-- 比較表 -->
    <h3 class="pro-subhead" style="margin-top: 40px">定期壽險 vs. 終身壽險 — 一張表看懂</h3>
@@ -2251,7 +2387,7 @@
    保障就應該有多<em>完整</em>
   </h2>
   <p class="reveal d1">
-   每個人的家庭責任、預算、健康狀況都不一樣，文章裡的規劃只是一個方向。如果您希望根據自己的狀況做客製化的保單健檢，歡迎透過 LINE 與我聊聊，第一次諮詢都是免費的。
+   每個人的家庭責任、預算、健康狀況都不一樣，文章裡的規劃只是一個方向。如果您希望根據自己的狀況做客製化的保單健檢，歡迎透過 LINE 與我聊聊。
   </p>
   <a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="closing-cta reveal d2">
    LINE 預約免費保單健檢
@@ -2268,8 +2404,8 @@
   <div>
    <h5>關於本文</h5>
    <p class="foot-disclaimer">
-    本文所引用之保額、保費與規劃方案皆為示意性質，僅供概念理解使用。實際保單商品之費率、條款、保障範圍與限制，請以各保險公司核准之契約內容為準。本資料不構成保險商品要約或銷售建議，如需就個人狀況進行規劃，請與您的合格保險經紀人或業務員面談。撰文：保險白話文，服務於保經公司之保險全方位規劃師。
-   </p>
+        本文保額、保費為示意，實際以各保險公司契約為準，內容僅供參考。
+      </p>
   </div>
   <div>
    <h5>延伸閱讀</h5>

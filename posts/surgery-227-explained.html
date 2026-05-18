@@ -44,7 +44,7 @@
   background: rgba(255,255,255,0.94);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  padding: 10px 4vw;
+  padding: 48px 4vw;
  }
  .nav-container{
   max-width: 1400px; margin: 0 auto;
@@ -232,7 +232,7 @@
   }
   .nav-brand small{ display: none; }
  }
- .hero{ position: relative; z-index: 2; padding: 80px 6vw 70px; border-bottom: 1px solid var(--line); }
+ .hero{ position: relative; z-index: 2; padding: 49px 6vw 70px; border-bottom: 1px solid var(--line); }
  .hero-grid{
   max-width: 1300px; margin: 0 auto;
   display: grid; grid-template-columns: 1.4fr 1fr;
@@ -311,7 +311,7 @@
 
  /* Big number block */
  .big-num-section{
-  padding: 100px 6vw;
+  padding: 62px 6vw;
   text-align: center;
   background: transparent;
   border-bottom: 1px solid var(--line);
@@ -370,7 +370,7 @@
   padding: 0 2px;
  }
 
- section{ position: relative; z-index: 2; padding: 90px 6vw; border-bottom: 1px solid var(--line); }
+ section{ position: relative; z-index: 2; padding: 55px 6vw; border-bottom: 1px solid var(--line); }
  .container{ max-width: 1100px; margin: 0 auto }
  .sec-eyebrow{
   display: flex; align-items: center; gap: 18px;
@@ -555,7 +555,7 @@
  .qa-row .a strong{ color: var(--olive-deep); font-weight: 700; }
 
  .closing{
-  padding: 100px 6vw; text-align: center;
+  padding: 62px 6vw; text-align: center;
   background: var(--paper);
   position: relative; z-index: 2;
  }
@@ -592,7 +592,7 @@
 
  footer{
   position: relative; z-index: 2;
-  padding: 60px 6vw 36px;
+  padding: 48px 6vw 36px;
   background: var(--olive-deep);
   color: rgba(245,239,228,0.75);
  }
@@ -677,7 +677,7 @@
  /* === [v10] Mobile menu - 重寫 === */
  @media (max-width: 980px){
   /* Navbar 容器 */
-  .navbar{ padding: 10px 4vw !important; }
+  .navbar{ padding: 48px 4vw !important; }
   .nav-container{
    position: relative !important;
    flex-direction: row !important;
@@ -1069,7 +1069,7 @@
   /* === 本文重點整理區塊 === */
   .recap-section{
     background: #faf8f4;
-    padding: 56px 6vw 64px;
+    padding: 48px 6vw 64px;
     border-top: 1px solid #e6e0d4;
   }
   .recap-box{
@@ -1107,6 +1107,25 @@
     .recap-box{ padding: 30px 22px; }
     .recap-box .recap-title{ font-size: 21px; }
     .recap-box .recap-text{ font-size: 16px; }
+  }
+
+  /* === [問題⑤] 重點式整理文字放大 === */
+  .item-card h4, .item-grid h4,
+  .feat-list li, .check-list li,
+  .point-list li, .tip-list li,
+  .items-list li .name,
+  .recap-text,
+  .five-list .fl-text h3{
+    font-size: 19px !important;
+  }
+  .item-card .desc, .item-card p,
+  .item-card .note,
+  .items-list li .desc{
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+  .recap-box .recap-text{
+    font-size: 18px !important;
   }
 </style>
 
@@ -1161,7 +1180,7 @@
     <ul class="dropdown">
      <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
      <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
-     <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
+     <li><a href="newborn-parents-checklist.html">新生兒出生後待辦清單</a></li>
      <li><a href="newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
      <li><a href="newborn-screening-basic.html">21 項基本篩檢</a></li>
      <li><a href="newborn-screening-paid.html">自費篩檢攻略</a></li>
@@ -1415,8 +1434,8 @@
   <div>
    <h5>關於本文</h5>
    <p class="foot-disclaimer">
-    本文所述「2-2-7」為健保署「全民健康保險醫療費用支付標準」第 2 部第 2 章第 7 節之縮寫。具體手術項目、編號隨健保署最新公告為準。各家保險公司商品的「手術」定義因條款不同會有差異，個別保單理賠範圍請以您的保單契約條款為準。本文不構成保險理賠建議或法律諮詢。撰文：保險白話文。
-   </p>
+        本文保額、保費為示意，實際以各保險公司契約為準，內容僅供參考。
+      </p>
   </div>
   <div>
    <h5>延伸閱讀</h5>

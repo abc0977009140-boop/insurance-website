@@ -44,7 +44,7 @@
   background: rgba(255,255,255,0.94);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  padding: 10px 4vw;
+  padding: 48px 4vw;
  }
  .nav-container{
   max-width: 1400px; margin: 0 auto;
@@ -233,7 +233,7 @@
   .nav-brand small{ display: none; }
  }
 
- .hero{ position: relative; z-index: 2; padding: 80px 6vw 70px; border-bottom: 1px solid var(--line); }
+ .hero{ position: relative; z-index: 2; padding: 49px 6vw 70px; border-bottom: 1px solid var(--line); }
  .hero-grid{ max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 70px; align-items: end; }
  .hero-eyebrow{ font-family: var(--display); font-style: italic; font-size: 22px; color: var(--teal); margin-bottom: 22px; letter-spacing: 0.02em; }
  .hero-eyebrow .num{ font-weight: 600; border: 1px solid var(--teal); padding: 2px 10px; border-radius: 999px; font-size: 12px; margin-right: 12px; font-style: normal; letter-spacing: 0.15em; }
@@ -250,7 +250,7 @@
  .hero-aside li:last-child{ border-bottom: none; padding-bottom: 4px }
  .hero-aside li::before{ content: counter(aside, decimal-leading-zero); font-family: var(--display); font-weight: 600; color: var(--teal); font-size: 17px; }
 
- section{ position: relative; z-index: 2; padding: 90px 6vw; border-bottom: 1px solid var(--line); }
+ section{ position: relative; z-index: 2; padding: 55px 6vw; border-bottom: 1px solid var(--line); }
  .container{ max-width: 1100px; margin: 0 auto }
  .sec-eyebrow{ display: flex; align-items: center; gap: 18px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 24px; font-weight: 500; }
  .sec-eyebrow::before{ content: ""; width: 50px; height: 1px; background: var(--terracotta); }
@@ -271,9 +271,9 @@
  .timeline-card h3{ font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 0 0 22px; color: var(--olive-deep); text-align: center; padding-bottom: 14px; border-bottom: 1px dashed var(--line-soft); }
  .timeline-flow{ display: grid; grid-template-columns: 1fr 50px 1fr 50px 1fr; gap: 0; align-items: center; }
  .flow-step{ background: var(--bg); padding: 22px 18px; text-align: center; border-radius: 6px; border-top: 3px solid var(--teal); }
- .flow-step .lbl{ font-family: var(--sans); font-weight: 600; font-size: 11px; color: var(--ink-mute); letter-spacing: 0.18em; margin-bottom: 8px; }
- .flow-step .val{ font-family: var(--serif); font-weight: 700; font-size: 16px; color: var(--olive-deep); margin-bottom: 8px; }
- .flow-step .desc{ font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+ .flow-step .lbl{ font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--ink-mute); letter-spacing: 0.18em; margin-bottom: 8px; }
+ .flow-step .val{ font-family: var(--serif); font-weight: 700; font-size: 21px; color: var(--olive-deep); margin-bottom: 8px; }
+ .flow-step .desc{ font-size: 16px; color: var(--ink-soft); line-height: 1.7; }
  .flow-arrow{ font-family: var(--display); font-size: 36px; font-weight: 600; color: var(--terracotta); text-align: center; line-height: 1; }
 
  /* 21 items list */
@@ -300,10 +300,10 @@
 
  /* Investment time critical */
  .critical-section{ background: linear-gradient(180deg, rgba(122,53,53,0.05), var(--bg)); }
- .critical-warning{ background: var(--ink); color: var(--paper); padding: 40px 44px; margin: 30px 0; text-align: center; border-radius: 6px; }
- .critical-warning .tag{ font-family: var(--display); font-style: italic; color: var(--terracotta-light); font-size: 16px; margin-bottom: 14px; letter-spacing: 0.05em; }
- .critical-warning h3{ font-family: var(--serif); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); color: var(--paper); margin: 0 0 16px; line-height: 1.5; }
- .critical-warning p{ font-family: var(--serif); color: rgba(245,239,228,0.85); font-size: 15px; margin: 0; line-height: 1.85; }
+ .critical-warning{ background: #faf6ef; color: var(--ink); padding: 36px 40px; margin: 30px 0; text-align: center; border-radius: 10px; border: 1px solid #e8e0d0; border-left: 5px solid var(--terracotta); }
+ .critical-warning .tag{ font-family: var(--display); font-style: italic; color: var(--terracotta-deep); font-size: 17px; margin-bottom: 14px; letter-spacing: 0.05em; }
+ .critical-warning h3{ font-family: var(--serif); font-weight: 700; font-size: clamp(21px, 2.6vw, 28px); color: var(--ink); margin: 0 0 16px; line-height: 1.5; }
+ .critical-warning p{ font-family: var(--serif); color: var(--ink-soft); font-size: 18px; margin: 0; line-height: 1.9; }
 
  .severity-row{ background: var(--paper); border: 1px solid var(--line); padding: 22px 28px; margin-bottom: 12px; border-left: 4px solid var(--gold); display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: center; }
  .severity-row.heavy{ border-left-color: var(--burgundy); }
@@ -319,14 +319,14 @@
  .goodnews-box p{ font-family: var(--serif); font-size: 15.5px; line-height: 1.85; color: var(--ink-soft); margin: 0; }
  .goodnews-box p strong{ color: var(--teal); font-weight: 700; }
 
- .pullquote{ padding: 110px 6vw; text-align: center; background: linear-gradient(180deg, var(--olive-deep), var(--olive)); color: var(--cream); border-bottom: 1px solid var(--olive-deep); position: relative; z-index: 2; }
+ .pullquote{ padding: 68px 6vw; text-align: center; background: linear-gradient(180deg, var(--olive-deep), var(--olive)); color: var(--cream); border-bottom: 1px solid var(--olive-deep); position: relative; z-index: 2; }
  .pullquote .marks{ font-family: var(--display); font-size: 96px; line-height: 0.5; color: var(--terracotta-light); margin-bottom: 24px; opacity: 0.85; }
  .pullquote blockquote{ font-family: var(--serif); font-weight: 500; font-size: clamp(22px, 2.8vw, 32px); line-height: 1.5; margin: 0 auto; max-width: 920px; color: var(--paper); }
  .pullquote blockquote em{ font-family: var(--display); font-style: italic; color: var(--terracotta-light); font-weight: 600; }
  .pullquote cite{ display: block; margin-top: 32px; font-family: var(--display); font-style: italic; font-size: 16px; color: rgba(245,239,228,0.7); }
  .pullquote cite::before{ content: "—"; margin-right: 8px }
 
- .closing{ padding: 100px 6vw; text-align: center; background: var(--paper); position: relative; z-index: 2; }
+ .closing{ padding: 62px 6vw; text-align: center; background: var(--paper); position: relative; z-index: 2; }
  .closing h2{ font-family: var(--serif); font-weight: 700; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.25; color: var(--olive-deep); max-width: 760px; margin: 0 auto 18px; }
  .closing h2 em{ font-family: var(--display); font-style: italic; font-weight: 600; color: var(--terracotta); }
  .closing p{ font-family: var(--serif); font-size: 17px; line-height: 1.85; color: var(--ink-soft); max-width: 620px; margin: 0 auto 36px; }
@@ -334,7 +334,7 @@
  .closing-cta:hover{ background: var(--terracotta-deep); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(138,79,42,0.25); }
  .closing-cta svg{ width: 18px; height: 18px }
 
- footer{ position: relative; z-index: 2; padding: 60px 6vw 36px; background: var(--olive-deep); color: rgba(245,239,228,0.75); }
+ footer{ position: relative; z-index: 2; padding: 48px 6vw 36px; background: var(--olive-deep); color: rgba(245,239,228,0.75); }
  .foot-grid{ max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
  .foot-grid h5{ font-family: var(--display); font-style: italic; font-size: 16px; color: var(--terracotta-light); margin: 0 0 16px; font-weight: 500; }
  .foot-disclaimer{ font-size: 12px; line-height: 1.85; color: rgba(245,239,228,0.6); }
@@ -361,7 +361,7 @@
   .foot-bottom{ flex-direction: column; gap: 8px }
   .topmeta{ display: none }
   section, .hero, .pullquote, .closing{ padding-left: 5vw; padding-right: 5vw; }
-  .pullquote{ padding-top: 70px; padding-bottom: 70px }
+  .pullquote{ padding-top: 44px; padding-bottom: 44px }
   .why-card, .timeline-card, .items-block{ padding: 24px 22px; }
  }
 
@@ -402,7 +402,7 @@
  /* === [v10] Mobile menu - 重寫 === */
  @media (max-width: 980px){
   /* Navbar 容器 */
-  .navbar{ padding: 10px 4vw !important; }
+  .navbar{ padding: 48px 4vw !important; }
   .nav-container{
    position: relative !important;
    flex-direction: row !important;
@@ -794,7 +794,7 @@
   /* === 本文重點整理區塊 === */
   .recap-section{
     background: #faf8f4;
-    padding: 56px 6vw 64px;
+    padding: 48px 6vw 64px;
     border-top: 1px solid #e6e0d4;
   }
   .recap-box{
@@ -832,6 +832,25 @@
     .recap-box{ padding: 30px 22px; }
     .recap-box .recap-title{ font-size: 21px; }
     .recap-box .recap-text{ font-size: 16px; }
+  }
+
+  /* === [問題⑤] 重點式整理文字放大 === */
+  .item-card h4, .item-grid h4,
+  .feat-list li, .check-list li,
+  .point-list li, .tip-list li,
+  .items-list li .name,
+  .recap-text,
+  .five-list .fl-text h3{
+    font-size: 19px !important;
+  }
+  .item-card .desc, .item-card p,
+  .item-card .note,
+  .items-list li .desc{
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+  .recap-box .recap-text{
+    font-size: 18px !important;
   }
 </style>
 
@@ -886,7 +905,7 @@
     <ul class="dropdown">
      <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
      <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
-     <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
+     <li><a href="newborn-parents-checklist.html">新生兒出生後待辦清單</a></li>
      <li><a href="newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
      <li><a href="newborn-screening-basic.html">21 項基本篩檢</a></li>
      <li><a href="newborn-screening-paid.html">自費篩檢攻略</a></li>
@@ -1179,8 +1198,8 @@
   <div>
    <h5>關於本文</h5>
    <p class="foot-disclaimer">
-    本文所述新生兒篩檢內容、項目、補助金額依衛福部國民健康署現行公告為準，實際金額或項目可能因政策調整而變動。文中所述核保處理方式為實務常見情況，個別保險公司商品與核保標準會有所不同。本文不構成醫療建議或保險商品要約。撰文：保險白話文，服務於保經公司之保險全方位規劃師。
-   </p>
+        本文保額、保費為示意，實際以各保險公司契約為準，內容僅供參考。
+      </p>
   </div>
   <div>
    <h5>延伸閱讀</h5>
@@ -1188,7 +1207,7 @@
     <li><a href="newborn-screening-paid.html">新生兒自費篩檢是什麼</a></li>
     <li><a href="newborn-jaundice.html">寶寶有黃疸還能買保險嗎</a></li>
     <li><a href="newborn-insurance-2025.html">新生兒保單規劃 5 大保障</a></li>
-    <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
+    <li><a href="newborn-parents-checklist.html">新生兒出生後待辦清單</a></li>
    </ul>
   </div>
   <div>

@@ -46,7 +46,7 @@
   background: rgba(255,255,255,0.94);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  padding: 10px 4vw;
+  padding: 48px 4vw;
  }
  .nav-container{
   max-width: 1400px; margin: 0 auto;
@@ -240,7 +240,7 @@
    ============================================ */
  .hero{
   position: relative; z-index: 2;
-  padding: 90px 6vw 100px;
+  padding: 55px 6vw 100px;
   border-bottom: 4px solid var(--burgundy);
   background: var(--bg);
   text-align: center;
@@ -294,7 +294,7 @@
    ============================================ */
  section{
   position: relative; z-index: 2;
-  padding: 90px 6vw;
+  padding: 55px 6vw;
   border-bottom: 1px solid var(--line);
  }
  .container{ max-width: 1100px; margin: 0 auto }
@@ -598,7 +598,7 @@
    SECTION 4-7: 4 大保單組合
    ============================================ */
  .policy-section{
-  padding: 100px 6vw;
+  padding: 62px 6vw;
   border-bottom: 1px solid var(--line);
   position: relative; z-index: 2;
  }
@@ -718,25 +718,27 @@
 
  /* Dark callout */
  .dark-callout{
-  background: var(--ink);
-  color: var(--paper);
+  background: #faf6ef;
+  color: var(--ink);
   padding: 32px 36px;
   margin: 28px 0;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 10px;
+  border: 1px solid #e8e0d0;
+  border-left: 5px solid var(--terracotta);
  }
  .dark-callout p{
   font-family: var(--serif);
   font-size: 18px;
-  line-height: 1.85;
-  color: rgba(245,239,228,0.85);
+  line-height: 1.9;
+  color: var(--ink-soft);
   margin: 0 0 8px;
  }
  .dark-callout p:last-child{ margin: 0; }
  .dark-callout p.highlight{
   font-family: var(--serif);
   font-weight: 700;
-  color: var(--terracotta-light);
+  color: var(--terracotta-deep);
   font-size: 22px;
   margin-top: 8px;
  }
@@ -911,7 +913,7 @@
  .final-section{
   background: linear-gradient(180deg, var(--olive-deep), var(--ink));
   color: var(--cream);
-  padding: 120px 6vw;
+  padding: 74px 6vw;
   text-align: center;
  }
  .final-section .top-text{
@@ -1002,7 +1004,7 @@
  /* Share section */
  .share-section{
   background: var(--paper);
-  padding: 60px 6vw;
+  padding: 48px 6vw;
   text-align: center;
   border-bottom: 1px solid var(--line);
   position: relative; z-index: 2;
@@ -1032,7 +1034,7 @@
  /* Footer */
  footer{
   position: relative; z-index: 2;
-  padding: 60px 6vw 36px;
+  padding: 48px 6vw 36px;
   background: var(--olive-deep);
   color: rgba(245,239,228,0.75);
  }
@@ -1087,7 +1089,7 @@
   section, .hero, .policy-section, .final-section, .share-section{
    padding-left: 5vw; padding-right: 5vw;
   }
-  .final-section{ padding-top: 80px; padding-bottom: 80px; }
+  .final-section{ padding-top: 49px; padding-bottom: 49px; }
   .info-card{ padding: 22px 24px; }
   .suggest-amount{ flex-direction: column; gap: 6px; align-items: flex-start; }
  }
@@ -1129,7 +1131,7 @@
  /* === [v10] Mobile menu - 重寫 === */
  @media (max-width: 980px){
   /* Navbar 容器 */
-  .navbar{ padding: 10px 4vw !important; }
+  .navbar{ padding: 48px 4vw !important; }
   .nav-container{
    position: relative !important;
    flex-direction: row !important;
@@ -1521,7 +1523,7 @@
   /* === 本文重點整理區塊 === */
   .recap-section{
     background: #faf8f4;
-    padding: 56px 6vw 64px;
+    padding: 48px 6vw 64px;
     border-top: 1px solid #e6e0d4;
   }
   .recap-box{
@@ -1559,6 +1561,25 @@
     .recap-box{ padding: 30px 22px; }
     .recap-box .recap-title{ font-size: 21px; }
     .recap-box .recap-text{ font-size: 16px; }
+  }
+
+  /* === [問題⑤] 重點式整理文字放大 === */
+  .item-card h4, .item-grid h4,
+  .feat-list li, .check-list li,
+  .point-list li, .tip-list li,
+  .items-list li .name,
+  .recap-text,
+  .five-list .fl-text h3{
+    font-size: 19px !important;
+  }
+  .item-card .desc, .item-card p,
+  .item-card .note,
+  .items-list li .desc{
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+  .recap-box .recap-text{
+    font-size: 18px !important;
   }
 </style>
 
@@ -1613,7 +1634,7 @@
     <ul class="dropdown">
      <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
      <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
-     <li><a href="newborn-parents-checklist.html">新手爸媽 60 天清單</a></li>
+     <li><a href="newborn-parents-checklist.html">新生兒出生後待辦清單</a></li>
      <li><a href="newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
      <li><a href="newborn-screening-basic.html">21 項基本篩檢</a></li>
      <li><a href="newborn-screening-paid.html">自費篩檢攻略</a></li>
@@ -2074,8 +2095,8 @@
   <div>
    <h5>關於本文</h5>
    <p class="foot-disclaimer">
-    本文所引用之癌症統計數據引自衛福部國民健康署公告，真實案例之診斷書與費用紀錄為服務客戶之個案資料（已去識別化處理）。文中提及之保險商品費率、保額、條款內容，依各保險公司核准之契約為準。本資料不構成保險商品要約或銷售建議，個別規劃請與您的合格保險經紀人或業務員面談討論。撰文：保險白話文，服務於保經公司之保險全方位規劃師。
-   </p>
+        本文保額、保費為示意，實際以各保險公司契約為準，內容僅供參考。
+      </p>
   </div>
   <div>
    <h5>延伸閱讀</h5>
