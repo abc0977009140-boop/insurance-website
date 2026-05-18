@@ -1757,6 +1757,144 @@
     .ko-compare{ grid-template-columns: 1fr; }
   }
 
+  /* 別買錯 提醒框 */
+  .warn-card{
+    background: #fbf4ec;
+    border: 1px solid #e8c9a8;
+    border-left: 4px solid var(--terracotta);
+    border-radius: 6px;
+    padding: 24px 28px;
+    margin: 22px 0 0;
+  }
+  .warn-card .warn-head{
+    display: flex; align-items: center; gap: 11px;
+    margin-bottom: 12px;
+  }
+  .warn-card .warn-icon{
+    flex-shrink: 0;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--terracotta); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--sans); font-weight: 900; font-size: 16px;
+  }
+  .warn-card .warn-head h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 18.5px; margin: 0; color: var(--terracotta-deep);
+  }
+  .warn-card > p{
+    font-family: var(--serif); font-size: 15px;
+    line-height: 1.85; color: var(--ink-soft); margin: 0 0 12px;
+  }
+  .warn-list{
+    list-style: none; margin: 0 0 12px; padding: 0;
+  }
+  .warn-list li{
+    font-family: var(--serif); font-size: 14.5px;
+    line-height: 1.8; color: var(--ink-soft);
+    padding: 12px 0 12px 16px;
+    border-top: 1px dashed #e0c5a4;
+    position: relative;
+  }
+  .warn-list li::before{
+    content: ""; position: absolute;
+    left: 0; top: 19px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--terracotta);
+  }
+  .warn-list li strong{ color: var(--terracotta-deep); }
+  .warn-card .warn-foot{
+    font-family: var(--serif); font-size: 14.5px;
+    line-height: 1.85; color: var(--ink-soft);
+    margin: 0; padding-top: 14px;
+    border-top: 1px solid #e8c9a8;
+  }
+  .warn-card .warn-foot strong{ color: var(--burgundy); }
+
+  @media (max-width: 600px){
+    .warn-card{ padding: 20px 18px; }
+    .warn-card .warn-head h3{ font-size: 16.5px; }
+  }
+
+  /* 癌症險分級給付條 */
+  .grade-bar{
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px; margin: 18px 0 8px;
+  }
+  .grade-cell{
+    position: relative;
+    background: #faf8f4;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 16px 10px 14px;
+    text-align: center;
+  }
+  .grade-cell.active{
+    background: var(--burgundy);
+    border-color: var(--burgundy);
+  }
+  .grade-cell .g-lv{
+    display: block;
+    font-family: var(--sans); font-weight: 700;
+    font-size: 13px; letter-spacing: 0.06em;
+    color: var(--ink-mute); margin-bottom: 4px;
+  }
+  .grade-cell.active .g-lv{ color: rgba(245,239,228,0.85); }
+  .grade-cell .g-amt{
+    display: block;
+    font-family: var(--serif); font-weight: 900;
+    font-size: 26px; line-height: 1.1;
+    color: var(--ink-soft);
+  }
+  .grade-cell.active .g-amt{ color: #fff; }
+  .grade-cell .g-tag{
+    display: inline-block; margin-top: 7px;
+    background: var(--gold); color: #fff;
+    font-family: var(--sans); font-weight: 700;
+    font-size: 11px; letter-spacing: 0.04em;
+    padding: 3px 10px; border-radius: 999px;
+  }
+  .grade-note{
+    font-family: var(--serif); font-size: 14px;
+    line-height: 1.7; color: var(--ink-mute);
+    margin: 0 0 16px; text-align: center;
+  }
+
+  /* 三者差別對照表 */
+  .compare-table{
+    width: 100%; border-collapse: collapse;
+    margin: 8px 0 4px;
+    font-family: var(--serif);
+    border: 1px solid var(--line);
+  }
+  .compare-table th,
+  .compare-table td{
+    padding: 13px 14px; text-align: left;
+    border: 1px solid var(--line-soft);
+    font-size: 14.5px; line-height: 1.7;
+    vertical-align: top;
+  }
+  .compare-table thead th{
+    background: var(--olive-deep); color: var(--cream);
+    font-family: var(--sans); font-weight: 700;
+    font-size: 13.5px;
+  }
+  .compare-table thead th:first-child{ background: var(--olive-deep); }
+  .compare-table tbody th{
+    background: #f5f3ee; color: var(--olive-deep);
+    font-weight: 700; font-size: 14px;
+    width: 124px;
+  }
+  .compare-table tbody tr.highlight th{ background: rgba(74,122,106,0.14); color: var(--teal); }
+  .compare-table tbody tr.highlight td{ background: rgba(74,122,106,0.06); }
+  .compare-table .ct-strong{ color: var(--burgundy); font-weight: 700; }
+
+  @media (max-width: 600px){
+    .grade-cell .g-amt{ font-size: 21px; }
+    .grade-cell{ padding: 13px 6px 12px; }
+    .compare-table th, .compare-table td{ padding: 10px 9px; font-size: 13px; }
+    .compare-table tbody th{ width: 90px; }
+  }
+
   /* ---- 修正:深色區塊內的 <p> 文字維持淺色 ----
      ([v17] 降噪把全站 p 設為深色,深色底區塊需覆蓋回來) */
   .stat-mega-block .stat-mega-text{ color: rgba(245,239,228,0.85) !important; }
@@ -1933,7 +2071,7 @@
   <div class="sec-eyebrow reveal">真實案例 · Real Case</div>
   <h2 class="sec-title reveal d1">同一場癌症，<em>兩張保單賠的金額差 20 倍</em></h2>
   <p class="sec-lead reveal d1">
-   我有一位客戶，確診甲狀腺癌，屬於初期、程度輕微。幸運的是，他當初同時規劃了「癌症險」和「重大傷病險」。後來兩張保單都申請了理賠——結果的差距，連我自己都印象深刻。
+   我有一位客戶，確診口腔癌，屬於初期、程度輕微。幸運的是，他當初同時規劃了「癌症險」和「重大傷病險」。後來兩張保單都申請了理賠——結果的差距，連我自己都印象深刻。
   </p>
 
   <!-- 癌症險理賠 -->
@@ -1949,8 +2087,25 @@
     </figure>
 
     <p style="font-family: var(--serif); font-size: 15.5px; line-height: 1.85; color: var(--ink-soft); margin: 0 0 6px;">
-     這位客戶的癌症險保額並不低。但癌症險多半採「<strong>分級給付</strong>」——理賠金額會依癌症的嚴重程度分級。他的甲狀腺癌屬於初期，因此只啟動到「初期癌症保險金」這一級，實際給付就是 5 萬元。
+     這位客戶的癌症險保額是 <strong>100 萬</strong>，並不低。但癌症險多半採「<strong>分級給付</strong>」——理賠金額會依癌症的嚴重程度分級。以這張保單為例：初期賠 5 萬、輕度賠 15 萬，要到重度才賠到 100 萬足額。他的口腔癌屬於初期，因此只啟動到「初期癌症保險金」這一級，實際給付就是 5 萬元。
     </p>
+
+    <div class="grade-bar">
+     <div class="grade-cell active">
+      <span class="g-lv">初期</span>
+      <span class="g-amt">5 萬</span>
+      <span class="g-tag">本案理賠</span>
+     </div>
+     <div class="grade-cell">
+      <span class="g-lv">輕度</span>
+      <span class="g-amt">15 萬</span>
+     </div>
+     <div class="grade-cell">
+      <span class="g-lv">重度</span>
+      <span class="g-amt">100 萬</span>
+     </div>
+    </div>
+    <p class="grade-note">投保保額 100 萬，但分級給付下，初期癌症只對應到第一級的 5 萬。</p>
 
     <div class="case-bigcost">
      <div class="lbl">癌症險 · 這場初期癌症實際理賠</div>
@@ -1970,7 +2125,7 @@
 
     <figure class="doc-figure">
      <img src="../images/critical-illness-payout.png" alt="重大傷病險理賠通知，核定給付金額共 100 萬元">
-     <figcaption>同一位客戶，同一場甲狀腺癌。重大傷病保險金核定給付 <strong>20 萬 + 80 萬，合計 100 萬元</strong>。因為甲狀腺惡性腫瘤屬於健保重大傷病範圍，客戶取得重大傷病證明後即整筆給付。當事人同意分享，個資已隱去。</figcaption>
+     <figcaption>同一位客戶，同一場口腔癌。重大傷病保險金核定給付 <strong>20 萬 + 80 萬，合計 100 萬元</strong>。因為口腔的惡性腫瘤屬於健保重大傷病範圍，客戶取得重大傷病證明後即整筆給付。當事人同意分享，個資已隱去。</figcaption>
     </figure>
 
     <p style="font-family: var(--serif); font-size: 15.5px; line-height: 1.85; color: var(--ink-soft); margin: 0 0 6px;">
@@ -1988,7 +2143,7 @@
 
   <!-- KO 對比 -->
   <div class="ko-block reveal d1">
-   <p class="ko-title">同一個人 · 同一場甲狀腺癌</p>
+   <p class="ko-title">同一個人 · 同一場口腔癌</p>
    <div class="ko-compare">
     <div class="ko-side lose">
      <p class="ko-label">癌症險賠了</p>
@@ -2050,13 +2205,13 @@
 
   <figure class="doc-figure reveal d2">
    <img src="../images/nhi-critical-illness-list.png" alt="健保署全民健康保險重大傷病項目附表，需積極或長期治療之癌症">
-   <figcaption>健保署公告的「全民健康保險重大傷病項目」附表（114 年 1 月 1 日以後適用）。第一大項就是「需積極或長期治療之癌症」，前面案例的甲狀腺惡性腫瘤（ICD 代碼 C73）即列於其中。</figcaption>
+   <figcaption>健保署公告的「全民健康保險重大傷病項目」附表（114 年 1 月 1 日以後適用）。清單第一大項就是「需積極或長期治療之癌症」，各類惡性腫瘤都依 ICD 診斷代碼列於其中。</figcaption>
   </figure>
 
   <div class="info-card reveal d1" style="border-left-color: var(--gold);">
    <div class="label" style="color: var(--gold);">▍範圍有多廣？</div>
    <h3>健保重大傷病共 30 大項、超過 300 種疾病</h3>
-   <p>健保署公告的重大傷病項目，總共有 <strong>30 大項、超過 300 種疾病</strong>。市面上的重大傷病險，多以這份清單為基礎承保，一般會排除先天性、遺傳性疾病與職業病等約 8 類，實際保障約 22 大類——確切範圍仍以各保單條款為準。下面是健保重大傷病清單中常見的項目：</p>
+   <p>健保署公告的重大傷病項目，總共有 <strong>30 大項、超過 300 種疾病</strong>。市面上的重大傷病險，多以這份清單為基礎承保，一般會排除先天性、遺傳性疾病與職業病等約 8 類，實際保障約 22 大類——確切範圍仍以各保單條款為準。下面從健保重大傷病清單中，列舉一些我們比較常聽見的重症：</p>
    <ul class="scope-list">
     <li>需積極或長期治療之癌症</li>
     <li>慢性腎衰竭（尿毒症），須長期透析</li>
@@ -2071,6 +2226,20 @@
     <li>因呼吸衰竭，須長期使用呼吸器</li>
     <li>部分罕見疾病</li>
    </ul>
+  </div>
+
+  <div class="warn-card reveal d1">
+   <div class="warn-head">
+    <span class="warn-icon">!</span>
+    <h3>挑選時請注意：別把這三種險種買錯</h3>
+   </div>
+   <p>市面上有三種名字很像、但其實不一樣的保單，很多人會買錯。投保前請<strong>看清楚保單條款上的險種名稱</strong>：</p>
+   <ul class="warn-list">
+    <li><strong>重大傷病險</strong>（本文推薦）<br>理賠認定<strong>跟著健保署的「重大傷病證明」走</strong>。只要拿到那張卡、符合保單範圍，就整筆給付，認定最明確、爭議最少。</li>
+    <li><strong>重大疾病險</strong><br>理賠看的是保單條款自己定義的疾病項目與條件（例如常見的 7 項、22 項），<strong>跟健保重大傷病卡不一定相同</strong>，能不能賠要看條款怎麼寫。</li>
+    <li><strong>特定傷病險</strong><br>同樣是由保單條款列舉特定疾病，項目與認定標準各家不同，<strong>和重大傷病險是兩回事</strong>。</li>
+   </ul>
+   <p class="warn-foot">三者名稱接近、保障邏輯卻不同。如果你要的是「憑健保重大傷病證明就理賠」的這種，請認明<strong>重大傷病險</strong>，不要誤買成重大疾病險或特定傷病險。</p>
   </div>
 
   <p class="sec-lead reveal d2" style="margin: 26px 0 0;">
@@ -2191,7 +2360,7 @@
     <div class="recap-sub">RECAP · 看完這篇，記住這幾件事</div>
     <div class="recap-item">
       <div class="recap-check">1</div>
-      <div class="recap-text">同一位客戶、同一場初期甲狀腺癌——<strong>癌症險賠 5 萬，重大傷病險賠 100 萬</strong>。</div>
+      <div class="recap-text">同一位客戶、同一場初期口腔癌——<strong>癌症險賠 5 萬，重大傷病險賠 100 萬</strong>。</div>
     </div>
     <div class="recap-item">
       <div class="recap-check">2</div>
