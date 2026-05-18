@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>癌症治療年燒百萬，您的保單能理賠多少？｜保險白話文</title>
-<meta name="description" content="台灣每 4 分 19 秒就有一人確診癌症。真實案例一次自費 51 萬，您的保單能撐多久？4 大保單組合對抗癌症：重大傷病險、癌症一次金、實支實付、壽險，缺一不可。">
-<meta name="keywords" content="癌症保險,重大傷病險,癌症一次金,實支實付,釔-90,癌症治療費用,癌症規劃,癌症保障">
-<meta property="og:title" content="癌症治療年燒百萬，您的保單能理賠多少？">
-<meta property="og:description" content="真實案例一次自費 51.3 萬，4 大保單組合教您對抗癌症燒錢風險。">
+<title>重大傷病險規劃，為什麼要優先於癌症險？｜保險白話文</title>
+<meta name="description" content="同一場初期癌症，癌症險只賠 5 萬、重大傷病險賠 100 萬。真實理賠案例帶你看懂分級給付與整筆給付的差別，以及預算有限時為什麼要先規劃重大傷病險。">
+<meta name="keywords" content="重大傷病險,癌症險,重大傷病卡,重大傷病證明,重大傷病範圍,分級給付,整筆給付,保險規劃順序,保險規劃">
+<meta property="og:title" content="重大傷病險規劃，為什麼要優先於癌症險？">
+<meta property="og:description" content="同一場初期癌症，癌症險賠 5 萬、重大傷病險賠 100 萬。真實理賠案例解析兩者差別與規劃順序。">
 <meta property="og:type" content="article">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1582,25 +1582,202 @@
     font-size: 18px !important;
   }
 
-  /* ---- [v37] 修正:深色區塊內的 <p> 文字維持淺色 ----
+  /* ============================================
+     [v37] 重大傷病文章 - 圖片與專屬區塊
+     ============================================ */
+
+  /* --- 修正:v17 降噪的全域 p 與 [class*="-section"] 規則
+         會誤傷深色設計區塊,這裡把對比補回來 --- */
+  .stat-mega-block .stat-mega-text,
+  .stat-mega-block .stat-mega-text-2{
+    color: rgba(245,239,228,0.92) !important;
+  }
+  .case-bigcost .desc{ color: #f5efe4 !important; }
+  .conclusion-box p.line-1{ color: #ffffff !important; }
+  .conclusion-box p.sub{ color: rgba(245,239,228,0.85) !important; }
+  .final-section{
+    background: linear-gradient(180deg, var(--olive-deep), var(--ink)) !important;
+  }
+  .final-section .top-text{ color: rgba(245,239,228,0.7) !important; }
+  .final-section .summary-text p{ color: rgba(245,239,228,0.78) !important; }
+
+  .doc-figure{
+    margin: 0 0 22px;
+    border: 1px solid #d8d2c4;
+    background: #fdfcf8;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+  .doc-figure img{ display: block; width: 100%; height: auto; }
+  .doc-figure figcaption{
+    font-family: var(--sans);
+    font-size: 13px; line-height: 1.75;
+    color: var(--ink-mute);
+    padding: 13px 18px;
+    background: #f5f3ee;
+    border-top: 1px solid #e6e0d0;
+  }
+  .doc-figure figcaption strong{ color: var(--burgundy) !important; }
+  .doc-figure.portrait{
+    max-width: 400px; margin-left: auto; margin-right: auto;
+  }
+
+  /* KO 對比區 */
+  .ko-block{ margin: 34px 0 0; }
+  .ko-title{
+    text-align: center;
+    font-family: var(--display); font-style: italic;
+    font-size: 19px; color: var(--ink-mute) !important;
+    margin: 0 0 14px; letter-spacing: 0.04em;
+  }
+  .ko-compare{
+    display: grid; grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--line);
+    border-radius: 6px; overflow: hidden;
+  }
+  .ko-side{ padding: 34px 26px; text-align: center; }
+  .ko-side.lose{ background: #faf8f4; }
+  .ko-side.win{ background: var(--olive-deep); }
+  .ko-side .ko-label{
+    font-family: var(--sans); font-weight: 700;
+    font-size: 13px; letter-spacing: 0.08em; margin: 0 0 8px;
+  }
+  .ko-side.lose .ko-label{ color: var(--ink-mute) !important; }
+  .ko-side.win .ko-label{ color: var(--cream) !important; }
+  .ko-side .ko-num{
+    font-family: var(--serif); font-weight: 900;
+    font-size: clamp(36px, 5.5vw, 52px); line-height: 1.05; margin: 0;
+  }
+  .ko-side.lose .ko-num{ color: var(--ink-soft) !important; }
+  .ko-side.win .ko-num{ color: var(--terracotta-light) !important; }
+  .ko-side .ko-foot{
+    font-family: var(--serif); font-size: 14px; margin: 8px 0 0;
+  }
+  .ko-side.lose .ko-foot{ color: var(--ink-mute) !important; }
+  .ko-side.win .ko-foot{ color: rgba(245,239,228,0.8) !important; }
+  .ko-note{
+    font-family: var(--serif); font-size: 15px; line-height: 1.85;
+    color: var(--ink-soft) !important; text-align: center;
+    margin: 18px auto 0; max-width: 640px;
+  }
+
+  /* 5 案例統計 */
+  .tally{
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px; overflow: hidden;
+    margin: 0 0 24px;
+  }
+  .tally-row{
+    display: grid; grid-template-columns: 76px 1fr;
+    gap: 22px; align-items: center;
+    padding: 22px 28px;
+    border-top: 1px solid var(--line-soft);
+  }
+  .tally-row:first-child{ border-top: none; }
+  .tally-row .t-count{
+    font-family: var(--serif); font-weight: 900;
+    font-size: 44px; line-height: 1;
+    color: var(--terracotta); text-align: center;
+  }
+  .tally-row.cancer .t-count{ color: var(--burgundy); }
+  .tally-row .t-count .u{ font-size: 15px; font-weight: 500; }
+  .tally-row .t-text h4{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 18px; margin: 0 0 4px; color: var(--olive-deep);
+  }
+  .tally-row .t-text p{
+    font-family: var(--serif); font-size: 14.5px;
+    line-height: 1.7; color: var(--ink-soft); margin: 0;
+  }
+
+  /* 重大傷病範圍清單 */
+  .scope-list{
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0 22px; margin: 16px 0 0; padding: 0; list-style: none;
+  }
+  .scope-list li{
+    display: flex; align-items: flex-start; gap: 9px;
+    font-family: var(--serif); font-size: 15px; line-height: 1.6;
+    color: var(--ink-soft);
+    padding: 10px 0;
+    border-top: 1px dashed var(--line-soft);
+  }
+  .scope-list li::before{
+    content: "✓"; flex-shrink: 0;
+    color: var(--teal); font-weight: 700; font-family: var(--sans);
+  }
+
+  /* 規劃優先順序 */
+  .priority-step{
+    display: grid; grid-template-columns: 56px 1fr;
+    gap: 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--teal);
+    padding: 26px 30px; margin-bottom: 16px;
+  }
+  .priority-step.step2{ border-left-color: var(--gold); }
+  .priority-step .ps-num{
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--teal); color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-weight: 900; font-size: 26px;
+  }
+  .priority-step.step2 .ps-num{ background: var(--gold); }
+  .priority-step .ps-body h3{
+    font-family: var(--serif); font-weight: 700;
+    font-size: 19px; margin: 0 0 8px; color: var(--olive-deep);
+  }
+  .priority-step .ps-body p{
+    font-family: var(--serif); font-size: 15.5px;
+    line-height: 1.85; color: var(--ink-soft); margin: 0;
+  }
+  .priority-step .ps-amount{
+    display: inline-block; margin-top: 12px;
+    background: rgba(74,122,106,0.1);
+    color: var(--teal); font-weight: 700;
+    font-family: var(--sans); font-size: 14px;
+    padding: 6px 15px; border-radius: 999px;
+  }
+  .priority-step.step2 .ps-amount{
+    background: rgba(184,137,58,0.12); color: var(--gold);
+  }
+
+  @media (max-width: 980px){
+    .scope-list{ grid-template-columns: 1fr; }
+    .tally-row{ grid-template-columns: 58px 1fr; gap: 16px; padding: 18px 18px; }
+    .tally-row .t-count{ font-size: 34px; }
+    .priority-step{ padding: 22px 20px; gap: 16px; grid-template-columns: 48px 1fr; }
+    .priority-step .ps-num{ width: 48px; height: 48px; font-size: 22px; }
+    .ko-side{ padding: 26px 18px; }
+  }
+  @media (max-width: 600px){
+    .ko-compare{ grid-template-columns: 1fr; }
+  }
+
+  /* ---- 修正:深色區塊內的 <p> 文字維持淺色 ----
      ([v17] 降噪把全站 p 設為深色,深色底區塊需覆蓋回來) */
   .stat-mega-block .stat-mega-text{ color: rgba(245,239,228,0.85) !important; }
   .stat-mega-block .stat-mega-text-2{ color: rgba(245,239,228,0.96) !important; }
   .case-bigcost .desc{ color: #ffffff !important; }
   .conclusion-box p.line-1{ color: #ffffff !important; }
-  .conclusion-box p.line-2{ color: var(--terracotta-light) !important; }
   .conclusion-box p.sub{ color: rgba(245,239,228,0.85) !important; }
   .final-section .summary-text p{ color: rgba(245,239,228,0.78) !important; }
+  .ko-side.win .ko-num{ color: var(--terracotta-light) !important; }
+  .ko-side.win .ko-label{ color: var(--cream) !important; }
+  .ko-side.win .ko-foot{ color: rgba(245,239,228,0.82) !important; }
 </style>
 
-<link rel="canonical" href="https://baihuawenins.com/posts/cancer-protection-plan.html">
-<meta property="og:url" content="https://baihuawenins.com/posts/cancer-protection-plan.html">
+<link rel="canonical" href="https://baihuawenins.com/posts/critical-illness-priority.html">
+<meta property="og:url" content="https://baihuawenins.com/posts/critical-illness-priority.html">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Article",
- "headline": "癌症治療年燒百萬，您的保單能理賠多少？｜保險白話文",
- "description": "台灣每 4 分 19 秒就有一人確診癌症。真實案例一次自費 51 萬，您的保單能撐多久？4 大保單組合對抗癌症：重大傷病險、癌症一次金、實支實付、壽險，缺一不可。",
+ "headline": "重大傷病險規劃，為什麼要優先於癌症險？",
+ "description": "同一場初期癌症，癌症險只賠 5 萬、重大傷病險賠 100 萬。真實理賠案例帶你看懂分級給付與整筆給付的差別，以及預算有限時為什麼要先規劃重大傷病險。",
  "author": {
   "@type": "Person",
   "name": "保險白話文"
@@ -1613,11 +1790,11 @@
    "url": "https://baihuawenins.com/logo.svg"
   }
  },
- "datePublished": "2026-05-15",
- "dateModified": "2026-05-15",
+ "datePublished": "2026-05-18",
+ "dateModified": "2026-05-18",
  "mainEntityOfPage": {
   "@type": "WebPage",
-  "@id": "https://baihuawenins.com/posts/cancer-protection-plan.html"
+  "@id": "https://baihuawenins.com/posts/critical-illness-priority.html"
  },
  "inLanguage": "zh-Hant-TW"
 }
@@ -1703,384 +1880,366 @@
 <!-- HERO -->
 <header class="hero">
  <span class="hero-tag reveal">重症案例分享系列</span>
- <h1 class="hero-mega reveal d1">癌症治療</h1>
- <h1 class="hero-mega red reveal d2">年燒百萬</h1>
+ <h1 class="hero-mega reveal d1">重大傷病險</h1>
+ <h1 class="hero-mega red reveal d2">先規劃</h1>
  <div class="hero-divider reveal d2"></div>
- <p class="hero-sub-1 reveal d3">您的保單</p>
- <p class="hero-sub-2 reveal d3">能理賠多少？</p>
+ <p class="hero-sub-1 reveal d3">預算有限時</p>
+ <p class="hero-sub-2 reveal d3">它的順位應該排在癌症險前面</p>
 </header>
 
-<!-- SECTION 2: 你以為癌症離你很遠 -->
+<!-- SECTION 1: 第 5 張重大傷病卡 -->
 <section class="stat-section">
  <div class="container">
 
   <div class="stat-headline">
-   <div class="stat-question reveal">你知道嗎？</div>
-   <h2 class="sec-title reveal d1">你覺得癌症<em>離你很遠</em>？</h2>
+   <div class="stat-question reveal">先說一件事</div>
+   <h2 class="sec-title reveal d1">我經手的客戶，<em>領到第 5 張重大傷病卡了</em></h2>
   </div>
 
+  <p class="sec-lead reveal d1" style="text-align: center; max-width: 760px; margin-left: auto; margin-right: auto;">
+   做保險這幾年，我陪著客戶走過 5 次重大傷病的理賠申請。每一次「重大傷病證明」核發下來，背後都是一個家庭真實的辛苦。也正因為這 5 個案例，我越來越確定一件事——<strong>當預算有限、沒辦法兩種都買的時候，重大傷病險的規劃順位，應該排在癌症險前面。</strong>
+  </p>
+
   <div class="stat-mega-block reveal d2">
-   <p class="stat-mega-text">在台灣</p>
-   <div class="stat-mega-number">每 <span class="num">4 分 19 秒</span></div>
-   <p class="stat-mega-text-2">就有一個人，確診癌症</p>
+   <p class="stat-mega-text">健保署 114 年 11 月統計</p>
+   <div class="stat-mega-number">每 <span class="num">23 人</span></div>
+   <p class="stat-mega-text-2">就有 1 人，領有重大傷病證明</p>
   </div>
 
   <div class="belief-grid">
    <div class="belief-card reveal d1">
     <div class="lbl">▍很多人這樣想</div>
-    <p>「保障有買就好，細節不重要」</p>
-    <p>「癌症是老了才會得的事」</p>
+    <p>「重病嘛，先把癌症險買起來就好」</p>
+    <p>「重大傷病險，聽起來不就是癌症險的另一個名字？」</p>
    </div>
    <div class="belief-card reality reveal d2">
     <div class="lbl">▍但現實是</div>
-    <p>確診當下才發現保障根本不夠</p>
-    <p><strong>自費幾十萬到幾百萬，哪裡生錢？</strong></p>
+    <p>癌症險只保「癌症」這一種病</p>
+    <p><strong>重大傷病涵蓋的，遠遠不只癌症</strong></p>
    </div>
   </div>
 
   <p class="sec-lead reveal d2" style="text-align: center; margin: 30px 0 0;">
-   接下來這個案例，來自我服務過的一位客戶——真實的診斷與費用紀錄，個資已隱去。
+   接下來這個案例，來自我服務過的一位客戶——真實的理賠通知，個資已隱去。看完你就會明白，為什麼這兩張保單，賠起來差這麼多。
   </p>
 
  </div>
 </section>
 
-<!-- SECTION 3: 真實案例 513,000 -->
+<!-- SECTION 2: 核心案例 同一場癌症差 20 倍 -->
 <section class="case-section">
  <div class="container">
 
   <div class="sec-eyebrow reveal">真實案例 · Real Case</div>
-  <h2 class="sec-title reveal d1">一次治療，<em>就燒了 51 萬</em></h2>
-  <p class="sec-lead reveal d1">下面是我服務過的一位肝癌客戶，治療過程中的真實診斷與費用紀錄。看到金額時，連我自己都倒抽一口氣。</p>
+  <h2 class="sec-title reveal d1">同一場癌症，<em>兩張保單賠的金額差 20 倍</em></h2>
+  <p class="sec-lead reveal d1">
+   我有一位客戶，確診甲狀腺癌，屬於初期、程度輕微。幸運的是，他當初同時規劃了「癌症險」和「重大傷病險」。後來兩張保單都申請了理賠——結果的差距，連我自己都印象深刻。
+  </p>
 
+  <!-- 癌症險理賠 -->
   <div class="case-card reveal d2">
    <div class="case-header">
-    <h3>癌症治療 · 真實自費紀錄</h3>
+    <h3>① 癌症險 · 理賠通知</h3>
    </div>
    <div class="case-content">
 
-    <div class="case-doc-box paper-doc">
-     <span class="case-doc-tag">▍診斷證明書</span>
-     <div class="doc-field">
-      <div class="f-label">科別</div>
-      <div class="f-value">外科部</div>
-     </div>
-     <div class="doc-field">
-      <div class="f-label">病名</div>
-      <div class="f-value"><strong>肝細胞癌</strong></div>
-     </div>
-     <div class="doc-field">
-      <div class="f-label">醫師囑言</div>
-      <div class="f-value">
-       病人因上述原因，於民國 114 年 04 月 08 日住院，於 04 月 09 日接受<strong style="font-size:14.5px;">自費經動脈肝臟腫瘤血管內放射治療（釔-90 微球體）</strong>，於 04 月 10 日出院，宜休養兩週，並於門診持續追蹤治療。
-      </div>
-     </div>
-    </div>
+    <figure class="doc-figure">
+     <img src="../images/cancer-insurance-payout.png" alt="癌症險理賠通知書，初期癌症保險金 5 萬元">
+     <figcaption>客戶癌症險的實際理賠通知。給付項目為「初期癌症保險金」<strong>50,000 元</strong>，加上延遲給付利息 164 元，總受款金額 50,164 元。當事人同意分享，個資已隱去。</figcaption>
+    </figure>
 
-    <div class="case-doc-box paper-doc">
-     <span class="case-doc-tag" style="background: var(--gold);">▍費用收據</span>
-     <div class="doc-field">
-      <div class="f-label">就醫身分</div>
-      <div class="f-value">健保 / 部分負擔優待</div>
-     </div>
-     <div class="doc-field">
-      <div class="f-label">治療處置費</div>
-      <div class="f-value">健保點數 56 點</div>
-     </div>
-     <div class="doc-amount-row">
-      <span class="a-label">材料費（釔-90 微球體）· 自付金額</span>
-      <span class="a-value">513,000 元</span>
-     </div>
-    </div>
+    <p style="font-family: var(--serif); font-size: 15.5px; line-height: 1.85; color: var(--ink-soft); margin: 0 0 6px;">
+     這位客戶的癌症險保額並不低。但癌症險多半採「<strong>分級給付</strong>」——理賠金額會依癌症的嚴重程度分級。他的甲狀腺癌屬於初期，因此只啟動到「初期癌症保險金」這一級，實際給付就是 5 萬元。
+    </p>
 
     <div class="case-bigcost">
-     <div class="lbl">釔-90 微球體 · 單次自費</div>
-     <div class="num">513,000<span class="unit">元</span></div>
-     <p class="desc">這只是其中一次治療的單一項材料費</p>
+     <div class="lbl">癌症險 · 這場初期癌症實際理賠</div>
+     <div class="num">50,164<span class="unit">元</span></div>
+     <p class="desc">採分級給付，初期癌症只動用到「初期癌症保險金」這一級</p>
     </div>
 
-    <div class="case-warning">
-     <div class="top">這只是藥物治療費用</div>
-     <div class="bottom">不含住院、手術、實支費用</div>
+   </div>
+  </div>
+
+  <!-- 重大傷病險理賠 -->
+  <div class="case-card reveal d2" style="margin-top: 30px;">
+   <div class="case-header" style="background: var(--teal);">
+    <h3>② 重大傷病險 · 理賠通知</h3>
+   </div>
+   <div class="case-content">
+
+    <figure class="doc-figure">
+     <img src="../images/critical-illness-payout.png" alt="重大傷病險理賠通知，核定給付金額共 100 萬元">
+     <figcaption>同一位客戶，同一場甲狀腺癌。重大傷病保險金核定給付 <strong>20 萬 + 80 萬，合計 100 萬元</strong>。因為甲狀腺惡性腫瘤屬於健保重大傷病範圍，客戶取得重大傷病證明後即整筆給付。當事人同意分享，個資已隱去。</figcaption>
+    </figure>
+
+    <p style="font-family: var(--serif); font-size: 15.5px; line-height: 1.85; color: var(--ink-soft); margin: 0 0 6px;">
+     重大傷病險不分級。只要拿到健保署核發的「重大傷病證明」、符合保單條款的範圍，保險公司就<strong>把保額整筆賠下來</strong>，不會因為是初期癌症就打折。這位客戶兩張重大傷病保障加起來，一口氣理賠了 100 萬元。
+    </p>
+
+    <div class="case-bigcost" style="background: var(--teal);">
+     <div class="lbl" style="color: rgba(245,239,228,0.75);">重大傷病險 · 同一場初期癌症實際理賠</div>
+     <div class="num" style="color: #fff;">1,000,000<span class="unit">元</span></div>
+     <p class="desc">取得重大傷病證明，整筆給付，不分輕度重度</p>
     </div>
 
-    <div class="case-consent">
-     <div class="c-icon">✓</div>
-     <div class="c-text">
-      本案例之診斷與費用資訊，經當事人同意分享，所有可識別個人身分之資訊（姓名、病歷號、醫療院所等）均已隱去。內容僅供保險規劃參考。
-     </div>
-    </div>
+   </div>
+  </div>
 
+  <!-- KO 對比 -->
+  <div class="ko-block reveal d1">
+   <p class="ko-title">同一個人 · 同一場甲狀腺癌</p>
+   <div class="ko-compare">
+    <div class="ko-side lose">
+     <p class="ko-label">癌症險賠了</p>
+     <p class="ko-num">5 萬</p>
+     <p class="ko-foot">分級給付 · 初期癌症</p>
+    </div>
+    <div class="ko-side win">
+     <p class="ko-label">重大傷病險賠了</p>
+     <p class="ko-num">100 萬</p>
+     <p class="ko-foot">憑證明 · 整筆給付</p>
+    </div>
+   </div>
+   <p class="ko-note">不是癌症險不好，而是同樣一場病，兩張保單的「給付邏輯」完全不同。這個差距，是這篇文章最重要的一句話。</p>
+  </div>
+
+ </div>
+</section>
+
+<!-- SECTION 3: 為什麼差這麼多 -->
+<section>
+ <div class="container">
+
+  <div class="sec-eyebrow reveal">機制解析</div>
+  <h2 class="sec-title reveal d1">為什麼差這麼多？<em>「分級給付」與「整筆給付」</em></h2>
+  <p class="sec-lead reveal d1">
+   理賠金額會差到 20 倍，不是哪一家保險公司比較小氣，而是這兩種保單天生就用不同的方式賠錢。搞懂這一點，你就會知道規劃時該怎麼排順序。
+  </p>
+
+  <div class="info-card reveal d1" style="border-left-color: var(--burgundy);">
+   <div class="label" style="color: var(--burgundy);">▍癌症險：依嚴重程度「分級給付」</div>
+   <h3>初期、輕度只賠一部分，重度才賠足額</h3>
+   <p>現在常見的癌症險，多半把癌症分成原位癌、初期、輕度、重度等不同等級，<strong>等級不同、賠的比例就不同</strong>。初期癌症通常只給一小筆「初期癌症保險金」，要到重度才會拿到較完整的金額。它的好處是連很輕微的癌症也賠得到、也能針對化放療、住院等療程設計給付——但遇到初期癌症，金額自然不會多。</p>
+  </div>
+
+  <div class="info-card reveal d2" style="border-left-color: var(--teal);">
+   <div class="label" style="color: var(--teal);">▍重大傷病險：憑證明「整筆給付」</div>
+   <h3>拿到重大傷病卡，保額一次賠下來</h3>
+   <p>重大傷病險<strong>不看嚴重程度分級</strong>。只要健保署核發了「重大傷病證明」、符合保單條款列的範圍，保險公司就把保額整筆給付。初期癌症也好、重度癌症也好，只要證明拿得到，賠的金額是一樣的。這也是為什麼同一場初期癌症，重大傷病險可以賠到 100 萬。</p>
+  </div>
+
+  <div class="dark-callout reveal d1">
+   <p style="font-family: var(--display); font-style: italic; font-size: 16px;">一句話記住差別</p>
+   <p>癌症險問你「病多嚴重」</p>
+   <p class="highlight">重大傷病險只問你「有沒有那張證明」</p>
+  </div>
+
+ </div>
+</section>
+
+<!-- SECTION 4: 重大傷病範圍 -->
+<section>
+ <div class="container">
+
+  <div class="sec-eyebrow reveal">保障範圍</div>
+  <h2 class="sec-title reveal d1">重大傷病的範圍，<em>不是只有癌症</em></h2>
+  <p class="sec-lead reveal d1">
+   很多人以為重大傷病險就是「比較貴的癌症險」。其實它的保障範圍，是以健保署公告的「重大傷病項目」為基礎——而那份清單，涵蓋的疾病非常廣。
+  </p>
+
+  <figure class="doc-figure reveal d2">
+   <img src="../images/nhi-critical-illness-list.png" alt="健保署全民健康保險重大傷病項目附表，需積極或長期治療之癌症">
+   <figcaption>健保署公告的「全民健康保險重大傷病項目」附表（114 年 1 月 1 日以後適用）。第一大項就是「需積極或長期治療之癌症」，前面案例的甲狀腺惡性腫瘤（ICD 代碼 C73）即列於其中。</figcaption>
+  </figure>
+
+  <div class="info-card reveal d1" style="border-left-color: var(--gold);">
+   <div class="label" style="color: var(--gold);">▍範圍有多廣？</div>
+   <h3>健保重大傷病共 30 大項、超過 300 種疾病</h3>
+   <p>健保署公告的重大傷病項目，總共有 <strong>30 大項、超過 300 種疾病</strong>。市面上的重大傷病險，多以這份清單為基礎承保，一般會排除先天性、遺傳性疾病與職業病等約 8 類，實際保障約 22 大類——確切範圍仍以各保單條款為準。下面是健保重大傷病清單中常見的項目：</p>
+   <ul class="scope-list">
+    <li>需積極或長期治療之癌症</li>
+    <li>慢性腎衰竭（尿毒症），須長期透析</li>
+    <li>全身性紅斑性狼瘡</li>
+    <li>類風濕性關節炎</li>
+    <li>乾燥症</li>
+    <li>克隆氏症等發炎性腸道疾病</li>
+    <li>慢性精神病</li>
+    <li>接受器官移植或造血幹細胞移植</li>
+    <li>重大創傷（創傷嚴重程度分數達 16 分以上）</li>
+    <li>嚴重燒燙傷</li>
+    <li>因呼吸衰竭，須長期使用呼吸器</li>
+    <li>部分罕見疾病</li>
+   </ul>
+  </div>
+
+  <p class="sec-lead reveal d2" style="margin: 26px 0 0;">
+   完整清單可查健保署官網：<a href="https://www.nhi.gov.tw/ch/cp-6086-caf5f-2957-1.html" target="_blank" rel="noopener" style="color: var(--terracotta-deep); text-decoration: underline;">全民健康保險重大傷病項目</a>。重點是——癌症險只保癌症這一種病；重大傷病險一張保單，把上面這 300 多種重大疾病一次涵蓋進來。
+  </p>
+
+ </div>
+</section>
+
+<!-- SECTION 5: 我經手的 5 個案例 -->
+<section class="stat-section">
+ <div class="container">
+
+  <div class="sec-eyebrow reveal">親身經驗</div>
+  <h2 class="sec-title reveal d1">我經手的 5 個重大傷病理賠，<em>只有 2 件是癌症</em></h2>
+  <p class="sec-lead reveal d1">
+   回到開頭說的 5 張重大傷病卡。把這 5 個理賠案例攤開來看，你會發現一個值得思考的事實——其中大多數，根本不是癌症。
+  </p>
+
+  <div class="tally reveal d2">
+   <div class="tally-row">
+    <div class="t-count">2<span class="u"> 件</span></div>
+    <div class="t-text">
+     <h4>車禍意外</h4>
+     <p>多處骨折，達到「重大創傷」創傷嚴重程度 16 分以上的標準，因此取得重大傷病證明。</p>
+    </div>
+   </div>
+   <div class="tally-row cancer">
+    <div class="t-count">2<span class="u"> 件</span></div>
+    <div class="t-text">
+     <h4>癌症</h4>
+     <p>確診後符合「需積極或長期治療之癌症」，取得重大傷病證明。</p>
+    </div>
+   </div>
+   <div class="tally-row">
+    <div class="t-count">1<span class="u"> 件</span></div>
+    <div class="t-text">
+     <h4>罕見疾病</h4>
+     <p>經診斷符合健保重大傷病範圍，取得重大傷病證明。</p>
+    </div>
+   </div>
+  </div>
+
+  <div class="info-card reveal d1" style="border-left-color: var(--burgundy);">
+   <div class="label" style="color: var(--burgundy);">▍這代表什麼？</div>
+   <h3>5 件裡有 3 件，跟癌症一點關係都沒有</h3>
+   <p>兩場車禍、一個罕見疾病——這 3 位客戶如果當初<strong>只買了癌症險，這一塊保障就是 0</strong>。是重大傷病險，在他們最需要的時候，把這筆錢補了上來。意外與重病不會先挑過你買了哪張保單，這就是為什麼「範圍夠廣」這件事這麼重要。</p>
+  </div>
+
+  <figure class="doc-figure portrait reveal d2">
+   <img src="../images/client-consent-conversation.jpg" alt="客戶的重大傷病核定通知書與 LINE 對話紀錄">
+   <figcaption>另一位客戶的真實紀錄，經當事人同意分享、個資已隱去。上方是健保署核發的「重大傷病核定審查通知書」——病名為<strong>類風濕性關節炎</strong>（自體免疫疾病，並非癌症）；下方是理賠期間我與客戶的對話。這也再次說明：重大傷病的保障範圍，從來就不只有癌症。</figcaption>
+  </figure>
+
+  <div class="case-consent" style="margin-top: 22px;">
+   <div class="c-icon">✓</div>
+   <div class="c-text">
+    本文引用之理賠通知、核定文件與對話紀錄，均經當事人同意分享，所有可識別個人身分之資訊（姓名、身分證字號、病歷號、醫療院所等）皆已隱去。內容僅供保險規劃參考。
    </div>
   </div>
 
  </div>
 </section>
 
-<!-- ====== POLICY 1: 重大傷病險 ====== -->
+<!-- SECTION 6: 規劃建議 -->
 <section class="policy-section p1">
  <div class="container">
 
   <div class="policy-header reveal">
-   <span class="policy-tag">▍關鍵保單 ①</span>
-   <h2><span class="em">重大傷病險</span></h2>
+   <span class="policy-tag">▍規劃建議</span>
+   <h2><span class="em">有預算考量</span>，這樣排順序</h2>
    <div class="role-marker">
-    <span class="role">主</span>
-    <span class="desc">這套組合的主角，所有規劃以它為核心</span>
+    <span class="role">序</span>
+    <span class="desc">先把最廣的風險守住，再加強單一重病</span>
    </div>
   </div>
 
-  <div class="info-card reveal">
-   <div class="label">▍為什麼選重大傷病？</div>
-   <h3>取得重大傷病卡 <span class="arrow">→</span> 直接一次給付</h3>
-   <p><strong>不限住院手術，怎麼用都可以</strong>。這就是它最強的地方——拿到健保署發的「重大傷病卡」，保險公司就一次付給您一筆錢，您要拿來付藥物、付看護、付生活費都行。</p>
+  <p class="sec-lead reveal d1" style="text-align: center; max-width: 720px; margin: 0 auto 36px;">
+   如果預算充足，重大傷病險和癌症險<strong>兩個都規劃</strong>是最理想的。但如果預算有限、必須有先後——我的建議是這樣：
+  </p>
+
+  <div class="priority-step reveal d1">
+   <div class="ps-num">1</div>
+   <div class="ps-body">
+    <h3>先規劃「重大傷病險」</h3>
+    <p>它保障範圍最廣、憑證明就能申請、而且整筆給付。先用它把 300 多種重大疾病的風險一次守住，是最有效率的第一步。</p>
+    <span class="ps-amount">建議額度至少 100 萬，預算允許者拉到 200 萬</span>
+   </div>
+  </div>
+
+  <div class="priority-step step2 reveal d2">
+   <div class="ps-num">2</div>
+   <div class="ps-body">
+    <h3>再規劃「癌症險」</h3>
+    <p>癌症是長期抗戰，治療常拖上好幾年。癌症險針對化放療、標靶、住院等療程設計，能在漫長療程中持續補位；部分極早期癌症或原位癌不一定符合重大傷病標準，這時也靠癌症險接手。</p>
+    <span class="ps-amount">建議額度至少 100 萬</span>
+   </div>
   </div>
 
   <div class="info-card reveal d1">
-   <div class="label">▍癌症以外也能理賠</div>
-   <h3>中風、心肌梗塞、腎衰竭都涵蓋</h3>
-   <p>很多人以為「重大傷病 = 癌症」，其實<strong>重大傷病險的保障範圍遠比癌症險更廣</strong>——共約 300 多項疾病。中風、心肌梗塞、慢性腎衰竭、自體免疫疾病等等，都是它的保障範圍。</p>
-  </div>
-
-  <div class="dark-callout reveal d2">
-   <p>癌症大部分時間，是門診化療。</p>
-   <p>不一定住院，但費用一樣燒。</p>
-   <p class="highlight">有一筆錢，才能專心治療。</p>
-  </div>
-
-  <div class="suggest-amount reveal d1">
-   <span class="lbl">▍保額建議</span>
-   <span class="val">100 萬以上</span>
-   <span class="desc">預算許可，越高越好</span>
-  </div>
-
-  <div class="info-card reveal d2" style="border-left-color: var(--burgundy);">
-   <div class="label" style="color: var(--burgundy);">▍診斷確定後</div>
-   <h3 style="color: var(--burgundy);">第一時間申請理賠，不要等</h3>
-   <p>很多客戶會卡在「先看看再說」，但這筆錢是治療的後盾。<strong>越早申請，越早能讓自己安心面對治療過程</strong>。</p>
-  </div>
-
- </div>
-</section>
-
-<!-- ====== POLICY 2: 癌症一次金 ====== -->
-<section class="policy-section p2">
- <div class="container">
-
-  <div class="policy-header reveal">
-   <span class="policy-tag">▍關鍵保單 ②</span>
-   <h2><span class="em">癌症一次金</span></h2>
-   <div class="role-marker">
-    <span class="role">輔</span>
-    <span class="desc">輔助角色，搭配重大傷病補強保障</span>
-   </div>
-  </div>
-
-  <p class="sec-lead reveal d1">癌症一次金不是一個簡單的「全有全無」商品——目前市場上的癌症一次金，會依照癌症的嚴重程度做分級給付：</p>
-
-  <div class="grade-table reveal d2">
-   <div class="grade-row head">
-    <div>分級</div>
-    <div>理賠保額</div>
-    <div>涵蓋範圍</div>
-   </div>
-   <div class="grade-row">
-    <div class="level">初期癌症</div>
-    <div class="pct">5~15%</div>
-    <div class="desc">原位癌、第一期惡性類癌等</div>
-   </div>
-   <div class="grade-row">
-    <div class="level">輕度癌症</div>
-    <div class="pct">15~20%</div>
-    <div class="desc">第一期前列腺癌、乳癌、子宮頸癌、大腸直腸癌、甲狀腺微乳頭狀態、邊緣性卵巢癌、黑色素瘤等</div>
-   </div>
-   <div class="grade-row heavy">
-    <div class="level">重度癌症</div>
-    <div class="pct">100%</div>
-    <div class="desc">以上分級以外之癌症，全部理賠</div>
-   </div>
-  </div>
-
-  <div class="conclusion-box reveal">
-   <p class="line-1">重大傷病優於癌症險</p>
-   <p class="line-2">癌症涵蓋在重大傷病內</p>
-   <p class="sub">以重大傷病為主，癌症險為輔搭配</p>
-  </div>
-
-  <div class="info-card reveal d1">
-   <div class="label">▍我的建議</div>
-   <h3>先把重大傷病買足，再考慮癌症一次金</h3>
-   <p>因為癌症本身就包含在重大傷病的範圍裡。<strong>用重大傷病險做主軸，預算還有餘裕，再用癌症一次金加強保障</strong>——這樣保費效率最高，保障也最完整。</p>
-  </div>
-
- </div>
-</section>
-
-<!-- ====== POLICY 3: 實支實付 ====== -->
-<section class="policy-section p3">
- <div class="container">
-
-  <div class="policy-header reveal">
-   <span class="policy-tag">▍關鍵保單 ③</span>
-   <h2><span class="em">實支實付險</span></h2>
-   <div class="role-marker">
-    <span class="role">補</span>
-    <span class="desc">補住院手術費用缺口</span>
-   </div>
-  </div>
-
-  <div class="info-card reveal">
-   <div class="label">▍實支實付能做什麼？</div>
-   <h3>住院的病房費、手術費、醫療雜費</h3>
-   <p>實支實付的核心是<strong>「花多少賠多少」</strong>，住院期間用到的自費藥物、自費醫材、自費病房，都可以透過實支實付來轉嫁費用。</p>
-  </div>
-
-  <div class="info-card reveal d1">
-   <div class="label">▍建議規劃</div>
-   <div class="suggest-amount" style="margin: 14px 0; border-radius: 4px;">
-    <span class="lbl">實支實付（醫療費）</span>
-    <span class="val">20 萬以上</span>
-    <span class="desc">越高越好</span>
-   </div>
-   <div class="suggest-amount" style="margin: 14px 0; border-radius: 4px;">
-    <span class="lbl">病房費</span>
-    <span class="val">2,000 元/日</span>
-    <span class="desc">癌症化放療療程使用</span>
-   </div>
-  </div>
-
-  <div class="dark-callout reveal d2">
-   <p style="font-family: var(--display); font-style: italic; color: rgba(245,239,228,0.7); font-size: 16px;">你可能不知道的事</p>
-   <p>癌症大多是門診，不一定住院</p>
-   <p class="highlight">沒住院，實支就派不上用場</p>
-  </div>
-
-  <div class="info-card reveal d1" style="border-left-color: var(--teal);">
-   <div class="label" style="color: var(--teal);">▍所以一次金才是核心</div>
-   <h3>不管有沒有住院，<span style="color: var(--teal);">確診就給你一筆錢</span></h3>
-   <p>實支實付不是不重要——而是<strong>它有適用範圍的限制（必須住院）</strong>。在癌症治療大多走門診的時代，實支實付負責補住院那塊，重大傷病險與癌症一次金，才是對抗燒錢癌症的關鍵。</p>
-  </div>
-
- </div>
-</section>
-
-<!-- ====== POLICY 4: 壽險 ====== -->
-<section class="policy-section p4">
- <div class="container">
-
-  <div class="policy-header reveal">
-   <span class="policy-tag">▍關鍵保單 ④</span>
-   <h2>壽險 · <span class="em">最後的安全感</span></h2>
-   <div class="role-marker">
-    <span class="role">愛</span>
-    <span class="desc">給家人最後的安心</span>
-   </div>
-  </div>
-
-  <div class="dark-callout reveal" style="background: var(--burgundy);">
-   <p style="font-family: var(--display); font-style: italic; color: rgba(245,239,228,0.7);">發生事情的時候</p>
-   <p class="highlight" style="color: var(--paper);">重點是有沒有足夠的錢幫忙</p>
-  </div>
-
-  <div class="formula-box reveal d1">
-   <h4>壽險保額怎麼估？一個簡單公式</h4>
-   <div class="formula-items">
-    <div class="formula-item"><strong>家庭生活費</strong></div>
-    <div class="formula-item"><strong>子女教育費</strong></div>
-    <div class="formula-item"><strong>父母奉養費</strong></div>
-    <div class="formula-item"><strong>房貸負債</strong></div>
-    <div class="formula-item"><strong>緊急備用金</strong></div>
-   </div>
-   <div class="formula-equals">
-    全部加起來 = 您最低應有的壽險保額
-   </div>
-  </div>
-
-  <div class="info-card reveal d2">
-   <div class="label">▍建議規劃方式</div>
-   <h3>終身壽險 + 定期壽險，額度先拉高</h3>
-   <p>年輕時責任最重——房貸還沒繳完、孩子還在念書、父母也需要奉養。這時候<strong>用「定期壽險」把額度先拉高</strong>，預算才負擔得起。</p>
-   <p>等保費隨年紀增加變貴時，可刪除定期壽險，<strong>留下終身壽險保障即可</strong>——這時候孩子大了、房貸清了，責任變輕，需要的保額也跟著降下來。</p>
+   <div class="label">▍如果沒有預算考量</div>
+   <h3>兩者都規劃，重大傷病打底、癌症險加強</h3>
+   <p>這兩張保單不是互相取代，而是互相補位。<strong>重大傷病險負責「範圍」</strong>——把各種重病一次守住、確診就有一筆現金；<strong>癌症險負責「深度」</strong>——陪你走完癌症那條最燒錢、最漫長的療程。預算足夠的話，兩者都規劃，保障才完整。</p>
   </div>
 
   <div class="conclusion-box reveal d1">
-   <p class="line-1" style="font-size: clamp(22px, 3vw, 32px);">這世代，留現金最實在</p>
-   <p class="sub">不是儲蓄險、不是房子——是一筆能在最關鍵時刻拿出來用的現金。</p>
+   <p class="line-1">順序對了，每一塊預算才花在刀口上</p>
+   <p class="sub">先求保障範圍夠廣，再求單一重病夠深</p>
   </div>
 
  </div>
 </section>
 
-<!-- FINAL SECTION -->
-
+<!-- RECAP -->
 <section class="recap-section">
   <div class="recap-box">
     <div class="recap-title">本文重點整理</div>
     <div class="recap-sub">RECAP · 看完這篇，記住這幾件事</div>
     <div class="recap-item">
       <div class="recap-check">1</div>
-      <div class="recap-text">癌症治療<strong>費用驚人</strong>——光是釔-90 微球體一次自費就達 51 萬。</div>
+      <div class="recap-text">同一位客戶、同一場初期甲狀腺癌——<strong>癌症險賠 5 萬，重大傷病險賠 100 萬</strong>。</div>
     </div>
     <div class="recap-item">
       <div class="recap-check">2</div>
-      <div class="recap-text">健保不一定給付<strong>標靶、自費藥物與新式療法</strong>，缺口要靠保險補。</div>
+      <div class="recap-text">癌症險採<strong>分級給付</strong>，初期、輕度只賠一部分；重大傷病險<strong>憑證明整筆給付</strong>，不分輕重。</div>
     </div>
     <div class="recap-item">
       <div class="recap-check">3</div>
-      <div class="recap-text"><strong>癌症險</strong>提供確診一次金或療程給付，讓家庭有現金應對。</div>
+      <div class="recap-text">健保重大傷病共 <strong>30 大項、超過 300 種疾病</strong>，癌症只是其中一項。</div>
     </div>
     <div class="recap-item">
       <div class="recap-check">4</div>
-      <div class="recap-text"><strong>重大傷病險</strong>範圍涵蓋癌症，取得重大傷病卡就理賠。</div>
+      <div class="recap-text">我經手的 5 個重大傷病理賠，<strong>有 3 件不是癌症</strong>（2 件車禍、1 件罕病）。</div>
     </div>
     <div class="recap-item">
       <div class="recap-check">5</div>
-      <div class="recap-text">趁<strong>健康時投保</strong>——一旦確診，就再也買不到癌症相關保障了。</div>
+      <div class="recap-text">有預算考量時：<strong>先規劃重大傷病險（至少 100 萬，建議 200 萬），再規劃癌症險（至少 100 萬）</strong>。</div>
     </div>
     <div class="recap-item">
       <div class="recap-check">✓</div>
-      <div class="recap-text">想規劃癌症保障？歡迎 <strong>LINE 諮詢</strong>，依預算幫您配置。</div>
+      <div class="recap-text">想知道依你的預算該怎麼排順序？歡迎 <strong>LINE 諮詢</strong>，幫你配置。</div>
     </div>
   </div>
 </section>
 
+<!-- FINAL SECTION -->
 <section class="final-section">
  <div class="top-text reveal">重症案例分享系列 · 這篇的核心只有一句話</div>
- <h2 class="reveal d1">保障夠不夠，<br><em>只有出事那天才會知道</em></h2>
+ <h2 class="reveal d1">先把範圍守住，<br><em>再加強單一重病</em></h2>
 
  <div class="summary-grid">
   <div class="summary-row main reveal d1">
    <div class="summary-role">主</div>
    <div class="summary-text">
     <h4>重大傷病險</h4>
-    <p>確診直接領一筆錢，保額 100 萬以上</p>
+    <p>範圍最廣、憑證明整筆給付，建議 100 萬以上</p>
    </div>
   </div>
   <div class="summary-row aux reveal d2">
-   <div class="summary-role">輔</div>
-   <div class="summary-text">
-    <h4>癌症一次金</h4>
-    <p>依嚴重程度分級理賠，補強重大傷病</p>
-   </div>
-  </div>
-  <div class="summary-row supp reveal d2">
    <div class="summary-role">補</div>
    <div class="summary-text">
-    <h4>實支實付</h4>
-    <p>補住院手術費用缺口，建議 20 萬以上</p>
-   </div>
-  </div>
-  <div class="summary-row love reveal d3">
-   <div class="summary-role">愛</div>
-   <div class="summary-text">
-    <h4>壽險</h4>
-    <p>保額足夠，給家人最後的安心</p>
+    <h4>癌症險</h4>
+    <p>陪你走完最燒錢的癌症療程，建議 100 萬以上</p>
    </div>
   </div>
  </div>
 
  <a href="https://line.me/R/ti/p/@129diduy" target="_blank" rel="noopener" class="final-cta reveal d2">
-  LINE 預約重症保障規劃
+  LINE 預約重大傷病保障規劃
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
  </a>
 </section>
@@ -2112,8 +2271,8 @@
   <div>
    <h5>延伸閱讀</h5>
    <ul>
+    <li><a href="cancer-protection-plan.html">癌症治療年燒百萬，保單能賠多少？</a></li>
     <li><a href="insurance-products-guide.html">保險商品 7 大險種完整解析</a></li>
-    <li><a href="adult-insurance-planning.html">成人保險規劃完整指南</a></li>
     <li><a href="claim-rejection-reasons.html">理賠被拒？避開 5 個地雷</a></li>
    </ul>
   </div>
