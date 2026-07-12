@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>部落格文章｜保險白話文</title>
-<meta name="description" content="保險白話文的部落格文章區。新生兒保單、成人保險規劃、保險公司差異、理賠經驗、商品地雷——分類篩選快速找到您想看的內容。">
-<meta name="keywords" content="保險文章,新生兒保單,成人保險,理賠經驗,罐頭保單,保險商品">
+<title>關於我｜保險白話文</title>
+<meta name="description" content="保險白話文——服務於保經公司的保險全方位規劃師。陪伴超過 200 個家庭、協助 300 位以上新生兒投保。專注新生兒保單、退休規劃與資產變現金。">
+<meta name="keywords" content="保險白話文,保險規劃師,保經公司,新生兒保單,退休規劃,資產變現金,關於我">
 
-<meta property="og:title" content="部落格文章｜保險白話文">
-<meta property="og:description" content="分類篩選快速找到您想看的保險知識。">
+<meta property="og:title" content="關於我｜保險白話文">
+<meta property="og:description" content="服務於保經公司的保險全方位規劃師，用白話陪您把保險買對不買貴。">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -905,10 +905,244 @@
   .closing p{ font-size: 16.5px !important; }
  }
 
+
+ /* ============================================
+    [v37] 關於我頁面
+    ============================================ */
+ .about-hero{
+  background: var(--olive-deep);
+  color: var(--cream);
+  padding: 90px 5vw 80px;
+  text-align: center;
+ }
+ .about-hero .container{ max-width: 860px; margin: 0 auto; }
+ .about-hero .eyebrow{
+  font-family: var(--display); font-style: italic;
+  font-size: 17px; color: var(--terracotta-light);
+  letter-spacing: 0.08em; margin-bottom: 18px;
+ }
+ .about-hero h1{
+  font-family: var(--serif); font-weight: 900;
+  font-size: clamp(34px, 6vw, 56px);
+  line-height: 1.25; margin: 0 0 24px; color: #fff;
+ }
+ .about-hero h1 em{
+  font-style: normal; color: var(--terracotta-light);
+ }
+ .about-hero p.lead{
+  font-family: var(--serif); font-size: 18px;
+  line-height: 1.9; color: rgba(245,239,228,0.82);
+  margin: 0;
+ }
+
+ .about-hero + .ab-intro{ padding-top: 70px; }
+ section.ab-intro, section.ab-why, section.ab-focus, section.ab-connect{
+  padding: 70px 5vw;
+ }
+ .ab-intro .container, .ab-why .container,
+ .ab-focus .container, .ab-connect .container{
+  max-width: 1100px; margin: 0 auto;
+ }
+ .ab-why{ background: #faf8f4; }
+
+ /* 簡介 */
+ .ab-grid{
+  display: grid; grid-template-columns: 0.85fr 1.3fr;
+  gap: 60px; align-items: center;
+ }
+ .ab-portrait{
+  aspect-ratio: 4/5;
+  background: var(--olive-deep);
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px;
+  box-shadow: 14px 14px 0 -3px rgba(74,69,48,0.18);
+ }
+ .ab-portrait img{ width: 78%; max-width: 280px; height: auto; }
+ .ab-content .lead-p{
+  font-family: var(--serif); font-size: 22px;
+  line-height: 1.6; color: var(--ink);
+  margin: 0 0 20px; font-weight: 500;
+ }
+ .ab-content p{
+  font-family: var(--serif); font-size: 16.5px;
+  line-height: 1.95; color: var(--ink-soft);
+  margin: 0 0 18px;
+ }
+ .ab-content p strong{
+  color: var(--terracotta-deep);
+  background-image: linear-gradient(transparent 75%, rgba(181,107,61,0.18) 75%);
+  padding: 0 2px;
+ }
+ .ab-stats{
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px; padding-top: 28px;
+  border-top: 1px solid var(--line);
+ }
+ .ab-stat{ border-right: 1px solid var(--line-soft); padding: 0 18px; }
+ .ab-stat:first-child{ padding-left: 0; }
+ .ab-stat:last-child{ border-right: none; }
+ .ab-stat .num{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; font-size: 42px; line-height: 1;
+  color: var(--terracotta);
+ }
+ .ab-stat .num .plus{ font-size: 22px; }
+ .ab-stat .lbl{
+  font-size: 12px; letter-spacing: 0.16em;
+  color: var(--ink-mute); margin-top: 8px;
+ }
+
+ /* 共用標題 */
+ .ab-h2{
+  font-family: var(--serif); font-weight: 900;
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.35; margin: 10px 0 16px; color: var(--ink);
+ }
+ .ab-h2 em{ font-style: normal; color: var(--terracotta); }
+ .ab-lead{
+  font-family: var(--serif); font-size: 16.5px;
+  line-height: 1.9; color: var(--ink-soft);
+  margin: 0 0 40px; max-width: 760px;
+ }
+ .ab-lead strong{ color: var(--terracotta-deep); }
+
+ /* 為什麼選保經 */
+ .ab-why-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+ }
+ .ab-why-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 30px 26px;
+ }
+ .ab-why-card .wc-icon{
+  color: var(--terracotta); font-size: 16px;
+  margin-bottom: 12px;
+ }
+ .ab-why-card h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 19px; margin: 0 0 8px; color: var(--olive-deep);
+ }
+ .ab-why-card p{
+  font-family: var(--serif); font-size: 14.5px;
+  line-height: 1.8; color: var(--ink-soft); margin: 0;
+ }
+
+ /* 專業領域 */
+ .ab-focus-list{
+  display: flex; flex-direction: column; gap: 0;
+  border-top: 1px solid var(--line);
+ }
+ .ab-focus-item{
+  display: grid; grid-template-columns: 90px 1fr;
+  gap: 24px; align-items: center;
+  padding: 26px 8px;
+  border-bottom: 1px solid var(--line-soft);
+ }
+ .ab-focus-item .fi-num{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; font-size: 40px;
+  color: var(--terracotta-light); text-align: center;
+ }
+ .ab-focus-item .fi-text h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 20px; margin: 0 0 5px; color: var(--olive-deep);
+ }
+ .ab-focus-item .fi-text p{
+  font-family: var(--serif); font-size: 15px;
+  line-height: 1.8; color: var(--ink-soft); margin: 0;
+ }
+
+ /* 聯絡與社群 */
+ .ab-connect{ background: #faf8f4; }
+ .ab-connect .sec-eyebrow{ justify-content: flex-start; }
+ .ab-connect-grid{
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 22px; margin-bottom: 50px;
+ }
+ .ab-connect-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 38px 28px; text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+  transition: all .35s ease;
+ }
+ .ab-connect-card:hover{
+  transform: translateY(-4px);
+  border-color: var(--terracotta);
+  box-shadow: 0 14px 30px rgba(138,79,42,0.12);
+ }
+ .ab-connect-card .cc-icon{
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--bg-2); color: var(--terracotta);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px; transition: all .3s;
+ }
+ .ab-connect-card .cc-icon svg{ width: 27px; height: 27px; }
+ .ab-connect-card.line:hover .cc-icon{ background: #06c755; color: #fff; }
+ .ab-connect-card.ig:hover .cc-icon{ background: #d6336c; color: #fff; }
+ .ab-connect-card.threads:hover .cc-icon{ background: #1a1f1d; color: #fff; }
+ .ab-connect-card h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 18px; margin: 0 0 5px; color: var(--olive-deep);
+ }
+ .ab-connect-card .cc-platform{
+  font-family: var(--display); font-style: italic;
+  font-size: 13px; color: var(--ink-mute);
+  margin-bottom: 12px; letter-spacing: 0.05em;
+ }
+ .ab-connect-card .cc-handle{
+  font-family: var(--serif); font-size: 16px;
+  color: var(--terracotta); font-weight: 600;
+ }
+
+ .ab-final{
+  text-align: center;
+  border-top: 1px solid var(--line);
+  padding-top: 44px;
+ }
+ .ab-final .af-line{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 22px; color: var(--ink);
+  margin: 0 0 22px;
+ }
+ .ab-final .af-cta{
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--terracotta); color: var(--paper);
+  font-family: var(--serif); font-weight: 600; font-size: 16px;
+  padding: 15px 32px; border-radius: 999px;
+  transition: all .3s;
+ }
+ .ab-final .af-cta:hover{
+  background: var(--terracotta-deep);
+  box-shadow: 0 8px 20px rgba(138,79,42,0.25);
+ }
+ .ab-final .af-cta svg{ width: 17px; height: 17px; }
+
+ @media (max-width: 860px){
+  .about-hero{ padding: 64px 5vw 56px; }
+  section.ab-intro, section.ab-why, section.ab-focus, section.ab-connect{
+   padding: 50px 5vw;
+  }
+  .ab-grid{ grid-template-columns: 1fr; gap: 36px; }
+  .ab-portrait{ max-width: 320px; margin: 0 auto; }
+  .ab-why-grid{ grid-template-columns: 1fr; }
+  .ab-connect-grid{ grid-template-columns: 1fr; }
+  .ab-content .lead-p{ font-size: 20px; }
+  .ab-focus-item{ grid-template-columns: 64px 1fr; gap: 16px; padding: 22px 4px; }
+  .ab-focus-item .fi-num{ font-size: 32px; }
+ }
+ @media (max-width: 480px){
+  .ab-stats{ margin-top: 24px; padding-top: 22px; }
+  .ab-stat{ padding: 0 8px; }
+  .ab-stat .num{ font-size: 34px; }
+ }
 </style>
 
-<link rel="canonical" href="https://baihuawenins.com/blog.html">
-<meta property="og:url" content="https://baihuawenins.com/blog.html">
+<link rel="canonical" href="https://baihuawenins.com/about.html">
+<meta property="og:url" content="https://baihuawenins.com/about.html">
 </head>
 <body>
 
@@ -988,625 +1222,166 @@
  </div>
 </nav>
 
-<!-- Hero -->
-<header class="blog-hero">
+<!-- ABOUT HERO -->
+<header class="about-hero">
  <div class="container">
-  <div class="eyebrow reveal">Blog · 部落格文章</div>
+  <div class="eyebrow reveal">關於我 · About Me</div>
   <h1 class="reveal">
-   您想了解<em>哪個保險主題</em>？
+   不被單一公司綁住，<em>站在您這邊</em>
   </h1>
   <p class="lead reveal">
-   下面有 20 篇深入解析的文章，依照主題分類。<strong><span class="lead-desktop">點上方分類標籤</span><span class="lead-mobile">點左上角選單</span></strong>快速篩選您感興趣的內容，3 秒鐘找到您要的答案。
+   我是保險白話文。比起「賣一張保單」，我更在意的是陪您把每一個為什麼想清楚——讓您買得明白、買得安心。
   </p>
  </div>
 </header>
 
-<!-- Filter (sticky) -->
-<div class="filter-section">
- <div class="filter-container">
-  <span class="filter-label">分類</span>
-  <button class="filter-btn active" data-cat="all">全部文章 <span class="count">20</span></button>
-
-  <div class="filter-dd">
-   <button class="filter-btn">新生兒保單 <span class="count">6</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/newborn-insurance-2025.html">新生兒保險 5 大保障</a>
-    <a href="posts/newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a>
-    <a href="posts/newborn-parents-checklist.html">新生兒出生後待辦清單</a>
-    <a href="posts/newborn-jaundice.html">寶寶黃疸對核保影響</a>
-    <a href="posts/newborn-screening-basic.html">21 項基本篩檢</a>
-    <a href="posts/newborn-screening-paid.html">自費篩檢攻略</a>
+<!-- 簡介 -->
+<section class="ab-intro">
+ <div class="container">
+  <div class="ab-grid">
+   <div class="ab-portrait reveal d1">
+    <img src="logo.svg" alt="保險白話文 Logo">
    </div>
-  </div>
+   <div class="ab-content reveal d2">
+    <p class="lead-p">
+     您好，我是 <strong>保險白話文</strong>，一位服務於保經公司的<strong>保險全方位規劃師</strong>。
+    </p>
+    <p>
+     過去這些年，我陪伴超過 <strong>200 個家庭</strong>規劃保險，協助 <strong>超過 300 位新生兒</strong>完成投保。我做的不只是「賣商品」，而是「陪您做決定」——先聽懂您的需求與擔心，再從各家商品中，找出真正適合您的那一個。
+    </p>
+    <p>
+     市場上的保險商品太多、條款太複雜，讓很多人最後不是「買錯」就是「買貴」。我的工作，就是把這些複雜的條款，用最白話的方式說給您聽，讓保險回到它最單純的樣子——<strong>一份在關鍵時刻接得住您家庭的承諾</strong>。
+    </p>
 
-  <div class="filter-dd">
-   <button class="filter-btn">成人保單 <span class="count">2</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/adult-insurance-planning.html">成人保險完整指南</a>
-    <a href="posts/term-life-premium.html">定期壽險後期保費</a>
-   </div>
-  </div>
-
-  <div class="filter-dd">
-   <button class="filter-btn">銀髮族保險 <span class="count">1</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/senior-insurance-planning.html">銀髮族規劃 2 級順序</a>
-   </div>
-  </div>
-
-  <div class="filter-dd">
-   <button class="filter-btn">重症案例分享 <span class="count">2</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/cancer-protection-plan.html">癌症治療年燒百萬</a>
-    <a href="posts/critical-illness-priority.html">重大傷病優先於癌症險</a>
-   </div>
-  </div>
-
-  <div class="filter-dd">
-   <button class="filter-btn">險種知識 <span class="count">5</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/insurance-products-guide.html">7 大險種解析</a>
-    <a href="posts/canned-insurance-policy.html">什麼是罐頭保單</a>
-    <a href="posts/auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a>
-    <a href="posts/surgery-227-explained.html">2-2-7 手術定義</a>
-    <a href="posts/whole-life-vs-term.html">終身險 vs 定期險</a>
-   </div>
-  </div>
-
-  <div class="filter-dd">
-   <button class="filter-btn">信用卡刷保費 <span class="count">1</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/credit-card-installment.html">信用卡刷保費懶人包</a>
-   </div>
-  </div>
-
-  <div class="filter-dd">
-   <button class="filter-btn">理賠經驗 <span class="count">2</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/claim-rejection-reasons.html">理賠 5 大地雷</a>
-    <a href="posts/pre-existing-disease.html">既往症與帶病投保</a>
-   </div>
-  </div>
-
-  <div class="filter-dd">
-   <button class="filter-btn">公司差異 <span class="count">1</span> <span class="dd-arrow">▼</span></button>
-   <div class="dd-menu">
-    <a href="posts/broker-vs-insurance-company.html">保經 vs 保險公司</a>
+    <div class="ab-stats">
+     <div class="ab-stat">
+      <div class="num">200<span class="plus">+</span></div>
+      <div class="lbl">服務家庭</div>
+     </div>
+     <div class="ab-stat">
+      <div class="num">300<span class="plus">+</span></div>
+      <div class="lbl">新生兒投保</div>
+     </div>
+     <div class="ab-stat">
+      <div class="num">6<span class="plus">年</span></div>
+      <div class="lbl">業界經驗</div>
+     </div>
+    </div>
    </div>
   </div>
  </div>
-</div>
+</section>
 
-<!-- Articles -->
-<section class="articles-section">
- <div class="articles-container">
-  <div class="results-bar">
-   <div class="info">
-    正在顯示 <strong id="result-count">20</strong> 篇文章
+<!-- 為什麼選保經 -->
+<section class="ab-why">
+ <div class="container">
+  <div class="sec-eyebrow reveal">為什麼是保經公司</div>
+  <h2 class="ab-h2 reveal d1">不被單一保險公司綁住，<em>才能真正比較</em></h2>
+  <p class="ab-lead reveal d1">
+   因為服務於保經公司，我能<strong>同時比較多家保險公司的商品</strong>。不必硬推自家保單，而是從整個市場裡，挑出最符合您需求與預算的那一個。
+  </p>
+  <div class="ab-why-grid">
+   <div class="ab-why-card reveal d1">
+    <div class="wc-icon">◆</div>
+    <h3>跨公司比較</h3>
+    <p>同樣的保障需求，不同公司的保費與條款可能差很多。我幫您橫向比較，把錢花在刀口上。</p>
    </div>
-   <div class="sort">Latest · 最新優先</div>
+   <div class="ab-why-card reveal d2">
+    <div class="wc-icon">◆</div>
+    <h3>站在您這邊</h3>
+    <p>我的立場是您的需求，不是某一家公司的業績。先聽您怎麼說，再給建議。</p>
+   </div>
+   <div class="ab-why-card reveal d3">
+    <div class="wc-icon">◆</div>
+    <h3>白話說條款</h3>
+    <p>把艱澀的保單條款翻成聽得懂的話，讓您清楚知道自己買了什麼、賠得到什麼。</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 專業領域 -->
+<section class="ab-focus">
+ <div class="container">
+  <div class="sec-eyebrow reveal">專業領域</div>
+  <h2 class="ab-h2 reveal d1">三個專注的方向</h2>
+  <p class="ab-lead reveal d1">
+   人生不同階段，需要的保障不一樣。我把專業聚焦在這三件事上：
+  </p>
+  <div class="ab-focus-list">
+   <div class="ab-focus-item reveal d1">
+    <span class="fi-num">01</span>
+    <div class="fi-text">
+     <h3>新生兒保單</h3>
+     <p>讓寶寶從一出生就有完整保障。掌握投保黃金時機，避開核保上的眉角。</p>
+    </div>
+   </div>
+   <div class="ab-focus-item reveal d2">
+    <span class="fi-num">02</span>
+    <div class="fi-text">
+     <h3>退休規劃</h3>
+     <p>讓五十歲後的您不再焦慮。及早安排，把退休後的生活費與醫療風險都顧好。</p>
+    </div>
+   </div>
+   <div class="ab-focus-item reveal d3">
+    <span class="fi-num">03</span>
+    <div class="fi-text">
+     <h3>資產變現金</h3>
+     <p>讓您的存款、不動產、保單，能在真正需要的時候動起來、派上用場。</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 聯絡與社群 -->
+<section class="ab-connect" id="connect">
+ <div class="container">
+  <div class="sec-eyebrow reveal">追蹤・聯絡</div>
+  <h2 class="ab-h2 reveal d1">在這些地方，<em>都可以找到我</em></h2>
+  <p class="ab-lead reveal d1">
+   有任何保險上的問題，歡迎透過 LINE 直接問我；也歡迎在 Instagram、Threads 上追蹤保險白話文，看更多白話的保險知識。
+  </p>
+
+  <div class="ab-connect-grid">
+   <a href="https://line.me/ti/p/Q0mw4pX2gT" target="_blank" rel="noopener" class="ab-connect-card line reveal d1">
+    <div class="cc-icon">
+     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.55 7.48 8.34 8.13.32.07.77.21.88.49.1.25.07.65.03.9l-.14.85c-.04.25-.2.99.86.54 1.07-.45 5.74-3.38 7.83-5.79C21.4 13.74 22 12.05 22 10.23 22 5.69 17.52 2 12 2z"/></svg>
+    </div>
+    <h3>LINE 即時諮詢</h3>
+    <div class="cc-platform">最快回覆</div>
+    <div class="cc-handle">直接私訊我</div>
+   </a>
+
+   <a href="https://www.instagram.com/insurance_is_su" target="_blank" rel="noopener" class="ab-connect-card ig reveal d2">
+    <div class="cc-icon">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+    </div>
+    <h3>Instagram</h3>
+    <div class="cc-platform">圖文・知識分享</div>
+    <div class="cc-handle">@insurance_is_su</div>
+   </a>
+
+   <a href="https://www.threads.net/@insurance_is_su" target="_blank" rel="noopener" class="ab-connect-card threads reveal d3">
+    <div class="cc-icon">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-5 0-8-3.5-8-9s3-9 8-9c4 0 6.5 2.3 7.2 5.3M12 21c4.5 0 7-2.6 7-5.6 0-3.4-2.9-4.8-6-4.8-2.6 0-4.3 1.2-4.3 3.1 0 1.7 1.5 2.7 3.2 2.7 2.6 0 4-2 4-5.4"/></svg>
+    </div>
+    <h3>Threads（脆）</h3>
+    <div class="cc-platform">日常・即時想法</div>
+    <div class="cc-handle">@insurance_is_su</div>
+   </a>
   </div>
 
-  <div class="articles-grid" id="articles-grid">
-   <!-- Article: 重大傷病優先於癌症險 -->
-   <a href="posts/critical-illness-priority.html" class="article-card" data-cat="cancer">
-    <div class="thumb t5">
-     <span class="cat-badge">重症案例分享</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>重大傷病險</span>
-      <span>癌症險</span>
-      <span>規劃順序</span>
-     </div>
-     <h3>重大傷病險規劃，為什麼要優先於癌症險？</h3>
-     <p class="excerpt">同一場初期癌症，癌症險只賠 5 萬、重大傷病險賠 100 萬。真實理賠案例帶你看懂兩者的差別，以及預算有限時的規劃順序。</p>
-     <div class="meta">
-      <span>重症案例分享</span>
-      <span class="read">閱讀 10 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 1: 新生兒保單規劃 -->
-   <a href="posts/newborn-insurance-2025.html" class="article-card" data-cat="newborn">
-    <div class="thumb t2">
-     <span class="cat-badge">新生兒保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/>
-      <path d="M9 12l2 2 4-4"/>
-      <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>新生兒保單</span>
-      <span>5 大保障</span>
-     </div>
-     <h3>新生兒保單規劃｜5 大保障完整解析</h3>
-     <p class="excerpt">寶寶剛出生，到底該買哪些保險？醫療險、癌症險、重大傷病險、意外險、兒童壽險——一篇文章看懂 5 大必備保障與規劃方案。</p>
-     <div class="meta">
-      <span>新生兒主題</span>
-      <span class="read">閱讀 12 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 2: 新生兒出生待辦事項 -->
-   <a href="posts/newborn-parents-checklist.html" class="article-card" data-cat="newborn">
-    <div class="thumb t1">
-     <span class="cat-badge">新生兒保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="4" y="3" width="16" height="18" rx="2"/>
-      <line x1="9" y1="8" x2="15" y2="8"/>
-      <line x1="9" y1="12" x2="15" y2="12"/>
-      <line x1="9" y1="16" x2="13" y2="16"/>
-      <polyline points="7 8 7.5 8.5 8 8"/>
-      <polyline points="7 12 7.5 12.5 8 12"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>新手爸媽</span>
-      <span>60 天清單</span>
-      <span>政府補助</span>
-     </div>
-     <h3>新生兒出生後待辦清單必看｜新手爸媽必辦 7 件事</h3>
-     <p class="excerpt">孩子要出生了好焦慮？別慌！7 件必辦事項一次整理：新生兒保險、取名、報戶口、健保卡、生育津貼、勞保補助、育兒津貼。</p>
-     <div class="meta">
-      <span>新生兒主題</span>
-      <span class="read">閱讀 8 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article: 新生兒投保出生前後時間軸 -->
-   <a href="posts/newborn-insurance-timeline.html" class="article-card" data-cat="newborn">
-    <div class="thumb t4">
-     <span class="cat-badge">新生兒保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="9"/>
-      <polyline points="12 7 12 12 15 14"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>新生兒保單</span>
-      <span>投保時間軸</span>
-      <span>黃金 10 天</span>
-     </div>
-     <h3>新生兒投保出生前後時間軸</h3>
-     <p class="excerpt">寶寶什麼時候可以買保險？從懷孕期間到出生後 10 天，新生兒投保有清楚的黃金時間軸——每個階段該做的準備一次看懂。</p>
-     <div class="meta">
-      <span>新生兒主題</span>
-      <span class="read">閱讀 8 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 3: 成人保單規劃 -->
-   <a href="posts/adult-insurance-planning.html" class="article-card" data-cat="adult">
-    <div class="thumb t3">
-     <span class="cat-badge">成人保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-      <path d="M12 13l3-3M9 10l3 3" stroke-width="1"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>成人保險</span>
-      <span>5 大保障</span>
-      <span>定期壽險</span>
-     </div>
-     <h3>成人保險規劃完整指南｜留愛不留債的 5 大保障</h3>
-     <p class="excerpt">父母怎麼了會影響整個家庭。從醫療、癌症、重大傷病、意外到壽險——家庭經濟支柱該買哪些保險？含定期壽險比較表。</p>
-     <div class="meta">
-      <span>成人主題</span>
-      <span class="read">閱讀 14 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 4: 定期壽險後期保費 -->
-   <a href="posts/term-life-premium.html" class="article-card" data-cat="adult">
-    <div class="thumb t4">
-     <span class="cat-badge">成人保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 3v18h18"/>
-      <path d="M7 14l4-4 4 4 5-5"/>
-      <circle cx="11" cy="10" r="1.5" fill="currentColor"/>
-      <circle cx="15" cy="14" r="1.5" fill="currentColor"/>
-      <circle cx="20" cy="9" r="1.5" fill="currentColor"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>定期壽險</span>
-      <span>保費規劃</span>
-      <span>美金保單</span>
-     </div>
-     <h3>同樣是壽險保障，後半輩子能不能更聰明地付？</h3>
-     <p class="excerpt">30 歲只要 3,200 元，到了 59 歲卻要 31,200 元。如果保費注定要漲，這筆錢有沒有更聰明的去處？投資型與美金保單兩種選擇。</p>
-     <div class="meta">
-      <span>成人主題</span>
-      <span class="read">閱讀 8 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 5: 保險商品 7 大險種 -->
-   <a href="posts/insurance-products-guide.html" class="article-card" data-cat="knowledge">
-    <div class="thumb t6">
-     <span class="cat-badge">險種知識</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="3" y="4" width="18" height="16" rx="2"/>
-      <line x1="3" y1="10" x2="21" y2="10"/>
-      <line x1="9" y1="4" x2="9" y2="20"/>
-      <circle cx="6" cy="7" r="0.5" fill="currentColor"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>險種解析</span>
-      <span>7 大險種</span>
-      <span>避開地雷</span>
-     </div>
-     <h3>保險商品 7 大險種完整解析｜避開地雷商品</h3>
-     <p class="excerpt">實支實付、住院日額、手術險、癌症險、長照險、失能險、重大傷病險、意外險、壽險——一篇文章看懂險種差異。</p>
-     <div class="meta">
-      <span>險種知識</span>
-      <span class="read">閱讀 12 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 6: 罐頭保單 -->
-   <a href="posts/canned-insurance-policy.html" class="article-card" data-cat="knowledge">
-    <div class="thumb t8">
-     <span class="cat-badge">險種知識</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="6" y="3" width="12" height="18" rx="1"/>
-      <line x1="6" y1="7" x2="18" y2="7"/>
-      <line x1="6" y1="17" x2="18" y2="17"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>罐頭保單</span>
-      <span>高 CP 值</span>
-      <span>保大再保小</span>
-     </div>
-     <h3>什麼是罐頭保單？醫生也在買的高 CP 值組合</h3>
-     <p class="excerpt">罐頭保單不是吃的罐頭！由 PTT 醫生 Apin 發明的保單組合方式，找 2~3 家保險公司商品搭配，達到低保費高保障。</p>
-     <div class="meta">
-      <span>險種知識</span>
-      <span class="read">閱讀 7 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 7: 理賠經驗談 -->
-   <a href="posts/claim-rejection-reasons.html" class="article-card" data-cat="claim">
-    <div class="thumb t5">
-     <span class="cat-badge">理賠經驗</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <line x1="12" y1="8" x2="12" y2="12"/>
-      <line x1="12" y1="16" x2="12.01" y2="16"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>理賠經驗</span>
-      <span>5 個地雷</span>
-      <span>避免拒賠</span>
-     </div>
-     <h3>理賠被拒？避開這 5 個地雷｜常見拒賠原因</h3>
-     <p class="excerpt">買了保險卻被拒賠？保險公司不是刻意刁難——這 5 個原因最常導致拒賠：保前疾病、沒有據實說明、除外責任、診斷書不明確、保單停效。</p>
-     <div class="meta">
-      <span>理賠經驗</span>
-      <span class="read">閱讀 8 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 8: 保險公司 vs 保經公司 -->
-   <a href="posts/broker-vs-insurance-company.html" class="article-card" data-cat="company">
-    <div class="thumb t7">
-     <span class="cat-badge">公司差異</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-      <circle cx="9" cy="7" r="4"/>
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>業務員身分</span>
-      <span>保經 vs 保險</span>
-      <span>客戶權益</span>
-     </div>
-     <h3>保險公司 vs 保經公司，差別在哪？</h3>
-     <p class="excerpt">買保險前先釐清業務員身分。保險公司業務員只能賣自家保單；保經公司業務員可以比較多家。從理賠爭議、未來服務看清差異。</p>
-     <div class="meta">
-      <span>公司差異</span>
-      <span class="read">閱讀 6 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 9: 癌症治療年燒百萬 (頂級) -->
-   <a href="posts/cancer-protection-plan.html" class="article-card" data-cat="cancer">
-    <div class="thumb t5">
-     <span class="cat-badge">重症案例分享</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>重大傷病險</span>
-      <span>癌症一次金</span>
-      <span>4 大保單</span>
-     </div>
-     <h3>癌症治療年燒百萬，您的保單能理賠多少？</h3>
-     <p class="excerpt">台灣每 4 分 19 秒就有一人確診癌症，單次自費治療 51.3 萬！重大傷病險、癌症一次金、實支實付、壽險——4 大保單組合對抗癌症燒錢。</p>
-     <div class="meta">
-      <span>重症案例分享</span>
-      <span class="read">閱讀 12 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 10: 銀髮族保險規劃 -->
-   <a href="posts/senior-insurance-planning.html" class="article-card" data-cat="senior">
-    <div class="thumb t4">
-     <span class="cat-badge">銀髮族保險</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-      <circle cx="12" cy="7" r="4"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>長輩保險</span>
-      <span>規劃順序</span>
-      <span>2 級規劃</span>
-     </div>
-     <h3>銀髮族如何買保險｜把錢花在刀口上的 2 級規劃</h3>
-     <p class="excerpt">想幫家中長輩買保險嗎？年齡越大保費越貴，更要把錢花在刀口上。意外險、實支實付、失能險為基本，癌症與重大傷病為加強。</p>
-     <div class="meta">
-      <span>銀髮族保險</span>
-      <span class="read">閱讀 8 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 11: 終身險 vs 定期險 -->
-   <a href="posts/whole-life-vs-term.html" class="article-card" data-cat="knowledge">
-    <div class="thumb t6">
-     <span class="cat-badge">險種知識</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.5 0 2.9.37 4.13 1"/>
-      <polyline points="21 3 21 9 15 9"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>終身險</span>
-      <span>定期險</span>
-      <span>30 倍差距</span>
-     </div>
-     <h3>終身險 vs 定期險，到底該怎麼挑選？</h3>
-     <p class="excerpt">100 萬癌症保障——定期險年繳 370 元、終身險年繳 11,000 元，差距高達 30 倍！這 30 倍的錢真的值得嗎？深入解析挑選邏輯。</p>
-     <div class="meta">
-      <span>險種知識</span>
-      <span class="read">閱讀 9 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 12: 已在疾病與理賠 -->
-   <a href="posts/pre-existing-disease.html" class="article-card" data-cat="claim">
-    <div class="thumb t5">
-     <span class="cat-badge">理賠經驗</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-      <polyline points="14 2 14 8 20 8"/>
-      <line x1="9" y1="13" x2="15" y2="13"/>
-      <line x1="9" y1="17" x2="15" y2="17"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>已在疾病</span>
-      <span>保險法 127 條</span>
-      <span>判例解析</span>
-     </div>
-     <h3>已在疾病與理賠｜保險法 127 條深入解析</h3>
-     <p class="excerpt">已在疾病 vs 既往症差別在哪？舊疾痊癒、舊疾復發保險公司會理賠嗎？引用最高法院乳癌案判決完整解析。</p>
-     <div class="meta">
-      <span>理賠經驗</span>
-      <span class="read">閱讀 8 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 13: 新生兒黃疸 -->
-   <a href="posts/newborn-jaundice.html" class="article-card" data-cat="newborn">
-    <div class="thumb t1">
-     <span class="cat-badge">新生兒保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>新生兒體況</span>
-      <span>黃疸</span>
-      <span>核保</span>
-     </div>
-     <h3>寶寶有黃疸還能買保險嗎？3 種黃疸對核保的影響</h3>
-     <p class="excerpt">生理性黃疸、母乳性黃疸、病理性黃疸——對保險核保影響完全不同。新生兒投保的特別考量，給新手爸媽的實務攻略。</p>
-     <div class="meta">
-      <span>新生兒體況</span>
-      <span class="read">閱讀 7 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 14: 新生兒基本篩檢 -->
-   <a href="posts/newborn-screening-basic.html" class="article-card" data-cat="newborn">
-    <div class="thumb t2">
-     <span class="cat-badge">新生兒保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="4" y="3" width="16" height="18" rx="2"/>
-      <polyline points="8 10 11 13 16 8"/>
-      <line x1="8" y1="16" x2="14" y2="16"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>政府補助</span>
-      <span>21 項篩檢</span>
-      <span>新生兒</span>
-     </div>
-     <h3>21 項新生兒基本篩檢，投保時點完整解析</h3>
-     <p class="excerpt">政府補助的 21 項新生兒篩檢一定要做嗎？對保險核保有什麼影響？金管會規定篩檢結果不受等待期限制，投保時機重點解析。</p>
-     <div class="meta">
-      <span>新生兒體況</span>
-      <span class="read">閱讀 7 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 15: 新生兒自費篩檢 -->
-   <a href="posts/newborn-screening-paid.html" class="article-card" data-cat="newborn">
-    <div class="thumb t3">
-     <span class="cat-badge">新生兒保單</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <line x1="12" y1="6" x2="12" y2="14"/>
-      <circle cx="12" cy="17" r="0.5" fill="currentColor"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>自費篩檢</span>
-      <span>血液檢查</span>
-      <span>超音波</span>
-     </div>
-     <h3>新生兒自費篩檢，投保 step by step</h3>
-     <p class="excerpt">血液檢查 6 項、超音波 4 項——自費篩檢做不做？超音波即時可見的警告與正確投保順序，新手爸媽不得不看。</p>
-     <div class="meta">
-      <span>新生兒體況</span>
-      <span class="read">閱讀 8 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 16: 自動續保 vs 保證續保 -->
-   <a href="posts/auto-vs-guaranteed-renewal.html" class="article-card" data-cat="knowledge">
-    <div class="thumb t8">
-     <span class="cat-badge">險種知識</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="23 4 23 10 17 10"/>
-      <polyline points="1 20 1 14 7 14"/>
-      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/>
-      <path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>自動續保</span>
-      <span>保證續保</span>
-      <span>產險時事</span>
-     </div>
-     <h3>自動續保 vs 保證續保，差一個字差很大</h3>
-     <p class="excerpt">兩者搞錯了會讓您的保障在最需要的時候斷掉！壽險與產險公司差異、產險意外實支險「無保證續保」最新時事一次解析。</p>
-     <div class="meta">
-      <span>險種知識</span>
-      <span class="read">閱讀 7 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <!-- Article 17: 2-2-7 手術是什麼 -->
-   <a href="posts/surgery-227-explained.html" class="article-card" data-cat="knowledge">
-    <div class="thumb t6">
-     <span class="cat-badge">險種知識</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>健保支付標準</span>
-      <span>手術定義</span>
-      <span>大腸鏡息肉</span>
-     </div>
-     <h3>2-2-7 手術是什麼？理賠的關鍵編碼</h3>
-     <p class="excerpt">大腸鏡切息肉算手術嗎？拔智齒算手術嗎？關鍵在保單條款引用的「2-2-7」——健保署支付標準第 2 部第 2 章第 7 節完整解析。</p>
-     <div class="meta">
-      <span>險種知識</span>
-      <span class="read">閱讀 7 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-   <a href="posts/credit-card-installment.html" class="article-card" data-cat="creditcard">
-    <div class="thumb t6">
-     <span class="cat-badge">信用卡刷保費</span>
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="5" width="20" height="14" rx="2"/>
-      <line x1="2" y1="10" x2="22" y2="10"/>
-     </svg>
-    </div>
-    <div class="body">
-     <div class="tags">
-      <span>信用卡刷保費</span>
-      <span>分期 0 利率</span>
-      <span>保費回饋</span>
-     </div>
-     <h3>信用卡刷保費分期 0 利率懶人包</h3>
-     <p class="excerpt">保費太重？整理 17 家銀行信用卡刷保費的分期 0 利率與回饋資訊——把保費壓力分散，還能拿現金回饋，把錢花得更聰明。</p>
-     <div class="meta">
-      <span>信用卡刷保費</span>
-      <span class="read">閱讀 6 分鐘 →</span>
-     </div>
-    </div>
-   </a>
-
-  </div>
-
-  <!-- Empty state -->
-  <div class="empty-state" id="empty-state">
-   <div class="icon">📭</div>
-   <p>這個分類目前沒有文章，請選其他分類看看 🙌</p>
-  </div>
-
-  <!-- Bottom CTA -->
-  <div class="bottom-cta">
-   <h2>看完文章，<em>還有疑問嗎</em>？</h2>
-   <p>每個人狀況不同，文章只能給您方向。如果您想要根據自己的狀況做客製化規劃，歡迎透過 LINE 與我聊聊。</p>
-   <a href="https://line.me/ti/p/Q0mw4pX2gT" target="_blank" rel="noopener" class="cta">
-    LINE 預約一對一諮詢
+  <div class="ab-final reveal d2">
+   <p class="af-line">買對保險，從一次聊聊開始</p>
+   <a href="https://line.me/ti/p/Q0mw4pX2gT" target="_blank" rel="noopener" class="af-cta">
+    LINE 免費諮詢
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
    </a>
   </div>
  </div>
 </section>
+
 
 <footer>
  <div class="foot-grid">
@@ -1635,7 +1410,7 @@
   </div>
  </div>
  <div class="foot-bottom">
-  <span>保險白話文 · 部落格文章</span>
+  <span>保險白話文 · 關於我</span>
   <span>© 2026 · 讓你保險買對不買貴</span>
  </div>
 </footer>
