@@ -204,28 +204,41 @@
   }
   .nav-menu > li.has-dropdown > a::after{ font-size: 14px; }
   .nav-menu > li.has-dropdown.open > a::after{ transform: rotate(180deg); color: var(--terracotta); }
+  /* [v37 update] 手機版分類預設全部展開 - 使用者一打開漢堡選單就看到全部文章 */
   .dropdown{
    position: static; box-shadow: none; border: none;
-   border-top: none; padding: 0;
+   border-top: none;
    background: transparent;
-   max-height: 0; overflow: hidden;
    opacity: 1; visibility: visible;
    transform: none;
-   transition: max-height .3s, padding .3s;
+   max-height: none; overflow: visible;
+   padding: 4px 0 14px 14px;
+   margin: 0;
   }
-  .nav-menu > li.has-dropdown.open .dropdown{
-   max-height: 800px;
-   padding: 0 0 16px 16px;
+  /* 分類標題:手機版不再是可點的連結,而是分區標籤 */
+  .nav-menu > li.has-dropdown > a{
+   pointer-events: none;
+   color: var(--terracotta-deep) !important;
+   font-family: var(--sans);
+   font-size: 12.5px !important; font-weight: 700;
+   letter-spacing: 0.12em;
+   padding: 22px 4px 8px !important;
+   text-transform: none;
   }
-  .nav-menu > li.has-dropdown:hover .dropdown{
-   opacity: 1; visibility: visible;
-  }
-  .nav-menu > li.has-dropdown:not(.open):hover .dropdown{
-   max-height: 0; padding: 0 0 0 16px;
-  }
+  /* 箭頭在手機版隱藏 */
+  .nav-menu > li.has-dropdown > a::after{ display: none !important; }
+  /* 文章連結 */
   .dropdown li a{
-   padding: 12px 16px; font-size: 14px;
+   padding: 11px 14px; font-size: 14.5px;
    border-left: 2px solid var(--line-soft);
+   color: var(--olive-deep);
+   line-height: 1.5;
+   display: block;
+  }
+  .dropdown li a:hover, .dropdown li a:active{
+   color: var(--terracotta);
+   border-left-color: var(--terracotta);
+   background: rgba(181,107,61,0.04);
   }
   .nav-menu .nav-cta{
    margin: 20px 0 0; text-align: center;
@@ -1251,29 +1264,25 @@
    line-height: 1.4 !important;
    width: 100% !important;
   }
-  .nav-menu > li.has-dropdown > a::after{
-   content: "▾" !important;
-   display: inline-block !important;
-   font-size: 18px !important;
+  /* [v37] 手機版:分類標題變分區標籤(不可點),箭頭隱藏 */
+  .nav-menu > li.has-dropdown > a{
+   pointer-events: none !important;
+   font-size: 12.5px !important;
+   font-weight: 700 !important;
+   letter-spacing: 0.08em !important;
    color: #b56b3d !important;
-   transition: transform .25s !important;
-   margin-left: 12px !important;
+   padding: 22px 22px 8px !important;
+   background: transparent !important;
   }
-  .nav-menu > li.has-dropdown.open > a::after{
-   transform: rotate(180deg) !important;
-  }
-  .nav-menu > li.has-dropdown.open > a{
-   background: rgba(181,107,61,0.06) !important;
-   color: #8a4f2a !important;
-  }
+  .nav-menu > li.has-dropdown > a::after{ display: none !important; }
 
-  /* Dropdown 子項：預設關閉，點開展開 */
+  /* [v37] 手機版 dropdown 預設全部展開 - 使用者一打開漢堡選單直接看到全部文章 */
   .dropdown{
    list-style: none !important;
-   padding: 0 !important;
+   padding: 4px 0 14px !important;
    margin: 0 !important;
-   max-height: 0 !important;
-   overflow: hidden !important;
+   max-height: none !important;
+   overflow: visible !important;
    position: static !important;
    box-shadow: none !important;
    border: none !important;
@@ -1283,11 +1292,6 @@
    visibility: visible !important;
    display: block !important;
    width: 100% !important;
-   transition: max-height .35s ease !important;
-  }
-  .nav-menu > li.has-dropdown.open .dropdown{
-   max-height: 800px !important;
-   padding: 4px 0 12px !important;
   }
   .dropdown li{ list-style: none !important; display: block !important; }
   .dropdown li a{
