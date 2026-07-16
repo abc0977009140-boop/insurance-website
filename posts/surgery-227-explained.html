@@ -169,132 +169,68 @@
   .nav-menu{ gap: 0; }
  }
  @media (max-width: 1200px){
-  /* [v37 mobile] 手機版:拿掉漢堡、改兩列水平選單 */
-  .nav-toggle{ display: none !important; }
-  .nav-container{
-   flex-wrap: wrap; gap: 0;
-   padding: 0 8px !important;
-  }
-  .nav-brand{
-   flex: 1 0 100%;
-   width: 100%;
-   justify-content: flex-start; gap: 8px;
-   padding: 10px 8px;
-  }
+  .nav-toggle{ display: flex; order: -1; margin-right: 4px; }
+  .nav-container{ gap: 8px; }
+  .nav-brand{ flex: 1; justify-content: center; gap: 8px; }
   .nav-brand small{ display: none; }
-  .nav-title{ font-size: 15px !important; }
+  .nav-title{ font-size: 16px !important; }
   .nav-menu{
-   position: static; flex-direction: row;
-   flex-wrap: wrap; gap: 0;
-   width: 100%;
-   background: #faf7f2;
-   border-top: 1px solid var(--line-soft);
-   padding: 0; margin: 0;
-   transform: none !important;
-   box-shadow: none;
-   max-height: none;
-   overflow: visible;
-   opacity: 1 !important; visibility: visible !important;
+   position: fixed; top: 64px; left: 0; right: auto;
+   bottom: 0; flex-direction: column;
+   background: #ffffff;
+   width: 88vw; max-width: 360px;
+   padding: 18px 22px 40px;
+   gap: 0; align-items: stretch;
+   transform: translateX(-100%);
+   transition: transform .35s cubic-bezier(.2,.7,.2,1);
+   overflow-y: auto; z-index: 10000;
+   box-shadow: 8px 0 32px rgba(0,0,0,0.15);
+   background-color: #ffffff !important; opacity: 1 !important;
   }
-  .nav-menu > li{
-   flex: 1 0 calc(100% / 6);
-   min-width: calc(100% / 6);
-   max-width: calc(100% / 6);
-   border-bottom: 1px solid var(--line-soft);
-   border-right: 1px solid var(--line-soft);
-   position: relative;
-   text-align: center;
-  }
-  .nav-menu > li:nth-child(6n){ border-right: none; }
-  .nav-menu > li:nth-last-child(-n+5){ border-bottom: none; }
+  /* 手機 menu 開啟時的背景遮罩 */
+  .nav-menu.open::before{ content: none; }
+  .nav-menu.open{ transform: translateX(0); }
+  .nav-menu > li{ width: 100%; border-bottom: 1px solid var(--line-soft); }
   .nav-menu > li > a{
-   padding: 10px 4px !important;
-   font-size: 11.5px !important;
-   line-height: 1.3 !important;
-   font-weight: 500 !important;
-   color: var(--olive-deep) !important;
-   pointer-events: auto !important;
-   background: transparent !important;
-   letter-spacing: 0 !important;
-   justify-content: center !important;
-   display: flex !important; align-items: center; gap: 3px;
-   border-radius: 0 !important;
+   padding: 18px 4px; font-size: 15px;
+   border-radius: 0; justify-content: space-between;
+   color: var(--olive-deep);
   }
-  .nav-menu > li.has-dropdown > a::after{
-   content: "▾"; display: inline-block !important;
-   font-size: 10px !important; margin-left: 2px !important;
-   color: var(--terracotta) !important;
-   transition: transform .2s ease !important;
-   transform: none !important;
+  .nav-menu > li > a:hover,
+  .nav-menu > li.has-dropdown:hover > a{
+   background: transparent; color: var(--terracotta);
   }
-  .nav-menu > li.has-dropdown.open > a::after{
-   transform: rotate(180deg) !important;
-  }
-  .nav-menu > li.has-dropdown.open > a{
-   background: var(--terracotta) !important;
-   color: #fff !important;
-  }
-  /* 下拉子選單:從分類項目下方冒出 */
+  .nav-menu > li.has-dropdown > a::after{ font-size: 14px; }
+  .nav-menu > li.has-dropdown.open > a::after{ transform: rotate(180deg); color: var(--terracotta); }
   .dropdown{
-   position: absolute !important;
-   top: 100% !important; left: 0 !important;
-   width: 100vw !important;
-   max-height: 0 !important;
-   overflow: hidden !important;
-   background: #fff !important;
-   border: none !important;
-   box-shadow: 0 8px 16px rgba(0,0,0,0.12) !important;
-   z-index: 100 !important;
-   transition: max-height .3s ease !important;
-   padding: 0 !important; margin: 0 !important;
-   opacity: 1 !important; visibility: visible !important;
-   display: block !important;
-   transform: none !important;
-   list-style: none !important;
+   position: static; box-shadow: none; border: none;
+   border-top: none; padding: 0;
+   background: transparent;
+   max-height: 0; overflow: hidden;
+   opacity: 1; visibility: visible;
+   transform: none;
+   transition: max-height .3s, padding .3s;
   }
   .nav-menu > li.has-dropdown.open .dropdown{
-   max-height: 500px !important;
-   border-top: 2px solid var(--terracotta) !important;
-   padding: 6px 0 !important;
+   max-height: 800px;
+   padding: 0 0 16px 16px;
   }
-  .dropdown li{ list-style: none !important; display: block !important; }
+  .nav-menu > li.has-dropdown:hover .dropdown{
+   opacity: 1; visibility: visible;
+  }
+  .nav-menu > li.has-dropdown:not(.open):hover .dropdown{
+   max-height: 0; padding: 0 0 0 16px;
+  }
   .dropdown li a{
-   display: block !important;
-   padding: 12px 20px !important;
-   font-size: 14.5px !important;
-   color: var(--olive-deep) !important;
-   text-align: left !important;
-   border: none !important;
-   border-bottom: 1px solid var(--line-soft) !important;
-   background: transparent !important;
-   line-height: 1.4 !important;
-  }
-  .dropdown li:last-child a{ border-bottom: none !important; }
-  .dropdown li a:active{
-   background: rgba(181,107,61,0.08) !important;
-   color: var(--terracotta) !important;
-  }
-  /* LINE CTA - 手機版也用等分方格 */
-  .nav-menu > li:last-child{
-   flex: 1 0 calc(100% / 6) !important;
-   min-width: calc(100% / 6) !important;
-   max-width: calc(100% / 6) !important;
-   height: 58px !important;
-   display: flex !important;
-   align-items: stretch;
+   padding: 12px 16px; font-size: 14px;
+   border-left: 2px solid var(--line-soft);
   }
   .nav-menu .nav-cta{
-   background: var(--terracotta) !important;
-   color: #fff !important;
-   font-weight: 700 !important;
-   padding: 10px 4px !important;
-   font-size: 11.5px !important;
-   border-radius: 0 !important;
-   margin: 0 !important;
-   text-align: center !important;
-   display: flex !important;
-   align-items: center; justify-content: center;
+   margin: 20px 0 0; text-align: center;
+   padding: 14px 18px !important; font-size: 15px;
+   justify-content: center;
   }
+  .nav-brand small{ display: none; }
  }
  .hero{ position: relative; z-index: 2; padding: 49px 6vw 70px; border-bottom: 1px solid var(--line); }
  .hero-grid{
