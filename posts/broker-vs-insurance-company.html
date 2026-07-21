@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>保險公司 vs 保經公司，差別在哪？｜業務員立場大不同｜保險白話文</title>
+<meta name="description" content="買保險前先釐清：保險公司業務員只能賣自家保單，保經公司業務員可以幫您比較多家商品。從理賠爭議、未來服務、核保時間看兩者差異。">
+<meta name="keywords" content="保險公司,保經公司,保險經紀人,業務員差異,理賠爭議,核保時間,保險規劃">
+<meta property="og:title" content="保險公司 vs 保經公司，差別在哪？">
+<meta property="og:description" content="買保險前先釐清業務員身分，從理賠爭議到未來服務看清差異。">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+ :root{
+  --bg: #ffffff; --bg-2: #ffffff; --paper: #ffffff;
+  --ink: #1a1f1d; --ink-soft: #4a4a44; --ink-mute: #7a766c;
+  --line: #cbbfa9; --line-soft: #d9cfb9;
+  --terracotta: #b56b3d; --terracotta-deep: #8a4f2a; --terracotta-light: #d18b5a;
+  --olive: #6b6240; --olive-deep: #4a4530; --cream: #e8d9b8;
+  --gold: #b8893a; --teal: #4a7a6a; --burgundy: #7a3535; --rose: #c97d6f;
+  --serif: "Noto Serif TC", "Cormorant Garamond", serif;
+  --sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, sans-serif;
+  --display: "Cormorant Garamond", "Noto Serif TC", serif;
+ }
+ *,*::before,*::after{box-sizing:border-box}
+ html{scroll-behavior: smooth}
+ html,body{margin:0;padding:0}
+ body{
+  background: var(--bg); color: var(--ink);
+  font-family: var(--sans); line-height: 1.7;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  background-image: none;
+ }
+ body::before{
+  content:""; position: fixed; inset: 0; pointer-events: none;
+  opacity: 0; mix-blend-mode: multiply; z-index: 1;
+ }
+ a{color: inherit; text-decoration: none}
+
+ .navbar{
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 48px 4vw;
+ }
+ .nav-container{
+  max-width: 1400px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 24px;
+ }
+ .nav-brand{
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; flex-shrink: 0;
+ }
+ .nav-brand img{ width: 38px; height: 38px; object-fit: contain; }
+ .nav-brand-text{ display: flex; flex-direction: column; line-height: 1.2; }
+ .nav-title{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 17px; letter-spacing: 0.05em;
+  color: var(--terracotta-deep);
+ }
+ .nav-brand small{
+  font-family: var(--display); font-style: italic;
+  font-size: 11px; letter-spacing: 0.04em;
+  color: var(--ink-mute); margin-top: 1px;
+ }
+ .nav-menu{
+  display: flex; list-style: none; margin: 0; padding: 0;
+  gap: 2px; align-items: center;
+ }
+ .nav-menu > li{ position: relative; }
+ .nav-menu > li > a{
+  display: flex; align-items: center; gap: 4px;
+  padding: 10px 12px;
+  font-family: var(--sans); font-size: 13.5px; font-weight: 500;
+  color: var(--ink-soft); text-decoration: none;
+  border-radius: 6px; transition: all .2s;
+  white-space: nowrap;
+ }
+ .nav-menu > li.has-dropdown > a::after{
+  content: "▾"; font-size: 10px;
+  transition: transform .2s; opacity: 0.6;
+ }
+ .nav-menu > li > a:hover,
+ .nav-menu > li.has-dropdown:hover > a{
+  background: var(--terracotta); color: var(--paper);
+ }
+ .nav-menu > li.has-dropdown:hover > a::after{ opacity: 1; transform: rotate(180deg); }
+ .nav-menu .nav-cta{
+  background: var(--terracotta); color: var(--paper) !important;
+  padding: 10px 18px !important; border-radius: 999px;
+  margin-left: 8px; font-weight: 600 !important;
+ }
+ .nav-menu .nav-cta:hover{
+  background: var(--terracotta-deep) !important;
+  box-shadow: 0 6px 16px rgba(138,79,42,0.25);
+ }
+ .dropdown{
+  position: absolute; top: calc(100% + 6px); left: 0;
+  min-width: 280px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--terracotta);
+  padding: 8px 0; list-style: none; margin: 0;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  opacity: 0; visibility: hidden;
+  transform: translateY(-6px);
+  transition: all .25s cubic-bezier(.2,.7,.2,1);
+ }
+ .nav-menu > li.has-dropdown:hover .dropdown{
+  opacity: 1; visibility: visible; transform: translateY(0);
+ }
+ .dropdown li a{
+  display: block;
+  padding: 11px 22px;
+  font-family: var(--sans); font-size: 13.5px;
+  color: var(--ink-soft); text-decoration: none;
+  transition: all .18s;
+  border-left: 2px solid transparent;
+ }
+ .dropdown li a:hover{
+  background: rgba(181,107,61,0.08);
+  color: var(--terracotta-deep);
+  border-left-color: var(--terracotta);
+  padding-left: 26px;
+ }
+ .dropdown-all{
+  background: linear-gradient(90deg, rgba(181,107,61,0.12), rgba(181,107,61,0.04));
+  border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 6px;
+ }
+ .dropdown-all a{
+  color: var(--terracotta-deep) !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.02em;
+ }
+ .dropdown-all a:hover{
+  background: var(--terracotta) !important;
+  color: var(--paper) !important;
+  border-left-color: transparent !important;
+ }
+ /* 點擊 active 狀態 */
+ .nav-menu > li.has-dropdown.open > a{
+  background: var(--terracotta);
+  color: var(--paper);
+ }
+ .nav-menu > li.has-dropdown.open > a::after{
+  transform: rotate(180deg); opacity: 1;
+ }
+ .nav-toggle{
+  display: none; background: none; border: none;
+  cursor: pointer; padding: 8px;
+  flex-direction: column; gap: 5px;
+ }
+ .nav-toggle span{
+  display: block; width: 22px; height: 2px;
+  background: var(--ink-soft);
+  transition: all .3s;
+ }
+ .nav-toggle.open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+ .nav-toggle.open span:nth-child(2){ opacity: 0; }
+ .nav-toggle.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+ @media (max-width: 1340px) and (min-width: 1201px){
+  .nav-menu > li > a{ padding: 10px 8px; font-size: 13px; }
+  .nav-menu{ gap: 0; }
+ }
+ @media (max-width: 1200px){
+  .nav-toggle{ display: flex; order: -1; margin-right: 4px; }
+  .nav-container{ gap: 8px; }
+  .nav-brand{ flex: 1; justify-content: center; gap: 8px; }
+  .nav-brand small{ display: none; }
+  .nav-title{ font-size: 16px !important; }
+  .nav-menu{
+   position: fixed; top: 64px; left: 0; right: auto;
+   bottom: 0; flex-direction: column;
+   background: #ffffff;
+   width: 88vw; max-width: 360px;
+   padding: 18px 22px 40px;
+   gap: 0; align-items: stretch;
+   transform: translateX(-100%);
+   transition: transform .35s cubic-bezier(.2,.7,.2,1);
+   overflow-y: auto; z-index: 10000;
+   box-shadow: 8px 0 32px rgba(0,0,0,0.15);
+   background-color: #ffffff !important; opacity: 1 !important;
+  }
+  /* 手機 menu 開啟時的背景遮罩 */
+  .nav-menu.open::before{ content: none; }
+  .nav-menu.open{ transform: translateX(0); }
+  .nav-menu > li{ width: 100%; border-bottom: 1px solid var(--line-soft); }
+  .nav-menu > li > a{
+   padding: 18px 4px; font-size: 15px;
+   border-radius: 0; justify-content: space-between;
+   color: var(--olive-deep);
+  }
+  .nav-menu > li > a:hover,
+  .nav-menu > li.has-dropdown:hover > a{
+   background: transparent; color: var(--terracotta);
+  }
+  .nav-menu > li.has-dropdown > a::after{ font-size: 14px; }
+  .nav-menu > li.has-dropdown.open > a::after{ transform: rotate(180deg); color: var(--terracotta); }
+  .dropdown{
+   position: static; box-shadow: none; border: none;
+   border-top: none; padding: 0;
+   background: transparent;
+   max-height: 0; overflow: hidden;
+   opacity: 1; visibility: visible;
+   transform: none;
+   transition: max-height .3s, padding .3s;
+  }
+  .nav-menu > li.has-dropdown.open .dropdown{
+   max-height: 800px;
+   padding: 0 0 16px 16px;
+  }
+  .nav-menu > li.has-dropdown:hover .dropdown{
+   opacity: 1; visibility: visible;
+  }
+  .nav-menu > li.has-dropdown:not(.open):hover .dropdown{
+   max-height: 0; padding: 0 0 0 16px;
+  }
+  .dropdown li a{
+   padding: 12px 16px; font-size: 14px;
+   border-left: 2px solid var(--line-soft);
+  }
+  .nav-menu .nav-cta{
+   margin: 20px 0 0; text-align: center;
+   padding: 14px 18px !important; font-size: 15px;
+   justify-content: center;
+  }
+  .nav-brand small{ display: none; }
+ }
+
+ .hero{
+  position: relative; z-index: 2;
+  padding: 49px 6vw 70px;
+  border-bottom: 1px solid var(--line);
+ }
+ .hero-grid{
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: 70px; align-items: end;
+ }
+ .hero-eyebrow{
+  font-family: var(--display); font-style: italic;
+  font-size: 22px; color: var(--teal);
+  margin-bottom: 22px; letter-spacing: 0.02em;
+ }
+ .hero-eyebrow .num{
+  font-feature-settings: "lnum"; font-weight: 600;
+  border: 1px solid var(--teal);
+  padding: 2px 10px; border-radius: 999px;
+  font-size: 12px; margin-right: 12px;
+  font-style: normal; letter-spacing: 0.15em;
+ }
+ h1.hero-title{
+  font-family: var(--serif); font-weight: 900;
+  font-size: clamp(38px, 5.6vw, 76px);
+  line-height: 1.1; letter-spacing: -0.01em;
+  margin: 0 0 28px; color: var(--olive-deep);
+ }
+ h1.hero-title .accent{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; color: var(--teal);
+ }
+ h1.hero-title .underline{
+  background-image: linear-gradient(transparent 78%, rgba(184,137,58,0.42) 78%, rgba(184,137,58,0.42) 92%, transparent 92%);
+ }
+ .hero-lead{
+  font-family: var(--serif); font-size: 18px;
+  line-height: 1.85; color: var(--ink-soft);
+  max-width: 540px;
+  border-left: 2px solid var(--teal); padding-left: 22px;
+ }
+ .hero-lead .drop{
+  font-family: var(--display); font-size: 56px;
+  line-height: 0.9; float: left;
+  margin: 8px 10px -4px 0;
+  color: var(--teal); font-weight: 600;
+ }
+ .hero-aside{
+  position: relative;
+  padding: 36px 36px 30px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 14px 14px 0 -4px var(--bg-2), 14px 14px 0 -3px var(--line);
+ }
+ .hero-aside::before{
+  content: "本文比較"; position: absolute;
+  top: -12px; left: 28px; background: var(--bg);
+  padding: 0 12px;
+  font-family: var(--display); font-style: italic;
+  color: var(--teal); font-size: 18px;
+ }
+ .hero-aside h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 15px; margin: 8px 0 18px;
+  color: var(--olive-deep); letter-spacing: 0.04em;
+ }
+ .hero-aside ol{ list-style: none; padding: 0; margin: 0; counter-reset: aside; }
+ .hero-aside li{
+  counter-increment: aside;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--line-soft);
+  font-size: 14px; color: var(--ink-soft);
+  display: grid; grid-template-columns: 30px 1fr;
+  gap: 14px; align-items: center;
+ }
+ .hero-aside li:last-child{ border-bottom: none; padding-bottom: 4px }
+ .hero-aside li::before{
+  content: counter(aside, decimal-leading-zero);
+  font-family: var(--display); font-weight: 600;
+  color: var(--teal); font-size: 17px;
+ }
+ .hero-aside li a{ color: inherit; transition: color .2s }
+ .hero-aside li:hover a{ color: var(--teal) }
+
+ section{
+  position: relative; z-index: 2;
+  padding: 55px 6vw;
+  border-bottom: 1px solid var(--line);
+ }
+ .container{ max-width: 1300px; margin: 0 auto }
+ .sec-eyebrow{
+  display: flex; align-items: center; gap: 18px;
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 24px; font-weight: 500;
+ }
+ .sec-eyebrow::before{ content: ""; width: 50px; height: 1px; background: var(--terracotta); }
+ h2.sec-title{
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(30px, 3.8vw, 48px);
+  line-height: 1.18; letter-spacing: -0.01em;
+  margin: 0 0 22px; color: var(--olive-deep);
+  max-width: 880px;
+ }
+ h2.sec-title em{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; color: var(--terracotta);
+ }
+ .sec-lead{
+  font-family: var(--serif); font-size: 17px;
+  line-height: 1.85; color: var(--ink-soft);
+  max-width: 760px; margin: 0 0 50px;
+ }
+
+ /* Side-by-side comparison */
+ .compare-section{
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+ }
+ .compare-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 50px;
+ }
+ .compare-col{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 0;
+  overflow: hidden;
+  transition: all .35s;
+ }
+ .compare-col:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(74,122,106,0.12);
+ }
+ .compare-col .header{
+  padding: 30px 32px;
+  background: var(--olive-deep);
+  color: var(--paper);
+  text-align: center;
+ }
+ .compare-col.broker .header{ background: var(--teal); }
+ .compare-col .header .kind{
+  display: inline-block;
+  padding: 4px 14px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  opacity: 0.8;
+ }
+ .compare-col .header h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 24px; margin: 0;
+  color: var(--paper);
+ }
+ .compare-col .header p{
+  margin: 8px 0 0;
+  font-family: var(--display); font-style: italic;
+  font-size: 14px;
+  color: rgba(245,239,228,0.7);
+  letter-spacing: 0.05em;
+ }
+ .compare-col .body{
+  padding: 28px 32px 32px;
+ }
+ .compare-col .desc{
+  font-family: var(--serif);
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--line-soft);
+ }
+ .compare-col .label-list{
+  list-style: none; padding: 0; margin: 0;
+ }
+ .compare-col .label-list li{
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  border-top: 1px dashed var(--line-soft);
+  align-items: start;
+ }
+ .compare-col .label-list li:first-child{ border-top: none; padding-top: 0 }
+ .compare-col .label-list .lbl{
+  font-family: var(--display); font-style: italic;
+  color: var(--ink-mute); font-size: 13px;
+ }
+ .compare-col .label-list .val{
+  color: var(--ink); line-height: 1.6;
+ }
+ .compare-col .label-list .val strong{
+  color: var(--olive-deep); font-weight: 700;
+ }
+
+ /* Highlight banner */
+ .highlight-banner{
+  background: transparent;
+  border: 1px solid rgba(74,122,106,0.3);
+  padding: 36px 40px;
+  margin: 50px 0 0;
+  text-align: center;
+ }
+ .highlight-banner h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 22px; margin: 0 0 12px;
+  color: var(--olive-deep);
+ }
+ .highlight-banner h3 em{
+  font-family: var(--display); font-style: italic;
+  color: var(--teal); font-weight: 600;
+ }
+ .highlight-banner p{
+  font-family: var(--serif); font-size: 16px;
+  line-height: 1.85; color: var(--ink-soft);
+  margin: 0; max-width: 720px; margin: 0 auto;
+ }
+ .highlight-banner p strong{
+  color: var(--olive-deep); font-weight: 700;
+  background-image: linear-gradient(transparent 75%, rgba(184,137,58,0.3) 75%);
+  padding: 0 2px;
+ }
+
+ /* Same-or-different banner */
+ .same-banner{
+  margin: 60px 0 0;
+  padding: 40px 44px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--olive);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: center;
+ }
+ .same-banner .equal{
+  font-family: var(--display);
+  font-size: 80px;
+  color: var(--olive);
+  line-height: 0.7;
+  font-weight: 600;
+ }
+ .same-banner .text h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 20px; margin: 0 0 10px;
+  color: var(--olive-deep);
+ }
+ .same-banner .text p{
+  font-size: 15px; line-height: 1.85;
+  color: var(--ink-soft); margin: 0;
+ }
+
+ /* Important reasons section */
+ .reasons-section{
+  background: var(--bg);
+ }
+ .reason-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 50px;
+ }
+ .reason-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 32px 32px 30px;
+  position: relative;
+  transition: all .35s;
+ }
+ .reason-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(74,122,106,0.1);
+  border-color: var(--teal);
+ }
+ .reason-card .num{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; font-size: 36px;
+  color: var(--teal); line-height: 1;
+  margin-bottom: 14px;
+ }
+ .reason-card .label{
+  display: inline-block;
+  font-family: var(--sans); font-weight: 500;
+  font-size: 11px; letter-spacing: 0.22em;
+  color: var(--paper);
+  background: var(--teal);
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+ }
+ .reason-card h3{
+  font-family: var(--serif); font-weight: 700;
+  font-size: 20px; margin: 0 0 14px;
+  color: var(--olive-deep);
+  line-height: 1.4;
+ }
+ .reason-card .role-list{
+  list-style: none; padding: 0; margin: 0;
+ }
+ .reason-card .role-list li{
+  padding: 12px 0;
+  border-top: 1px dashed var(--line-soft);
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 12px;
+  align-items: start;
+ }
+ .reason-card .role-list li:first-child{ border-top: none; padding-top: 0 }
+ .reason-card .role-list li.broker::before{
+  content: "✓";
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: -1px;
+ }
+ .reason-card .role-list li.company::before{
+  content: "✕";
+  color: var(--burgundy);
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 1px;
+ }
+ .reason-card .role-list li strong{
+  color: var(--olive-deep); font-weight: 700;
+ }
+
+ /* Pull quote */
+ .pullquote{
+  padding: 68px 6vw;
+  text-align: center;
+  background: linear-gradient(180deg, var(--olive-deep), var(--olive));
+  color: var(--cream);
+  border-bottom: 1px solid var(--olive-deep);
+  position: relative; z-index: 2;
+ }
+ .pullquote .marks{
+  font-family: var(--display); font-size: 96px;
+  line-height: 0.5; color: var(--terracotta-light);
+  margin-bottom: 24px; opacity: 0.85;
+ }
+ .pullquote blockquote{
+  font-family: var(--serif); font-weight: 500;
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.5; margin: 0 auto;
+  max-width: 920px; color: var(--paper);
+ }
+ .pullquote blockquote em{
+  font-family: var(--display); font-style: italic;
+  color: var(--terracotta-light); font-weight: 600;
+ }
+ .pullquote cite{
+  display: block; margin-top: 32px;
+  font-family: var(--display); font-style: italic;
+  font-size: 16px; color: rgba(245,239,228,0.7);
+  letter-spacing: 0.05em;
+ }
+ .pullquote cite::before{ content: "—"; margin-right: 8px }
+
+ /* Closing */
+ .closing{
+  padding: 62px 6vw;
+  text-align: center;
+  background: var(--paper);
+  position: relative; z-index: 2;
+ }
+ .closing h2{
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.25; color: var(--olive-deep);
+  max-width: 760px; margin: 0 auto 18px;
+ }
+ .closing h2 em{
+  font-family: var(--display); font-style: italic;
+  font-weight: 600; color: var(--terracotta);
+ }
+ .closing p{
+  font-family: var(--serif); font-size: 17px;
+  line-height: 1.85; color: var(--ink-soft);
+  max-width: 620px; margin: 0 auto 36px;
+ }
+ .closing-cta{
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 16px 36px;
+  background: var(--terracotta); color: var(--paper);
+  font-family: var(--serif); font-weight: 600;
+  font-size: 16px; letter-spacing: 0.04em;
+  border-radius: 999px;
+  transition: all .3s;
+ }
+ .closing-cta:hover{
+  background: var(--terracotta-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(138,79,42,0.25);
+ }
+ .closing-cta svg{ width: 18px; height: 18px }
+
+ footer{
+  position: relative; z-index: 2;
+  padding: 48px 6vw 36px;
+  background: var(--olive-deep);
+  color: rgba(245,239,228,0.75);
+ }
+ .foot-grid{
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+ }
+ .foot-grid h5{
+  font-family: var(--display); font-style: italic;
+  font-size: 16px; color: var(--terracotta-light);
+  margin: 0 0 16px; font-weight: 500;
+ }
+ .foot-disclaimer{ font-size: 12px; line-height: 1.85; color: rgba(245,239,228,0.6); }
+ .foot-grid ul{ list-style: none; padding: 0; margin: 0; font-size: 13px }
+ .foot-grid li{ padding: 5px 0 }
+ .foot-grid a{ color: rgba(245,239,228,0.7); transition: color .2s }
+ .foot-grid a:hover{ color: var(--paper) }
+ .foot-bottom{
+  max-width: 1300px; margin: 36px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245,239,228,0.12);
+  display: flex; justify-content: space-between;
+  font-family: var(--display); font-style: italic;
+  font-size: 13px; color: rgba(245,239,228,0.5);
+ }
+
+ .reveal{
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 1.0s cubic-bezier(.2,.7,.2,1), transform 1.0s cubic-bezier(.2,.7,.2,1);
+ }
+ .reveal.in{ opacity: 1; transform: none }
+ .reveal.d1{ transition-delay: .1s }
+ .reveal.d2{ transition-delay: .25s }
+
+ @media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; gap: 40px }
+  .compare-grid{ grid-template-columns: 1fr; gap: 18px }
+  .reason-grid{ grid-template-columns: 1fr; gap: 18px }
+  .same-banner{ grid-template-columns: 1fr; gap: 18px; padding: 28px }
+  .same-banner .equal{ font-size: 60px }
+  .foot-grid{ grid-template-columns: 1fr; gap: 36px }
+  .foot-bottom{ flex-direction: column; gap: 8px }
+  .topmeta{ display: none }
+  section, .hero, .pullquote, .closing{
+   padding-left: 5vw; padding-right: 5vw;
+  }
+  .pullquote{ padding-top: 44px; padding-bottom: 44px }
+ }
+
+ /* ============ 手機版內文字加大（讓閱讀更舒適）============ */
+ @media (max-width: 768px){
+  body{ font-size: 17px; line-height: 1.85; }
+  p{ font-size: 17px !important; line-height: 1.9 !important; }
+  li{ font-size: 16.5px !important; line-height: 1.85 !important; }
+  .hero-lead{ font-size: 17.5px !important; line-height: 1.9 !important; }
+  .sec-lead{ font-size: 17px !important; line-height: 1.9 !important; }
+  .excerpt{ font-size: 15.5px !important; line-height: 1.8 !important; }
+  .info-block p, .tip-box, .warn-box,
+  .item-card .desc, .compare-col p,
+  .compare-col li, .outcome-card p,
+  .breakdown-card p, .action-card p,
+  .surgery-col p, .surgery-col li,
+  .qa-row .a, .qa-row .q,
+  .ruling-card blockquote,
+  .law-panel blockquote,
+  .news-block p,
+  .case-doc-row .content,
+  .tier-card .right,
+  .belief-card .quote,
+  .dark-callout p,
+  .formula-box .formula,
+  .combo-item .text,
+  .feat-list li,
+  .subtype-grid p{
+   font-size: 16.5px !important; line-height: 1.9 !important;
+  }
+  .dropdown li a{ font-size: 16px !important; padding: 14px 20px !important; }
+  .nav-menu > li > a{ font-size: 17px !important; padding: 18px 8px !important; }
+  .dropdown-all a{ font-size: 15px !important; font-weight: 700 !important; }
+  h3{ font-size: 21px !important; }
+  h4{ font-size: 18px !important; }
+ }
+
+
+
+ /* === 文章內字體放大（同 v9）=== */
+ .hero-lead{ font-size: 19px !important; line-height: 1.95 !important; }
+ .sec-lead, .intro-section p, .case-lead{ font-size: 18px !important; line-height: 1.95 !important; }
+ .info-block p, .info-block .title,
+ .tip-box > div, .warn-box > div,
+ .qa-box .q, .qa-box .a, .qa-row .q, .qa-row .a,
+ .dark-callout p{ font-size: 17px !important; line-height: 1.9 !important; }
+ .compare-col p, .compare-col li,
+ .surgery-col p, .surgery-col li,
+ .outcome-card p, .item-card .desc,
+ .ruling-card blockquote, .law-panel blockquote,
+ .case-doc-row .content, .feat-list li,
+ .priority-header p, .belief-card .quote,
+ .combo-item .text{ font-size: 16.5px !important; line-height: 1.9 !important; }
+ .closing p{ font-size: 18px !important; }
+
+ @media (max-width: 768px){
+  .hero-lead{ font-size: 17px !important; }
+  .sec-lead, .intro-section p, .case-lead{ font-size: 16.5px !important; }
+  .info-block p, .tip-box > div, .warn-box > div,
+  .qa-box .q, .qa-box .a, .qa-row .q, .qa-row .a,
+  .dark-callout p{ font-size: 16px !important; }
+  .compare-col p, .compare-col li,
+  .surgery-col p, .surgery-col li,
+  .outcome-card p, .item-card .desc,
+  .ruling-card blockquote, .law-panel blockquote,
+  .case-doc-row .content, .feat-list li,
+  .priority-header p, .belief-card .quote,
+  .combo-item .text{ font-size: 15.5px !important; }
+  .closing p{ font-size: 16.5px !important; }
+ }
+
+ /* hl-red */
+ .hl{ color: #b02b2b; font-weight: 700; }
+ strong.hl, .hl strong{ color: #b02b2b; }
+ /* === 重點字統一紅色 === */
+ .article strong,
+ .post-body strong,
+ .content strong,
+ article strong,
+ .sec-lead strong,
+ .intro-section strong,
+ .info-block strong,
+ p strong{
+  color: #b02b2b !important;
+  font-weight: 700;
+ }
+ /* 深色底區塊內的 strong 維持淺色(避免看不清) */
+ .dark-callout strong,
+ .case-bigcost strong,
+ .case-warning strong,
+ .stat-mega strong,
+ [class*="dark"] strong,
+ [style*="background: var(--ink)"] strong,
+ [style*="background:#1"] strong,
+ .hero strong,
+ .hero-mega strong{
+  color: inherit !important;
+ }
+
+ /* ============================================
+   [v17] 視覺降噪 - 讓文章清爽好讀
+   ============================================ */
+
+ /* 1. 全部 section 統一白底,不要忽深忽淺 */
+ section, .pro-section, .big-num-section,
+ .intro-section, [class*="-section"]{
+  background: #ffffff !important;
+  background-image: none !important;
+ }
+
+ /* 2. 拿掉 section 之間的粗邊框、陰影 */
+ section{
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+ }
+
+ /* 3. 內文段落:加大、行距加寬,更好閱讀 */
+ p, .pro-body p, .sec-lead, .intro-section p{
+  font-size: 17px !important;
+  line-height: 2.0 !important;
+  color: #2a2a26 !important;
+ }
+
+ /* 4. 大標題縮小一點,不要那麼張揚 */
+ h1, .hero-mega, .hero-title{
+  letter-spacing: 0.02em !important;
+ }
+ h2, .sec-title, h2.sec-title{
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+ }
+
+ /* 5. 拿掉裝飾性的 eyebrow 小標的花樣,變單純文字 */
+ .sec-eyebrow, .eyebrow, .pro-tag, .top-text{
+  letter-spacing: 0.08em !important;
+  font-size: 12.5px !important;
+  color: #9a9488 !important;
+  background: none !important;
+  border: none !important;
+ }
+
+ /* 6. 大數字裝飾 - 全部縮小 */
+ .stat-mega-number, .stat-mega .num,
+ .big-digit, .digit, .breakdown-card .digit,
+ .case-bigcost .num{
+  font-size: 32px !important;
+ }
+ .hero-mega{ font-size: 40px !important; }
+
+ /* 7. 卡片類 - 邊框淡化、陰影拿掉,變素雅 */
+ .feat-list li, .info-block, .surgery-col,
+ .compare-col, .item-card, .breakdown-card,
+ .outcome-card, .belief-card, .qa-box, .combo-item{
+  box-shadow: none !important;
+  border-radius: 6px !important;
+ }
+
+ /* 8. 提示框保留但簡化:細邊框 + 淺底 */
+ .tip-box, .warn-box{
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #faf8f4 !important;
+ }
+
+ /* 9. 深色色塊區 - 改成淺色,不要那麼搶眼 */
+ .dark-callout, .dark-section{
+  background: #f5f3ee !important;
+  color: #2a2a26 !important;
+  box-shadow: none !important;
+ }
+ .dark-callout *, .dark-section *{
+  color: #2a2a26 !important;
+ }
+
+ /* 10. 拿掉各種漸層 highlight 底線,重點字單純用紅色 */
+ strong{
+  background-image: none !important;
+  background: none !important;
+ }
+ .article strong, .pro-body p strong, p strong,
+ .sec-lead strong, .info-block strong{
+  color: #b02b2b !important;
+  font-weight: 700 !important;
+ }
+
+
+  /* ============================================
+     [v25] 加大文章字體 - 晚上滑手機更好讀
+     ============================================ */
+  .pro-body p, .intro-section p, .sec-lead,
+  article p, .priority-header p,
+  .item-card .desc, .item-card .reason,
+  .tip-box > div, .warn-box > div,
+  .info-block p, .dark-callout p,
+  .timeline-content p, .plan-section p,
+  .case-content p, p{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 條列卡片裡的小標也放大一點 */
+  .item-card .note, .feat-list li{
+    font-size: 17px !important;
+  }
+  /* 提示框文字 */
+  .tip-box, .warn-box{
+    font-size: 19px !important;
+    line-height: 2.05 !important;
+  }
+  /* 手機上再大一點點 */
+  @media (max-width: 980px){
+    .pro-body p, .intro-section p, .sec-lead,
+    article p, .priority-header p,
+    .item-card .desc, .item-card .reason,
+    .tip-box > div, .warn-box > div,
+    .info-block p, .dark-callout p,
+    .timeline-content p, .plan-section p,
+    .case-content p, p{
+      font-size: 19px !important;
+      line-height: 2.05 !important;
+    }
+  }
+
+
+  /* === 本文重點整理區塊 === */
+  .recap-section{
+    background: #faf8f4;
+    padding: 48px 6vw 64px;
+    border-top: 1px solid #e6e0d4;
+  }
+  .recap-box{
+    max-width: 720px; margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e0d9ca;
+    border-radius: 12px;
+    padding: 38px 34px;
+  }
+  .recap-box .recap-title{
+    font-family: var(--serif); font-size: 23px; font-weight: 700;
+    color: var(--terracotta-deep); margin: 0 0 6px; text-align: center;
+  }
+  .recap-box .recap-sub{
+    font-family: var(--sans); font-size: 14px; color: var(--ink-soft);
+    text-align: center; margin: 0 0 26px; letter-spacing: 0.08em;
+  }
+  .recap-box .recap-item{
+    display: flex; gap: 14px; padding: 16px 0;
+    border-top: 1px dashed #e0d9ca;
+  }
+  .recap-box .recap-item:first-of-type{ border-top: none; }
+  .recap-box .recap-check{
+    flex-shrink: 0; width: 26px; height: 26px;
+    background: var(--olive); color: #fff; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+  }
+  .recap-box .recap-text{
+    font-family: var(--sans); font-size: 16.5px;
+    line-height: 1.85; color: var(--ink);
+  }
+  .recap-box .recap-text strong{ color: #b02b2b; font-weight: 700; }
+  @media (max-width: 980px){
+    .recap-box{ padding: 30px 22px; }
+    .recap-box .recap-title{ font-size: 21px; }
+    .recap-box .recap-text{ font-size: 16px; }
+  }
+
+  /* === [問題⑤] 重點式整理文字放大 === */
+  .item-card h4, .item-grid h4,
+  .feat-list li, .check-list li,
+  .point-list li, .tip-list li,
+  .items-list li .name,
+  .recap-text,
+  .five-list .fl-text h3{
+    font-size: 19px !important;
+  }
+  .item-card .desc, .item-card p,
+  .item-card .note,
+  .items-list li .desc{
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+  .recap-box .recap-text{
+    font-size: 18px !important;
+  }
+</style>
+
+<link rel="canonical" href="https://baihuawenins.com/posts/broker-vs-insurance-company.html">
+<meta property="og:url" content="https://baihuawenins.com/posts/broker-vs-insurance-company.html">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "保險公司 vs 保經公司，差別在哪？｜業務員立場大不同｜保險白話文",
+ "description": "買保險前先釐清：保險公司業務員只能賣自家保單，保經公司業務員可以幫您比較多家商品。從理賠爭議、未來服務、核保時間看兩者差異。",
+ "author": {
+  "@type": "Person",
+  "name": "保險白話文"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "保險白話文",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://baihuawenins.com/logo.svg"
+  }
+ },
+ "datePublished": "2026-05-15",
+ "dateModified": "2026-05-15",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://baihuawenins.com/posts/broker-vs-insurance-company.html"
+ },
+ "inLanguage": "zh-Hant-TW"
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+ <div class="nav-container">
+  <a href="../index.html" class="nav-brand">
+   <img src="../logo.svg" alt="保險白話文 Logo">
+   <div class="nav-brand-text">
+    <span class="nav-title">保險白話文</span>
+    <small>讓你保險買對不買貴</small>
+   </div>
+  </a>
+  <button class="nav-toggle" aria-label="開啟選單">
+   <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-menu">
+   <li><a href="../index.html">首頁</a></li>
+   <li class="has-dropdown">
+    <a href="#">新生兒保單</a>
+    <ul class="dropdown">
+     <li><a href="newborn-insurance-2025.html">新生兒保險 5 大保障</a></li>
+     <li><a href="newborn-insurance-timeline.html">新生兒投保出生前後時間軸</a></li>
+     <li><a href="newborn-parents-checklist.html">新生兒出生後待辦清單</a></li>
+     <li><a href="newborn-jaundice.html">寶寶黃疸對核保影響</a></li>
+     <li><a href="newborn-screening-basic.html">21 項基本篩檢</a></li>
+     <li><a href="newborn-screening-paid.html">自費篩檢攻略</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">成人保單</a>
+    <ul class="dropdown">
+     <li><a href="adult-insurance-planning.html">成人保險完整指南</a></li>
+     <li><a href="term-life-premium.html">定期壽險後期保費</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">銀髮族保險</a>
+    <ul class="dropdown">
+     <li><a href="senior-insurance-planning.html">銀髮族規劃 2 級順序</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">重症案例分享</a>
+    <ul class="dropdown">
+     <li><a href="cancer-protection-plan.html">癌症治療年燒百萬</a></li>
+     <li><a href="critical-illness-priority.html">重大傷病優先於癌症險</a></li>
+    </ul>
+   </li>
+   <li class="has-dropdown">
+    <a href="#">險種知識</a>
+    <ul class="dropdown">
+     <li><a href="insurance-products-guide.html">7 大險種解析</a></li>
+     <li><a href="canned-insurance-policy.html">什麼是罐頭保單</a></li>
+     <li><a href="auto-vs-guaranteed-renewal.html">自動 vs 保證續保</a></li>
+     <li><a href="surgery-227-explained.html">2-2-7 手術定義</a></li>
+          <li><a href="whole-life-vs-term.html">終身險 vs 定期險</a></li>
+     <li><a href="life-insurance-tax-basics.html">身故保險金真的免稅嗎</a></li>
+    </ul>
+   </li>
+      <li class="has-dropdown">
+        <a href="#">信用卡刷保費</a>
+        <ul class="dropdown">
+          <li><a href="credit-card-installment.html">信用卡刷保費懶人包</a></li>
+        </ul>
+      </li>
+   <li class="has-dropdown">
+    <a href="#">理賠經驗</a>
+    <ul class="dropdown">
+     <li><a href="claim-rejection-reasons.html">理賠 5 大地雷</a></li>
+     <li><a href="pre-existing-disease.html">已在疾病 127 條</a></li>
+     <li><a href="broker-vs-insurance-company.html">保經 vs 保險公司</a></li>
+    </ul>
+   </li>
+   <li><a href="../blog.html">全部文章</a></li>
+   <li><a href="../about.html">關於我</a></li>
+   <li><a href="https://line.me/ti/p/Q0mw4pX2gT" target="_blank" rel="noopener" class="nav-cta">LINE 諮詢</a></li>
+  </ul>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="hero-grid">
+  <div>
+   <div class="hero-eyebrow reveal">
+    <span class="num">買保險前先釐清</span>業務員身分差異
+   </div>
+   <h1 class="hero-title reveal d1">
+    保險公司 vs <span class="accent">保經公司</span>，<br>
+    <span class="underline">差別在哪</span>？
+   </h1>
+   <p class="hero-lead reveal d2">
+    <span class="drop">買</span>保險之前，您最先要釐清的不是商品，而是——<strong>您面前這位業務員是哪一家的</strong>。保險公司業務員只能賣自家保單；保經公司業務員可以幫您比較多家。同樣的保單、同樣的保費，但<strong>未來服務、理賠爭議、爭取空間，完全不同</strong>。
+   </p>
+  </div>
+
+  <aside class="hero-aside reveal d2">
+   <h3>本文比較</h3>
+   <ol>
+    <li><a href="#compare">兩種業務員身分差異</a></li>
+    <li><a href="#same">什麼是相同的</a></li>
+    <li><a href="#diff">什麼是不一樣的</a></li>
+    <li><a href="#advice">客戶最該重視的事</a></li>
+   </ol>
+  </aside>
+ </div>
+</header>
+
+<!-- Comparison section -->
+<section class="compare-section" id="compare">
+ <div class="container">
+  <div class="sec-eyebrow reveal">
+   <span style="font-family: var(--display); font-style: italic; font-size: 18px; text-transform: none; color: var(--olive-deep)">並排比較</span>兩種身分
+  </div>
+  <h2 class="sec-title reveal d1">
+   用一張圖，<em>快速看懂兩種業務員</em>
+  </h2>
+  <p class="sec-lead reveal d2">
+   雖然都叫「業務員」，但保險公司業務員與保經公司業務員的工作範圍與身分立場有很大的不同。先了解差異，您才知道誰能真正站在您這邊。
+  </p>
+
+  <div class="compare-grid">
+   <!-- 保險公司 -->
+   <div class="compare-col reveal">
+    <div class="header">
+     <span class="kind">Type 01</span>
+     <h3>保險公司業務員</h3>
+     <p>Insurance Company Agent</p>
+    </div>
+    <div class="body">
+     <p class="desc">
+      保險公司的業務員，<strong style="color: var(--olive-deep)">只能賣他所屬保險公司的保單</strong>。例如：富邦人壽業務員只能賣富邦的保單。
+     </p>
+     <ul class="label-list">
+      <li>
+       <span class="lbl">隸屬</span>
+       <span class="val">保險公司員工</span>
+      </li>
+      <li>
+       <span class="lbl">商品範圍</span>
+       <span class="val">僅限<strong>所屬保險公司</strong>的商品</span>
+      </li>
+      <li>
+       <span class="lbl">優勢</span>
+       <span class="val">對自家商品最熟悉</span>
+      </li>
+      <li>
+       <span class="lbl">限制</span>
+       <span class="val">無法幫您跨公司比較</span>
+      </li>
+     </ul>
+    </div>
+   </div>
+
+   <!-- 保經公司 -->
+   <div class="compare-col broker reveal d1">
+    <div class="header">
+     <span class="kind">Type 02</span>
+     <h3>保經公司業務員</h3>
+     <p>Insurance Brokerage Agent</p>
+    </div>
+    <div class="body">
+     <p class="desc">
+      保經公司的業務員<strong style="color: var(--olive-deep)">可以賣多家保險公司的保單</strong>。例如：台灣人壽、遠雄人壽、新光人壽、富邦人壽⋯等等。
+     </p>
+     <ul class="label-list">
+      <li>
+       <span class="lbl">隸屬</span>
+       <span class="val">保經公司員工</span>
+      </li>
+      <li>
+       <span class="lbl">商品範圍</span>
+       <span class="val"><strong>多家保險公司</strong>商品都可賣</span>
+      </li>
+      <li>
+       <span class="lbl">優勢</span>
+       <span class="val">可從各家比較規劃出最佳組合</span>
+      </li>
+      <li>
+       <span class="lbl">立場</span>
+       <span class="val">可站在客戶角度爭取權益</span>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+
+  <div class="highlight-banner">
+   <h3>具體例子：<em>跨公司搭配最佳組合</em></h3>
+   <p>
+    假設 <strong>A 公司的重大傷病比較好、B 公司的醫療險比較好</strong>，您想要組合搭配一起買——找<strong>保經公司業務員可以一次買到兩家</strong>；如果是找保險公司業務員，就需要分別找 A 公司與 B 公司的業務。
+   </p>
+  </div>
+ </div>
+</section>
+
+<!-- Same banner -->
+<section id="same">
+ <div class="container">
+  <div class="sec-eyebrow reveal">
+   <span style="font-family: var(--display); font-style: italic; font-size: 18px; text-transform: none; color: var(--olive-deep)">相同部分</span>什麼都不變
+  </div>
+  <h2 class="sec-title reveal d1">
+   保費跟保障，<em>兩邊買都一樣</em>
+  </h2>
+
+  <div class="same-banner reveal d1">
+   <div class="equal">=</div>
+   <div class="text">
+    <h3>同樣的保單、同樣的權益</h3>
+    <p>
+     <strong style="color: var(--olive-deep)">同樣的保單內容</strong>，不論和保經公司業務員或保險公司業務員購買，<strong style="color: var(--olive-deep)">繳的保費以及遇到問題的理賠金、享有的保障都是相同的</strong>。差別在於選購的「過程」與未來「服務」。
+    </p>
+   </div>
+  </div>
+
+  <p style="font-family: var(--serif); font-size: 17px; line-height: 1.95; color: var(--ink-soft); margin: 40px 0 0; max-width: 820px;" class="reveal d2">
+   保經公司因為可以賣多間保險公司的商品，所以<strong style="color: var(--olive-deep)">較能全面性地思考保戶的需求</strong>，從眾多保險公司商品中比較並規劃出符合保戶需求與預算的保險組合。對客戶來說，不用自己跑好幾家業務員，就能拿到最完整的方案。
+  </p>
+ </div>
+</section>
+
+<!-- 4 important things -->
+<section class="reasons-section" id="diff">
+ <div class="container">
+  <div class="sec-eyebrow reveal">
+   <span style="font-family: var(--display); font-style: italic; font-size: 18px; text-transform: none; color: var(--olive-deep)">差異關鍵</span>客戶最該關心的 4 件事
+  </div>
+  <h2 class="sec-title reveal d1" id="advice">
+   除了商品比較，還有<em>更重要的事</em>
+  </h2>
+  <p class="sec-lead reveal d2">
+   其實「商品多寡」只是表象，真正影響客戶長期權益的，是下面這 4 個關鍵——尤其是發生理賠爭議的時候，業務員的身分立場差別很大。
+  </p>
+
+  <div class="reason-grid">
+
+   <!-- 未來服務 -->
+   <div class="reason-card reveal">
+    <div class="num">01</div>
+    <span class="label">未來服務</span>
+    <h3>原本簽約的業務員，會負責後續所有保單服務</h3>
+    <ul class="role-list">
+     <li class="broker">
+      <div><strong>保經公司</strong>與<strong>保險公司</strong>都是一樣協助客戶處理理賠、契約變更等等</div>
+     </li>
+     <li class="broker">
+      <div>由原本簽約的業務員，協助未來的保單服務</div>
+     </li>
+    </ul>
+   </div>
+
+   <!-- 理賠爭議 -->
+   <div class="reason-card reveal d1">
+    <div class="num">02</div>
+    <span class="label">理賠爭議</span>
+    <h3>發生爭議時，誰能真正幫您爭取？</h3>
+    <ul class="role-list">
+     <li class="company">
+      <div><strong>保險公司業務員</strong>隸屬保險公司，未來有理賠爭議要替客戶爭取的空間就比較小，畢竟他是保險公司的員工，得罪公司也是一種很大的壓力</div>
+     </li>
+     <li class="broker">
+      <div><strong>保經公司業務員</strong>不屬於保險公司員工，在理賠上可以跟客戶站在同一端替客戶爭取，可以協助客戶向金管會申訴保險公司</div>
+     </li>
+    </ul>
+   </div>
+
+   <!-- 核保時間 -->
+   <div class="reason-card reveal d2">
+    <div class="num">03</div>
+    <span class="label">核保時間</span>
+    <h3>核保的快慢，跟業務員身分無關</h3>
+    <ul class="role-list">
+     <li class="broker">
+      <div>核保時間的快慢<strong>跟保險公司有關</strong>，不是業務員能決定的</div>
+     </li>
+     <li class="broker">
+      <div>當保單核保完成時，<strong>保單生效日會回溯到投保當天</strong>，理賠權益不會受到影響</div>
+     </li>
+    </ul>
+   </div>
+
+   <!-- 理賠時間 -->
+   <div class="reason-card reveal d2">
+    <div class="num">04</div>
+    <span class="label">理賠時間</span>
+    <h3>15 天內必須給付理賠金</h3>
+    <ul class="role-list">
+     <li class="broker">
+      <div>當保險公司收到理賠所需文件後，必須在約定的期限內給付理賠金</div>
+     </li>
+     <li class="broker">
+      <div>如果沒有特別約定期限，則需要在 <strong>『15 天內』</strong>給付理賠金</div>
+     </li>
+    </ul>
+   </div>
+
+  </div>
+
+  <div class="highlight-banner" style="margin-top: 50px;">
+   <h3>理賠不賠時，<em>保單條款是關鍵</em></h3>
+   <p>
+    當理賠遇到爭議時，<strong>您買的商品條款就很重要</strong>——商品條款中有沒有理賠限制，比如：2-2-7 限制、3-3-4 限制、實支實付年上限理賠……等等。這些都會影響您能不能順利拿到理賠金。
+   </p>
+  </div>
+ </div>
+</section>
+
+
+<section class="recap-section">
+  <div class="recap-box">
+    <div class="recap-title">本文重點整理</div>
+    <div class="recap-sub">RECAP · 看完這篇，記住這幾件事</div>
+    <div class="recap-item">
+      <div class="recap-check">1</div>
+      <div class="recap-text">買保險可透過<strong>保險公司業務員</strong>或<strong>保險經紀人</strong>，兩者不同。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">2</div>
+      <div class="recap-text"><strong>保險公司業務員</strong>只賣自家商品，熟悉但選擇較侷限。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">3</div>
+      <div class="recap-text"><strong>保險經紀人</strong>可跨多家公司比較，能挑出更適合的組合。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">4</div>
+      <div class="recap-text">重點不是哪種管道，而是<strong>顧問是否專業、是否站在你這邊</strong>。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">5</div>
+      <div class="recap-text">找一個<strong>願意長期服務、理賠時也在</strong>的顧問最重要。</div>
+    </div>
+    <div class="recap-item">
+      <div class="recap-check">✓</div>
+      <div class="recap-text">想找專業的保險顧問？歡迎 <strong>LINE 諮詢</strong>，我會誠實建議。</div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+ <div class="container">
+  <h2 class="reveal">與其找一家公司的業務員，<em>不如找能比較的人</em></h2>
+  <p class="reveal d1">
+   我服務於保經公司，能同時比較多家保險公司的商品。如果您想找一個「站在您這邊」的業務員，幫您從各家商品中挑出最適合的組合，歡迎透過 LINE 與我聊聊。
+  </p>
+  <a href="https://line.me/ti/p/Q0mw4pX2gT" target="_blank" rel="noopener" class="closing-cta reveal d2">
+   LINE 預約一對一諮詢
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
+ </div>
+</section>
+
+<footer>
+ <div class="foot-grid">
+  <div>
+   <h5>關於本文</h5>
+   <p class="foot-disclaimer">
+        本文保額、保費為示意，實際以各保險公司契約為準，內容僅供參考。
+      </p>
+  </div>
+  <div>
+   <h5>延伸閱讀</h5>
+   <ul>
+    <li><a href="insurance-products-guide.html">保險商品 7 大險種完整解析</a></li>
+    <li><a href="claim-rejection-reasons.html">理賠被拒？避開這 5 個地雷</a></li>
+    <li><a href="adult-insurance-planning.html">成人保險規劃完整指南</a></li>
+   </ul>
+  </div>
+  <div>
+   <h5>聯繫我們</h5>
+   <ul>
+    <li>LINE · 私訊聊聊</li>
+    <li>Instagram · @insurance_is_su</li>
+    <li>Threads · @insurance_is_su</li>
+   </ul>
+  </div>
+ </div>
+ <div class="foot-bottom">
+  <span>保險白話文 · 部落格文章</span>
+  <span>© 2026 · 讓你保險買對不買貴</span>
+ </div>
+</footer>
+
+<script>
+ // === [v14] Navbar toggle ===
+ const navToggle = document.querySelector('.nav-toggle');
+ const navMenu = document.querySelector('.nav-menu');
+ if (navToggle && navMenu){
+  navToggle.addEventListener('click', (e) => {
+   e.stopPropagation();
+   const isOpen = navMenu.classList.toggle('open');
+   navToggle.classList.toggle('open');
+   document.body.classList.toggle('menu-open', isOpen);
+  });
+ }
+ // 點主分類 = 展開/收合該分類文章
+ document.querySelectorAll('.has-dropdown > a').forEach(a => {
+  a.addEventListener('click', (e) => {
+   e.preventDefault();
+   e.stopPropagation();
+   const li = a.parentElement;
+   const wasOpen = li.classList.contains('open');
+   // 收合其他已開的分類
+   document.querySelectorAll('.has-dropdown.open').forEach(d => {
+    if (d !== li) d.classList.remove('open');
+   });
+   // 切換自己
+   li.classList.toggle('open', !wasOpen);
+  });
+ });
+ // 點抽屜以外的地方 = 關閉抽屜
+ document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 980 && navMenu && navMenu.classList.contains('open')){
+   if (!e.target.closest('.nav-menu') && !e.target.closest('.nav-toggle')){
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('open');
+    document.body.classList.remove('menu-open');
+   }
+  } else if (window.innerWidth > 980){
+   if (!e.target.closest('.has-dropdown')){
+    document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
+   }
+  }
+ });
+
+ const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+   if (e.isIntersecting){
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+   }
+  });
+ }, { threshold: 0.12 });
+ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
