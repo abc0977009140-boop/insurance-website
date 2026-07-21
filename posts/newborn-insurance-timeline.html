@@ -849,6 +849,20 @@
   .recap-box .recap-text{
     font-size: 18px !important;
   }
+
+ /* [v37] 全站禁止水平滑動(手機版) */
+ html, body{
+  overflow-x: hidden !important;
+  max-width: 100vw;
+ }
+ @media (max-width: 1200px){
+  html, body{
+   overflow-x: hidden !important;
+   width: 100%;
+   max-width: 100vw;
+   position: relative;
+  }
+ }
 </style>
 
 <link rel="canonical" href="https://baihuawenins.com/posts/newborn-insurance-timeline.html">

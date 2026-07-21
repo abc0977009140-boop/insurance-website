@@ -260,7 +260,6 @@
    justify-content: center;
   }
   .nav-brand small{ display: none; }
- }
 
   /* 手機 menu 開啟時的背景遮罩 */
   .nav-menu.open::before{ content: none; }
@@ -1151,6 +1150,20 @@
   .closing p{ font-size: 16.5px !important; }
  }
 
+
+ /* [v37] 全站禁止水平滑動(手機版) */
+ html, body{
+  overflow-x: hidden !important;
+  max-width: 100vw;
+ }
+ @media (max-width: 1200px){
+  html, body{
+   overflow-x: hidden !important;
+   width: 100%;
+   max-width: 100vw;
+   position: relative;
+  }
+ }
 </style>
 
 <link rel="canonical" href="https://baihuawenins.com/">
@@ -1300,70 +1313,59 @@
 </header>
 
 <!-- ================================================
-   CATEGORIES · 快速分類
+   CATEGORIES
    ================================================ -->
 <section class="cat-section">
  <div class="container">
-  <div class="sec-eyebrow reveal">快速分類 · Categories</div>
+  <div class="sec-eyebrow reveal">專業領域 · Specialty</div>
   <h2 class="sec-title reveal d1">
-   依主題找文章，<em>快速看您想看的</em>
+   三個<em>專注的方向</em>，<br>
+   幫您解決人生不同階段的保險問題
   </h2>
 
-  <div class="cat-grid cat-grid-4">
+  <div class="cat-grid">
    <!-- Card 1: 新生兒保單 -->
-   <a href="blog.html#cat=newborn" class="cat-card reveal d1">
+   <a href="blog.html" class="cat-card reveal d1">
     <div class="cat-icon">
      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2L4 7v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V7l-8-5z"/>
-      <path d="M9 12l2 2 4-4"/>
+      <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/>
+      <path d="M3 12c0-4.97 4.03-9 9-9s9 4.03 9 9"/>
+      <path d="M3 12c0 4.97 4.03 9 9 9s9-4.03 9-9"/>
+      <path d="M12 7v2M12 15v2"/>
      </svg>
     </div>
     <h3>新生兒保單</h3>
-    <div class="cat-count">6 篇文章</div>
-    <p>從寶寶出生的黃金投保時機，到 5 大必備保障、罐頭保單怎麼挑，一次看懂。</p>
-    <span class="arrow">看文章 →</span>
+    <div class="en">For Newborns &amp; New Parents</div>
+    <p>從寶寶出生那一刻起，就該有一份完整的保障。我幫您看懂罐頭保單、規劃醫療、意外、重大傷病，用最低預算撐起最高保額。</p>
+    <span class="arrow">查看文章 →</span>
    </a>
 
-   <!-- Card 2: 成人保單 -->
-   <a href="blog.html#cat=adult" class="cat-card reveal d2">
+   <!-- Card 2: 退休規劃 -->
+   <a href="blog.html" class="cat-card reveal d2">
     <div class="cat-icon">
      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-      <circle cx="12" cy="7" r="4"/>
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
      </svg>
     </div>
-    <h3>成人保單</h3>
-    <div class="cat-count">2 篇文章</div>
-    <p>成人保險規劃完整指南、定期壽險後期保費解析，把預算花在刀口上。</p>
-    <span class="arrow">看文章 →</span>
+    <h3>退休規劃</h3>
+    <div class="en">Retirement Planning</div>
+    <p>退休不是一個終點，而是另一段三十年的開始。如何讓現在的錢，在六十歲之後仍然為您工作？我們從現金流、保障、稅務一起規劃。</p>
+    <span class="arrow">查看文章 →</span>
    </a>
 
-   <!-- Card 3: 險種知識 -->
-   <a href="blog.html#cat=knowledge" class="cat-card reveal d3">
+   <!-- Card 3: 資產變現金 -->
+   <a href="blog.html" class="cat-card reveal d3">
     <div class="cat-icon">
      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      <line x1="12" y1="1" x2="12" y2="23"/>
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
      </svg>
     </div>
-    <h3>險種知識</h3>
-    <div class="cat-count">6 篇文章</div>
-    <p>7 大險種解析、罐頭保單真相、身故保險金免稅規則⋯⋯用白話講懂保險條款。</p>
-    <span class="arrow">看文章 →</span>
-   </a>
-
-   <!-- Card 4: 理賠經驗 -->
-   <a href="blog.html#cat=claim" class="cat-card reveal d4">
-    <div class="cat-icon">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M9 11l3 3L22 4"/>
-      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-     </svg>
-    </div>
-    <h3>理賠經驗</h3>
-    <div class="cat-count">2 篇文章</div>
-    <p>理賠被拒的 5 大地雷、既往症條款解析、保經 vs 保險公司差別。</p>
-    <span class="arrow">看文章 →</span>
+    <h3>資產變現金</h3>
+    <div class="en">Asset to Liquidity</div>
+    <p>不動產、股票、保單，每一種資產都有它的角色。當您需要現金時，怎麼活化它們而不傷本金？這是專業規劃的核心。</p>
+    <span class="arrow">查看文章 →</span>
    </a>
   </div>
  </div>
